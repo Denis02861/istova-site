@@ -7,7 +7,7 @@ export default function Header() {
           <a href="#concept" className="hover:text-brand">О нас</a>
           <a href="#ritual" className="hover:text-brand">Ритуал</a>
           <a href="#programs" className="hover:text-brand">Программы</a>
-          <a href="#team" className="hover:text-brand">Команда</a>
+          
           <a href="#contacts" className="hover:text-brand">Контакты</a>
         </nav>
         <a href="#booking" className="hidden md:inline-block px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors text-sm">Записаться</a>

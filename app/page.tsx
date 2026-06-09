@@ -4,7 +4,6 @@ import Concept from "./components/Concept";
 import Ritual from "./components/Ritual";
 import Programs from "./components/Programs";
 import Space from "./components/Space";
-import Team from "./components/Team";
 import Certificates from "./components/Certificates";
 import FAQ from "./components/FAQ";
 import Contacts from "./components/Contacts";
@@ -21,7 +20,6 @@ export default function Page() {
         <Ritual />
         <Programs />
         <Space />
-        <Team />
         <Certificates />
         <FAQ />
         <Contacts />

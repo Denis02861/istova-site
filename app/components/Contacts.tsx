@@ -14,7 +14,7 @@ export default function Contacts() {
             <p className="text-brand/40 text-xs italic mb-6">(подтвердить ближе к открытию)</p>
 
             <h3 className="font-serif text-2xl text-brand mb-4 mt-8">Связь</h3>
-            <p className="text-brand-dark/80 mb-1">Телефон: +7 (___) ___-__-__</p>
+            <p className="text-brand-dark/80 mb-1">Телефон: <a href="tel:+79013201050" className="hover:text-brand">+7 (901) 320-10-50</a></p>
             <p className="text-brand-dark/80 mb-1">WhatsApp · Telegram · @istova_spb</p>
           </div>
           <div className="aspect-square bg-sand-deep flex items-center justify-center text-brand/40 font-serif">
