@@ -1,4 +1,6 @@
 export default function Contacts() {
+  const address = "Санкт-Петербург, ул. Беринга, 23 к. 2";
+  const mapSrc = `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(address)}&z=16`;
   return (
     <section id="contacts" className="py-24 bg-sand">
       <div className="container mx-auto px-6 max-w-5xl">
@@ -6,7 +8,7 @@ export default function Contacts() {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="font-serif text-2xl text-brand mb-4">Адрес</h3>
-            <p className="text-brand-dark/80 mb-2">Санкт-Петербург, ул. Беринга, 23 к. 2</p>
+            <p className="text-brand-dark/80 mb-2">{address}</p>
             <p className="text-brand-dark/60 text-sm mb-6">Васильевский остров · 12 минут от м. Василеостровская</p>
 
             <h3 className="font-serif text-2xl text-brand mb-4 mt-8">Часы работы</h3>
@@ -17,8 +19,16 @@ export default function Contacts() {
             <p className="text-brand-dark/80 mb-1">Телефон: <a href="tel:+79013201050" className="hover:text-brand">+7 (901) 320-10-50</a></p>
             <p className="text-brand-dark/80 mb-1">@istova</p>
           </div>
-          <div className="aspect-square bg-sand-deep flex items-center justify-center text-brand/40 font-serif">
-            карта Яндекс (виджет)
+          <div className="aspect-square bg-sand-deep">
+            <iframe
+              src={mapSrc}
+              width="100%"
+              height="100%"
+              frameBorder={0}
+              allowFullScreen
+              title="Карта — Истова"
+              style={{ border: 0 }}
+            />
           </div>
         </div>
       </div>
