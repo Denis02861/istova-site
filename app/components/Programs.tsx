@@ -7,9 +7,6 @@ type Program = {
   accent?: string;
 };
 
-const COMMON_DESC =
-  "ИСТОВА — пространство ухода в Петербурге, где программа собирается как ритуал: сауна, бережные техники, авторская подборка натуральных масел и косметики. Без обещаний которые невозможно сдержать.";
-
 const programs: Program[] = [
   {
     name: "ЗАРЯ",
@@ -170,11 +167,6 @@ export default function Programs() {
                   </div>
                 )}
               </header>
-
-              {/* Описание бренда (общее) */}
-              <p className="text-sm text-brand-dark/70 leading-relaxed mb-8">
-                {COMMON_DESC}
-              </p>
 
               {/* Список этапов */}
               <ul className="space-y-2 text-sm text-brand-dark/80 leading-relaxed flex-1 mb-8">
