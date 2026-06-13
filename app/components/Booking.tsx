@@ -13,6 +13,10 @@ export default function Booking() {
             <textarea placeholder="Комментарий (опционально)" rows={3} className="w-full px-4 py-3 bg-sand border border-brand/20 focus:border-brand outline-none"></textarea>
             <button type="submit" className="w-full py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Отправить заявку</button>
           </form>
+          <div className="mt-8 pt-6 border-t border-brand/15 text-left">
+            <p className="text-sm text-brand/70 mb-1">Как с вами связаться</p>
+            <p className="text-base text-brand">@istova</p>
+          </div>
         </div>
       </div>
     </section>

@@ -8,13 +8,14 @@ export default function Footer() {
             <p className="text-sm italic text-sand/60">Пространство истинного ухода</p>
           </div>
           <div>
-            <h4 className="text-sand mb-3 text-sm tracking-wide uppercase">Соцсети</h4>
-            <p className="text-sm mb-1">Instagram: <a href="#" className="hover:text-sand">@istova.spb</a></p>
-            <p className="text-sm">Telegram: <a href="#" className="hover:text-sand">@istova_spb</a></p>
+            <h4 className="text-sand mb-3 text-sm tracking-wide uppercase">Как с вами связаться</h4>
+            <p className="text-sm">@istova</p>
           </div>
           <div>
             <h4 className="text-sand mb-3 text-sm tracking-wide uppercase">Документы</h4>
-            <p className="text-sm mb-1"><a href="#" className="hover:text-sand">Политика конфиденциальности</a></p>
+            <p className="text-sm mb-1">
+              <a href="/politika-obrabotki-personalnyh-dannyh/" className="hover:text-sand">Политика конфиденциальности</a>
+            </p>
           </div>
         </div>
         <div className="border-t border-sand/10 pt-6 text-center text-xs text-sand/40">© Истова 2026</div>
