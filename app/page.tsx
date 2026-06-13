@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Concept from "./components/Concept";
 import Ritual from "./components/Ritual";
 import Programs from "./components/Programs";
+import TeaCard from "./components/TeaCard";
 import Space from "./components/Space";
 import Certificates from "./components/Certificates";
 import FAQ from "./components/FAQ";
@@ -19,6 +20,7 @@ export default function Page() {
         <Concept />
         <Ritual />
         <Programs />
+        <TeaCard />
         <Space />
         <Certificates />
         <FAQ />
