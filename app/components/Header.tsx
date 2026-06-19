@@ -12,6 +12,11 @@ export default function Header() {
         </nav>
         <a href="#booking" className="hidden md:inline-block px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors text-sm">Записаться</a>
       </div>
+      <div className="bg-brand/5 border-t border-brand/10">
+        <div className="container mx-auto px-6 py-1.5 text-center text-xs text-brand/70 tracking-wide">
+          Сайт в процессе разработки — возможны изменения
+        </div>
+      </div>
     </header>
   );
 }
