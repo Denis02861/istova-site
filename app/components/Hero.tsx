@@ -2,7 +2,12 @@ export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-sand relative pt-20">
       <div className="container mx-auto px-6 text-center">
-        <h1 className="font-serif text-6xl md:text-8xl text-brand mb-4 tracking-wider">ИСТОВА</h1>
+        <h1 className="sr-only">Истова</h1>
+        <img
+          src="/logo/istova-wordmark.png"
+          alt="ИСТОВА"
+          className="h-20 md:h-28 w-auto mx-auto mb-4"
+        />
         <p className="font-serif italic text-xl md:text-2xl text-brand/80 mb-12 max-w-xl mx-auto leading-relaxed">
           Пространство истинного ухода<br/>в Петербурге
         </p>
