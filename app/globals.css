@@ -26,5 +26,5 @@ html, body {
 
 /* Отступ при якорном скролле — чтобы fixed Header не перекрывал заголовок секции */
 section[id] {
-  scroll-margin-top: 9rem;
+  scroll-margin-top: 7rem;
 }
