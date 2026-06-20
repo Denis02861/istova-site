@@ -142,7 +142,7 @@ export default function Programs() {
   return (
     <section id="programs" className="py-24 bg-sand-deep/30">
       <div className="container mx-auto px-6">
-        <h2 className="font-serif text-4xl md:text-5xl text-brand mb-4 text-center">7 программ ухода</h2>
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">7 программ ухода</h2>
         <p className="text-center text-brand-dark/70 mb-16 max-w-2xl mx-auto">
           Каждая программа — отдельный мир со своим темпом, ароматом и финалом. Полный перечень этапов — на карточке.
         </p>
@@ -155,10 +155,10 @@ export default function Programs() {
             >
               {/* Шапка: ИСТОВА бледно + название крупно */}
               <header className="mb-8">
-                <div className="font-serif text-2xl tracking-[0.3em] text-brand/20 mb-1">
+                <div className="font-display text-2xl tracking-[0.3em] text-brand/20 mb-1">
                   ИСТОВА
                 </div>
-                <div className="font-serif text-3xl md:text-4xl tracking-wider text-brand mb-2">
+                <div className="font-display text-3xl md:text-4xl tracking-wider text-brand mb-2">
                   {p.name}
                 </div>
                 {p.accent && (
@@ -184,7 +184,7 @@ export default function Programs() {
                   Записаться
                 </a>
                 <div className="text-right">
-                  <div className="font-serif text-3xl text-brand">{p.price}</div>
+                  <div className="font-display text-3xl text-brand">{p.price}</div>
                   <div className="text-xs text-brand-dark/60 mt-1">~ {p.dur}</div>
                 </div>
               </div>

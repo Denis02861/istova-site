@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="font-serif text-2xl text-sand mb-2 tracking-wider">ИСТОВА</div>
+            <div className="font-display text-2xl text-sand mb-2 tracking-wider">ИСТОВА</div>
             <p className="text-sm italic text-sand/60">Пространство истинного ухода</p>
           </div>
           <div>

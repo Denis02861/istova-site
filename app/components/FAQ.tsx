@@ -16,12 +16,12 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-24 bg-sand-soft">
       <div className="container mx-auto px-6 max-w-3xl">
-        <h2 className="font-serif text-4xl md:text-5xl text-brand mb-16 text-center">Частые вопросы</h2>
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center uppercase tracking-wider">Частые вопросы</h2>
         <div className="space-y-4">
           {items.map((it, i) => (
             <article key={i} className="border-b border-brand/10 pb-4">
               <button onClick={() => setOpen(open === i ? null : i)} className="w-full text-left flex justify-between items-center py-3">
-                <span className="font-serif text-lg text-brand">{it.q}</span>
+                <span className="font-display text-lg text-brand">{it.q}</span>
                 <span className="text-brand/60 text-2xl">{open === i ? "−" : "+"}</span>
               </button>
               {open === i && <p className="text-brand-dark/80 leading-relaxed pb-3">{it.a}</p>}
