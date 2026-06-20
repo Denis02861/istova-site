@@ -23,3 +23,8 @@ html, body {
   color: #2A1F1A;
   font-family: 'Inter', system-ui, sans-serif;
 }
+
+/* Отступ при якорном скролле — чтобы fixed Header не перекрывал заголовок секции */
+section[id] {
+  scroll-margin-top: 9rem;
+}
