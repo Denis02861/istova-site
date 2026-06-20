@@ -6,9 +6,17 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 const BOOKING_WEBHOOK = "https://n8nautomat.site/webhook/istova-booking";
 
+const CHANNELS = [
+  { value: "Позвонить", label: "Позвонить" },
+  { value: "WhatsApp", label: "WhatsApp" },
+  { value: "Telegram", label: "Telegram" },
+  { value: "Не важно", label: "Не важно" },
+];
+
 export default function Booking() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [channel, setChannel] = useState("");
   const [comment, setComment] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -16,9 +24,9 @@ export default function Booking() {
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (status === "sending") return;
-    if (!name.trim() || !phone.trim()) {
+    if (!name.trim() || !phone.trim() || !channel) {
       setStatus("error");
-      setErrorMsg("Заполните имя и телефон");
+      setErrorMsg("Заполните имя, телефон и способ связи");
       return;
     }
     setStatus("sending");
@@ -27,7 +35,7 @@ export default function Booking() {
       const res = await fetch(BOOKING_WEBHOOK, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone, comment }),
+        body: JSON.stringify({ name, phone, channel, comment }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) {
@@ -36,6 +44,7 @@ export default function Booking() {
       setStatus("sent");
       setName("");
       setPhone("");
+      setChannel("");
       setComment("");
     } catch (err) {
       setStatus("error");
@@ -67,7 +76,7 @@ export default function Booking() {
             <form onSubmit={onSubmit} className="space-y-4 text-left">
               <input
                 type="text"
-                placeholder="Имя"
+                placeholder="Имя *"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 disabled={sending}
@@ -77,7 +86,7 @@ export default function Booking() {
               />
               <input
                 type="tel"
-                placeholder="Телефон"
+                placeholder="Телефон *"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 disabled={sending}
@@ -85,6 +94,18 @@ export default function Booking() {
                 maxLength={30}
                 className="w-full px-4 py-3 bg-sand border border-brand/20 focus:border-brand outline-none disabled:opacity-60"
               />
+              <select
+                value={channel}
+                onChange={(e) => setChannel(e.target.value)}
+                disabled={sending}
+                required
+                className={`w-full px-4 py-3 bg-sand border border-brand/20 focus:border-brand outline-none disabled:opacity-60 ${channel ? "" : "text-brand/50"}`}
+              >
+                <option value="" disabled>Как с вами связаться *</option>
+                {CHANNELS.map((c) => (
+                  <option key={c.value} value={c.value} className="text-brand">{c.label}</option>
+                ))}
+              </select>
               <textarea
                 placeholder="Комментарий (опционально)"
                 value={comment}
