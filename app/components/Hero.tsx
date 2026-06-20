@@ -2,12 +2,6 @@ export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
       <img
-        src="/brand/decor/cloud.png"
-        alt=""
-        aria-hidden="true"
-        className="absolute top-32 left-8 w-32 md:w-48 opacity-20 pointer-events-none"
-      />
-      <img
         src="/brand/decor/spiral.png"
         alt=""
         aria-hidden="true"

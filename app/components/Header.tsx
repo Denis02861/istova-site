@@ -3,7 +3,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-sand/80 backdrop-blur-sm border-b border-brand/10">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#hero" className="flex items-center" aria-label="Истова — главная">
-          <img src="/logo/istova-icon.png" alt="Истова" className="h-10 md:h-12 w-auto" />
+          <img src="/brand/decor/cloud.png" alt="Истова" className="h-10 md:h-12 w-auto" />
         </a>
         <nav className="hidden md:flex gap-8 text-sm text-brand/80">
           <a href="#concept" className="hover:text-brand">О нас</a>
