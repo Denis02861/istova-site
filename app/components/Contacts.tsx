@@ -12,12 +12,14 @@ export default function Contacts() {
             <p className="text-brand-dark/60 text-sm mb-6">Васильевский остров · 12 минут от м. Василеостровская</p>
 
             <h3 className="font-display text-2xl text-brand mb-4 mt-8 uppercase tracking-wider">Часы работы</h3>
-            <p className="text-brand-dark/80 mb-2">Ежедневно, 10:00 — 22:00</p>
-            <p className="text-brand/40 text-xs italic mb-6">(подтвердить ближе к открытию)</p>
+            <p className="text-brand-dark/80 mb-1">Ежедневно, 10:00 — 22:00</p>
+            <p className="text-brand-dark/80 mb-6">По предварительной записи</p>
 
             <h3 className="font-display text-2xl text-brand mb-4 mt-8 uppercase tracking-wider">Как с вами связаться</h3>
             <p className="text-brand-dark/80 mb-1">Телефон: <a href="tel:+79013201050" className="hover:text-brand">+7 (901) 320-10-50</a></p>
-            <p className="text-brand-dark/80 mb-1">@istova</p>
+            <p className="text-brand-dark/80 mb-1">
+              <a href="https://t.me/Istova_spa" target="_blank" rel="noopener noreferrer" className="hover:text-brand">@Istova_spa</a>
+            </p>
           </div>
           <div className="aspect-square bg-sand-deep">
             <iframe

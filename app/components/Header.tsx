@@ -1,9 +1,9 @@
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-sand/80 backdrop-blur-sm border-b border-brand/10">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="flex justify-between items-center py-2 pr-6 pl-2 md:pl-4">
         <a href="#hero" className="flex items-center" aria-label="Истова — главная">
-          <img src="/brand/decor/cloud.png" alt="Истова" className="h-14 md:h-16 w-auto" />
+          <img src="/brand/decor/cloud.png" alt="Истова" className="h-20 md:h-24 w-auto" />
         </a>
         <nav className="hidden md:flex gap-8 text-sm text-brand/80">
           <a href="#concept" className="hover:text-brand">О нас</a>

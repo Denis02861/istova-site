@@ -25,7 +25,7 @@ const programs: Program[] = [
       "чай с лимоном и имбирём",
     ],
     dur: "1 ч 30 мин",
-    price: "от ___ ₽",
+    price: "8 500 ₽",
   },
   {
     name: "СУМЕРКИ",
@@ -44,7 +44,7 @@ const programs: Program[] = [
       "утяжелённое одеяло, тишина, гость остаётся один",
     ],
     dur: "2 ч",
-    price: "от ___ ₽",
+    price: "11 000 ₽",
   },
   {
     name: "ПОТОК",
@@ -62,7 +62,7 @@ const programs: Program[] = [
       "японский чай в финале — медитативная подача",
     ],
     dur: "1 ч 30 мин",
-    price: "от ___ ₽",
+    price: "9 000 ₽",
   },
   {
     name: "ОТЗВУК",
@@ -79,7 +79,7 @@ const programs: Program[] = [
       "чай по выбору, выход в комнате с приглушённым светом",
     ],
     dur: "2 ч",
-    price: "от ___ ₽",
+    price: "13 000 ₽",
   },
   {
     name: "ЯВЬ",
@@ -96,7 +96,7 @@ const programs: Program[] = [
       "чай по выбору в финале",
     ],
     dur: "2 ч",
-    price: "от ___ ₽",
+    price: "10 500 ₽",
   },
   {
     name: "КЕДР",
@@ -113,7 +113,7 @@ const programs: Program[] = [
       "сушка феном",
     ],
     dur: "2 ч 30 мин",
-    price: "от ___ ₽",
+    price: "12 500 ₽",
   },
   {
     name: "РОДНИК",
@@ -131,7 +131,7 @@ const programs: Program[] = [
       "тёплое одеяло на 5 минут в финале",
     ],
     dur: "1 ч 30 мин",
-    price: "от ___ ₽",
+    price: "9 500 ₽",
   },
 ];
 
@@ -155,10 +155,7 @@ export default function Programs() {
             >
               {/* Шапка: ИСТОВА бледно + название крупно */}
               <header className="mb-8">
-                <div className="font-display text-2xl tracking-[0.3em] text-brand/20 mb-1">
-                  ИСТОВА
-                </div>
-                <div className="font-display text-3xl md:text-4xl tracking-wider text-brand mb-2">
+                <div className="font-display text-3xl md:text-4xl tracking-wider text-brand mb-2 uppercase">
                   {p.name}
                 </div>
                 {p.accent && (
