@@ -200,8 +200,9 @@ export default function Programs() {
 
       <ul className="space-y-3 text-sm text-brand-dark/80 leading-relaxed flex-1 mb-6">
         {p.steps.map((step, i) => (
-          <li key={i} className="pl-4 relative before:content-['/'] before:absolute before:left-0 before:text-brand/50">
-            {step}
+          <li key={i} className="flex gap-2">
+            <span className="text-brand/50 shrink-0">/</span>
+            <span>{step}</span>
           </li>
         ))}
       </ul>

@@ -181,11 +181,9 @@ export default async function ProgramPage({
             </h2>
             <ul className="space-y-4 text-base text-brand-dark/85 leading-relaxed">
               {program.steps.map((step, i) => (
-                <li
-                  key={i}
-                  className="pl-6 relative before:content-['/'] before:absolute before:left-0 before:text-brand/50"
-                >
-                  {step}
+                <li key={i} className="flex gap-3">
+                  <span className="text-brand/50 shrink-0">/</span>
+                  <span>{step}</span>
                 </li>
               ))}
             </ul>
