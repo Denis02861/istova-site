@@ -1,3 +1,4 @@
+import Link from "next/link";
 type Program = {
   slug: string;
   name: string;
@@ -183,9 +184,12 @@ export default function Programs() {
       className="bg-sand-soft border border-brand/10 p-10 flex flex-col min-h-[640px] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:border-brand/25"
     >
       <header className="mb-8">
-        <div className="font-display text-3xl md:text-4xl tracking-wider text-brand mb-2 uppercase">
+        <Link
+          href={`/programs/${p.slug}/`}
+          className="font-display text-3xl md:text-4xl tracking-wider text-brand mb-2 uppercase block hover:opacity-80 transition-opacity"
+        >
           {p.name}
-        </div>
+        </Link>
         {p.accent && (
           <div className="text-xs uppercase tracking-widest text-brand/60">
             {p.accent}
@@ -211,12 +215,20 @@ export default function Programs() {
       )}
 
       <div className="flex justify-between items-end pt-6 border-t border-brand/10">
-        <a
-          href="#booking"
-          className="text-sm px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors"
-        >
-          Записаться
-        </a>
+        <div className="flex flex-col gap-2">
+          <a
+            href="#booking"
+            className="text-sm px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors text-center"
+          >
+            Записаться
+          </a>
+          <Link
+            href={`/programs/${p.slug}/`}
+            className="text-xs uppercase tracking-widest text-brand/60 hover:text-brand text-center"
+          >
+            Подробнее →
+          </Link>
+        </div>
         <div className="text-right">
           <div className="font-display text-3xl text-brand">{p.price}</div>
           <div className="text-xs text-brand-dark/60 mt-1">~ {p.dur}</div>
