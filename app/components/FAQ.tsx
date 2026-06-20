@@ -11,10 +11,27 @@ const items = [
   { q: "Есть ли подарочные сертификаты?", a: "Да. Бумажные и электронные, на любую сумму или конкретную программу. Срок действия 6 месяцев." },
 ];
 
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((it) => ({
+    "@type": "Question",
+    name: it.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: it.a,
+    },
+  })),
+};
+
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className="py-24 bg-sand-soft">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
+      />
       <div className="container mx-auto px-6 max-w-3xl">
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center uppercase tracking-wider">Частые вопросы</h2>
         <div className="space-y-4">
