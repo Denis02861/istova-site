@@ -1,9 +1,22 @@
 import "./globals.css";
 import Script from "next/script";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://istova.ru"),
   title: "Истова — пространство истинного ухода в Петербурге",
   description: "Спа-ритуалы и пространство красоты на Васильевском острове. ул. Беринга, 23 к. 2.",
+  alternates: {
+    canonical: "https://istova.ru/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://istova.ru/",
+    siteName: "Истова",
+    title: "Истова — пространство истинного ухода в Петербурге",
+    description: "Спа-ритуалы и пространство красоты на Васильевском острове. ул. Беринга, 23 к. 2.",
+    locale: "ru_RU",
+  },
 };
 
 const YM_ID = 109992381;
