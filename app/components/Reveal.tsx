@@ -4,15 +4,18 @@ import { useEffect, useRef, useState, ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  delay?: number;
 };
 
-export default function Reveal({ children, delay = 0 }: Props) {
+export default function Reveal({ children }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (!("IntersectionObserver" in window)) {
+      setVisible(true);
+      return;
+    }
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setVisible(true);
       return;
@@ -29,7 +32,7 @@ export default function Reveal({ children, delay = 0 }: Props) {
           }
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
     io.observe(el);
     return () => io.disconnect();
@@ -38,8 +41,7 @@ export default function Reveal({ children, delay = 0 }: Props) {
   return (
     <div
       ref={ref}
-      style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
-      className={`transition-all duration-700 ease-out will-change-[opacity,transform] ${
+      className={`transition-all duration-700 ease-out will-change-transform ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
     >
