@@ -1,6 +1,6 @@
 export default function Contacts() {
   const address = "Санкт-Петербург, ул. Беринга, 23 к. 2";
-  const mapSrc = `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(address)}&z=16`;
+  const mapSrc = "https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=63939829435";
   return (
     <section id="contacts" className="py-24 bg-sand">
       <div className="container mx-auto px-6 max-w-5xl">
