@@ -1,14 +1,4 @@
-import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin", "cyrillic"], weight: ["400", "500", "600"],
-  variable: "--font-cormorant", display: "swap",
-});
-const inter = Inter({
-  subsets: ["latin", "cyrillic"], weight: ["300", "400", "500"],
-  variable: "--font-inter", display: "swap",
-});
 
 export const metadata = {
   title: "Истова — пространство истинного ухода в Петербурге",
@@ -17,7 +7,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="ru">
       <body className="font-sans">{children}</body>
     </html>
   );

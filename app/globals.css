@@ -2,4 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body { background-color: #F4EFE8; color: #2A1F1A; }
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Variable.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UNCAGE';
+  src: url('/fonts/UNCAGE-Variable.ttf') format('truetype-variations');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  background-color: #F4F2EF;
+  color: #2A1F1A;
+  font-family: 'Inter', system-ui, sans-serif;
+}

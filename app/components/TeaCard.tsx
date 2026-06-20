@@ -35,16 +35,29 @@ const teas = [
 
 export default function TeaCard() {
   return (
-    <section id="tea" className="py-24 bg-sand-soft">
-      <div className="container mx-auto px-6">
-        <h2 className="font-serif text-4xl md:text-5xl text-brand mb-4 text-center">Чайная карта</h2>
-        <p className="text-center text-brand-dark/70 mb-16 max-w-2xl mx-auto">
-          Чай — часть ритуала: он сопровождает встречу, паузу между этапами и завершение программы. Восемь сортов подобраны под разные состояния.
+    <section id="tea" className="bg-sand">
+      <div className="bg-moss py-8">
+        <h2 className="font-display text-3xl md:text-4xl text-sand text-center tracking-[0.2em] uppercase">
+          Чайная карта
+        </h2>
+      </div>
+
+      <div className="container mx-auto px-6 py-16 relative">
+        <img
+          src="/brand/decor/seaweed.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute right-0 top-12 w-40 md:w-56 opacity-20 pointer-events-none"
+        />
+
+        <p className="text-center text-brand-dark/70 mb-12 max-w-2xl mx-auto">
+          Чай — часть ритуала: он сопровождает встречу, паузу между этапами и завершение программы. Восемь сортов под разные состояния.
         </p>
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
+
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto relative z-10">
           {teas.map((t) => (
             <article key={t.name} className="border-b border-brand/15 pb-6">
-              <h3 className="font-serif text-xl text-brand mb-2">{t.name}</h3>
+              <h3 className="font-display text-xl text-brand mb-2 uppercase tracking-wider">{t.name}</h3>
               <p className="text-sm text-brand-dark/70 leading-relaxed">{t.desc}</p>
             </article>
           ))}

@@ -8,14 +8,20 @@ const steps = [
 
 export default function Ritual() {
   return (
-    <section id="ritual" className="py-24 bg-sand">
-      <div className="container mx-auto px-6">
-        <h2 className="font-serif text-4xl md:text-5xl text-brand mb-16 text-center">Как проходит ваш визит</h2>
+    <section id="ritual" className="py-24 bg-sand relative overflow-hidden">
+      <img
+        src="/brand/decor/spiral.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute top-12 left-8 w-32 md:w-44 opacity-15 pointer-events-none"
+      />
+      <div className="container mx-auto px-6 relative z-10">
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center uppercase tracking-wider">Как проходит ваш визит</h2>
         <div className="grid md:grid-cols-5 gap-8 max-w-5xl mx-auto">
           {steps.map(s => (
             <div key={s.n} className="text-center">
-              <div className="font-serif text-3xl text-brand/40 mb-3">{s.n}</div>
-              <h3 className="font-serif text-xl text-brand mb-3">{s.t}</h3>
+              <div className="font-display text-3xl text-moss/60 mb-3">{s.n}</div>
+              <h3 className="font-display text-xl text-brand mb-3 uppercase tracking-wider">{s.t}</h3>
               <p className="text-sm text-brand-dark/70 leading-relaxed">{s.d}</p>
             </div>
           ))}
