@@ -39,16 +39,6 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: [`${SITE_URL}/og-image.jpg`],
   },
-  referrer: "strict-origin-when-cross-origin",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  other: {
-    "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
-    "color-scheme": "light",
-  },
 };
 
 const YM_ID = 109992381;
