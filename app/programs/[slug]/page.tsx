@@ -176,9 +176,9 @@ export default async function ProgramPage({
 
           {/* Программа */}
           <section className="mb-12">
-            <div className="text-xs uppercase tracking-widest text-brand/60 mb-6">
+            <h2 className="text-xs uppercase tracking-widest text-brand/60 mb-6 font-normal">
               Этапы ритуала
-            </div>
+            </h2>
             <ul className="space-y-4 text-base text-brand-dark/85 leading-relaxed">
               {program.steps.map((step, i) => (
                 <li
@@ -191,9 +191,9 @@ export default async function ProgramPage({
             </ul>
             {program.after && (
               <div className="mt-8 pt-6 border-t border-brand/10 text-sm text-brand-dark/85">
-                <div className="text-xs uppercase tracking-widest text-brand/60 mb-2">
+                <h2 className="text-xs uppercase tracking-widest text-brand/60 mb-2 font-normal">
                   После
-                </div>
+                </h2>
                 {program.after}
               </div>
             )}
@@ -202,15 +202,15 @@ export default async function ProgramPage({
           {/* Цена и запись */}
           <section className="mb-20 flex flex-wrap items-end justify-between gap-8 pt-8 border-t border-brand/10">
             <div>
-              <div className="text-xs uppercase tracking-widest text-brand/60 mb-1">
+              <h3 className="text-xs uppercase tracking-widest text-brand/60 mb-1 font-normal">
                 Длительность
-              </div>
+              </h3>
               <div className="text-2xl text-brand-dark">~ {program.dur}</div>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-brand/60 mb-1">
+              <h3 className="text-xs uppercase tracking-widest text-brand/60 mb-1 font-normal">
                 Стоимость
-              </div>
+              </h3>
               <div className="font-display text-4xl text-brand">{program.price}</div>
             </div>
             <Link
@@ -223,9 +223,9 @@ export default async function ProgramPage({
 
           {/* Другие программы */}
           <section className="border-t border-brand/10 pt-12">
-            <div className="text-xs uppercase tracking-widest text-brand/60 mb-8 text-center">
+            <h2 className="text-xs uppercase tracking-widest text-brand/60 mb-8 text-center font-normal">
               Другие ритуалы Истовы
-            </div>
+            </h2>
             <div className="grid sm:grid-cols-2 gap-6">
               {related.map((p) => (
                 <Link
