@@ -10,6 +10,7 @@ import FAQ from "./components/FAQ";
 import Contacts from "./components/Contacts";
 import Booking from "./components/Booking";
 import Footer from "./components/Footer";
+import Reveal from "./components/Reveal";
 
 export default function Page() {
   return (
@@ -17,15 +18,15 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
-        <Concept />
-        <Ritual />
-        <Programs />
-        <TeaCard />
-        <Space />
-        <Certificates />
-        <FAQ />
-        <Contacts />
-        <Booking />
+        <Reveal><Concept /></Reveal>
+        <Reveal><Ritual /></Reveal>
+        <Reveal><Programs /></Reveal>
+        <Reveal><TeaCard /></Reveal>
+        <Reveal><Space /></Reveal>
+        <Reveal><Certificates /></Reveal>
+        <Reveal><FAQ /></Reveal>
+        <Reveal><Contacts /></Reveal>
+        <Reveal><Booking /></Reveal>
       </main>
       <Footer />
     </>

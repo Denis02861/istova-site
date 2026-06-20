@@ -151,7 +151,7 @@ export default function Programs() {
           {programs.map((p) => (
             <article
               key={p.name}
-              className="bg-sand-soft border border-brand/10 p-10 flex flex-col min-h-[640px]"
+              className="bg-sand-soft border border-brand/10 p-10 flex flex-col min-h-[640px] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:border-brand/25"
             >
               {/* Шапка: ИСТОВА бледно + название крупно */}
               <header className="mb-8">

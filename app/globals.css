@@ -23,3 +23,23 @@ html, body {
   color: #2A1F1A;
   font-family: 'Inter', system-ui, sans-serif;
 }
+
+/* Плавный скролл при клике по якорям меню */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Мягкое «дыхание» лого Истовы в Hero — ±3px, 6с */
+@keyframes breath {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+.animate-breath {
+  animation: breath 6s ease-in-out infinite;
+}
+
+/* Уважение к настройкам пользователя */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-breath { animation: none; }
+}

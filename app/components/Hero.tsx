@@ -12,7 +12,7 @@ export default function Hero() {
         <img
           src="/logo/istova-wordmark.png"
           alt="ИСТŌВА"
-          className="h-20 md:h-28 w-auto mx-auto mb-6"
+          className="h-20 md:h-28 w-auto mx-auto mb-6 animate-breath"
         />
         <p className="font-display italic text-xl md:text-2xl text-brand/80 mb-12 max-w-xl mx-auto leading-relaxed">
           Пространство истинного ухода<br/>в Петербурге
