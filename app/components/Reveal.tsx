@@ -22,12 +22,21 @@ export default function Reveal({ children }: Props) {
     }
     const el = ref.current;
     if (!el) return;
+
+    const reveal = () => {
+      // двойной rAF: даёт браузеру кадр на применение opacity-0,
+      // потом стартует transition на следующем кадре
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setVisible(true));
+      });
+    };
+
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            setVisible(true);
             io.disconnect();
+            reveal();
             break;
           }
         }
