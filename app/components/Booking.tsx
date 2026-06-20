@@ -4,6 +4,8 @@ import { useState, FormEvent } from "react";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+const BOOKING_WEBHOOK = "https://n8nautomat.site/webhook/istova-booking";
+
 export default function Booking() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -22,7 +24,7 @@ export default function Booking() {
     setStatus("sending");
     setErrorMsg("");
     try {
-      const res = await fetch("/api/booking", {
+      const res = await fetch(BOOKING_WEBHOOK, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, phone, comment }),
