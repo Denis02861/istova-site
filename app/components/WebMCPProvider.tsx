@@ -36,7 +36,14 @@ export default function WebMCPProvider() {
     if (typeof window === "undefined") return;
     if (!navigator.modelContext || typeof navigator.modelContext.provideContext !== "function") return;
 
-    navigator.modelContext.provideContext({
+    type IdleRequest = (cb: () => void) => number;
+    const idle: IdleRequest =
+      (window as Window & { requestIdleCallback?: IdleRequest }).requestIdleCallback ??
+      ((cb) => window.setTimeout(cb, 1));
+
+    const id = idle(() => {
+      if (!navigator.modelContext) return;
+      navigator.modelContext.provideContext({
       tools: [
         {
           name: "view_programs",
@@ -108,6 +115,13 @@ export default function WebMCPProvider() {
         },
       ],
     });
+    });
+
+    return () => {
+      const cancel = (window as Window & { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback;
+      if (cancel) cancel(id);
+      else window.clearTimeout(id);
+    };
   }, []);
 
   return null;

@@ -14,7 +14,7 @@ export default function Ritual() {
         alt=""
         aria-hidden="true"
         className="absolute top-12 left-8 w-32 md:w-44 opacity-15 pointer-events-none"
-       loading="lazy" decoding="async" />
+       loading="lazy" decoding="async"  width={512} height={512} />
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center uppercase tracking-wider">Как проходит ваш визит</h2>
         <div className="grid md:grid-cols-5 gap-8 max-w-5xl mx-auto">

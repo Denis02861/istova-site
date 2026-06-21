@@ -6,14 +6,14 @@ export default function Hero() {
         alt=""
         aria-hidden="true"
         className="absolute bottom-24 right-8 w-32 md:w-48 opacity-20 pointer-events-none"
-      />
+       width={512} height={512} />
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="sr-only">Истова</h1>
         <img
           src="/logo/istova-wordmark.webp"
           alt="ИСТŌВА"
           className="h-20 md:h-28 w-auto mx-auto mb-6 animate-breath"
-        />
+         width={728} height={218} />
         <p className="font-display italic text-xl md:text-2xl text-brand/80 mb-12 max-w-xl mx-auto leading-relaxed">
           Пространство истинного ухода<br/>в Петербурге
         </p>
