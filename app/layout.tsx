@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     images: [
       {
-        url: `${SITE_URL}/og-image.jpg`,
+        url: `${SITE_URL}/og-image.webp`,
         width: 1200,
         height: 630,
         alt: "Истова",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: [`${SITE_URL}/og-image.jpg`],
+    images: [`${SITE_URL}/og-image.webp`],
   },
 };
 
@@ -50,7 +50,7 @@ const ORG_JSONLD = {
   name: "Истова",
   url: SITE_URL,
   logo: `${SITE_URL}/logo/istova-icon.png`,
-  image: `${SITE_URL}/og-image.jpg`,
+  image: `${SITE_URL}/og-image.webp`,
   description: DESCRIPTION,
   address: {
     "@type": "PostalAddress",

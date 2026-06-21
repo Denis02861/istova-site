@@ -10,11 +10,11 @@ export default function Ritual() {
   return (
     <section id="ritual" className="py-24 bg-sand relative overflow-hidden">
       <img
-        src="/brand/decor/spiral.png"
+        src="/brand/decor/spiral.webp"
         alt=""
         aria-hidden="true"
         className="absolute top-12 left-8 w-32 md:w-44 opacity-15 pointer-events-none"
-      />
+       loading="lazy" decoding="async" />
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center uppercase tracking-wider">Как проходит ваш визит</h2>
         <div className="grid md:grid-cols-5 gap-8 max-w-5xl mx-auto">

@@ -44,11 +44,11 @@ export default function TeaCard() {
 
       <div className="container mx-auto px-6 py-16 relative">
         <img
-          src="/brand/decor/seaweed.png"
+          src="/brand/decor/seaweed.webp"
           alt=""
           aria-hidden="true"
           className="absolute right-0 top-12 w-40 md:w-56 opacity-20 pointer-events-none"
-        />
+         loading="lazy" decoding="async" />
 
         <p className="text-center text-brand-dark/70 mb-12 max-w-2xl mx-auto">
           Чай — часть ритуала: он сопровождает встречу, паузу между этапами и завершение программы. Восемь сортов под разные состояния.

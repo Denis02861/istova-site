@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
       <img
-        src="/brand/decor/spiral.png"
+        src="/brand/decor/spiral.webp"
         alt=""
         aria-hidden="true"
         className="absolute bottom-24 right-8 w-32 md:w-48 opacity-20 pointer-events-none"
@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="sr-only">Истова</h1>
         <img
-          src="/logo/istova-wordmark.png"
+          src="/logo/istova-wordmark.webp"
           alt="ИСТŌВА"
           className="h-20 md:h-28 w-auto mx-auto mb-6 animate-breath"
         />
