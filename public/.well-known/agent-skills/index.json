@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agentskills.io/schemas/index/v0.2.0.json",
+  "version": "0.2.0",
+  "site": "https://istova.ru",
+  "skills": [
+    {
+      "name": "view-programs",
+      "type": "browse",
+      "description": "Browse 9 active spa programs (4 paired base rituals + 5 author programs) with durations and prices.",
+      "url": "https://istova.ru/#programs",
+      "sha256": "714e0455fc51d2c64cb80475948514c0b6f7304fc72188aaa3aba26a1d1ad043"
+    },
+    {
+      "name": "view-program-details",
+      "type": "browse",
+      "description": "View detailed information about a specific spa program. URL template: /programs/{slug}/ where slug is one of: zarya-telo, zarya-volosy, sumerki-telo, sumerki-volosy, rodnik, kedr, lada, yav, otzvuk.",
+      "url": "https://istova.ru/programs/kedr/",
+      "sha256": "c31657df128776790714e792269de6e09d997d62eee0b0813b8a4bc6e051ec53"
+    },
+    {
+      "name": "book-appointment",
+      "type": "action",
+      "description": "Open the booking form to schedule a spa appointment. Provides date, time selection and contact submission.",
+      "url": "https://istova.ru/#booking",
+      "sha256": "d17ed4c9ba8c8dfd5ccb33caefcff2d6dea74c2d1da72c7bc5b75211fa0abbc6"
+    },
+    {
+      "name": "view-contacts",
+      "type": "browse",
+      "description": "View salon contacts: address (St. Petersburg, Beringa St. 23 bld. 2, Vasilyevsky Island) and Telegram (@Istova_spa).",
+      "url": "https://istova.ru/#contacts",
+      "sha256": "e1b61112f2b86bf7b8b684bfe3752c7540d89c66689aea6313992943f2628e1b"
+    },
+    {
+      "name": "knowledge-summary",
+      "type": "read",
+      "description": "Read the LLM-friendly summary of the entire site in /llms.txt format (contacts, all programs with prices, concept).",
+      "url": "https://istova.ru/llms.txt",
+      "sha256": "ee707d40a43cdb89321bc447584d1d78e0c6b94272f4491e721c7489637b10f1"
+    }
+  ]
+}

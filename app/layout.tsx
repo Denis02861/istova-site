@@ -1,5 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
+import WebMCPProvider from "./components/WebMCPProvider";
 import type { Metadata } from "next";
 
 const SITE_URL = "https://istova.ru";
@@ -62,8 +63,14 @@ const ORG_JSONLD = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="agent-skills" href="/.well-known/agent-skills/index.json" type="application/json" />
+        <link rel="describedby" href="/llms.txt" type="text/markdown" />
+        <link rel="alternate" href="/sitemap.xml" type="application/xml" title="Sitemap" />
+      </head>
       <body className="font-sans">
         {children}
+        <WebMCPProvider />
         <Script id="org-jsonld" type="application/ld+json" strategy="beforeInteractive">
           {JSON.stringify(ORG_JSONLD)}
         </Script>

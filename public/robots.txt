@@ -40,5 +40,9 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+
+# Content Signals (contentsignals.org draft) — премиум-салон хочет максимальной видимости в AI
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 Sitemap: https://istova.ru/sitemap.xml
 Host: https://istova.ru
