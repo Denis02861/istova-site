@@ -14,6 +14,35 @@ export default function Concept() {
           <p>Здесь работают по программам, проверенным временем. Натуральные масла, ритмика тёплого и прохладного, тишина внутри, в которой можно услышать собственное дыхание.</p>
           <p>Мы строим место, в которое хочется возвращаться — не за процедурой, а за состоянием.</p>
         </div>
+
+        <div className="mt-20 pt-16 border-t border-brand/15">
+          <div className="text-xs uppercase tracking-widest text-brand/60 mb-8 text-center">
+            Тихая идеальность
+          </div>
+          <div className="grid md:grid-cols-3 gap-10 md:gap-12 text-center mb-16">
+            <div>
+              <h3 className="font-display text-2xl text-brand mb-4 uppercase tracking-wider">Принятие</h3>
+              <p className="text-base text-brand-dark/80 leading-relaxed">
+                Место, где вас не оценивают, а принимают такой, какая вы есть.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-2xl text-brand mb-4 uppercase tracking-wider">Искренность</h3>
+              <p className="text-base text-brand-dark/80 leading-relaxed">
+                Без вылизанного глянца. Настоящие люди, эмоции и путь к себе.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-2xl text-brand mb-4 uppercase tracking-wider">Целостность</h3>
+              <p className="text-base text-brand-dark/80 leading-relaxed">
+                Красота как состояние наполненности, которое уносишь с собой.
+              </p>
+            </div>
+          </div>
+          <p className="text-base md:text-lg text-brand-dark/85 leading-relaxed text-center italic max-w-2xl mx-auto">
+            Истова — возможность отпустить роль «всеконтролирующей и ответственной», чтобы вернуться к себе и почувствовать свою ценность в атмосфере принятия.
+          </p>
+        </div>
       </div>
     </section>
   );

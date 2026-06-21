@@ -14,8 +14,11 @@ export default function Hero() {
           alt="ИСТŌВА"
           className="h-20 md:h-28 w-auto mx-auto mb-6 animate-breath"
          width={728} height={218} />
-        <p className="font-display italic text-xl md:text-2xl text-brand/80 mb-12 max-w-xl mx-auto leading-relaxed">
-          Пространство истинного ухода<br/>в Петербурге
+        <p className="font-display italic text-2xl md:text-4xl text-brand mb-6 max-w-2xl mx-auto leading-snug">
+          Не нужен особый день,<br/>чтобы почувствовать себя особенной
+        </p>
+        <p className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12">
+          Пространство истинного ухода · Петербург
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a href="#booking" className="px-8 py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Записаться</a>
