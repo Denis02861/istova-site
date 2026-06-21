@@ -1,36 +1,8 @@
-const teas = [
-  {
-    name: "Ассам с чабрецом",
-    desc: "Чёрный чай с глубоким вкусом и душистыми нотами чабреца. Согревает и возвращает в тонус.",
-  },
-  {
-    name: "Таёжный сбор",
-    desc: "Ароматный чёрный чай с пихтой, лесными ягодами и северными травами. Погружает в спокойствие таёжного леса.",
-  },
-  {
-    name: "Молочный улун",
-    desc: "Мягкий китайский улун со сливочным ароматом и бархатным послевкусием. Окутывает теплом и мягко успокаивает.",
-  },
-  {
-    name: "Сенча с лемонграссом и имбирём",
-    desc: "Купаж традиционного японского зелёного чая с бодрящим цитрусом и пряным имбирём. Мягко тонизирует и настраивает на продолжение дня.",
-  },
-  {
-    name: "Фруктовый сбор",
-    desc: "Насыщенный красный чай с приятной кислинкой и сочными нотами спелых фруктов. Освежает и поднимает настроение.",
-  },
-  {
-    name: "Гречишный чай с яблоком и корицей",
-    desc: "Злаковый чай с ароматом печёного яблока, корицы и тёплыми ореховыми нотами.",
-  },
-  {
-    name: "Луговой травяной сбор",
-    desc: "Душистые травы с природным послевкусием — выдох после насыщенного дня.",
-  },
-  {
-    name: "Ромашка и мелисса",
-    desc: "Цветочные ноты ромашки и лёгкая свежесть мелиссы. Мягко расслабляет и готовит ко сну.",
-  },
+const categories = [
+  "Чёрные с глубоким вкусом",
+  "Зелёные тонизирующие",
+  "Травяные сборы",
+  "Цветочные и расслабляющие",
 ];
 
 export default function TeaCard() {
@@ -47,20 +19,30 @@ export default function TeaCard() {
           src="/brand/decor/seaweed.webp"
           alt=""
           aria-hidden="true"
-          className="absolute right-0 top-12 w-40 md:w-56 opacity-20 pointer-events-none"
-         loading="lazy" decoding="async"  width={512} height={512} />
+          className="hidden md:block absolute right-0 top-12 w-40 md:w-56 opacity-20 pointer-events-none"
+          loading="lazy"
+          decoding="async"
+          width={512}
+          height={512}
+        />
 
-        <p className="text-center text-brand-dark/70 mb-12 max-w-2xl mx-auto">
-          Чай — часть ритуала: он сопровождает встречу, паузу между этапами и завершение программы. Восемь сортов под разные состояния.
-        </p>
+        <div className="max-w-2xl mx-auto text-center relative z-10">
+          <p className="text-base md:text-lg text-brand-dark/85 leading-relaxed mb-10">
+            Чай — часть ритуала. Сопровождает встречу и завершает программу в тишине лаунж-зоны.
+          </p>
 
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto relative z-10">
-          {teas.map((t) => (
-            <article key={t.name} className="border-b border-brand/15 pb-6">
-              <h3 className="font-display text-xl text-brand mb-2 uppercase tracking-wider">{t.name}</h3>
-              <p className="text-sm text-brand-dark/70 leading-relaxed">{t.desc}</p>
-            </article>
-          ))}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4 mb-10 text-sm md:text-base text-brand-dark/75">
+            {categories.map((c) => (
+              <div key={c} className="text-left md:text-center">
+                <span className="text-brand/50 mr-2">·</span>
+                {c}
+              </div>
+            ))}
+          </div>
+
+          <p className="text-sm md:text-base text-brand-dark/70 italic">
+            Сорт подбираем под ваше состояние и время суток. Конкретику расскажем при встрече.
+          </p>
         </div>
       </div>
     </section>

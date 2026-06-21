@@ -13,7 +13,7 @@ export default function Ritual() {
         src="/brand/decor/spiral.webp"
         alt=""
         aria-hidden="true"
-        className="absolute top-12 left-8 w-32 md:w-44 opacity-15 pointer-events-none"
+        className="hidden md:block absolute top-12 left-8 w-32 md:w-44 opacity-15 pointer-events-none"
        loading="lazy" decoding="async"  width={512} height={512} />
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center uppercase tracking-wider">Как проходит ваш визит</h2>
