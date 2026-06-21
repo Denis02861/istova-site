@@ -5,7 +5,7 @@ export default function Hero() {
         src="/brand/decor/spiral.webp"
         alt=""
         aria-hidden="true"
-        className="hidden md:block absolute bottom-24 right-8 w-32 md:w-48 opacity-20 pointer-events-none"
+        className="absolute bottom-8 right-4 md:bottom-24 md:right-8 w-16 md:w-48 opacity-10 md:opacity-20 pointer-events-none"
        width={512} height={512} />
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="sr-only">Истова</h1>

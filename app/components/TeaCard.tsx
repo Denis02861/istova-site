@@ -19,7 +19,7 @@ export default function TeaCard() {
           src="/brand/decor/seaweed.webp"
           alt=""
           aria-hidden="true"
-          className="hidden md:block absolute right-0 top-12 w-40 md:w-56 opacity-20 pointer-events-none"
+          className="absolute right-2 top-4 md:right-0 md:top-12 w-16 md:w-56 opacity-12 md:opacity-20 pointer-events-none"
           loading="lazy"
           decoding="async"
           width={512}
