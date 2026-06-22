@@ -4,6 +4,7 @@ import Link from "next/link";
 import { programs } from "../../components/Programs";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import ProgramTracker from "../../components/ProgramTracker";
 
 const SITE_URL = "https://istova.ru";
 
@@ -144,6 +145,7 @@ export default async function ProgramPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }}
       />
+      <ProgramTracker slug={slug} />
       <Header />
       <main className="bg-sand py-24">
         <div className="container mx-auto px-6 max-w-4xl">

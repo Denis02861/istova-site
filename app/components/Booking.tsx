@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
+import { track } from "../lib/track";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -21,16 +22,39 @@ export default function Booking() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const viewedRef = useRef(false);
+
+  useEffect(() => {
+    if (!sectionRef.current || viewedRef.current) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting && !viewedRef.current) {
+            viewedRef.current = true;
+            track("BOOKING_FORM_VIEW");
+            obs.disconnect();
+          }
+        }
+      },
+      { threshold: 0.3 }
+    );
+    obs.observe(sectionRef.current);
+    return () => obs.disconnect();
+  }, []);
+
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (status === "sending") return;
     if (!name.trim() || !phone.trim() || !channel) {
       setStatus("error");
       setErrorMsg("Заполните имя, телефон и способ связи");
+      track("BOOKING_VALIDATION_ERROR");
       return;
     }
     setStatus("sending");
     setErrorMsg("");
+    track("BOOKING_SUBMIT", { channel });
     try {
       const res = await fetch(BOOKING_WEBHOOK, {
         method: "POST",
@@ -42,6 +66,7 @@ export default function Booking() {
         throw new Error(data.error || "Ошибка отправки");
       }
       setStatus("sent");
+      track("BOOKING_SUCCESS", { channel });
       setName("");
       setPhone("");
       setChannel("");
@@ -49,13 +74,14 @@ export default function Booking() {
     } catch (err) {
       setStatus("error");
       setErrorMsg(err instanceof Error ? err.message : "Ошибка сети");
+      track("BOOKING_ERROR");
     }
   }
 
   const sending = status === "sending";
 
   return (
-    <section id="booking" className="py-24 bg-brand text-sand">
+    <section ref={sectionRef} id="booking" className="py-24 bg-brand text-sand">
       <div className="container mx-auto px-6 max-w-3xl text-center">
         <h2 className="font-display text-4xl md:text-5xl mb-6 uppercase tracking-wider">Записаться на ритуал</h2>
         <p className="mb-12 text-sand/80 max-w-xl mx-auto leading-relaxed">Оставьте заявку — администратор свяжется с вами в течение часа и подтвердит запись.</p>
@@ -133,7 +159,13 @@ export default function Booking() {
           <div className="mt-8 pt-6 border-t border-brand/15 text-left">
             <p className="text-sm text-brand/70 mb-1">Или напишите нам напрямую</p>
             <p className="text-base text-brand">
-              <a href="https://t.me/Istova_spa" target="_blank" rel="noopener noreferrer" className="hover:underline">@Istova_spa</a>
+              <a
+                href="https://t.me/Istova_spa"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track("TELEGRAM_CLICK", { from: "booking" })}
+                className="hover:underline"
+              >@Istova_spa</a>
             </p>
           </div>
         </div>

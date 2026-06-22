@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { track } from "../lib/track";
 
 const NAV = [
   { href: "#concept", label: "О нас" },
@@ -31,7 +32,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <a href="#booking" className="hidden md:inline-block px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors text-sm">Записаться</a>
+        <a
+          href="#booking"
+          onClick={() => track("BOOKING_CLICK", { from: "header_desktop" })}
+          className="hidden md:inline-block px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors text-sm"
+        >
+          Записаться
+        </a>
 
         {/* Бургер — только мобила */}
         <button
@@ -72,7 +79,10 @@ export default function Header() {
           ))}
           <a
             href="#booking"
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              setOpen(false);
+              track("BOOKING_CLICK", { from: "header_mobile" });
+            }}
             className="mt-4 py-3 text-center bg-brand text-sand text-base uppercase tracking-wider"
           >
             Записаться
