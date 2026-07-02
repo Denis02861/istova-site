@@ -1,3 +1,5 @@
+"use client";
+
 const steps = [
   { n: "01", t: "Встреча", d: "Администратор принимает вас в холле, помогает раздеться и проводит в зону отдыха." },
   { n: "02", t: "Арома-выбор", d: "На ресепшене подбираете аромат, который будет сопровождать весь ритуал." },
@@ -6,15 +8,18 @@ const steps = [
   { n: "05", t: "Возвращение", d: "Плед, приглушённый свет, время. Возвращаемся в мир медленно." },
 ];
 
+import Parallax from "./Parallax";
+
 export default function Ritual() {
   return (
     <section id="ritual" className="py-24 bg-sand relative overflow-hidden">
-      <img
-        src="/brand/decor/spiral.webp"
-        alt=""
-        aria-hidden="true"
-        className="absolute bottom-6 left-4 md:top-12 md:left-8 md:bottom-auto w-14 md:w-44 opacity-10 md:opacity-15 pointer-events-none"
-       loading="lazy" decoding="async"  width={512} height={512} />
+      <Parallax speed={0.32} className="absolute bottom-6 left-4 md:top-12 md:left-8 md:bottom-auto w-14 md:w-44 opacity-10 md:opacity-15 pointer-events-none">
+        <img
+          src="/brand/decor/spiral.webp"
+          alt=""
+          aria-hidden="true"
+          loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
+      </Parallax>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Пять шагов</div>
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">

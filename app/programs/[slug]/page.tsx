@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { programs } from "../../components/Programs";
+import { programs } from "../../lib/programs-data";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ProgramTracker from "../../components/ProgramTracker";
@@ -198,6 +198,22 @@ export default async function ProgramPage({
               </div>
             )}
           </section>
+
+          {program.cosmetics && program.cosmetics.length > 0 && (
+            <section className="mb-12 p-8 bg-sand-soft border border-brand/10">
+              <h2 className="text-xs uppercase tracking-widest text-brand/60 mb-6 font-normal">
+                Косметика и материалы
+              </h2>
+              <ul className="space-y-3 text-base text-brand-dark/85 leading-relaxed">
+                {program.cosmetics.map((c, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="text-brand/50 shrink-0">·</span>
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {/* Цена и запись */}
           <section className="mb-20 flex flex-wrap items-end justify-between gap-8 pt-8 border-t border-brand/10">

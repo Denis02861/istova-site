@@ -1,12 +1,17 @@
+"use client";
+
+import Parallax from "./Parallax";
+
 export default function Concept() {
   return (
     <section id="concept" className="py-24 bg-sand-soft relative overflow-hidden">
-      <img
-        src="/brand/decor/bird.webp"
-        alt=""
-        aria-hidden="true"
-        className="absolute top-4 right-4 md:top-12 md:right-8 w-14 md:w-44 opacity-15 md:opacity-20 pointer-events-none"
-       loading="lazy" decoding="async"  width={512} height={512} />
+      <Parallax speed={0.4} className="absolute top-4 right-4 md:top-12 md:right-8 w-14 md:w-44 opacity-15 md:opacity-20 pointer-events-none">
+        <img
+          src="/brand/decor/bird.webp"
+          alt=""
+          aria-hidden="true"
+          loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
+      </Parallax>
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center uppercase tracking-wider">Истова — это про подлинное</h2>
         <div className="space-y-6 text-lg leading-relaxed text-brand-dark/90">

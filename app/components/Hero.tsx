@@ -1,6 +1,8 @@
 "use client";
 
 import { track } from "../lib/track";
+import Parallax from "./Parallax";
+import MagneticButton from "./MagneticButton";
 
 const STATS = [
   { v: "256", u: "м²", l: "пространства" },
@@ -11,11 +13,13 @@ const STATS = [
 export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
-      <img
-        src="/brand/decor/spiral.webp"
-        alt=""
-        aria-hidden="true"
-        loading="lazy" decoding="async" className="absolute bottom-8 right-4 md:bottom-24 md:right-8 w-16 md:w-48 opacity-10 md:opacity-20 pointer-events-none" width={512} height={512} />
+      <Parallax speed={0.35} className="absolute bottom-8 right-4 md:bottom-24 md:right-8 w-16 md:w-48 opacity-10 md:opacity-20 pointer-events-none">
+        <img
+          src="/brand/decor/spiral.webp"
+          alt=""
+          aria-hidden="true"
+          loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
+      </Parallax>
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="sr-only">Истова</h1>
         <img
@@ -29,8 +33,8 @@ export default function Hero() {
           Пространство истинного ухода · Петербург
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-          <a href="#booking" onClick={() => track("BOOKING_CLICK", { from: "hero" })} className="px-8 py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Записаться</a>
-          <a href="#concept" className="px-8 py-3 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors">О пространстве</a>
+          <MagneticButton href="#booking" onClick={() => track("BOOKING_CLICK", { from: "hero" })} className="px-8 py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Записаться</MagneticButton>
+          <MagneticButton href="#concept" strength={0.25} className="px-8 py-3 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors">О пространстве</MagneticButton>
         </div>
 
         <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto mb-12 pt-8 border-t border-brand/10">

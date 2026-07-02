@@ -17,6 +17,7 @@ import Quiz from "./components/Quiz";
 import Prep from "./components/Prep";
 import StickyMobileBar from "./components/StickyMobileBar";
 import ScrollProgress from "./components/ScrollProgress";
+import SmoothScroll from "./components/SmoothScroll";
 
 export default function Page() {
   return (
@@ -24,23 +25,24 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
-        <Reveal><Concept /></Reveal>
-        <Reveal><Ritual /></Reveal>
-        <Reveal><Quiz /></Reveal>
-        <Reveal><Programs /></Reveal>
-        <Reveal><TeaCard /></Reveal>
-        <Reveal><Space /></Reveal>
-        <Reveal><Prep /></Reveal>
-        <Reveal><Founder /></Reveal>
-        <Reveal><Certificates /></Reveal>
-        <Reveal><FAQ /></Reveal>
-        <Reveal><Contacts /></Reveal>
-        <Reveal><Booking /></Reveal>
+        <Concept />
+        <Ritual />
+        <Reveal variant="up"><Quiz /></Reveal>
+        <Reveal variant="up"><Programs /></Reveal>
+        <Reveal variant="left"><TeaCard /></Reveal>
+        <Reveal variant="scale"><Space /></Reveal>
+        <Reveal variant="right"><Prep /></Reveal>
+        <Reveal variant="fade"><Founder /></Reveal>
+        <Reveal variant="up"><Certificates /></Reveal>
+        <Reveal variant="up"><FAQ /></Reveal>
+        <Reveal variant="left"><Contacts /></Reveal>
+        <Reveal variant="scale"><Booking /></Reveal>
       </main>
       <Footer />
       <FloatingCTA />
       <StickyMobileBar />
       <ScrollProgress />
+      <SmoothScroll />
     </>
   );
 }

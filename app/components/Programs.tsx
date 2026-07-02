@@ -1,293 +1,217 @@
+"use client";
+
 import Link from "next/link";
-type Program = {
-  slug: string;
-  name: string;
-  category: "base" | "special";
-  accent?: string;
-  steps: string[];
-  after?: string;
-  note?: string;
-  dur: string;
-  price: string;
-};
-
-const programs: Program[] = [
-  // ─── БАЗОВЫЕ ПАРНЫЕ ───
-  {
-    slug: "zarya-telo",
-    name: "ЗАРЯ | ТЕЛО",
-    category: "base",
-    accent: "УТРО · Ритуал пробуждения через тело",
-    steps: [
-      "Финская сауна с бодрящими эфирами (розмарин / грейпфрут / эвкалипт)",
-      "Обновление кожи с гималайской солью и розовым грейпфрутом (пилинг тела)",
-      "Тонизирующий СПА-массаж для лёгкости и энергии, 40 мин (задняя поверхность тела)",
-      "Освежающий уход для лица (снятие утренней отёчности, свежесть кожи)",
-      "Пробуждение через стопы (ручные техники + массажные ролики)",
-    ],
-    dur: "100 мин",
-    price: "9 200 ₽",
-  },
-  {
-    slug: "zarya-volosy",
-    name: "ЗАРЯ | ВОЛОСЫ",
-    category: "base",
-    accent: "УТРО · Ритуал пробуждения через кожу головы",
-    steps: [
-      "Тонизирующий массаж лица и шейно-воротниковой зоны (ручные техники + криосферы)",
-      "Пенный СПА-массаж кожи головы",
-      "Золотая дуга — авторский аква-ритуал с водной дугой",
-      "СПА-уход для кожи головы и волос Davines (очищение, восстановление, тонус корней)",
-      "Пробуждение через кожу головы (ручные техники + гребни + массажные инструменты)",
-    ],
-    after: "Сушка и лёгкая укладка волос",
-    dur: "90 мин",
-    price: "8 200 ₽",
-  },
-  {
-    slug: "sumerki-telo",
-    name: "СУМЕРКИ | ТЕЛО",
-    category: "base",
-    accent: "ВЕЧЕР · Ритуал расслабления через тело",
-    steps: [
-      "Финская сауна с успокаивающими эфирами (лаванда / иланг-иланг / пачули)",
-      "Лавандовый ритуал обновления кожи (кремовый пилинг для тела)",
-      "Сандаловое обёртывание для тела (согревает и питает кожу)",
-      "Расслабляющий СПА-массаж на тёплом масле, 40 мин (задняя поверхность тела)",
-      "Тёплая паровая маска для глаз",
-      "Согревание кистей и стоп травяными мешочками",
-    ],
-    dur: "100 мин",
-    price: "10 500 ₽",
-  },
-  {
-    slug: "sumerki-volosy",
-    name: "СУМЕРКИ | ВОЛОСЫ",
-    category: "base",
-    accent: "ВЕЧЕР · Ритуал расслабления через кожу головы",
-    steps: [
-      "Расслабляющий массаж лица и шейно-воротниковой зоны (ручные техники + нефритовые ролики)",
-      "Тёплый травяной настой для кожи головы и волос (луговые травы, безопасен для окрашенных волос)",
-      "Золотая дуга — авторский аква-ритуал с водной дугой",
-      "СПА-уход для кожи головы и волос Davines (глубокое очищение, питание и восстановление)",
-      "Расслабляющий массаж головы (ручные техники + гребни + массажные инструменты)",
-      "Согревание кистей и стоп травяными мешочками",
-    ],
-    after: "Сушка волос — на выбор: самостоятельно или со СПА-мастером",
-    dur: "90 мин",
-    price: "9 500 ₽",
-  },
-  // ─── АВТОРСКИЕ ───
-  {
-    slug: "rodnik",
-    name: "РОДНИК",
-    category: "special",
-    accent: "РАВНОВЕСИЕ · Бережный ритуал для будущей мамы",
-    note: "Программа адаптирована для беременных со 2 триместра и спустя 6 недель после родов.",
-    steps: [
-      "Расслабляющий массаж лица и шейно-воротниковой зоны (ручные техники + нефритовые ролики)",
-      "Деликатный СПА-уход для лица (увлажнение, снятие признаков усталости и комфорт кожи)",
-      "Расслабляющий массаж головы (ручные техники + гребни)",
-      "Золотая дуга — авторский аква-ритуал с водной дугой",
-      "СПА-уход для кожи головы и волос Davines (очищение, питание, восстановление)",
-      "Ритуал лёгких ног (мягкие лимфодренажные техники)",
-      "Охлаждающий крем для стоп и голеней",
-    ],
-    after: "Сушка волос — на выбор: самостоятельно или со СПА-мастером",
-    dur: "90 мин",
-    price: "9 500 ₽",
-  },
-  {
-    slug: "kedr",
-    name: "КЕДР",
-    category: "special",
-    accent: "РАВНОВЕСИЕ · Мужской ритуал восстановления",
-    steps: [
-      "Финская сауна с кедровыми эфирами (кедр / можжевельник / сосна)",
-      "Обновление кожи с морской солью и маслом кедра",
-      "Креольский массаж бамбуковыми палочками",
-      "Расслабляющий массаж тела с горячими камнями, 60 мин",
-      "СПА-уход для лица и бороды",
-      "Восстанавливающий массаж кожи головы (ручные техники + гребни + массажные инструменты)",
-      "Золотая дуга — авторский аква-ритуал с водной дугой",
-      "СПА-уход для кожи головы и волос Davines (очищение, плотность, восстановление)",
-    ],
-    after: "Сушка волос — на выбор: самостоятельно или со СПА-мастером",
-    dur: "2 ч 30 мин",
-    price: "12 500 ₽",
-  },
-  {
-    slug: "lada",
-    name: "ЛАДА",
-    category: "special",
-    accent: "РАВНОВЕСИЕ · Женский ритуал восстановления",
-    steps: [
-      "Финская сауна с цветочными эфирами (роза / нероли / иланг-иланг)",
-      "Турецкий пилинг кесе с розовым маслом (мягкое обновление кожи)",
-      "СПА-массаж тела с тёплыми травяными мешочками, 40 мин",
-      "Эстетический массаж лица и шейно-воротниковой зоны (ручные техники + гуаша)",
-      "СПА-уход для лица (питание, увлажнение, сияние кожи)",
-      "Расслабляющий массаж кожи головы (ручные техники + гребни + массажные инструменты)",
-      "Золотая дуга — авторский аква-ритуал с водной дугой",
-      "СПА-уход для кожи головы и волос Davines (питание, восстановление, мягкость)",
-      "Ритуал для кистей с тёплым маслом нероли",
-    ],
-    after: "Сушка волос — на выбор: самостоятельно или со СПА-мастером",
-    dur: "2 ч 30 мин",
-    price: "12 500 ₽",
-  },
-  {
-    slug: "yav",
-    name: "ЯВЬ",
-    category: "special",
-    accent: "НАЧАЛО · Ритуал знакомства с Истовой",
-    steps: [
-      "Расслабляющий СПА-массаж спины и шейно-воротниковой зоны, 25 мин (знакомство с телесными практиками Истовы)",
-      "Освежающий СПА-уход для лица",
-      "Золотая дуга — авторский аква-ритуал с водной дугой",
-      "СПА-уход для кожи головы и волос Davines (очищение, восстановление, мягкость)",
-      "Расслабляющий массаж кожи головы (ручные техники + гребни)",
-    ],
-    after: "Сушка и лёгкая укладка волос",
-    dur: "70 мин",
-    price: "6 800 ₽",
-  },
-  {
-    slug: "otzvuk",
-    name: "ОТЗВУК",
-    category: "special",
-    accent: "ВЕЧЕР · Ритуал глубокой тишины",
-    note: "Программа без водных практик — полное погружение в тишину и звук.",
-    steps: [
-      "Аудиопогружение в пространстве объёмного звука",
-      "Сенсорный уход для лица (тихие техники с акцентом на тактильные ощущения)",
-      "Звуковая практика с поющими чашами",
-      "Ритуал заземления через стопы (медленные техники для стоп и голеней с тёплым маслом)",
-      "Ритуал веса (тёплые гречишные мешочки для тела)",
-      "Расслабляющий массаж кожи головы с гребнями",
-      "Отдых под тяжёлым одеялом с тёплым компрессом для глаз",
-    ],
-    dur: "2 ч",
-    price: "13 000 ₽",
-  },
-];
-
+import { useState, useEffect, useRef } from "react";
+import { programs, type Program } from "../lib/programs-data";
 const DISCLAIMER =
   "*Перечень услуг составлен в соответствии с требованиями Приказа Росстандарта от 29.11.2012 №1597-ст и №1605-ст «ГОСТ Р 55317-2012». Истова не оказывает лечебные и оздоровительные процедуры.";
 
-export { programs };
-
 export default function Programs() {
-  const baseProgs = programs.filter((p) => p.category === "base");
-  const specialProgs = programs.filter((p) => p.category === "special");
+  const [open, setOpen] = useState<string | null>(null);
+  const active = programs.find((p) => p.slug === open);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(null); };
+    window.addEventListener("keydown", onKey);
+    return () => { document.body.style.overflow = ""; window.removeEventListener("keydown", onKey); };
+  }, [open]);
+
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const scrollBy = (dir: 1 | -1) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>("button");
+    const step = card ? card.offsetWidth + 20 : 400;
+    el.scrollBy({ left: step * dir, behavior: "smooth" });
+  };
 
   const renderCard = (p: Program) => (
-    <article
+    <button
       key={p.slug}
-      className="group relative bg-sand-soft border border-brand/10 p-10 flex flex-col min-h-[640px] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] hover:border-brand/30 overflow-hidden"
+      type="button"
+      onClick={() => setOpen(p.slug)}
+      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start bg-sand-soft border border-brand/10 p-8 flex flex-col min-h-[360px] text-left transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] hover:border-brand/40 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand/40"
     >
       <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
-      <header className="mb-8 relative">
-        <Link
-          href={`/programs/${p.slug}/`}
-          className="font-display text-3xl md:text-4xl tracking-wider text-brand mb-2 uppercase block hover:opacity-80 transition-opacity"
-        >
-          {p.name}
-        </Link>
-        {p.accent && (
-          <div className="text-xs uppercase tracking-widest text-brand/60">
-            {p.accent}
-          </div>
-        )}
-        {p.note && (
-          <div className="text-xs text-brand/70 italic mt-3">{p.note}</div>
-        )}
-      </header>
-
-      <ul className="space-y-3 text-sm text-brand-dark/80 leading-relaxed flex-1 mb-6">
-        {p.steps.map((step, i) => (
-          <li key={i} className="flex gap-2">
-            <span className="text-brand/50 shrink-0">/</span>
-            <span>{step}</span>
-          </li>
-        ))}
-      </ul>
-
-      {p.after && (
-        <div className="text-xs text-brand-dark/70 mb-6 pt-4 border-t border-brand/10">
-          <span className="font-medium">После:</span> {p.after}
+      {p.accent && (
+        <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-3">
+          {p.accent.split("·")[0].trim()}
         </div>
       )}
-
-      <div className="flex justify-between items-end pt-6 border-t border-brand/10">
-        <div className="flex flex-col gap-2">
-          <a
-            href="#booking"
-            className="text-sm px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors text-center"
-          >
-            Записаться
-          </a>
-          <Link
-            href={`/programs/${p.slug}/`}
-            className="text-xs uppercase tracking-widest text-brand/60 hover:text-brand text-center"
-          >
-            Подробнее →
-          </Link>
+      <h3 className="font-display text-2xl md:text-3xl tracking-wider text-brand mb-4 uppercase">
+        {p.name}
+      </h3>
+      <p className="font-display italic text-lg md:text-xl text-brand-dark/85 leading-snug mb-6 flex-1">
+        {p.teaser}
+      </p>
+      <div className="flex justify-between items-end pt-4 border-t border-brand/10">
+        <div className="text-xs uppercase tracking-widest text-brand/70 group-hover:text-brand transition-colors flex items-center gap-1">
+          Что внутри
+          <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
         </div>
         <div className="text-right">
-          <div className="font-display text-3xl text-brand">{p.price}</div>
-          <div className="text-xs text-brand-dark/60 mt-1">~ {p.dur}</div>
+          <div className="font-display text-xl text-brand">{p.price}</div>
+          <div className="text-[10px] text-brand-dark/60 mt-0.5">~ {p.dur}</div>
         </div>
       </div>
-    </article>
+    </button>
   );
 
   return (
-    <section id="programs" className="py-24 bg-sand-deep/30">
+    <section id="programs" className="py-24 bg-sand-deep/30 overflow-hidden">
       <div className="container mx-auto px-6">
+        <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Программы</div>
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">
-          Программы Истовы
+          9 ритуалов Истовы
         </h2>
-        <p className="text-center text-brand-dark/70 mb-12 max-w-2xl mx-auto">
-          4 базовых ритуала и 5 авторских программ. Каждая — со своим темпом, ароматом и финалом.
+        <p className="text-center text-brand-dark/70 mb-10 max-w-2xl mx-auto">
+          4 базовых парных ритуала и 5 авторских. Каждый — со своим темпом, ароматом и финалом. Свайпайте карточки →
         </p>
 
-        {/* Сквозной блок — что объединяет все ритуалы */}
-        <div className="max-w-3xl mx-auto mb-16 border border-brand/15 bg-sand-soft/60 p-8 md:p-10">
-          <div className="text-xs uppercase tracking-widest text-brand/60 mb-6 text-center">
-            Каждый ритуал Истовы
+        <div className="max-w-3xl mx-auto mb-10 border border-brand/15 bg-sand-soft/60 p-6 md:p-8">
+          <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Каждый ритуал Истовы</div>
+          <div className="space-y-2 text-sm md:text-base text-brand-dark/85 leading-relaxed text-center">
+            <p>Открывается арома-выбором · сопровождается звуковыми акцентами · завершается чаем в лаунж-зоне.</p>
           </div>
-          <div className="space-y-4 text-sm md:text-base text-brand-dark/85 leading-relaxed text-center">
-            <p>Открывается арома-выбором, который будет с вами в течение всего ритуала.</p>
-            <p>Сопровождается звуковыми акцентами для мягкой настройки на каждый этап.</p>
-            <p>Завершается выбранным чаем и отдыхом в лаунж-зоне.</p>
-          </div>
+        </div>
+      </div>
+
+      <div className="relative">
+        <div
+          ref={scrollRef}
+          data-lenis-prevent
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-6 px-6 md:px-[10vw] scroll-smooth touch-pan-x"
+          style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch" }}
+        >
+          {programs.map(renderCard)}
+          <div className="shrink-0 w-1 md:w-6" aria-hidden="true" />
         </div>
 
-        {/* Базовые парные */}
-        <div className="mb-6">
-          <div className="text-center text-xs uppercase tracking-widest text-brand/60 mb-8">
-            Базовые парные ритуалы
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
-          {baseProgs.map(renderCard)}
-        </div>
+        <button
+          type="button"
+          onClick={() => scrollBy(-1)}
+          aria-label="Предыдущая программа"
+          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center bg-sand-soft border border-brand/20 text-brand hover:bg-brand hover:text-sand transition-colors shadow-lg z-10"
+        >
+          ←
+        </button>
+        <button
+          type="button"
+          onClick={() => scrollBy(1)}
+          aria-label="Следующая программа"
+          className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center bg-sand-soft border border-brand/20 text-brand hover:bg-brand hover:text-sand transition-colors shadow-lg z-10"
+        >
+          →
+        </button>
+      </div>
 
-        {/* Авторские */}
-        <div className="mb-6">
-          <div className="text-center text-xs uppercase tracking-widest text-brand/60 mb-8">
-            Авторские программы
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {specialProgs.map(renderCard)}
-        </div>
-
-        <p className="text-[10px] text-brand-dark/40 leading-relaxed max-w-4xl mx-auto mt-12 px-2">
+      <div className="container mx-auto px-6 mt-10 flex flex-col items-center gap-4">
+        <Link
+          href="/programs/"
+          className="inline-block px-8 py-4 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors uppercase tracking-widest text-sm"
+        >
+          Все программы →
+        </Link>
+        <a
+          href="#quiz"
+          className="text-xs uppercase tracking-widest text-brand/70 hover:text-brand border-b border-brand/30 hover:border-brand pb-1 transition-colors"
+        >
+          Не знаете какую выбрать — пройдите квиз ↑
+        </a>
+        <p className="text-[10px] text-brand-dark/40 leading-relaxed max-w-4xl mx-auto mt-6 px-2 text-center">
           {DISCLAIMER}
         </p>
       </div>
+
+      {active && (
+        <div
+          className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-8 bg-brand-dark/50 backdrop-blur-sm"
+          onClick={() => setOpen(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="relative bg-sand-soft w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 md:p-10 border border-brand/20 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setOpen(null)}
+              aria-label="Закрыть"
+              className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 flex items-center justify-center text-brand/70 hover:text-brand hover:bg-brand/5 transition-colors text-2xl"
+            >
+              ×
+            </button>
+
+            <div className="pr-10">
+              {active.accent && (
+                <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-3">{active.accent}</div>
+              )}
+              <h3 className="font-display text-3xl md:text-4xl tracking-wider text-brand uppercase mb-4">
+                {active.name}
+              </h3>
+              <p className="font-display italic text-lg text-brand-dark/85 leading-snug mb-6">
+                {active.teaser}
+              </p>
+              {active.note && (
+                <div className="text-xs text-brand/70 italic mb-6 pb-6 border-b border-brand/10">
+                  {active.note}
+                </div>
+              )}
+
+              <div className="text-xs uppercase tracking-widest text-brand/60 mb-4">Что внутри ритуала</div>
+              <ul className="space-y-3 text-sm md:text-base text-brand-dark/85 leading-relaxed mb-6">
+                {active.steps.map((step, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="font-display text-brand/50 shrink-0 min-w-[24px]">0{i + 1}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {active.cosmetics && active.cosmetics.length > 0 && (
+                <div className="mb-6 p-5 bg-sand/60 border border-brand/10">
+                  <div className="text-xs uppercase tracking-widest text-brand/60 mb-3">Косметика и материалы</div>
+                  <ul className="space-y-2 text-sm text-brand-dark/85 leading-relaxed">
+                    {active.cosmetics.map((c, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="text-brand/50 shrink-0">·</span>
+                        <span>{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {active.after && (
+                <div className="text-sm text-brand-dark/70 mb-6 p-4 bg-sand/60 border border-brand/10">
+                  <span className="font-medium text-brand">После:</span> {active.after}
+                </div>
+              )}
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-end gap-4 pt-6 border-t border-brand/10">
+                <div>
+                  <div className="font-display text-3xl text-brand">{active.price}</div>
+                  <div className="text-xs text-brand-dark/60 mt-1">~ {active.dur}</div>
+                </div>
+                <a
+                  href="#booking"
+                  onClick={() => setOpen(null)}
+                  className="sm:ml-auto px-6 py-3 bg-brand text-sand text-center hover:bg-brand-dark transition-colors uppercase tracking-widest text-sm"
+                >
+                  Записаться
+                </a>
+                <Link
+                  href={`/programs/${active.slug}/`}
+                  className="px-6 py-3 border border-brand/40 text-brand text-center hover:bg-brand hover:text-sand transition-colors uppercase tracking-widest text-sm"
+                >
+                  Полная страница
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
