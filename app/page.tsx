@@ -11,6 +11,12 @@ import Contacts from "./components/Contacts";
 import Booking from "./components/Booking";
 import Footer from "./components/Footer";
 import Reveal from "./components/Reveal";
+import FloatingCTA from "./components/FloatingCTA";
+import Founder from "./components/Founder";
+import Quiz from "./components/Quiz";
+import Prep from "./components/Prep";
+import StickyMobileBar from "./components/StickyMobileBar";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default function Page() {
   return (
@@ -20,15 +26,21 @@ export default function Page() {
         <Hero />
         <Reveal><Concept /></Reveal>
         <Reveal><Ritual /></Reveal>
+        <Reveal><Quiz /></Reveal>
         <Reveal><Programs /></Reveal>
         <Reveal><TeaCard /></Reveal>
         <Reveal><Space /></Reveal>
+        <Reveal><Prep /></Reveal>
+        <Reveal><Founder /></Reveal>
         <Reveal><Certificates /></Reveal>
         <Reveal><FAQ /></Reveal>
         <Reveal><Contacts /></Reveal>
         <Reveal><Booking /></Reveal>
       </main>
       <Footer />
+      <FloatingCTA />
+      <StickyMobileBar />
+      <ScrollProgress />
     </>
   );
 }

@@ -184,9 +184,10 @@ export default function Programs() {
   const renderCard = (p: Program) => (
     <article
       key={p.slug}
-      className="bg-sand-soft border border-brand/10 p-10 flex flex-col min-h-[640px] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:border-brand/25"
+      className="group relative bg-sand-soft border border-brand/10 p-10 flex flex-col min-h-[640px] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] hover:border-brand/30 overflow-hidden"
     >
-      <header className="mb-8">
+      <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
+      <header className="mb-8 relative">
         <Link
           href={`/programs/${p.slug}/`}
           className="font-display text-3xl md:text-4xl tracking-wider text-brand mb-2 uppercase block hover:opacity-80 transition-opacity"
