@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { track } from "../lib/track";
 
 const NAV = [
@@ -13,6 +14,9 @@ const NAV = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const onHome = pathname === "/" || pathname === "";
+  const link = (h: string) => (onHome ? h : `/${h}`);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,18 +34,18 @@ export default function Header() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${scrolled ? "bg-sand/95 backdrop-blur-md shadow-[0_2px_20px_rgba(116,68,54,0.08)] border-b border-brand/15" : "bg-sand/80 backdrop-blur-sm border-b border-brand/10"}`}>
       <div className="flex justify-between items-center py-2 pr-4 pl-2 md:pl-4 md:pr-6">
-        <a href="#hero" onClick={() => setOpen(false)} className="flex items-center" aria-label="Истова — главная">
+        <a href={link("#hero")} onClick={() => setOpen(false)} className="flex items-center" aria-label="Истова — главная">
           <img src="/brand/decor/cloud.webp" alt="Истова" className={`w-auto transition-all duration-500 ease-out ${scrolled ? "h-11 md:h-12" : "h-14 md:h-16"}`} width={512} height={512} />
         </a>
 
         <nav className="hidden md:flex gap-8 text-sm text-brand/80">
           {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="hover:text-brand transition-colors">{n.label}</a>
+            <a key={n.href} href={link(n.href)} className="hover:text-brand transition-colors">{n.label}</a>
           ))}
         </nav>
 
         <a
-          href="#booking"
+          href={link("#booking")}
           onClick={() => track("BOOKING_CLICK", { from: "header_desktop" })}
           className="hidden md:inline-block px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors text-sm"
         >
@@ -78,7 +82,7 @@ export default function Header() {
           {NAV.map((n) => (
             <a
               key={n.href}
-              href={n.href}
+              href={link(n.href)}
               onClick={() => setOpen(false)}
               className="py-3 text-lg text-brand border-b border-brand/10"
             >
@@ -86,7 +90,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#booking"
+            href={link("#booking")}
             onClick={() => {
               setOpen(false);
               track("BOOKING_CLICK", { from: "header_mobile" });

@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { track } from "../lib/track";
 
 export default function StickyMobileBar() {
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
+  const bookingHref = pathname === "/" || pathname === "" ? "#booking" : "/#booking";
 
   useEffect(() => {
     const onScroll = () => {
@@ -46,7 +49,7 @@ export default function StickyMobileBar() {
           Telegram
         </a>
         <a
-          href="#booking"
+          href={bookingHref}
           onClick={() => track("BOOKING_CLICK", { from: "sticky_bar" })}
           className="py-3 text-center text-xs uppercase tracking-widest text-sand bg-brand active:bg-brand-dark"
           aria-label="Забронировать"

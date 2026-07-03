@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { track } from "../lib/track";
 
 export default function FloatingCTA() {
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
+  const bookingHref = pathname === "/" || pathname === "" ? "#booking" : "/#booking";
 
   useEffect(() => {
     const onScroll = () => {
@@ -45,7 +48,7 @@ export default function FloatingCTA() {
   return (
     <a
       ref={anchorRef}
-      href="#booking"
+      href={bookingHref}
       onClick={() => track("BOOKING_CLICK", { from: "floating_cta" })}
       aria-label="Забронировать"
       style={{ transform: "translate3d(var(--mx, 0), var(--my, 0), 0)" }}
