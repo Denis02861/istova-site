@@ -9,13 +9,13 @@ export default function SmoothScroll() {
     if (prefersReduced) return;
 
     const lenis = new Lenis({
-      duration: 1.3,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      touchMultiplier: 1.5,
+      touchMultiplier: 1,
       wheelMultiplier: 1,
-      lerp: 0.08,
-      syncTouch: true,
-      syncTouchLerp: 0.1,
+      lerp: 0.09,
+      // на touch-устройствах smooth-scroll не работает — оставляем нативное поведение
+      // (Lenis без syncTouch не перехватывает touch-события)
     });
 
     let raf = 0;
