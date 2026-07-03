@@ -47,6 +47,14 @@ export async function generateMetadata({
   return {
     title,
     description,
+    keywords: [
+      program.name,
+      "спа-ритуал Санкт-Петербург",
+      "спа Васильевский остров",
+      "Истова",
+      `${program.dur} спа`,
+    ],
+    authors: [{ name: "Истова", url: SITE_URL }],
     alternates: { canonical: url },
     openGraph: {
       type: "article",
@@ -55,14 +63,18 @@ export async function generateMetadata({
       title,
       description,
       locale: "ru_RU",
-      images: [`${SITE_URL}/og-image.jpg`],
+      publishedTime: "2026-06-09T00:00:00+03:00",
+      modifiedTime: "2026-07-03T00:00:00+03:00",
+      authors: ["Истова"],
+      images: [{ url: `${SITE_URL}/og-image.webp`, width: 1200, height: 630, alt: program.name }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/og-image.jpg`],
+      images: [`${SITE_URL}/og-image.webp`],
     },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -81,31 +93,52 @@ export default async function ProgramPage({
   const SERVICE_JSONLD = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${url}#service`,
     serviceType: program.name,
     name: program.name,
     description,
-    provider: {
-      "@type": "BeautySalon",
-      name: "Истова",
-      url: SITE_URL,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "ул. Беринга, 23 к. 2",
-        addressLocality: "Санкт-Петербург",
-        addressCountry: "RU",
-      },
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Санкт-Петербург",
-    },
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "City", name: "Санкт-Петербург" },
     offers: {
       "@type": "Offer",
       price: program.price.replace(/[^\d]/g, ""),
       priceCurrency: "RUB",
       availability: "https://schema.org/InStock",
       url,
+      validFrom: "2026-06-09",
     },
+    datePublished: "2026-06-09",
+    dateModified: "2026-07-03",
+    author: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    inLanguage: "ru-RU",
+  };
+
+  const FAQ_JSONLD = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Сколько длится ритуал \"${program.name}\"?`,
+        acceptedAnswer: { "@type": "Answer", text: `Продолжительность — примерно ${program.dur}. Точное время зависит от вашего темпа отдыха между этапами.` },
+      },
+      {
+        "@type": "Question",
+        name: `Сколько стоит ритуал \"${program.name}\"?`,
+        acceptedAnswer: { "@type": "Answer", text: `Стоимость одиночного визита — ${program.price}. Ритуал можно провести вдвоём в двух смежных кабинетах со скидкой (для этого ритуала — ${program.pair_price ?? "уточните у администратора"}).` },
+      },
+      {
+        "@type": "Question",
+        name: "Что взять с собой?",
+        acceptedAnswer: { "@type": "Answer", text: "Ничего специального. Полотенца, халат, тапочки и уходовая косметика включены. За 1,5-2 часа до визита не рекомендуем плотно есть." },
+      },
+      {
+        "@type": "Question",
+        name: "Как записаться?",
+        acceptedAnswer: { "@type": "Answer", text: "Через форму на сайте, по телефону +7 (901) 320-10-50 или в Telegram @Istova_spa. Администратор свяжется в течение часа." },
+      },
+    ],
   };
 
   const BREADCRUMB_JSONLD = {
@@ -144,6 +177,10 @@ export default async function ProgramPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
       />
       <ProgramTracker slug={slug} />
       <Header />
@@ -244,6 +281,29 @@ export default async function ProgramPage({
             >
               Записаться на ритуал
             </Link>
+          </section>
+
+          {/* FAQ */}
+          <section className="mb-16 border-t border-brand/10 pt-12">
+            <h2 className="text-xs uppercase tracking-widest text-brand/60 mb-8 font-normal">Частые вопросы</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-display text-lg text-brand mb-2">Сколько длится ритуал?</h3>
+                <p className="text-sm text-brand-dark/80 leading-relaxed">Продолжительность — примерно {program.dur}. Точное время зависит от вашего темпа отдыха между этапами.</p>
+              </div>
+              <div>
+                <h3 className="font-display text-lg text-brand mb-2">Сколько стоит ритуал?</h3>
+                <p className="text-sm text-brand-dark/80 leading-relaxed">Стоимость одиночного визита — {program.price}. Ритуал можно провести вдвоём в двух смежных кабинетах со скидкой{program.pair_price ? ` (${program.pair_price})` : ""}.</p>
+              </div>
+              <div>
+                <h3 className="font-display text-lg text-brand mb-2">Что взять с собой?</h3>
+                <p className="text-sm text-brand-dark/80 leading-relaxed">Ничего специального. Полотенца, халат, тапочки и уходовая косметика включены. За 1,5-2 часа до визита не рекомендуем плотно есть.</p>
+              </div>
+              <div>
+                <h3 className="font-display text-lg text-brand mb-2">Как записаться?</h3>
+                <p className="text-sm text-brand-dark/80 leading-relaxed">Через форму на сайте, по телефону <a href="tel:+79013201050" className="underline hover:text-brand">+7 (901) 320-10-50</a> или в Telegram <a href="https://t.me/Istova_spa" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">@Istova_spa</a>. Администратор свяжется в течение часа.</p>
+              </div>
+            </div>
           </section>
 
           {/* Другие программы */}

@@ -28,7 +28,26 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/icon.png", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/android-chrome-192.png", sizes: "192x192", type: "image/png" },
     ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  other: {
+    "HandheldFriendly": "true",
+    "MobileOptimized": "width",
+    "format-detection": "telephone=yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "Истова",
+    "theme-color": "#F4F2EF",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
   openGraph: {
     type: "website",
@@ -112,6 +131,28 @@ const ORG_JSONLD = {
     "Уход за волосами",
     "Финская сауна",
   ],
+  founder: {
+    "@type": "Person",
+    name: "Карасёв Денис Игоревич",
+    jobTitle: "Основатель",
+  },
+  foundingDate: "2026-06",
+  legalName: "ИП Карасёв Денис Игоревич",
+  taxID: "280118121214",
+  vatID: "280118121214",
+  identifier: [
+    { "@type": "PropertyValue", propertyID: "ИНН", value: "280118121214" },
+    { "@type": "PropertyValue", propertyID: "ОГРНИП", value: "326237500185610" },
+    { "@type": "PropertyValue", propertyID: "ОКВЭД", value: "96.02" },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+7 (901) 320-10-50",
+    contactType: "reservations",
+    areaServed: "RU",
+    availableLanguage: ["Russian"],
+    email: "istomaspa@yandex.ru",
+  },
 };
 
 const WEBSITE_JSONLD = {
@@ -120,17 +161,28 @@ const WEBSITE_JSONLD = {
   "@id": `${SITE_URL}/#website`,
   url: SITE_URL,
   name: "Истова",
+  alternateName: "Istova SPA",
   inLanguage: "ru-RU",
   publisher: { "@id": `${SITE_URL}/#organization` },
+  copyrightHolder: { "@id": `${SITE_URL}/#organization` },
+  datePublished: "2026-06-09",
+  dateModified: "2026-07-03",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <link rel="agent-skills" href="/.well-known/agent-skills/index.json" type="application/json" />
         <link rel="describedby" href="/llms.txt" type="text/markdown" />
         <link rel="alternate" href="/sitemap.xml" type="application/xml" title="Sitemap" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png" />
         <link rel="preload" as="image" href="/logo/istova-wordmark.webp" fetchPriority="high" type="image/webp" />
         <link rel="preload" as="image" href="/brand/decor/cloud.webp" type="image/webp" />
         <link rel="dns-prefetch" href="https://mc.yandex.ru" />

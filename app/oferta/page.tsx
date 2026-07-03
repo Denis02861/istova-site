@@ -12,11 +12,68 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/oferta/` },
+  keywords: [
+    "публичная оферта Истова",
+    "правила спа-услуг",
+    "оферта салона красоты",
+    "ИП Карасёв",
+  ],
+  authors: [{ name: "Истова", url: SITE_URL }],
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "article",
+    url: `${SITE_URL}/oferta/`,
+    siteName: "Истова",
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "ru_RU",
+    publishedTime: "2026-06-09T00:00:00+03:00",
+    modifiedTime: "2026-07-03T00:00:00+03:00",
+    images: [{ url: `${SITE_URL}/og-image.webp`, width: 1200, height: 630, alt: TITLE }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [`${SITE_URL}/og-image.webp`],
+  },
+};
+
+const ARTICLE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": ["Article", "TermsOfService"],
+  "@id": `${SITE_URL}/oferta/#article`,
+  headline: "Публичная оферта — спа «Истова»",
+  description: DESCRIPTION,
+  url: `${SITE_URL}/oferta/`,
+  datePublished: "2026-06-09",
+  dateModified: "2026-07-03",
+  inLanguage: "ru-RU",
+  author: { "@id": `${SITE_URL}/#organization` },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/oferta/` },
+};
+
+const BREADCRUMB_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Главная", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Публичная оферта", item: `${SITE_URL}/oferta/` },
+  ],
 };
 
 export default function OfertaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_JSONLD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }}
+      />
       <Header />
       <main className="bg-sand py-24">
         <div className="container mx-auto px-6 max-w-3xl">

@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/programs/` },
+  keywords: [
+    "спа-программы Санкт-Петербург",
+    "спа Васильевский остров",
+    "авторские ритуалы",
+    "спа для двоих",
+    "программы Истовы",
+  ],
+  authors: [{ name: "Истова", url: SITE_URL }],
+  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/programs/`,
@@ -20,6 +29,13 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     locale: "ru_RU",
+    images: [{ url: `${SITE_URL}/og-image.webp`, width: 1200, height: 630, alt: "Программы Истовы" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [`${SITE_URL}/og-image.webp`],
   },
 };
 
@@ -59,8 +75,39 @@ export default function ProgramsCatalogPage() {
     </Link>
   );
 
+  const ITEMLIST_JSONLD = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${SITE_URL}/programs/#itemlist`,
+    name: "Программы Истовы",
+    numberOfItems: programs.length,
+    itemListElement: programs.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `${SITE_URL}/programs/${p.slug}/`,
+      name: p.name,
+    })),
+  };
+
+  const BREADCRUMB_JSONLD = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Главная", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Программы", item: `${SITE_URL}/programs/` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ITEMLIST_JSONLD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }}
+      />
       <Header />
       <main className="bg-sand py-24 min-h-screen">
         <div className="container mx-auto px-6 max-w-6xl">

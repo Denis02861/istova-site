@@ -1,13 +1,80 @@
+const SITE_URL = "https://istova.ru";
+const TITLE = "Политика обработки персональных данных — Истова";
+const DESCRIPTION = "Политика обработки персональных данных ИП Карасёв Д.И. Правила сбора и хранения данных клиентов сайта istova.ru: cookies, аналитика, права субъекта, контакты Оператора.";
+
 export const metadata = {
-  title: "Политика обработки персональных данных — Истова",
-  description: "Политика обработки персональных данных ИП Карасёв Д.И. (istova.ru).",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: `${SITE_URL}/politika-obrabotki-personalnyh-dannyh/` },
+  keywords: [
+    "политика конфиденциальности",
+    "обработка персональных данных",
+    "ФЗ-152",
+    "ИП Карасёв",
+    "Истова",
+  ],
+  authors: [{ name: "Истова", url: SITE_URL }],
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "article",
+    url: `${SITE_URL}/politika-obrabotki-personalnyh-dannyh/`,
+    siteName: "Истова",
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "ru_RU",
+    publishedTime: "2026-06-09T00:00:00+03:00",
+    modifiedTime: "2026-07-03T00:00:00+03:00",
+    images: [{ url: `${SITE_URL}/og-image.webp`, width: 1200, height: 630, alt: TITLE }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [`${SITE_URL}/og-image.webp`],
+  },
+};
+
+const ARTICLE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": ["Article", "PrivacyPolicy"],
+  "@id": `${SITE_URL}/politika-obrabotki-personalnyh-dannyh/#article`,
+  headline: "Политика обработки персональных данных",
+  description: DESCRIPTION,
+  url: `${SITE_URL}/politika-obrabotki-personalnyh-dannyh/`,
+  datePublished: "2026-06-09",
+  dateModified: "2026-07-03",
+  inLanguage: "ru-RU",
+  author: { "@id": `${SITE_URL}/#organization` },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/politika-obrabotki-personalnyh-dannyh/` },
+};
+
+const BREADCRUMB_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Главная", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Политика ПДн", item: `${SITE_URL}/politika-obrabotki-personalnyh-dannyh/` },
+  ],
 };
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-sand">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_JSONLD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }}
+      />
       <div className="container mx-auto px-6 py-24 max-w-3xl">
-        <a href="/" className="text-sm text-brand/70 hover:text-brand mb-8 inline-block">← На главную</a>
+        <nav aria-label="Хлебные крошки" className="text-xs uppercase tracking-widest text-brand/60 mb-8">
+          <a href="/" className="hover:text-brand">Главная</a>
+          <span className="mx-2">·</span>
+          <span className="text-brand">Политика ПДн</span>
+        </nav>
         <h1 className="font-serif text-3xl md:text-4xl text-brand mb-3">
           Политика обработки персональных данных
         </h1>
