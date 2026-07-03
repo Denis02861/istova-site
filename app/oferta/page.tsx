@@ -195,7 +195,7 @@ export default function OfertaPage() {
                 <br />
                 Адрес оказания услуг: 199397, г. Санкт-Петербург, ул. Беринга, 23 к. 2
                 <br />
-                Контакт: <a href="mailto:hello@istova.ru" className="underline hover:text-brand">hello@istova.ru</a>
+                Контакт: <a href="mailto:istomaspa@yandex.ru" className="underline hover:text-brand">istomaspa@yandex.ru</a>
               </p>
             </div>
           </div>
