@@ -8,37 +8,16 @@ type Focus = "body" | "hair" | "silence";
 type Time = "morning" | "evening" | "any";
 type Mode = "solo" | "duo" | "any";
 
-type RecItem =
-  | { kind: "single"; program: Program }
-  | { kind: "duo"; body: Program; hair: Program; title: string; suffix: string };
+type RecItem = { kind: "single"; program: Program };
 
 const byslug = (s: string) => programs.find((p) => p.slug === s)!;
 
-function recommend(focus: Focus, time: Time, mode: Mode): RecItem[] {
-  // Парный вариант (два человека одновременно: один — ТЕЛО, другой — ВОЛОСЫ)
-  const duo = (t: "zarya" | "sumerki"): RecItem => ({
-    kind: "duo",
-    body: byslug(`${t}-telo`),
-    hair: byslug(`${t}-volosy`),
-    title: t === "zarya" ? "ЗАРЯ · парный ритуал" : "СУМЕРКИ · парный ритуал",
-    suffix: t === "zarya"
-      ? "Утренние ритуалы для двоих: один — на тело, другой — на кожу головы, в смежных кабинетах"
-      : "Вечерние ритуалы для двоих: один — на тело, другой — на кожу головы, в смежных кабинетах",
-  });
-
-  // Тишина — единственная траектория
+function recommend(focus: Focus, time: Time, _mode: Mode): RecItem[] {
+  // Возвращаем всегда одинаковые single-программы независимо от mode.
+  // При mode=duo рендер сам покажет pair_price и бейдж «для двоих».
   if (focus === "silence") {
     return [{ kind: "single", program: byslug("otzvuk") }, { kind: "single", program: byslug("lada") }];
   }
-
-  // Парный сценарий — выбираем базовые парные ЗАРЯ / СУМЕРКИ
-  if (mode === "duo") {
-    if (time === "morning") return [duo("zarya"), { kind: "single", program: byslug("yav") }];
-    if (time === "evening") return [duo("sumerki"), { kind: "single", program: byslug("otzvuk") }];
-    return [duo("zarya"), duo("sumerki")];
-  }
-
-  // Соло / без разницы
   if (focus === "body") {
     if (time === "morning") return [{ kind: "single", program: byslug("zarya-telo") }, { kind: "single", program: byslug("yav") }];
     if (time === "evening") return [{ kind: "single", program: byslug("sumerki-telo") }, { kind: "single", program: byslug("lada") }];
@@ -98,6 +77,15 @@ export default function Quiz() {
 
   const renderSingle = (p: Program, asDuo = false) => {
     const showPair = asDuo && p.pair_price;
+    let struckSoloDoubleFmt = "";
+    let discountPct = 0;
+    if (showPair) {
+      const solo = parseInt(p.price.replace(/\D/g, ""), 10);
+      const pair = parseInt((p.pair_price as string).replace(/\D/g, ""), 10);
+      const soloDouble = solo * 2;
+      struckSoloDoubleFmt = soloDouble.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ₽";
+      discountPct = Math.max(0, Math.round((1 - pair / soloDouble) * 100));
+    }
     return (
       <button
         key={p.slug}
@@ -110,90 +98,41 @@ export default function Quiz() {
             {p.accent?.split("·")[0].trim()}
           </div>
           {showPair && (
-            <div className="text-[10px] uppercase tracking-widest text-brand/70 px-2 py-0.5 border border-brand/20">
-              для двоих
+            <div className="text-[10px] uppercase tracking-widest text-brand/70 px-2 py-0.5 border border-brand/20 bg-sand-soft">
+              × 2 для двоих
             </div>
           )}
         </div>
         <div className="font-display text-2xl text-brand uppercase tracking-wider mb-3">{p.name}</div>
         <p className="text-sm text-brand-dark/75 italic mb-4">{p.teaser}</p>
-        <div className="mt-auto flex justify-between items-end pt-3 border-t border-brand/10">
-          <div className="text-xs uppercase tracking-widest text-brand/70">Открыть →</div>
-          <div className="text-right">
-            <div className="font-display text-xl text-brand">
-              {showPair ? p.pair_price : p.price}
+        {showPair ? (
+          <div className="mt-auto flex flex-col gap-1 pt-3 border-t border-brand/10">
+            <div className="flex justify-between items-baseline">
+              <div className="text-xs uppercase tracking-widest text-brand/70">
+                Вдвоём одновременно
+                <div className="text-[10px] normal-case text-brand/50 mt-0.5">
+                  <span className="line-through">{struckSoloDoubleFmt}</span> · −{discountPct}%
+                </div>
+              </div>
+              <div className="font-display text-xl text-brand">{p.pair_price}</div>
             </div>
-            <div className="text-[10px] text-brand-dark/60">~ {p.dur}{showPair ? " · для двоих" : ""}</div>
+            <div className="text-[10px] uppercase tracking-widest text-brand/60 mt-1">Открыть →</div>
           </div>
-        </div>
+        ) : (
+          <div className="mt-auto flex justify-between items-end pt-3 border-t border-brand/10">
+            <div className="text-xs uppercase tracking-widest text-brand/70">Открыть →</div>
+            <div className="text-right">
+              <div className="font-display text-xl text-brand">{p.price}</div>
+              <div className="text-[10px] text-brand-dark/60">~ {p.dur}</div>
+            </div>
+          </div>
+        )}
       </button>
     );
   };
 
-  const renderDuo = (rec: Extract<RecItem, { kind: "duo" }>, idx: number) => {
-    const bodySolo = parseInt(rec.body.price.replace(/\D/g, ""), 10);
-    const hairSolo = parseInt(rec.hair.price.replace(/\D/g, ""), 10);
-    const soloSum = bodySolo + hairSolo;
-    // MIX-пара: скидка 10% от суммы solo, округление до сотен
-    const totalDigits = Math.round((soloSum * 0.9) / 100) * 100;
-    const totalFmt = totalDigits.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ₽";
-    const soloSumFmt = soloSum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ₽";
-    const discountPct = Math.round((1 - totalDigits / soloSum) * 100);
-    return (
-      <div key={`duo-${idx}`} className="border border-brand/25 bg-sand p-6">
-        <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-2">Для двоих</div>
-        <div className="font-display text-2xl text-brand uppercase tracking-wider mb-2">{rec.title}</div>
-        <p className="text-xs text-brand-dark/70 mb-5">{rec.suffix}</p>
-        <div className="space-y-3 mb-5">
-          <button
-            type="button"
-            onClick={() => { track("QUIZ_RESULT_OPEN", { slug: rec.body.slug }); openProgram(rec.body.slug); }}
-            className="w-full text-left border border-brand/15 bg-sand-soft p-4 hover:border-brand/40 transition-all group"
-          >
-            <div className="flex justify-between items-center">
-              <div>
-                <div className="text-[10px] uppercase tracking-widest text-brand/60">1 · тело</div>
-                <div className="font-display text-lg text-brand uppercase tracking-wider">{rec.body.name}</div>
-                <div className="text-[10px] text-brand-dark/60">~ {rec.body.dur}</div>
-              </div>
-              <div className="text-right">
-                <div className="font-display text-base text-brand">{rec.body.price}</div>
-                <div className="text-[10px] uppercase tracking-widest text-brand/60 group-hover:text-brand">Открыть →</div>
-              </div>
-            </div>
-          </button>
-          <button
-            type="button"
-            onClick={() => { track("QUIZ_RESULT_OPEN", { slug: rec.hair.slug }); openProgram(rec.hair.slug); }}
-            className="w-full text-left border border-brand/15 bg-sand-soft p-4 hover:border-brand/40 transition-all group"
-          >
-            <div className="flex justify-between items-center">
-              <div>
-                <div className="text-[10px] uppercase tracking-widest text-brand/60">2 · волосы</div>
-                <div className="font-display text-lg text-brand uppercase tracking-wider">{rec.hair.name}</div>
-                <div className="text-[10px] text-brand-dark/60">~ {rec.hair.dur}</div>
-              </div>
-              <div className="text-right">
-                <div className="font-display text-base text-brand">{rec.hair.price}</div>
-                <div className="text-[10px] uppercase tracking-widest text-brand/60 group-hover:text-brand">Открыть →</div>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div className="flex justify-between items-end pt-3 border-t border-brand/10">
-          <div className="text-xs uppercase tracking-widest text-brand/70">
-            Итого за двоих
-            <div className="text-[10px] normal-case text-brand/50 mt-0.5">
-              <span className="line-through">{soloSumFmt}</span> · выгода −{discountPct}%
-            </div>
-          </div>
-          <div className="font-display text-xl text-brand">{totalFmt}</div>
-        </div>
-      </div>
-    );
-  };
-
   return (
+
     <section id="quiz" className="py-24 bg-sand-soft border-y border-brand/10">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Что вам ближе</div>
@@ -269,9 +208,7 @@ export default function Quiz() {
           <div>
             <div className="text-center text-brand-dark/80 mb-8">Ваши варианты</div>
             <div className="grid md:grid-cols-2 gap-5">
-              {recs.map((r, i) =>
-                r.kind === "single" ? renderSingle(r.program, mode === "duo") : renderDuo(r, i)
-              )}
+              {recs.map((r) => renderSingle(r.program, mode === "duo"))}
             </div>
             <div className="text-center mt-8">
               <button onClick={reset} className="text-xs uppercase tracking-widest text-brand/60 hover:text-brand">
