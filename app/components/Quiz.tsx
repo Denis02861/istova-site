@@ -1,47 +1,63 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import { programs, type Program } from "../lib/programs-data";
 import { track } from "../lib/track";
 
-type Answer = "focus" | "time" | "mode";
 type Focus = "body" | "hair" | "silence";
 type Time = "morning" | "evening" | "any";
 type Mode = "solo" | "duo" | "any";
 
-type Rec = {
-  slug: string;
-  name: string;
-  tag: string;
-  price: string;
-  dur: string;
-};
+type RecItem =
+  | { kind: "single"; program: Program }
+  | { kind: "duo"; body: Program; hair: Program; title: string; suffix: string };
 
-const R: Record<string, Rec> = {
-  zarya_telo:     { slug: "zarya-telo",     name: "ЗАРЯ | ТЕЛО",     tag: "УТРО · тело",          price: "9 200 ₽",  dur: "100 мин" },
-  zarya_volosy:   { slug: "zarya-volosy",   name: "ЗАРЯ | ВОЛОСЫ",   tag: "УТРО · волосы",        price: "8 200 ₽",  dur: "90 мин" },
-  sumerki_telo:   { slug: "sumerki-telo",   name: "СУМЕРКИ | ТЕЛО",  tag: "ВЕЧЕР · тело",         price: "10 500 ₽", dur: "100 мин" },
-  sumerki_volosy: { slug: "sumerki-volosy", name: "СУМЕРКИ | ВОЛОСЫ",tag: "ВЕЧЕР · волосы",       price: "9 500 ₽",  dur: "90 мин" },
-  otzvuk:         { slug: "otzvuk",         name: "ОТЗВУК",          tag: "ВЕЧЕР · тишина",       price: "13 000 ₽", dur: "2 ч" },
-  yav:            { slug: "yav",            name: "ЯВЬ",             tag: "УТРО · короткий",      price: "6 800 ₽",  dur: "70 мин" },
-  kedr:           { slug: "kedr",           name: "КЕДР",            tag: "МУЖСКОЙ · тело/борода",price: "7 200 ₽",  dur: "80 мин" },
-  lada:           { slug: "lada",           name: "ЛАДА",            tag: "ЖЕНСКИЙ · глубокий",   price: "11 500 ₽", dur: "130 мин" },
-  rodnik:         { slug: "rodnik",         name: "РОДНИК",          tag: "БЕРЕМЕННЫМ · мягко",   price: "9 000 ₽",  dur: "90 мин" },
-};
+const byslug = (s: string) => programs.find((p) => p.slug === s)!;
 
-function recommend(focus: Focus, time: Time, mode: Mode): Rec[] {
-  if (focus === "silence") return [R.otzvuk, R.lada];
+function recommend(focus: Focus, time: Time, mode: Mode): RecItem[] {
+  // Парный вариант (два человека одновременно: один — ТЕЛО, другой — ВОЛОСЫ)
+  const duo = (t: "zarya" | "sumerki"): RecItem => ({
+    kind: "duo",
+    body: byslug(`${t}-telo`),
+    hair: byslug(`${t}-volosy`),
+    title: t === "zarya" ? "ЗАРЯ · парный ритуал" : "СУМЕРКИ · парный ритуал",
+    suffix: t === "zarya"
+      ? "Утренние ритуалы для двоих: один — на тело, другой — на кожу головы, в смежных кабинетах"
+      : "Вечерние ритуалы для двоих: один — на тело, другой — на кожу головы, в смежных кабинетах",
+  });
+
+  // Тишина — единственная траектория
+  if (focus === "silence") {
+    return [{ kind: "single", program: byslug("otzvuk") }, { kind: "single", program: byslug("lada") }];
+  }
+
+  // Парный сценарий — выбираем базовые парные ЗАРЯ / СУМЕРКИ
+  if (mode === "duo") {
+    if (time === "morning") return [duo("zarya"), { kind: "single", program: byslug("yav") }];
+    if (time === "evening") return [duo("sumerki"), { kind: "single", program: byslug("otzvuk") }];
+    return [duo("zarya"), duo("sumerki")];
+  }
+
+  // Соло / без разницы
   if (focus === "body") {
-    if (time === "morning") return [R.zarya_telo, R.yav];
-    if (time === "evening") return [R.sumerki_telo, R.lada];
-    return [R.sumerki_telo, R.zarya_telo];
+    if (time === "morning") return [{ kind: "single", program: byslug("zarya-telo") }, { kind: "single", program: byslug("yav") }];
+    if (time === "evening") return [{ kind: "single", program: byslug("sumerki-telo") }, { kind: "single", program: byslug("lada") }];
+    return [{ kind: "single", program: byslug("sumerki-telo") }, { kind: "single", program: byslug("zarya-telo") }];
   }
   if (focus === "hair") {
-    if (time === "morning") return [R.zarya_volosy, R.kedr];
-    if (time === "evening") return [R.sumerki_volosy, R.kedr];
-    return [R.sumerki_volosy, R.zarya_volosy];
+    if (time === "morning") return [{ kind: "single", program: byslug("zarya-volosy") }, { kind: "single", program: byslug("kedr") }];
+    if (time === "evening") return [{ kind: "single", program: byslug("sumerki-volosy") }, { kind: "single", program: byslug("kedr") }];
+    return [{ kind: "single", program: byslug("sumerki-volosy") }, { kind: "single", program: byslug("zarya-volosy") }];
   }
-  return [R.zarya_telo, R.sumerki_telo];
+  return [{ kind: "single", program: byslug("zarya-telo") }, { kind: "single", program: byslug("sumerki-telo") }];
+}
+
+function openProgram(slug: string) {
+  if (typeof window === "undefined") return;
+  window.dispatchEvent(new CustomEvent("istova:open-program", { detail: { slug } }));
+  // прокрутка к секции programs
+  const el = document.getElementById("programs");
+  if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
 export default function Quiz() {
@@ -50,26 +66,110 @@ export default function Quiz() {
   const [time, setTime] = useState<Time | null>(null);
   const [mode, setMode] = useState<Mode | null>(null);
 
-  const recs = useMemo(() => (focus && time && mode ? recommend(focus, time, mode) : []), [focus, time, mode]);
+  const recs = useMemo(
+    () => (focus && time && mode ? recommend(focus, time, mode) : []),
+    [focus, time, mode]
+  );
 
-  const reset = () => { setStep(0); setFocus(null); setTime(null); setMode(null); };
+  const reset = () => {
+    setStep(0);
+    setFocus(null);
+    setTime(null);
+    setMode(null);
+  };
 
   const OPTIONS = {
     focus: [
-      { v: "body" as Focus,    label: "На тело",              d: "массаж, тепло, кожа" },
-      { v: "hair" as Focus,    label: "На волосы",            d: "кожа головы, уход, распускание" },
-      { v: "silence" as Focus, label: "На тишину внутри",     d: "звук, дыхание, отдых" },
+      { v: "body" as Focus, label: "На тело", d: "массаж, тепло, кожа" },
+      { v: "hair" as Focus, label: "На волосы", d: "кожа головы, уход, распускание" },
+      { v: "silence" as Focus, label: "На тишину внутри", d: "звук, дыхание, отдых" },
     ],
     time: [
-      { v: "morning" as Time, label: "Утром / днём",       d: "проснуться, взбодриться" },
-      { v: "evening" as Time, label: "Вечером",            d: "отпустить, замедлиться" },
-      { v: "any" as Time,     label: "Без разницы",        d: "покажите оба варианта" },
+      { v: "morning" as Time, label: "Утром / днём", d: "проснуться, взбодриться" },
+      { v: "evening" as Time, label: "Вечером", d: "отпустить, замедлиться" },
+      { v: "any" as Time, label: "Без разницы", d: "покажите оба варианта" },
     ],
     mode: [
-      { v: "solo" as Mode, label: "Одной",       d: "тишина, никого рядом" },
-      { v: "duo" as Mode,  label: "Вдвоём",      d: "с партнёром или подругой" },
-      { v: "any" as Mode,  label: "Без разницы", d: "покажите оба варианта" },
+      { v: "solo" as Mode, label: "Одной", d: "тишина, никого рядом" },
+      { v: "duo" as Mode, label: "Вдвоём", d: "с партнёром или подругой — парный ритуал" },
+      { v: "any" as Mode, label: "Без разницы", d: "покажите оба варианта" },
     ],
+  };
+
+  const renderSingle = (p: Program) => (
+    <button
+      key={p.slug}
+      type="button"
+      onClick={() => { track("QUIZ_RESULT_OPEN", { slug: p.slug }); openProgram(p.slug); }}
+      className="w-full text-left border border-brand/20 bg-sand p-6 flex flex-col hover:border-brand/40 hover:-translate-y-0.5 transition-all"
+    >
+      <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-2">
+        {p.accent?.split("·")[0].trim()}
+      </div>
+      <div className="font-display text-2xl text-brand uppercase tracking-wider mb-3">{p.name}</div>
+      <p className="text-sm text-brand-dark/75 italic mb-4">{p.teaser}</p>
+      <div className="mt-auto flex justify-between items-end pt-3 border-t border-brand/10">
+        <div className="text-xs uppercase tracking-widest text-brand/70">Открыть →</div>
+        <div className="text-right">
+          <div className="font-display text-xl text-brand">{p.price}</div>
+          <div className="text-[10px] text-brand-dark/60">~ {p.dur}</div>
+        </div>
+      </div>
+    </button>
+  );
+
+  const renderDuo = (rec: Extract<RecItem, { kind: "duo" }>, idx: number) => {
+    const priceSum = ["body", "hair"].reduce((_a, _b) => 0, 0); // просто чтобы typescript не ругался
+    const totalDigits =
+      parseInt(rec.body.price.replace(/\D/g, ""), 10) + parseInt(rec.hair.price.replace(/\D/g, ""), 10);
+    const totalFmt = totalDigits.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ₽";
+    return (
+      <div key={`duo-${idx}`} className="border border-brand/25 bg-sand p-6">
+        <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-2">Для двоих</div>
+        <div className="font-display text-2xl text-brand uppercase tracking-wider mb-2">{rec.title}</div>
+        <p className="text-xs text-brand-dark/70 mb-5">{rec.suffix}</p>
+        <div className="space-y-3 mb-5">
+          <button
+            type="button"
+            onClick={() => { track("QUIZ_RESULT_OPEN", { slug: rec.body.slug }); openProgram(rec.body.slug); }}
+            className="w-full text-left border border-brand/15 bg-sand-soft p-4 hover:border-brand/40 transition-all group"
+          >
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="text-[10px] uppercase tracking-widest text-brand/60">1 · тело</div>
+                <div className="font-display text-lg text-brand uppercase tracking-wider">{rec.body.name}</div>
+                <div className="text-[10px] text-brand-dark/60">~ {rec.body.dur}</div>
+              </div>
+              <div className="text-right">
+                <div className="font-display text-base text-brand">{rec.body.price}</div>
+                <div className="text-[10px] uppercase tracking-widest text-brand/60 group-hover:text-brand">Открыть →</div>
+              </div>
+            </div>
+          </button>
+          <button
+            type="button"
+            onClick={() => { track("QUIZ_RESULT_OPEN", { slug: rec.hair.slug }); openProgram(rec.hair.slug); }}
+            className="w-full text-left border border-brand/15 bg-sand-soft p-4 hover:border-brand/40 transition-all group"
+          >
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="text-[10px] uppercase tracking-widest text-brand/60">2 · волосы</div>
+                <div className="font-display text-lg text-brand uppercase tracking-wider">{rec.hair.name}</div>
+                <div className="text-[10px] text-brand-dark/60">~ {rec.hair.dur}</div>
+              </div>
+              <div className="text-right">
+                <div className="font-display text-base text-brand">{rec.hair.price}</div>
+                <div className="text-[10px] uppercase tracking-widest text-brand/60 group-hover:text-brand">Открыть →</div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div className="flex justify-between items-end pt-3 border-t border-brand/10">
+          <div className="text-xs uppercase tracking-widest text-brand/70">Итого за двоих</div>
+          <div className="font-display text-xl text-brand">{totalFmt}</div>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -80,12 +180,17 @@ export default function Quiz() {
           Какой ритуал подойдёт вам
         </h2>
         <p className="text-center text-brand-dark/70 mb-12 max-w-xl mx-auto">
-          Три вопроса — и подскажем 1-2 ритуала под ваш день. Меняется в любой момент.
+          Три вопроса — и подскажем 1-2 ритуала под ваш день.
         </p>
 
         <div className="flex justify-center gap-2 mb-8">
           {[0, 1, 2].map((i) => (
-            <span key={i} className={`h-1 w-10 rounded-full transition-colors duration-300 ${i <= step ? "bg-brand" : "bg-brand/15"}`} />
+            <span
+              key={i}
+              className={`h-1 w-10 rounded-full transition-colors duration-300 ${
+                i <= step ? "bg-brand" : "bg-brand/15"
+              }`}
+            />
           ))}
         </div>
 
@@ -143,25 +248,9 @@ export default function Quiz() {
           <div>
             <div className="text-center text-brand-dark/80 mb-8">Ваши варианты</div>
             <div className="grid md:grid-cols-2 gap-5">
-              {recs.map((r) => (
-                <div key={r.slug} className="border border-brand/20 bg-sand p-6 flex flex-col">
-                  <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-2">{r.tag}</div>
-                  <div className="font-display text-2xl text-brand uppercase tracking-wider mb-3">{r.name}</div>
-                  <div className="text-sm text-brand-dark/70 mb-4">
-                    <span className="text-brand">{r.price}</span> · {r.dur}
-                  </div>
-                  <div className="mt-auto flex gap-3">
-                    <Link href={`/programs/${r.slug}/`} className="text-xs uppercase tracking-widest text-brand/70 hover:text-brand py-2">Подробнее →</Link>
-                    <a
-                      href="#booking"
-                      onClick={() => track("BOOKING_CLICK", { from: "quiz", slug: r.slug })}
-                      className="ml-auto text-sm px-4 py-2 bg-brand text-sand hover:bg-brand-dark transition-colors"
-                    >
-                      Записаться
-                    </a>
-                  </div>
-                </div>
-              ))}
+              {recs.map((r, i) =>
+                r.kind === "single" ? renderSingle(r.program) : renderDuo(r, i)
+              )}
             </div>
             <div className="text-center mt-8">
               <button onClick={reset} className="text-xs uppercase tracking-widest text-brand/60 hover:text-brand">

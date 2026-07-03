@@ -44,6 +44,32 @@ export default function Booking() {
     return () => obs.disconnect();
   }, []);
 
+  const applyPreselect = (name?: string) => {
+    if (!name) return;
+    setComment((prev) => {
+      const line = `Программа: ${name}`;
+      if (prev.includes(line)) return prev;
+      if (!prev.trim()) return line;
+      return `${line}\n${prev}`;
+    });
+  };
+
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem("istova-preselect");
+      if (raw) {
+        const p = JSON.parse(raw);
+        applyPreselect(p?.name);
+      }
+    } catch {}
+    const onEv = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      applyPreselect(detail?.name);
+    };
+    window.addEventListener("istova:preselect-program", onEv);
+    return () => window.removeEventListener("istova:preselect-program", onEv);
+  }, []);
+
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (status === "sending") return;
@@ -74,6 +100,7 @@ export default function Booking() {
       }
       setStatus("sent");
       track("BOOKING_SUCCESS", { channel });
+      try { sessionStorage.removeItem("istova-preselect"); } catch {}
       setName("");
       setPhone("");
       setChannel("");

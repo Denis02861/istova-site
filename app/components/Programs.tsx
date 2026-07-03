@@ -17,6 +17,15 @@ export default function Programs() {
     return () => { document.body.style.overflow = ""; window.removeEventListener("keydown", onKey); };
   }, [open]);
 
+  useEffect(() => {
+    const onOpen = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (detail?.slug) setOpen(detail.slug);
+    };
+    window.addEventListener("istova:open-program", onOpen);
+    return () => window.removeEventListener("istova:open-program", onOpen);
+  }, []);
+
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const scrollBy = (dir: 1 | -1) => {
     const el = scrollRef.current;
@@ -132,7 +141,9 @@ export default function Programs() {
           aria-modal="true"
         >
           <div
-            className="relative bg-sand-soft w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 md:p-10 border border-brand/20 shadow-2xl"
+            data-lenis-prevent
+            className="relative bg-sand-soft w-full max-w-2xl max-h-[90vh] overflow-y-auto overscroll-contain p-6 md:p-10 border border-brand/20 shadow-2xl"
+            style={{ WebkitOverflowScrolling: "touch" }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -196,7 +207,11 @@ export default function Programs() {
                 </div>
                 <a
                   href="#booking"
-                  onClick={() => setOpen(null)}
+                  onClick={() => {
+                    try { sessionStorage.setItem("istova-preselect", JSON.stringify({ slug: active.slug, name: active.name })); } catch {}
+                    window.dispatchEvent(new CustomEvent("istova:preselect-program", { detail: { slug: active.slug, name: active.name } }));
+                    setOpen(null);
+                  }}
                   className="sm:ml-auto px-6 py-3 bg-brand text-sand text-center hover:bg-brand-dark transition-colors uppercase tracking-widest text-sm"
                 >
                   Записаться
