@@ -18,6 +18,7 @@ import Prep from "./components/Prep";
 import StickyMobileBar from "./components/StickyMobileBar";
 import ScrollProgress from "./components/ScrollProgress";
 import SmoothScroll from "./components/SmoothScroll";
+import CookieBanner from "./components/CookieBanner";
 
 export default function Page() {
   return (
@@ -43,6 +44,7 @@ export default function Page() {
       <StickyMobileBar />
       <ScrollProgress />
       <SmoothScroll />
+      <CookieBanner />
     </>
   );
 }

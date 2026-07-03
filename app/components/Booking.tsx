@@ -20,6 +20,7 @@ export default function Booking() {
   const [channel, setChannel] = useState("");
   const [comment, setComment] = useState("");
   const [status, setStatus] = useState<Status>("idle");
+  const [consent, setConsent] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
 
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -50,6 +51,12 @@ export default function Booking() {
       setStatus("error");
       setErrorMsg("Заполните имя, телефон и способ связи");
       track("BOOKING_VALIDATION_ERROR");
+      return;
+    }
+    if (!consent) {
+      setStatus("error");
+      setErrorMsg("Требуется согласие на обработку персональных данных");
+      track("BOOKING_CONSENT_MISSING");
       return;
     }
     setStatus("sending");
@@ -151,9 +158,26 @@ export default function Booking() {
               >
                 {sending ? "Отправляем…" : "Отправить заявку"}
               </button>
-              <p className="text-xs text-brand/50 text-center pt-2">
-                Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных
-              </p>
+              <label className="flex items-start gap-3 pt-2 text-xs text-brand/60 leading-relaxed cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                  className="mt-0.5 w-4 h-4 accent-brand shrink-0"
+                />
+                <span>
+                  Я даю согласие на обработку персональных данных в соответствии с{" "}
+                  <a
+                    href="/politika-obrabotki-personalnyh-dannyh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-brand"
+                  >
+                    Политикой обработки ПДн
+                  </a>
+                  .
+                </span>
+              </label>
             </form>
           )}
           <div className="mt-8 pt-6 border-t border-brand/15 text-left">
