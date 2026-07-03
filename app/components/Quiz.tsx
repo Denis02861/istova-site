@@ -96,33 +96,49 @@ export default function Quiz() {
     ],
   };
 
-  const renderSingle = (p: Program) => (
-    <button
-      key={p.slug}
-      type="button"
-      onClick={() => { track("QUIZ_RESULT_OPEN", { slug: p.slug }); openProgram(p.slug); }}
-      className="w-full text-left border border-brand/20 bg-sand p-6 flex flex-col hover:border-brand/40 hover:-translate-y-0.5 transition-all"
-    >
-      <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-2">
-        {p.accent?.split("·")[0].trim()}
-      </div>
-      <div className="font-display text-2xl text-brand uppercase tracking-wider mb-3">{p.name}</div>
-      <p className="text-sm text-brand-dark/75 italic mb-4">{p.teaser}</p>
-      <div className="mt-auto flex justify-between items-end pt-3 border-t border-brand/10">
-        <div className="text-xs uppercase tracking-widest text-brand/70">Открыть →</div>
-        <div className="text-right">
-          <div className="font-display text-xl text-brand">{p.price}</div>
-          <div className="text-[10px] text-brand-dark/60">~ {p.dur}</div>
+  const renderSingle = (p: Program, asDuo = false) => {
+    const showPair = asDuo && p.pair_price;
+    return (
+      <button
+        key={p.slug}
+        type="button"
+        onClick={() => { track("QUIZ_RESULT_OPEN", { slug: p.slug }); openProgram(p.slug); }}
+        className="w-full text-left border border-brand/20 bg-sand p-6 flex flex-col hover:border-brand/40 hover:-translate-y-0.5 transition-all"
+      >
+        <div className="flex items-center gap-2 mb-2 flex-wrap">
+          <div className="text-[10px] uppercase tracking-widest text-brand/60">
+            {p.accent?.split("·")[0].trim()}
+          </div>
+          {showPair && (
+            <div className="text-[10px] uppercase tracking-widest text-brand/70 px-2 py-0.5 border border-brand/20">
+              для двоих
+            </div>
+          )}
         </div>
-      </div>
-    </button>
-  );
+        <div className="font-display text-2xl text-brand uppercase tracking-wider mb-3">{p.name}</div>
+        <p className="text-sm text-brand-dark/75 italic mb-4">{p.teaser}</p>
+        <div className="mt-auto flex justify-between items-end pt-3 border-t border-brand/10">
+          <div className="text-xs uppercase tracking-widest text-brand/70">Открыть →</div>
+          <div className="text-right">
+            <div className="font-display text-xl text-brand">
+              {showPair ? p.pair_price : p.price}
+            </div>
+            <div className="text-[10px] text-brand-dark/60">~ {p.dur}{showPair ? " · для двоих" : ""}</div>
+          </div>
+        </div>
+      </button>
+    );
+  };
 
   const renderDuo = (rec: Extract<RecItem, { kind: "duo" }>, idx: number) => {
-    const priceSum = ["body", "hair"].reduce((_a, _b) => 0, 0); // просто чтобы typescript не ругался
-    const totalDigits =
-      parseInt(rec.body.price.replace(/\D/g, ""), 10) + parseInt(rec.hair.price.replace(/\D/g, ""), 10);
+    const bodySolo = parseInt(rec.body.price.replace(/\D/g, ""), 10);
+    const hairSolo = parseInt(rec.hair.price.replace(/\D/g, ""), 10);
+    const soloSum = bodySolo + hairSolo;
+    // MIX-пара: скидка 10% от суммы solo, округление до сотен
+    const totalDigits = Math.round((soloSum * 0.9) / 100) * 100;
     const totalFmt = totalDigits.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ₽";
+    const soloSumFmt = soloSum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ₽";
+    const discountPct = Math.round((1 - totalDigits / soloSum) * 100);
     return (
       <div key={`duo-${idx}`} className="border border-brand/25 bg-sand p-6">
         <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-2">Для двоих</div>
@@ -165,7 +181,12 @@ export default function Quiz() {
           </button>
         </div>
         <div className="flex justify-between items-end pt-3 border-t border-brand/10">
-          <div className="text-xs uppercase tracking-widest text-brand/70">Итого за двоих</div>
+          <div className="text-xs uppercase tracking-widest text-brand/70">
+            Итого за двоих
+            <div className="text-[10px] normal-case text-brand/50 mt-0.5">
+              <span className="line-through">{soloSumFmt}</span> · выгода −{discountPct}%
+            </div>
+          </div>
           <div className="font-display text-xl text-brand">{totalFmt}</div>
         </div>
       </div>
@@ -249,7 +270,7 @@ export default function Quiz() {
             <div className="text-center text-brand-dark/80 mb-8">Ваши варианты</div>
             <div className="grid md:grid-cols-2 gap-5">
               {recs.map((r, i) =>
-                r.kind === "single" ? renderSingle(r.program) : renderDuo(r, i)
+                r.kind === "single" ? renderSingle(r.program, mode === "duo") : renderDuo(r, i)
               )}
             </div>
             <div className="text-center mt-8">

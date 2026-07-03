@@ -50,6 +50,9 @@ export default function ProgramsCatalogPage() {
         </div>
         <div className="text-right">
           <div className="font-display text-2xl text-brand">{p.price}</div>
+          {p.pair_price && (
+            <div className="text-[10px] text-brand/60 mt-0.5">Вдвоём {p.pair_price}</div>
+          )}
           <div className="text-[10px] text-brand-dark/60 mt-0.5">~ {p.dur}</div>
         </div>
       </div>

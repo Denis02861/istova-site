@@ -10,6 +10,7 @@ export type Program = {
   price: string;
   teaser: string;
   cosmetics?: string[];
+  pair_price?: string;
 };
 
 export const programs: Program[] = [
@@ -35,6 +36,7 @@ export const programs: Program[] = [
       "Массажное масло тонизирующее",
       "Уход для лица — освежающая линейка",
     ],
+    pair_price: "16 000 ₽",
   },
   {
     slug: "zarya-volosy",
@@ -57,6 +59,7 @@ export const programs: Program[] = [
       "Davines — линейка для кожи головы и волос (очищение, восстановление, тонус корней)",
       "Гребни и массажные инструменты",
     ],
+    pair_price: "14 300 ₽",
   },
   {
     slug: "sumerki-telo",
@@ -82,6 +85,7 @@ export const programs: Program[] = [
       "Травяные согревающие мешочки",
       "Паровая маска для глаз",
     ],
+    pair_price: "18 300 ₽",
   },
   {
     slug: "sumerki-volosy",
@@ -106,6 +110,7 @@ export const programs: Program[] = [
       "Davines — линейка для кожи головы и волос (глубокое очищение, питание, восстановление)",
       "Травяные согревающие мешочки",
     ],
+    pair_price: "16 500 ₽",
   },
   // ─── АВТОРСКИЕ ───
   {
@@ -133,6 +138,7 @@ export const programs: Program[] = [
       "Davines — линейка для кожи головы и волос",
       "Охлаждающий крем для стоп и голеней",
     ],
+    pair_price: "16 500 ₽",
   },
   {
     slug: "kedr",
@@ -161,6 +167,7 @@ export const programs: Program[] = [
       "Уход для лица и бороды",
       "Davines — линейка для кожи головы и волос (плотность, восстановление)",
     ],
+    pair_price: "21 200 ₽",
   },
   {
     slug: "lada",
@@ -191,6 +198,7 @@ export const programs: Program[] = [
       "Davines — линейка для кожи головы и волос",
       "Тёплое масло нероли для ритуала кистей",
     ],
+    pair_price: "21 200 ₽",
   },
   {
     slug: "yav",
@@ -212,6 +220,7 @@ export const programs: Program[] = [
       "Освежающий уход для лица",
       "Davines — линейка для кожи головы и волос (очищение, восстановление, мягкость)",
     ],
+    pair_price: "12 000 ₽",
   },
   {
     slug: "otzvuk",
@@ -237,5 +246,6 @@ export const programs: Program[] = [
       "Тёплый компресс для глаз",
       "Утяжелённое одеяло, поющие чаши, объёмный звук (пространственные инструменты)",
     ],
+    pair_price: "22 100 ₽",
   },
 ];

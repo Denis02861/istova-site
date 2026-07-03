@@ -225,10 +225,19 @@ export default async function ProgramPage({
             </div>
             <div>
               <h3 className="text-xs uppercase tracking-widest text-brand/60 mb-1 font-normal">
-                Стоимость
+                Одному
               </h3>
-              <div className="font-display text-4xl text-brand">{program.price}</div>
+              <div className="font-display text-3xl md:text-4xl text-brand">{program.price}</div>
             </div>
+            {program.pair_price && (
+              <div>
+                <h3 className="text-xs uppercase tracking-widest text-brand/60 mb-1 font-normal">
+                  Вдвоём · выгоднее
+                </h3>
+                <div className="font-display text-3xl md:text-4xl text-brand">{program.pair_price}</div>
+                <div className="text-xs text-brand/60 mt-1">в двух смежных кабинетах</div>
+              </div>
+            )}
             <Link
               href="/#booking"
               className="text-sm uppercase tracking-widest px-8 py-4 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors"

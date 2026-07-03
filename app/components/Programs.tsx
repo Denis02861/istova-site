@@ -43,11 +43,18 @@ export default function Programs() {
       className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start bg-sand-soft border border-brand/10 p-8 flex flex-col min-h-[360px] text-left transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] hover:border-brand/40 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand/40"
     >
       <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
-      {p.accent && (
-        <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-3">
-          {p.accent.split("·")[0].trim()}
-        </div>
-      )}
+      <div className="flex items-center gap-2 mb-3 flex-wrap">
+        {p.accent && (
+          <div className="text-[10px] uppercase tracking-widest text-brand/60">
+            {p.accent.split("·")[0].trim()}
+          </div>
+        )}
+        {p.pair_price && (
+          <div className="text-[10px] uppercase tracking-widest text-brand/70 px-2 py-0.5 border border-brand/20 bg-sand">
+            Можно вдвоём
+          </div>
+        )}
+      </div>
       <h3 className="font-display text-2xl md:text-3xl tracking-wider text-brand mb-4 uppercase">
         {p.name}
       </h3>
@@ -200,22 +207,48 @@ export default function Programs() {
                 </div>
               )}
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-end gap-4 pt-6 border-t border-brand/10">
-                <div>
-                  <div className="font-display text-3xl text-brand">{active.price}</div>
-                  <div className="text-xs text-brand-dark/60 mt-1">~ {active.dur}</div>
+              <div className="pt-6 border-t border-brand/10 mb-6">
+                <div className="text-xs uppercase tracking-widest text-brand/60 mb-3">Стоимость и длительность</div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 bg-sand/60 border border-brand/10">
+                    <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-1">Одному</div>
+                    <div className="font-display text-2xl md:text-3xl text-brand">{active.price}</div>
+                    <div className="text-[10px] text-brand-dark/60 mt-1">~ {active.dur}</div>
+                  </div>
+                  {active.pair_price && (
+                    <div className="p-4 bg-sand border border-brand/25">
+                      <div className="text-[10px] uppercase tracking-widest text-brand/70 mb-1">Вдвоём · выгоднее</div>
+                      <div className="font-display text-2xl md:text-3xl text-brand">{active.pair_price}</div>
+                      <div className="text-[10px] text-brand-dark/60 mt-1">в двух кабинетах одновременно</div>
+                    </div>
+                  )}
                 </div>
+              </div>
+              <div className="flex flex-col sm:flex-row items-stretch gap-4 pt-2">
                 <a
                   href="#booking"
                   onClick={() => {
-                    try { sessionStorage.setItem("istova-preselect", JSON.stringify({ slug: active.slug, name: active.name })); } catch {}
-                    window.dispatchEvent(new CustomEvent("istova:preselect-program", { detail: { slug: active.slug, name: active.name } }));
+                    try { sessionStorage.setItem("istova-preselect", JSON.stringify({ slug: active.slug, name: active.name, forDuo: false })); } catch {}
+                    window.dispatchEvent(new CustomEvent("istova:preselect-program", { detail: { slug: active.slug, name: active.name, forDuo: false } }));
                     setOpen(null);
                   }}
-                  className="sm:ml-auto px-6 py-3 bg-brand text-sand text-center hover:bg-brand-dark transition-colors uppercase tracking-widest text-sm"
+                  className="flex-1 px-4 py-3 bg-brand text-sand text-center hover:bg-brand-dark transition-colors uppercase tracking-widest text-xs"
                 >
-                  Записаться
+                  Записаться одному
                 </a>
+                {active.pair_price && (
+                  <a
+                    href="#booking"
+                    onClick={() => {
+                      try { sessionStorage.setItem("istova-preselect", JSON.stringify({ slug: active.slug, name: active.name, forDuo: true })); } catch {}
+                      window.dispatchEvent(new CustomEvent("istova:preselect-program", { detail: { slug: active.slug, name: active.name, forDuo: true } }));
+                      setOpen(null);
+                    }}
+                    className="flex-1 px-4 py-3 bg-brand text-sand text-center hover:bg-brand-dark transition-colors uppercase tracking-widest text-xs"
+                  >
+                    Записаться вдвоём
+                  </a>
+                )}
                 <Link
                   href={`/programs/${active.slug}/`}
                   className="px-6 py-3 border border-brand/40 text-brand text-center hover:bg-brand hover:text-sand transition-colors uppercase tracking-widest text-sm"

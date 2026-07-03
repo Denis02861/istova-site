@@ -44,13 +44,18 @@ export default function Booking() {
     return () => obs.disconnect();
   }, []);
 
-  const applyPreselect = (name?: string) => {
+  const applyPreselect = (name?: string, forDuo?: boolean) => {
     if (!name) return;
     setComment((prev) => {
-      const line = `Программа: ${name}`;
-      if (prev.includes(line)) return prev;
-      if (!prev.trim()) return line;
-      return `${line}\n${prev}`;
+      const suffix = forDuo ? " (вдвоём)" : "";
+      const line = `Программа: ${name}${suffix}`;
+      // очистить предыдущую строку «Программа: ...»
+      const rest = prev
+        .split(/\n/)
+        .filter((l) => !l.startsWith("Программа:"))
+        .join("\n")
+        .trim();
+      return rest ? `${line}\n${rest}` : line;
     });
   };
 
@@ -59,12 +64,12 @@ export default function Booking() {
       const raw = sessionStorage.getItem("istova-preselect");
       if (raw) {
         const p = JSON.parse(raw);
-        applyPreselect(p?.name);
+        applyPreselect(p?.name, p?.forDuo);
       }
     } catch {}
     const onEv = (e: Event) => {
       const detail = (e as CustomEvent).detail;
-      applyPreselect(detail?.name);
+      applyPreselect(detail?.name, detail?.forDuo);
     };
     window.addEventListener("istova:preselect-program", onEv);
     return () => window.removeEventListener("istova:preselect-program", onEv);
