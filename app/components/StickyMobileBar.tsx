@@ -24,6 +24,7 @@ export default function StickyMobileBar() {
 
   return (
     <div
+      data-mobile-sticky-bar
       className={`md:hidden fixed left-0 right-0 bottom-0 z-40 bg-sand/95 backdrop-blur-md border-t border-brand/15 shadow-[0_-2px_20px_rgba(116,68,54,0.08)] transition-all duration-500 ease-out ${
         show ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"
       }`}

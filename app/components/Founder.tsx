@@ -1,7 +1,7 @@
 export default function Founder() {
   return (
     <section id="founder" className="py-24 bg-sand-soft">
-      <div className="container mx-auto px-6 max-w-3xl text-center">
+      <div className="container mx-auto px-6 max-w-3xl text-center relative z-10">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-6">От основателя</div>
         <blockquote className="relative">
           <span

@@ -120,8 +120,17 @@ export default function Booking() {
   const sending = status === "sending";
 
   return (
-    <section ref={sectionRef} id="booking" className="py-24 bg-brand text-sand">
-      <div className="container mx-auto px-6 max-w-3xl text-center">
+    <section
+      ref={sectionRef}
+      id="booking"
+      className="py-24 bg-brand text-sand relative overflow-hidden"
+    >
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 opacity-30 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: "url('/textures/marble-dark.jpg')", mixBlendMode: "overlay" }}
+      />
+      <div className="container mx-auto px-6 max-w-3xl text-center relative z-10">
         <h2 className="font-display text-4xl md:text-5xl mb-6 uppercase tracking-wider">Записаться на ритуал</h2>
         <p className="mb-12 text-sand/80 max-w-xl mx-auto leading-relaxed">Оставьте заявку — администратор свяжется с вами в течение часа и подтвердит запись.</p>
         <div className="bg-sand-soft text-brand p-12 max-w-xl mx-auto">

@@ -2,19 +2,46 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { programs, type Program } from "../lib/programs-data";
 const DISCLAIMER =
   "*Перечень услуг составлен в соответствии с требованиями Приказа Росстандарта от 29.11.2012 №1597-ст и №1605-ст «ГОСТ Р 55317-2012». Истова не оказывает лечебные и оздоровительные процедуры.";
 
 export default function Programs() {
   const [open, setOpen] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
   const active = programs.find((p) => p.slug === open);
 
+  useEffect(() => { setMounted(true); }, []);
+
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(null); };
-    window.addEventListener("keydown", onKey);
-    return () => { document.body.style.overflow = ""; window.removeEventListener("keydown", onKey); };
+    if (open) {
+      // iOS-safe scroll lock: фиксируем body с текущим scrollY
+      const scrollY = window.scrollY;
+      document.body.dataset.scrollLock = String(scrollY);
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+      document.body.classList.add("istova-modal-open");
+      window.addEventListener("keydown", onKey);
+    }
+    return () => {
+      if (document.body.dataset.scrollLock !== undefined) {
+        const y = parseInt(document.body.dataset.scrollLock || "0", 10);
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.left = "";
+        document.body.style.right = "";
+        document.body.style.width = "";
+        delete document.body.dataset.scrollLock;
+        document.body.classList.remove("istova-modal-open");
+        window.scrollTo(0, y);
+      }
+      window.removeEventListener("keydown", onKey);
+    };
   }, [open]);
 
   useEffect(() => {
@@ -140,7 +167,7 @@ export default function Programs() {
         </p>
       </div>
 
-      {active && (
+      {mounted && active && createPortal(
         <div
           className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-8 bg-brand-dark/50 backdrop-blur-sm"
           onClick={() => setOpen(null)}
@@ -156,7 +183,7 @@ export default function Programs() {
             <button
               onClick={() => setOpen(null)}
               aria-label="Закрыть"
-              className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 flex items-center justify-center text-brand/70 hover:text-brand hover:bg-brand/5 transition-colors text-2xl"
+              className="sticky top-2 float-right z-10 w-11 h-11 flex items-center justify-center text-brand/70 hover:text-brand bg-sand-soft hover:bg-brand/5 border border-brand/15 rounded-full transition-colors text-2xl -mr-2 -mt-2 md:-mr-4 md:-mt-4"
             >
               ×
             </button>
@@ -258,7 +285,8 @@ export default function Programs() {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );

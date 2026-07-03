@@ -30,7 +30,7 @@ export default function Page() {
         <Ritual />
         <Reveal variant="up"><Quiz /></Reveal>
         <Reveal variant="up"><Programs /></Reveal>
-        <Reveal variant="left"><TeaCard /></Reveal>
+        <TeaCard />
         <Reveal variant="scale"><Space /></Reveal>
         <Reveal variant="right"><Prep /></Reveal>
         <Reveal variant="fade"><Founder /></Reveal>
