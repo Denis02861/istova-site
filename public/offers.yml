@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-07-04T13:45:00+03:00">
+  <shop>
+    <name>Истова</name>
+    <company>ИП Карасёв Денис Игоревич</company>
+    <url>https://istova.ru/</url>
+    <email>istomaspa@yandex.ru</email>
+    <phone>+7 (901) 320-10-50</phone>
+    <currencies>
+      <currency id="RUR" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">СПА-ритуалы</category>
+      <category id="2">СПА-ритуалы для двоих</category>
+      <category id="3">Подарочные сертификаты</category>
+    </categories>
+    <offers>
+    <offer id="zarya-telo-solo" available="true">
+      <name>ЗАРЯ | ТЕЛО — одному</name>
+      <url>https://istova.ru/programs/zarya-telo/</url>
+      <price>9200</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Утренний ритуал пробуждения через тело: финская сауна с бодрящими эфирами, пилинг с гималайской солью, тонизирующий СПА-массаж, освежающий уход за лицом, пробуждение через стопы.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">100 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="zarya-volosy-solo" available="true">
+      <name>ЗАРЯ | ВОЛОСЫ — одному</name>
+      <url>https://istova.ru/programs/zarya-volosy/</url>
+      <price>8200</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Утренний ритуал пробуждения через кожу головы: массаж лица с криосферами, пенный СПА-массаж, Золотая дуга, СПА-уход Davines. Сушка и лёгкая укладка.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">90 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="sumerki-telo-solo" available="true">
+      <name>СУМЕРКИ | ТЕЛО — одному</name>
+      <url>https://istova.ru/programs/sumerki-telo/</url>
+      <price>10500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Вечерний ритуал расслабления через тело: финская сауна с лавандой, лавандовый пилинг, сандаловое обёртывание, массаж на тёплом масле, паровая маска для глаз.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">100 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="sumerki-volosy-solo" available="true">
+      <name>СУМЕРКИ | ВОЛОСЫ — одному</name>
+      <url>https://istova.ru/programs/sumerki-volosy/</url>
+      <price>9500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Вечерний ритуал расслабления через кожу головы: тёплый травяной настой, Золотая дуга, СПА-уход Davines, расслабляющий массаж головы. Сушка волос.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">90 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="yav-solo" available="true">
+      <name>ЯВЬ — одному</name>
+      <url>https://istova.ru/programs/yav/</url>
+      <price>6800</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Ритуал знакомства с Истовой: расслабляющий СПА-массаж спины и шейно-воротниковой зоны, освежающий уход за лицом, Золотая дуга, СПА-уход Davines.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">70 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="otzvuk-solo" available="true">
+      <name>ОТЗВУК — одному</name>
+      <url>https://istova.ru/programs/otzvuk/</url>
+      <price>13000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Вечерний ритуал глубокой тишины без водных практик: аудиопогружение, сенсорный уход для лица, звуковая практика с поющими чашами, ритуал заземления, отдых под тяжёлым одеялом.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">120 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="kedr-solo" available="true">
+      <name>КЕДР — одному</name>
+      <url>https://istova.ru/programs/kedr/</url>
+      <price>12500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Мужской ритуал восстановления: финская сауна с кедровыми эфирами, пилинг с морской солью и маслом кедра, креольский массаж бамбуковыми палочками, массаж с горячими камнями.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">150 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="lada-solo" available="true">
+      <name>ЛАДА — одному</name>
+      <url>https://istova.ru/programs/lada/</url>
+      <price>12500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Женский ритуал восстановления: финская сауна с розой и нероли, турецкий пилинг кесе, СПА-массаж с травяными мешочками, эстетический массаж лица с гуаша.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">150 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="rodnik-solo" available="true">
+      <name>РОДНИК — одному</name>
+      <url>https://istova.ru/programs/rodnik/</url>
+      <price>9500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Бережный ритуал для будущей мамы. Адаптирован для беременных со 2 триместра и через 6 недель после родов.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">90 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="zarya-telo-pair" available="true">
+      <name>ЗАРЯ | ТЕЛО — вдвоём</name>
+      <url>https://istova.ru/programs/zarya-telo/</url>
+      <price>16000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Утренний ритуал пробуждения для двоих в двух смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">100 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="zarya-volosy-pair" available="true">
+      <name>ЗАРЯ | ВОЛОСЫ — вдвоём</name>
+      <url>https://istova.ru/programs/zarya-volosy/</url>
+      <price>14300</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Утренний ритуал для двоих в двух смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">90 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="sumerki-telo-pair" available="true">
+      <name>СУМЕРКИ | ТЕЛО — вдвоём</name>
+      <url>https://istova.ru/programs/sumerki-telo/</url>
+      <price>18300</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Вечерний ритуал расслабления для двоих в двух смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">100 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="sumerki-volosy-pair" available="true">
+      <name>СУМЕРКИ | ВОЛОСЫ — вдвоём</name>
+      <url>https://istova.ru/programs/sumerki-volosy/</url>
+      <price>16500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Вечерний ритуал для двоих в двух смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">90 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="yav-pair" available="true">
+      <name>ЯВЬ — вдвоём</name>
+      <url>https://istova.ru/programs/yav/</url>
+      <price>12000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Знакомство с Истовой для двоих в двух смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">70 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="otzvuk-pair" available="true">
+      <name>ОТЗВУК — вдвоём</name>
+      <url>https://istova.ru/programs/otzvuk/</url>
+      <price>22100</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Ритуал глубокой тишины для двоих в смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">120 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="kedr-pair" available="true">
+      <name>КЕДР — вдвоём</name>
+      <url>https://istova.ru/programs/kedr/</url>
+      <price>21200</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Мужской ритуал восстановления для двоих в смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">150 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="lada-pair" available="true">
+      <name>ЛАДА — вдвоём</name>
+      <url>https://istova.ru/programs/lada/</url>
+      <price>21200</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Женский ритуал восстановления для двоих в смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">150 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="rodnik-pair" available="true">
+      <name>РОДНИК — вдвоём</name>
+      <url>https://istova.ru/programs/rodnik/</url>
+      <price>16500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Бережный ритуал для будущих мам, вдвоём в смежных кабинетах.</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">90 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <vendor>Истова</vendor>
+    </offer>
+    <offer id="cert-any" available="true">
+      <name>Подарочный сертификат Истовы (любая сумма)</name>
+      <url>https://istova.ru/#booking</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/og-image.webp</picture>
+      <delivery>false</delivery>
+      <pickup>true</pickup>
+      <description>Электронный или бумажный подарочный сертификат на любую сумму от 3 000 ₽. Оформляется онлайн или в салоне. Активируется на любой из ритуалов Истовы или парикмахерский зал. Срок действия — 6 месяцев с даты оформления.</description>
+      <sales_notes>От 3 000 ₽ до любой суммы. Оформление онлайн или в салоне.</sales_notes>
+      <vendor>Истова</vendor>
+    </offer>
+    </offers>
+  </shop>
+</yml_catalog>
