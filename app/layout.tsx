@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
 };
 
-const YM_ID = 110390441;
+const YM_ID = 109992381;
 
 const ORG_JSONLD = {
   "@context": "https://schema.org",
