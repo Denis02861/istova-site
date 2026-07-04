@@ -177,6 +177,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://mc.yandex.ru https://mc.yandex.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://mc.yandex.ru https://mc.yandex.com https://yandex.ru https://storage.mds.yandex.net; font-src 'self' data:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://n8nautomat.site; frame-src 'self' https://yandex.ru https://mc.yandex.ru; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://n8nautomat.site; upgrade-insecure-requests" />
+        <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
         <link rel="agent-skills" href="/.well-known/agent-skills/index.json" type="application/json" />
         <link rel="describedby" href="/llms.txt" type="text/markdown" />
         <link rel="alternate" href="/sitemap.xml" type="application/xml" title="Sitemap" />
