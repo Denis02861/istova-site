@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-07-04T13:45:00+03:00">
+<yml_catalog date="2026-07-04T18:50:00+03:00">
   <shop>
     <name>Истова</name>
     <company>ИП Карасёв Денис Игоревич</company>
@@ -28,6 +28,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">100 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="zarya-volosy-solo" available="true">
@@ -43,6 +48,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="sumerki-telo-solo" available="true">
@@ -58,6 +68,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">100 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="sumerki-volosy-solo" available="true">
@@ -73,6 +88,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="yav-solo" available="true">
@@ -88,6 +108,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">70 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="otzvuk-solo" available="true">
@@ -103,6 +128,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">120 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="kedr-solo" available="true">
@@ -118,6 +148,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">150 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="lada-solo" available="true">
@@ -133,6 +168,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">150 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="rodnik-solo" available="true">
@@ -148,6 +188,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="zarya-telo-pair" available="true">
@@ -163,6 +208,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">100 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="zarya-volosy-pair" available="true">
@@ -178,6 +228,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="sumerki-telo-pair" available="true">
@@ -193,6 +248,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">100 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="sumerki-volosy-pair" available="true">
@@ -208,6 +268,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="yav-pair" available="true">
@@ -223,6 +288,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">70 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="otzvuk-pair" available="true">
@@ -238,6 +308,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">120 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="kedr-pair" available="true">
@@ -253,6 +328,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">150 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="lada-pair" available="true">
@@ -268,6 +348,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">150 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="rodnik-pair" available="true">
@@ -283,6 +368,11 @@
       <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     <offer id="cert-any" available="true">
@@ -296,6 +386,11 @@
       <pickup>true</pickup>
       <description>Электронный или бумажный подарочный сертификат на любую сумму от 3 000 ₽. Оформляется онлайн или в салоне. Активируется на любой из ритуалов Истовы или парикмахерский зал. Срок действия — 6 месяцев с даты оформления.</description>
       <sales_notes>От 3 000 ₽ до любой суммы. Оформление онлайн или в салоне.</sales_notes>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">0</param>
+      <param name="Опыт">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
       <vendor>Истова</vendor>
     </offer>
     </offers>
