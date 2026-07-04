@@ -150,6 +150,8 @@ export default function Booking() {
             <form onSubmit={onSubmit} className="space-y-4 text-left">
               <input
                 type="text"
+                aria-label="Имя"
+                autoComplete="name"
                 placeholder="Имя *"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -160,6 +162,8 @@ export default function Booking() {
               />
               <input
                 type="tel"
+                aria-label="Телефон"
+                autoComplete="tel"
                 placeholder="Телефон *"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -168,7 +172,10 @@ export default function Booking() {
                 maxLength={30}
                 className="w-full px-4 py-3 bg-sand border border-brand/20 focus:border-brand outline-none disabled:opacity-60"
               />
+              <label htmlFor="booking-channel" className="sr-only">Как с вами связаться</label>
               <select
+                id="booking-channel"
+                aria-label="Как с вами связаться"
                 value={channel}
                 onChange={(e) => setChannel(e.target.value)}
                 disabled={sending}
@@ -181,6 +188,7 @@ export default function Booking() {
                 ))}
               </select>
               <textarea
+                aria-label="Комментарий"
                 placeholder="Комментарий (опционально)"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}

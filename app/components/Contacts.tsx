@@ -28,6 +28,9 @@ export default function Contacts() {
               height="100%"
               frameBorder={0}
               allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              sandbox="allow-scripts allow-same-origin allow-popups"
               title="Карта — Истова"
               style={{ border: 0 }}
             />

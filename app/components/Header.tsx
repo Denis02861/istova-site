@@ -58,7 +58,7 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Закрыть меню" : "Открыть меню"}
           aria-expanded={open}
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 -mr-1 relative"
+          className="md:hidden flex flex-col justify-center items-center w-11 h-11 -mr-1 relative"
         >
           <span className={`absolute h-0.5 w-6 bg-brand transition-transform duration-300 ${open ? "rotate-45" : "-translate-y-2"}`} />
           <span className={`absolute h-0.5 w-6 bg-brand transition-opacity duration-200 ${open ? "opacity-0" : "opacity-100"}`} />

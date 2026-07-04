@@ -1,12 +1,11 @@
 import "./globals.css";
 import Script from "next/script";
-import WebMCPProvider from "./components/WebMCPProvider";
 import type { Metadata } from "next";
 
 const SITE_URL = "https://istova.ru";
 const TITLE = "Истова — пространство истинного ухода в Петербурге";
 const DESCRIPTION =
-  "Премиальное бьюти-пространство в сердце Петербурга — авторские СПА-ритуалы, парикмахерское искусство, макияж. Сервис под ключ для особенных моментов. Васильевский остров, ул. Беринга, 23 к. 2.";
+  "Авторские СПА-ритуалы, парикмахерская, макияж на Васильевском острове. Ритуалы для одного и вдвоём. Ул. Беринга, 23 к. 2. Санкт-Петербург.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -186,14 +185,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png" />
         <link rel="preload" as="image" href="/logo/istova-wordmark.webp" fetchPriority="high" type="image/webp" />
-        <link rel="preload" as="image" href="/brand/decor/cloud.webp" type="image/webp" />
+        <link rel="preload" as="font" href="/fonts/Inter-Variable.woff2" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://mc.yandex.ru" />
         <link rel="dns-prefetch" href="https://yandex.ru" />
         <link rel="preconnect" href="https://mc.yandex.ru" />
       </head>
       <body className="font-sans">
         {children}
-        <WebMCPProvider />
         <Script id="org-jsonld" type="application/ld+json" strategy="beforeInteractive">
           {JSON.stringify(ORG_JSONLD)}
         </Script>

@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-Variable.ttf') format('truetype-variations');
+  src: url('/fonts/Inter-Variable.woff2') format('woff2-variations'),
+       url('/fonts/Inter-Variable.ttf') format('truetype-variations');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -12,7 +13,8 @@
 
 @font-face {
   font-family: 'UNCAGE';
-  src: url('/fonts/UNCAGE-Variable.ttf') format('truetype-variations');
+  src: url('/fonts/UNCAGE-Variable.woff2') format('woff2-variations'),
+       url('/fonts/UNCAGE-Variable.ttf') format('truetype-variations');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;

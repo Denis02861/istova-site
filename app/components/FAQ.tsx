@@ -37,7 +37,7 @@ export default function FAQ() {
         <div className="space-y-4">
           {items.map((it, i) => (
             <article key={i} className="border-b border-brand/10 pb-4">
-              <button onClick={() => setOpen(open === i ? null : i)} className="w-full text-left flex justify-between items-center py-3">
+              <button aria-expanded={open === i} onClick={() => setOpen(open === i ? null : i)} className="w-full text-left flex justify-between items-center py-3 min-h-[44px]">
                 <span className="font-display text-lg text-brand">{it.q}</span>
                 <span className="text-brand/60 text-2xl">{open === i ? "−" : "+"}</span>
               </button>
