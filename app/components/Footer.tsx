@@ -55,7 +55,7 @@ export default function Footer() {
               <br />
               ОКВЭД 96.02
             </p>
-            <p className="text-xs text-sand/50 leading-relaxed mt-3">
+            <p className="text-xs text-sand/70 leading-relaxed mt-3">
               Адрес регистрации:
               <br />
               353451, Краснодарский край, г. Анапа, ул. Парковая, 60 к. 2, кв. 39
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-sand/10 pt-6 text-center text-xs text-sand/40">
+        <div className="border-t border-sand/10 pt-6 text-center text-xs text-sand/60">
           © 2026 ИП Карасёв Д.И. · Все права защищены
         </div>
       </div>

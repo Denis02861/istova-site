@@ -162,7 +162,7 @@ export default function Programs() {
         >
           Не знаете какую выбрать — пройдите квиз ↑
         </a>
-        <p className="text-[10px] text-brand-dark/40 leading-relaxed max-w-4xl mx-auto mt-6 px-2 text-center">
+        <p className="text-[10px] text-brand-dark/70 leading-relaxed max-w-4xl mx-auto mt-6 px-2 text-center">
           {DISCLAIMER}
         </p>
       </div>
