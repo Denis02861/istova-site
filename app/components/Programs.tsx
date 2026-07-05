@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { programs, type Program } from "../lib/programs-data";
+import { track } from "../lib/track";
 const DISCLAIMER =
   "*Перечень услуг составлен в соответствии с требованиями Приказа Росстандарта от 29.11.2012 №1597-ст и №1605-ст «ГОСТ Р 55317-2012». Истова не оказывает лечебные и оздоровительные процедуры.";
 
@@ -255,6 +256,7 @@ export default function Programs() {
                 <a
                   href="#booking"
                   onClick={() => {
+                    track("BOOKING_CLICK", { from: "programs_solo", slug: active.slug });
                     try { sessionStorage.setItem("istova-preselect", JSON.stringify({ slug: active.slug, name: active.name, forDuo: false })); } catch {}
                     window.dispatchEvent(new CustomEvent("istova:preselect-program", { detail: { slug: active.slug, name: active.name, forDuo: false } }));
                     setOpen(null);
@@ -267,6 +269,7 @@ export default function Programs() {
                   <a
                     href="#booking"
                     onClick={() => {
+                      track("BOOKING_CLICK", { from: "programs_pair", slug: active.slug });
                       try { sessionStorage.setItem("istova-preselect", JSON.stringify({ slug: active.slug, name: active.name, forDuo: true })); } catch {}
                       window.dispatchEvent(new CustomEvent("istova:preselect-program", { detail: { slug: active.slug, name: active.name, forDuo: true } }));
                       setOpen(null);

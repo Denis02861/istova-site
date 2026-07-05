@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { programs } from "../../lib/programs-data";
 import Header from "../../components/Header";
+import TrackedLink from "../../components/TrackedLink";
 import Footer from "../../components/Footer";
 import ProgramTracker from "../../components/ProgramTracker";
 
@@ -275,12 +276,14 @@ export default async function ProgramPage({
                 <div className="text-xs text-brand/60 mt-1">в двух смежных кабинетах</div>
               </div>
             )}
-            <Link
+            <TrackedLink
+              goal="BOOKING_CLICK"
+              goalParams={{from:"program_page", slug: program.slug}}
               href="/#booking"
               className="text-sm uppercase tracking-widest px-8 py-4 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors"
             >
               Записаться на ритуал
-            </Link>
+            </TrackedLink>
           </section>
 
           {/* FAQ */}
@@ -301,7 +304,7 @@ export default async function ProgramPage({
               </div>
               <div>
                 <h3 className="font-display text-lg text-brand mb-2">Как записаться?</h3>
-                <p className="text-sm text-brand-dark/80 leading-relaxed">Через форму на сайте, по телефону <a href="tel:+79013201050" className="underline hover:text-brand">+7 (901) 320-10-50</a> или в Telegram <a href="https://t.me/Istova_spa" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">@Istova_spa</a>. Администратор свяжется в течение часа.</p>
+                <p className="text-sm text-brand-dark/80 leading-relaxed">Через форму на сайте, по телефону <TrackedLink goal="PHONE_CLICK" goalParams={{from:"program_page"}} href="tel:+79013201050" className="underline hover:text-brand">+7 (901) 320-10-50</TrackedLink> или в Telegram <TrackedLink goal="TG_CLICK" goalParams={{from:"program_page"}} href="https://t.me/Istova_spa" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">@Istova_spa</TrackedLink>. Администратор свяжется в течение часа.</p>
               </div>
             </div>
           </section>

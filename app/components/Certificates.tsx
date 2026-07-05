@@ -1,3 +1,5 @@
+import TrackedLink from "./TrackedLink";
+
 const tiers = [
   { amount: "5 000", note: "лёгкий подарок" },
   { amount: "10 000", note: "ритуал на двоих" },
@@ -19,7 +21,7 @@ export default function Certificates() {
           ))}
         </div>
         <div className="text-center">
-          <a href="#booking" className="inline-block px-8 py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Заказать сертификат</a>
+          <TrackedLink goal="BOOKING_CLICK" goalParams={{from:"certificates"}} href="#booking" className="inline-block px-8 py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Заказать сертификат</TrackedLink>
         </div>
       </div>
     </section>

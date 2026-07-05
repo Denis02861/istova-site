@@ -236,7 +236,7 @@ export default function Booking() {
                 href="https://t.me/Istova_spa"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => track("TELEGRAM_CLICK", { from: "booking" })}
+                onClick={() => track("TG_CLICK", { from: "booking" })}
                 className="hover:underline"
               >@Istova_spa</a>
             </p>

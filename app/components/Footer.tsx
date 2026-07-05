@@ -1,3 +1,5 @@
+import TrackedLink from "./TrackedLink";
+
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-sand/80 py-14">
@@ -14,12 +16,12 @@ export default function Footer() {
               ул. Беринга, 23 к. 2
             </p>
             <p className="text-sm text-sand/70 mt-3">
-              <a href="tel:+79013201050" className="hover:text-sand">+7 (901) 320-10-50</a>
+              <TrackedLink goal="PHONE_CLICK" goalParams={{from:"footer"}} href="tel:+79013201050" className="hover:text-sand">+7 (901) 320-10-50</TrackedLink>
             </p>
             <p className="text-sm text-sand/70">
-              <a href="https://t.me/Istova_spa" target="_blank" rel="noopener noreferrer" className="hover:text-sand">
+              <TrackedLink goal="TG_CLICK" goalParams={{from:"footer"}} href="https://t.me/Istova_spa" target="_blank" rel="noopener noreferrer" className="hover:text-sand">
                 @Istova_spa
-              </a>
+              </TrackedLink>
             </p>
           </div>
 
