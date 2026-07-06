@@ -51,9 +51,9 @@ export default function Reveal({ children, variant = "up", delay = 0, stagger, c
       if (done) return;
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
-      // Триггер: когда верхняя граница блока опустилась ниже 88% высоты viewport
-      // (значит блок виден на ~12% от низа экрана)
-      if (rect.top < vh * 0.88 && rect.bottom > 0) {
+      // Триггер: как в TeaCard — блок уже поднялся в центральную зону
+      // (виден на ~25% снизу И нижняя грань не убежала выше 10% сверху)
+      if (rect.top < vh * 0.75 && rect.bottom > vh * 0.1) {
         done = true;
         window.removeEventListener("scroll", onScroll);
         window.removeEventListener("resize", onScroll);
