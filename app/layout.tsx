@@ -176,7 +176,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://mc.yandex.ru https://mc.yandex.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://mc.yandex.ru https://mc.yandex.com https://yandex.ru https://storage.mds.yandex.net; font-src 'self' data:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://n8nautomat.site; frame-src 'self' https://yandex.ru https://mc.yandex.ru; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://n8nautomat.site; upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://mc.yandex.ru https://mc.yandex.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://mc.yandex.ru https://mc.yandex.com https://yandex.ru https://storage.mds.yandex.net; font-src 'self' data:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://n8nautomat.site; frame-src 'self' https://yandex.ru https://mc.yandex.ru; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://n8nautomat.site" />
         <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
         <link rel="agent-skills" href="/.well-known/agent-skills/index.json" type="application/json" />
         <link rel="describedby" href="/llms.txt" type="text/markdown" />
@@ -191,13 +191,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://mc.yandex.ru" />
       </head>
       <body className="font-sans">
+        <a href="#hero" className="skip-link">Перейти к содержимому</a>
         {children}
-        <Script id="org-jsonld" type="application/ld+json" strategy="beforeInteractive">
-          {JSON.stringify(ORG_JSONLD)}
-        </Script>
-        <Script id="website-jsonld" type="application/ld+json" strategy="beforeInteractive">
-          {JSON.stringify(WEBSITE_JSONLD)}
-        </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSONLD) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_JSONLD) }}
+        />
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=${YM_ID}", "ym");ym(${YM_ID}, "init", {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});`}
         </Script>

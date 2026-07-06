@@ -106,7 +106,7 @@ function TeaRow({ img, name, desc }: { img: string; name: string; desc: string }
         />
       </div>
       <div className="md:pl-4">
-        <h3 className="font-display text-xl md:text-2xl text-brand uppercase tracking-wider mb-2 md:mb-3">
+        <h3 className="font-display text-xl md:text-2xl text-brand tracking-tight mb-2 md:mb-3">
           {name}
         </h3>
         <p className="text-sm md:text-base text-brand-dark/75 leading-relaxed">
@@ -121,7 +121,7 @@ export default function TeaCard() {
   return (
     <section id="tea" className="bg-sand">
       <div className="bg-moss py-8">
-        <h2 className="font-display text-3xl md:text-4xl text-sand text-center tracking-[0.2em] uppercase">
+        <h2 className="font-display text-3xl md:text-4xl text-sand text-center tracking-tight">
           Чайная карта
         </h2>
       </div>

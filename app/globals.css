@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Variable.woff2') format('woff2-variations'),
-       url('/fonts/Inter-Variable.ttf') format('truetype-variations');
-  font-weight: 100 900;
+  font-family: 'Golos Text';
+  src: url('/fonts/GolosText-Variable.woff2') format('woff2-variations'),
+       url('/fonts/GolosText-Variable-Latin.woff2') format('woff2-variations');
+  font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
@@ -23,7 +23,7 @@
 html, body {
   background-color: #F4F2EF;
   color: #2A1F1A;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Golos Text', system-ui, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -43,4 +43,148 @@ body.istova-modal-open [data-mobile-sticky-bar] {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .animate-breath { animation: none; }
+}
+
+
+/* Redesign-skill upgrades — Sat 2026-07-06 */
+
+/* Text-wrap: balance для заголовков, pretty для параграфов */
+h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+
+/* Font weight variety в дисплей-шрифте */
+.font-display { font-weight: 500; }
+h1.font-display, h2.font-display { font-weight: 600; }
+
+/* Grain-noise overlay для тактильности (fixed, pointer-events-none) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.28  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 200px 200px;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+
+/* Focus-visible rings — a11y */
+:focus-visible {
+  outline: 2px solid rgba(116, 68, 54, 0.6);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Skip-to-content — visually hidden until focus */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 8px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: #F4F2EF;
+  color: #744436;
+  font-weight: 600;
+  border: 2px solid #744436;
+}
+.skip-link:focus { top: 8px; }
+
+
+/* Motion standards (Emil Kowalski) */
+:root {
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.transition-colors, [class*="transition-colors"] {
+  transition-timing-function: var(--ease-out-strong);
+  transition-duration: 180ms;
+}
+
+/* Disable hover animations on touch devices — они залипают после тапа */
+@media (hover: none), (pointer: coarse) {
+  *[class*="hover:"] { transition-property: none !important; }
+}
+
+
+/* Success checkmark bounce (Emil rare/first-time delight) */
+@keyframes check-bounce {
+  0% { transform: scale(0); opacity: 0; }
+  40% { transform: scale(1.15); opacity: 1; }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+.animate-check-bounce { animation: check-bounce 500ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+
+
+/* Programs modal — spring open + backdrop fade + stagger content */
+@keyframes modal-in {
+  0%   { transform: scale(0.7); opacity: 0; }
+  60%  { transform: scale(1.02); opacity: 1; }
+  100% { transform: scale(1); }
+}
+@keyframes modal-backdrop-in {
+  from { opacity: 0; backdrop-filter: blur(0); }
+  to   { opacity: 1; backdrop-filter: blur(4px); }
+}
+.animate-modal-in { animation: modal-in 380ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animate-modal-backdrop { animation: modal-backdrop-in 300ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+
+/* Modal stagger — direct children появляются с задержкой */
+.modal-stagger > * {
+  animation: modal-stagger-in 500ms cubic-bezier(0.23, 1, 0.32, 1) both;
+  opacity: 0;
+}
+.modal-stagger > *:nth-child(1) { animation-delay: 120ms; }
+.modal-stagger > *:nth-child(2) { animation-delay: 180ms; }
+.modal-stagger > *:nth-child(3) { animation-delay: 240ms; }
+.modal-stagger > *:nth-child(4) { animation-delay: 300ms; }
+.modal-stagger > *:nth-child(5) { animation-delay: 360ms; }
+.modal-stagger > *:nth-child(n+6) { animation-delay: 420ms; }
+@keyframes modal-stagger-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-modal-in, .animate-modal-backdrop, .modal-stagger > * {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+
+/* Staggered Reveal — CSS-based (no wrapper divs, keeps grid/flex intact) */
+.stagger-children > * {
+  transition: transform 1000ms cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 900ms cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, opacity;
+}
+.stagger-children[data-stagger-visible="false"] > * {
+  opacity: 0;
+  transform: translateY(60px) scale(0.96);
+}
+.stagger-children[data-stagger-visible="true"] > * {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+@media (max-width: 767px) {
+  .stagger-children[data-stagger-visible="false"] > * {
+    transform: translateY(90px) scale(0.94);
+  }
+}
+.stagger-children[data-stagger-visible="true"] > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(2) { transition-delay: var(--stagger-step, 150ms); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(3) { transition-delay: calc(var(--stagger-step, 150ms) * 2); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(4) { transition-delay: calc(var(--stagger-step, 150ms) * 3); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(5) { transition-delay: calc(var(--stagger-step, 150ms) * 4); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(6) { transition-delay: calc(var(--stagger-step, 150ms) * 5); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(7) { transition-delay: calc(var(--stagger-step, 150ms) * 6); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(n+8) { transition-delay: calc(var(--stagger-step, 150ms) * 7); }
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger-children > * {
+    transition: none;
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }

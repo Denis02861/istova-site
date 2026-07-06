@@ -11,7 +11,7 @@ const config: Config = {
       },
       fontFamily: {
         display: ["UNCAGE", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Golos Text", "system-ui", "sans-serif"],
         // serif оставлен для обратной совместимости — указывает на UNCAGE
         serif: ["UNCAGE", "Georgia", "serif"],
       },

@@ -1,6 +1,7 @@
 "use client";
 
 import Parallax from "./Parallax";
+import Reveal from "./Reveal";
 
 export default function Concept() {
   return (
@@ -13,39 +14,39 @@ export default function Concept() {
           loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
       </Parallax>
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center uppercase tracking-wider">Истова — это про подлинное</h2>
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Место, не услуга</h2>
         <div className="space-y-6 text-lg leading-relaxed text-brand-dark/90">
-          <p>Истова — пространство ухода в Петербурге, где забота возвращается к себе истинной: без масок, без спешки, без обещаний которые невозможно сдержать.</p>
+          <p>Истова — спа в Петербурге. Место без масок, без спешки, без обещаний, которые невозможно сдержать.</p>
           <p>Здесь работают по программам, проверенным временем. Натуральные масла, ритмика тёплого и прохладного, тишина внутри, в которой можно услышать собственное дыхание.</p>
-          <p>Мы строим место, в которое хочется возвращаться — не за процедурой, а за состоянием.</p>
+          <p>Место, в которое возвращаются не за процедурой, а за состоянием.</p>
         </div>
 
         <div className="mt-20 pt-16 border-t border-brand/15">
-          <div className="text-xs uppercase tracking-widest text-brand/60 mb-8 text-center">
-            Тихая идеальность
+          <div className="text-center mb-8">
+            <span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">Три опоры</span>
           </div>
-          <div className="grid md:grid-cols-3 gap-10 md:gap-12 text-center mb-16">
-            <div>
-              <h3 className="font-display text-2xl text-brand mb-4 uppercase tracking-wider">Принятие</h3>
+          <Reveal stagger={220} className="grid md:grid-cols-6 gap-10 md:gap-14 mb-16">
+            <div className="md:col-span-3 md:pr-8">
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Принятие</h3>
               <p className="text-base text-brand-dark/80 leading-relaxed">
                 Место, где вас не оценивают, а принимают такой, какая вы есть.
               </p>
             </div>
-            <div>
-              <h3 className="font-display text-2xl text-brand mb-4 uppercase tracking-wider">Искренность</h3>
+            <div className="md:col-span-3 md:pl-8 md:mt-16">
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Искренность</h3>
               <p className="text-base text-brand-dark/80 leading-relaxed">
-                Без вылизанного глянца. Настоящие люди, эмоции и путь к себе.
+                Без глянца. Настоящие люди, реальные фото, живой опыт.
               </p>
             </div>
-            <div>
-              <h3 className="font-display text-2xl text-brand mb-4 uppercase tracking-wider">Целостность</h3>
+            <div className="md:col-span-4 md:col-start-2 md:mt-8">
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Целостность</h3>
               <p className="text-base text-brand-dark/80 leading-relaxed">
                 Красота как состояние наполненности, которое уносишь с собой.
               </p>
             </div>
-          </div>
+          </Reveal>
           <p className="text-base md:text-lg text-brand-dark/85 leading-relaxed text-center italic max-w-2xl mx-auto">
-            Истова — возможность отпустить роль «всеконтролирующей и ответственной», чтобы вернуться к себе и почувствовать свою ценность в атмосфере принятия.
+            Возможность отложить роль «всё контролирую сама» и почувствовать что тебя держат.
           </p>
         </div>
       </div>

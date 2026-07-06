@@ -11,6 +11,7 @@ const DISCLAIMER =
 export default function Programs() {
   const [open, setOpen] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [originRect, setOriginRect] = useState<{x: number; y: number} | null>(null);
   const active = programs.find((p) => p.slug === open);
 
   useEffect(() => { setMounted(true); }, []);
@@ -67,9 +68,14 @@ export default function Programs() {
     <button
       key={p.slug}
       type="button"
-      onClick={() => setOpen(p.slug)}
-      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start bg-sand-soft border border-brand/10 p-8 flex flex-col min-h-[360px] text-left transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] hover:border-brand/40 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand/40"
+      onClick={(e) => {
+        const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+        setOriginRect({ x: rect.left + rect.width/2, y: rect.top + rect.height/2 });
+        setOpen(p.slug);
+      }}
+      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-brand/30 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
     >
+      <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col min-h-[360px] w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
       <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
       <div className="flex items-center gap-2 mb-3 flex-wrap">
         {p.accent && (
@@ -83,7 +89,7 @@ export default function Programs() {
           </div>
         )}
       </div>
-      <h3 className="font-display text-2xl md:text-3xl tracking-wider text-brand mb-4 uppercase">
+      <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">
         {p.name}
       </h3>
       <p className="font-display italic text-lg md:text-xl text-brand-dark/85 leading-snug mb-6 flex-1">
@@ -99,14 +105,15 @@ export default function Programs() {
           <div className="text-[10px] text-brand-dark/60 mt-0.5">~ {p.dur}</div>
         </div>
       </div>
+      </div>
     </button>
   );
 
   return (
     <section id="programs" className="py-24 bg-sand-deep/30 overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Программы</div>
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">
+        <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Программы</span></div>
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">
           9 ритуалов Истовы
         </h2>
         <p className="text-center text-brand-dark/70 mb-10 max-w-2xl mx-auto">
@@ -114,7 +121,7 @@ export default function Programs() {
         </p>
 
         <div className="max-w-3xl mx-auto mb-10 border border-brand/15 bg-sand-soft/60 p-6 md:p-8">
-          <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Каждый ритуал Истовы</div>
+          <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Каждый ритуал Истовы</span></div>
           <div className="space-y-2 text-sm md:text-base text-brand-dark/85 leading-relaxed text-center">
             <p>Открывается арома-выбором · сопровождается звуковыми акцентами · завершается чаем в лаунж-зоне.</p>
           </div>
@@ -170,15 +177,20 @@ export default function Programs() {
 
       {mounted && active && createPortal(
         <div
-          className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-8 bg-brand-dark/50 backdrop-blur-sm"
+          className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-8 bg-brand-dark/50 backdrop-blur-sm animate-modal-backdrop"
           onClick={() => setOpen(null)}
           role="dialog"
           aria-modal="true"
         >
           <div
             data-lenis-prevent
-            className="relative bg-sand-soft w-full max-w-2xl max-h-[90vh] overflow-y-auto overscroll-contain p-6 md:p-10 border border-brand/20 shadow-2xl"
-            style={{ WebkitOverflowScrolling: "touch" }}
+            className="relative bg-sand-soft w-full max-w-2xl max-h-[90vh] overflow-y-auto overscroll-contain p-6 md:p-10 border border-brand/20 shadow-2xl animate-modal-in"
+            style={{
+              WebkitOverflowScrolling: "touch",
+              transformOrigin: originRect
+                ? `${originRect.x}px ${originRect.y}px`
+                : "center center",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -189,11 +201,11 @@ export default function Programs() {
               ×
             </button>
 
-            <div className="pr-10">
+            <div className="pr-10 modal-stagger">
               {active.accent && (
                 <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-3">{active.accent}</div>
               )}
-              <h3 className="font-display text-3xl md:text-4xl tracking-wider text-brand uppercase mb-4">
+              <h3 className="font-display text-3xl md:text-4xl text-brand tracking-tight mb-4">
                 {active.name}
               </h3>
               <p className="font-display italic text-lg text-brand-dark/85 leading-snug mb-6">
