@@ -151,3 +151,35 @@ body::before {
     opacity: 1;
   }
 }
+
+
+/* Staggered Reveal — CSS-based (no wrapper divs, keeps grid/flex intact) */
+.stagger-children > * {
+  transition: transform 900ms cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 900ms cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, opacity;
+}
+.stagger-children[data-stagger-visible="false"] > * {
+  opacity: 0;
+  transform: translateY(28px);
+}
+.stagger-children[data-stagger-visible="true"] > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger-children[data-stagger-visible="true"] > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(2) { transition-delay: var(--stagger-step, 150ms); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(3) { transition-delay: calc(var(--stagger-step, 150ms) * 2); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(4) { transition-delay: calc(var(--stagger-step, 150ms) * 3); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(5) { transition-delay: calc(var(--stagger-step, 150ms) * 4); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(6) { transition-delay: calc(var(--stagger-step, 150ms) * 5); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(7) { transition-delay: calc(var(--stagger-step, 150ms) * 6); }
+.stagger-children[data-stagger-visible="true"] > *:nth-child(n+8) { transition-delay: calc(var(--stagger-step, 150ms) * 7); }
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger-children > * {
+    transition: none;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

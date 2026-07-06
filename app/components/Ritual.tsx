@@ -30,11 +30,11 @@ export default function Ritual() {
           От встречи в холле до тихого возвращения — путь, который не хочется прерывать.
         </p>
 
-        <ol className="max-w-3xl mx-auto relative">
+        <Reveal as="ol" stagger={150} className="max-w-3xl mx-auto relative">
           <div className="absolute left-[38px] md:left-[52px] top-4 bottom-4 w-px bg-gradient-to-b from-brand/5 via-brand/20 to-brand/5 pointer-events-none" aria-hidden="true" />
           {steps.map((step, i) => (
-            <Reveal key={step.n} delay={i*80}>
             <li
+              key={step.n}
               className="relative flex gap-6 md:gap-10 pb-10 md:pb-14 last:pb-0 group"
             >
               <div className="relative shrink-0 w-[76px] md:w-[104px] flex items-start justify-center">
@@ -54,9 +54,8 @@ export default function Ritual() {
                 </p>
               </div>
             </li>
-            </Reveal>
           ))}
-        </ol>
+        </Reveal>
       </div>
     </section>
   );
