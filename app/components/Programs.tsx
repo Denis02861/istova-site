@@ -68,7 +68,7 @@ export default function Programs() {
       key={p.slug}
       type="button"
       onClick={() => setOpen(p.slug)}
-      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:ring-brand/30 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
+      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-brand/30 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
     >
       <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col min-h-[360px] w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
       <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />

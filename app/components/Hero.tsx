@@ -36,7 +36,7 @@ export default function Hero() {
           <MagneticButton
             href="#booking"
             onClick={() => track("BOOKING_CLICK", { from: "hero" })}
-            className="group inline-flex items-center gap-3 pl-8 pr-2 py-2 bg-brand text-sand rounded-full hover:bg-brand-dark active:scale-[0.98] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+            className="group inline-flex items-center gap-3 pl-8 pr-2 py-2 bg-brand text-sand rounded-full hover:bg-brand-dark active:scale-[0.98] transition-[transform,background-color,color] duration-[180ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
           >
             <span className="font-medium">Записаться</span>
             <span className="w-10 h-10 rounded-full bg-sand/15 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]" aria-hidden="true">↗</span>
@@ -44,7 +44,7 @@ export default function Hero() {
           <MagneticButton
             href="#concept"
             strength={0.25}
-            className="inline-flex items-center gap-2 px-8 py-3 border border-brand text-brand rounded-full hover:bg-brand hover:text-sand active:scale-[0.98] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+            className="inline-flex items-center gap-2 px-8 py-3 border border-brand text-brand rounded-full hover:bg-brand hover:text-sand active:scale-[0.98] transition-[transform,background-color,color] duration-[180ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
           >
             О пространстве
           </MagneticButton>

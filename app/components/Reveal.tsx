@@ -11,19 +11,19 @@ type Props = {
 };
 
 const hidden: Record<Variant, string> = {
-  up:    "opacity-0 translate-y-20 blur-md",
-  left:  "opacity-0 -translate-x-24 blur-md",
-  right: "opacity-0 translate-x-24 blur-md",
-  scale: "opacity-0 scale-[0.9] blur-md",
-  fade:  "opacity-0 blur-sm",
+  up:    "opacity-0 translate-y-16",
+  left:  "opacity-0 -translate-x-24",
+  right: "opacity-0 translate-x-24",
+  scale: "opacity-0 scale-[0.95]",
+  fade:  "opacity-0",
 };
 
 const shown: Record<Variant, string> = {
-  up:    "opacity-100 translate-y-0 blur-0",
-  left:  "opacity-100 translate-x-0 blur-0",
-  right: "opacity-100 translate-x-0 blur-0",
-  scale: "opacity-100 scale-100 blur-0",
-  fade:  "opacity-100 blur-0",
+  up:    "opacity-100 translate-y-0",
+  left:  "opacity-100 translate-x-0",
+  right: "opacity-100 translate-x-0",
+  scale: "opacity-100 scale-100",
+  fade:  "opacity-100",
 };
 
 export default function Reveal({ children, variant = "up", delay = 0 }: Props) {
@@ -80,7 +80,7 @@ export default function Reveal({ children, variant = "up", delay = 0 }: Props) {
       className={`transition-all ease-out will-change-transform ${
         visible ? shown[variant] : hidden[variant]
       }`}
-      style={{ transitionDuration: "1200ms", transitionTimingFunction: "cubic-bezier(0.22, 0.61, 0.36, 1)" }}
+      style={{ transitionDuration: "800ms", transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" }}
     >
       {children}
     </div>

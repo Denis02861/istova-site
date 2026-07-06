@@ -14,7 +14,7 @@ export default function Certificates() {
         <p className="text-center text-brand-dark/80 mb-12 max-w-xl mx-auto">Сертификат можно подарить на любую сумму или конкретную программу. Действителен 6 месяцев. Бумажная или электронная версия — на ваш выбор.</p>
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {tiers.map(t => (
-            <div key={t.amount} className="bg-sand-soft p-8 text-center border border-brand/10 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:border-brand/25">
+            <div key={t.amount} className="bg-sand-soft p-8 text-center border border-brand/10 transition-[transform,box-shadow,border-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:shadow-lg hover:border-brand/25">
               <div className="font-display text-3xl text-brand mb-2">{t.amount} ₽</div>
               <div className="text-sm text-brand-dark/60 italic">{t.note}</div>
             </div>

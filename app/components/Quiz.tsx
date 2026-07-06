@@ -91,7 +91,7 @@ export default function Quiz() {
         key={p.slug}
         type="button"
         onClick={() => { track("QUIZ_RESULT_OPEN", { slug: p.slug }); openProgram(p.slug); }}
-        className="w-full text-left border border-brand/20 bg-sand p-6 flex flex-col hover:border-brand/40 hover:-translate-y-0.5 transition-all"
+        className="w-full text-left border border-brand/20 bg-sand p-6 flex flex-col hover:border-brand/40 hover:-translate-y-0.5 transition-[transform,border-color] duration-200 ease-out"
       >
         <div className="flex items-center gap-2 mb-2 flex-wrap">
           <div className="text-[10px] uppercase tracking-widest text-brand/60">
@@ -161,7 +161,7 @@ export default function Quiz() {
               <button
                 key={o.v}
                 onClick={() => { setFocus(o.v); setStep(1); track("QUIZ_ANSWER", { step: "focus", v: o.v }); }}
-                className="w-full text-left border border-brand/15 bg-sand/60 hover:bg-sand hover:border-brand/40 p-5 transition-all group"
+                className="w-full text-left border border-brand/15 bg-sand/60 hover:bg-sand hover:border-brand/40 p-5 transition-[background-color,border-color] duration-180 ease-out group"
               >
                 <div className="font-display text-lg md:text-xl text-brand uppercase tracking-wider group-hover:translate-x-1 transition-transform">{o.label}</div>
                 <div className="text-sm text-brand-dark/60 mt-1">{o.d}</div>
@@ -177,7 +177,7 @@ export default function Quiz() {
               <button
                 key={o.v}
                 onClick={() => { setTime(o.v); setStep(2); track("QUIZ_ANSWER", { step: "time", v: o.v }); }}
-                className="w-full text-left border border-brand/15 bg-sand/60 hover:bg-sand hover:border-brand/40 p-5 transition-all group"
+                className="w-full text-left border border-brand/15 bg-sand/60 hover:bg-sand hover:border-brand/40 p-5 transition-[background-color,border-color] duration-180 ease-out group"
               >
                 <div className="font-display text-lg md:text-xl text-brand uppercase tracking-wider group-hover:translate-x-1 transition-transform">{o.label}</div>
                 <div className="text-sm text-brand-dark/60 mt-1">{o.d}</div>
@@ -194,7 +194,7 @@ export default function Quiz() {
               <button
                 key={o.v}
                 onClick={() => { setMode(o.v); setStep(3); track("QUIZ_ANSWER", { step: "mode", v: o.v }); }}
-                className="w-full text-left border border-brand/15 bg-sand/60 hover:bg-sand hover:border-brand/40 p-5 transition-all group"
+                className="w-full text-left border border-brand/15 bg-sand/60 hover:bg-sand hover:border-brand/40 p-5 transition-[background-color,border-color] duration-180 ease-out group"
               >
                 <div className="font-display text-lg md:text-xl text-brand uppercase tracking-wider group-hover:translate-x-1 transition-transform">{o.label}</div>
                 <div className="text-sm text-brand-dark/60 mt-1">{o.d}</div>
