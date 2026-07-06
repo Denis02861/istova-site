@@ -22,7 +22,7 @@ export default function Ritual() {
       </Parallax>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Пять шагов</div>
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">
           Как проходит ваш визит
         </h2>
         <p className="text-center text-brand-dark/70 max-w-xl mx-auto mb-20 leading-relaxed">

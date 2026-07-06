@@ -83,7 +83,7 @@ export default function Programs() {
           </div>
         )}
       </div>
-      <h3 className="font-display text-2xl md:text-3xl tracking-wider text-brand mb-4 uppercase">
+      <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">
         {p.name}
       </h3>
       <p className="font-display italic text-lg md:text-xl text-brand-dark/85 leading-snug mb-6 flex-1">
@@ -106,7 +106,7 @@ export default function Programs() {
     <section id="programs" className="py-24 bg-sand-deep/30 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Программы</div>
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">
           9 ритуалов Истовы
         </h2>
         <p className="text-center text-brand-dark/70 mb-10 max-w-2xl mx-auto">
@@ -193,7 +193,7 @@ export default function Programs() {
               {active.accent && (
                 <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-3">{active.accent}</div>
               )}
-              <h3 className="font-display text-3xl md:text-4xl tracking-wider text-brand uppercase mb-4">
+              <h3 className="font-display text-3xl md:text-4xl text-brand tracking-tight mb-4">
                 {active.name}
               </h3>
               <p className="font-display italic text-lg text-brand-dark/85 leading-snug mb-6">

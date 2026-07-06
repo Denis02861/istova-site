@@ -13,7 +13,7 @@ export default function Concept() {
           loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
       </Parallax>
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center uppercase tracking-wider">Место, не услуга</h2>
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Место, не услуга</h2>
         <div className="space-y-6 text-lg leading-relaxed text-brand-dark/90">
           <p>Истова — спа в Петербурге. Место без масок, без спешки, без обещаний, которые невозможно сдержать.</p>
           <p>Здесь работают по программам, проверенным временем. Натуральные масла, ритмика тёплого и прохладного, тишина внутри, в которой можно услышать собственное дыхание.</p>
@@ -24,21 +24,21 @@ export default function Concept() {
           <div className="text-xs uppercase tracking-widest text-brand/60 mb-8 text-center">
             Три опоры
           </div>
-          <div className="grid md:grid-cols-3 gap-10 md:gap-12 text-center mb-16">
-            <div>
-              <h3 className="font-display text-2xl text-brand mb-4">Принятие</h3>
+          <div className="grid md:grid-cols-6 gap-10 md:gap-14 mb-16">
+            <div className="md:col-span-3 md:pr-8">
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Принятие</h3>
               <p className="text-base text-brand-dark/80 leading-relaxed">
                 Место, где вас не оценивают, а принимают такой, какая вы есть.
               </p>
             </div>
-            <div>
-              <h3 className="font-display text-2xl text-brand mb-4">Искренность</h3>
+            <div className="md:col-span-3 md:pl-8 md:mt-16">
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Искренность</h3>
               <p className="text-base text-brand-dark/80 leading-relaxed">
                 Без глянца. Настоящие люди, реальные фото, живой опыт.
               </p>
             </div>
-            <div>
-              <h3 className="font-display text-2xl text-brand mb-4">Целостность</h3>
+            <div className="md:col-span-4 md:col-start-2 md:mt-8">
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Целостность</h3>
               <p className="text-base text-brand-dark/80 leading-relaxed">
                 Красота как состояние наполненности, которое уносишь с собой.
               </p>

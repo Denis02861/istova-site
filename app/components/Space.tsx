@@ -12,7 +12,7 @@ export default function Space() {
     <section id="space" className="py-24 bg-sand">
       <div className="container mx-auto px-6 max-w-5xl relative z-10">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Пространство</div>
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-6 text-center uppercase tracking-wider">
+        <h2 className="font-display text-4xl md:text-5xl text-brand mb-6 text-center tracking-tight">
           Два мира под одной крышей
         </h2>
         <p className="text-center text-lg text-brand-dark/80 max-w-2xl mx-auto mb-16 leading-relaxed">

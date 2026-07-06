@@ -136,7 +136,7 @@ export default function Quiz() {
     <section id="quiz" className="py-24 bg-sand-soft border-y border-brand/10">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Что вам ближе</div>
-        <h2 className="font-display text-3xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">
+        <h2 className="font-display text-3xl md:text-5xl text-brand mb-4 text-center tracking-tight">
           Какой ритуал подойдёт вам
         </h2>
         <p className="text-center text-brand-dark/70 mb-12 max-w-xl mx-auto">

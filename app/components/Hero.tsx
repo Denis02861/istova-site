@@ -12,7 +12,7 @@ const STATS = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
+    <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
       <Parallax speed={0.35} className="absolute bottom-8 right-4 md:bottom-24 md:right-8 w-16 md:w-48 opacity-10 md:opacity-20 pointer-events-none">
         <img
           src="/brand/decor/spiral.webp"
