@@ -30,7 +30,7 @@ export default function Ritual() {
           От встречи в холле до тихого возвращения — путь, который не хочется прерывать.
         </p>
 
-        <Reveal as="ol" stagger={150} className="max-w-3xl mx-auto relative">
+        <Reveal as="ol" stagger={220} className="max-w-3xl mx-auto relative">
           <div className="absolute left-[38px] md:left-[52px] top-4 bottom-4 w-px bg-gradient-to-b from-brand/5 via-brand/20 to-brand/5 pointer-events-none" aria-hidden="true" />
           {steps.map((step, i) => (
             <li

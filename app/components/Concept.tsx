@@ -1,6 +1,7 @@
 "use client";
 
 import Parallax from "./Parallax";
+import Reveal from "./Reveal";
 
 export default function Concept() {
   return (
@@ -24,7 +25,7 @@ export default function Concept() {
           <div className="text-center mb-8">
             <span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">Три опоры</span>
           </div>
-          <div className="grid md:grid-cols-6 gap-10 md:gap-14 mb-16">
+          <Reveal stagger={220} className="grid md:grid-cols-6 gap-10 md:gap-14 mb-16">
             <div className="md:col-span-3 md:pr-8">
               <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Принятие</h3>
               <p className="text-base text-brand-dark/80 leading-relaxed">
