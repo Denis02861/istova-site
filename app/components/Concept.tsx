@@ -44,7 +44,7 @@ export default function Concept() {
                 Красота как состояние наполненности, которое уносишь с собой.
               </p>
             </div>
-          </div>
+          </Reveal>
           <p className="text-base md:text-lg text-brand-dark/85 leading-relaxed text-center italic max-w-2xl mx-auto">
             Возможность отложить роль «всё контролирую сама» и почувствовать что тебя держат.
           </p>
