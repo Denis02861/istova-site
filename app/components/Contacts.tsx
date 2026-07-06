@@ -12,6 +12,8 @@ export default function Contacts() {
             <h3 className="font-display text-2xl text-brand mb-4 uppercase tracking-wider">Адрес</h3>
             <p className="text-brand-dark/80 mb-2">{address}</p>
             <p className="text-brand-dark/60 text-sm mb-6">Васильевский остров · 12 минут от м. Василеостровская</p>
+            <p className="text-brand-dark/70 text-sm mb-1 mt-4">Парковка: свободная во дворе</p>
+            <p className="text-brand-dark/60 text-sm mb-6">Открытый двор дома, автомобиль оставите спокойно</p>
 
             <h3 className="font-display text-2xl text-brand mb-4 mt-8 uppercase tracking-wider">Часы работы</h3>
             <p className="text-brand-dark/80 mb-1">Ежедневно, 10:00 — 22:00</p>
