@@ -1,7 +1,7 @@
 "use client";
 
 const steps = [
-  { n: "01", t: "Встреча", d: "Администратор принимает вас в холле, помогает раздеться и проводит в зону отдыха." },
+  { n: "01", t: "Встреча", d: "Администратор встречает вас в холле, провожает в раздевалку и зону отдыха." },
   { n: "02", t: "Арома-выбор", d: "На ресепшене подбираете аромат, который будет сопровождать весь ритуал." },
   { n: "03", t: "Программа", d: "Выбранный ритуал. От 70 до 150 минут вашего времени." },
   { n: "04", t: "Чайная пауза", d: "После ритуала — выбранный чай по карте в тишине лаунж-зоны." },
@@ -45,7 +45,7 @@ export default function Ritual() {
                 </div>
               </div>
               <div className="flex-1 pt-1 md:pt-3">
-                <h3 className="font-display text-xl md:text-2xl text-brand mb-3 uppercase tracking-wider">
+                <h3 className="font-display text-xl md:text-2xl text-brand mb-3">
                   {s.t}
                 </h3>
                 <p className="text-sm md:text-base text-brand-dark/75 leading-relaxed max-w-lg">

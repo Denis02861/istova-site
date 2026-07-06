@@ -12,9 +12,7 @@ import Booking from "./components/Booking";
 import Footer from "./components/Footer";
 import Reveal from "./components/Reveal";
 import FloatingCTA from "./components/FloatingCTA";
-import Founder from "./components/Founder";
 import Quiz from "./components/Quiz";
-import Prep from "./components/Prep";
 import StickyMobileBar from "./components/StickyMobileBar";
 import ScrollProgress from "./components/ScrollProgress";
 import SmoothScroll from "./components/SmoothScroll";
@@ -31,13 +29,11 @@ export default function Page() {
         <Reveal variant="up"><Quiz /></Reveal>
         <Reveal variant="up"><Programs /></Reveal>
         <TeaCard />
-        <Reveal variant="scale"><Space /></Reveal>
-        <Reveal variant="right"><Prep /></Reveal>
-        <Reveal variant="fade"><Founder /></Reveal>
+        <Reveal variant="up"><Space /></Reveal>
         <Reveal variant="up"><Certificates /></Reveal>
         <Reveal variant="up"><FAQ /></Reveal>
-        <Reveal variant="left"><Contacts /></Reveal>
-        <Reveal variant="scale"><Booking /></Reveal>
+        <Reveal variant="up"><Contacts /></Reveal>
+        <Reveal variant="up"><Booking /></Reveal>
       </main>
       <Footer />
       <FloatingCTA />

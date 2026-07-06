@@ -30,7 +30,7 @@ export default function Hero() {
           Не нужен особый день,<br/>чтобы почувствовать себя особенной
         </p>
         <p className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12">
-          Пространство истинного ухода · Петербург
+          Спа и пространство красоты · Васильевский остров
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
           <MagneticButton href="#booking" onClick={() => track("BOOKING_CLICK", { from: "hero" })} className="px-8 py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Записаться</MagneticButton>
