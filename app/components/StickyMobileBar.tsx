@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { track } from "../lib/track";
+import TrackedLink from "./TrackedLink";
 
 export default function StickyMobileBar() {
   const [show, setShow] = useState(false);
@@ -31,24 +32,26 @@ export default function StickyMobileBar() {
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <div className="grid grid-cols-3 divide-x divide-brand/10">
-        <a
+        <TrackedLink
+          goal="PHONE_CLICK"
+          goalParams={{ from: "sticky_bar" }}
           href="tel:+79013201050"
-          onClick={() => track("PHONE_CLICK", { from: "sticky_bar" })}
           className="py-3 text-center text-xs uppercase tracking-widest text-brand-dark/80 active:bg-brand/5"
           aria-label="Позвонить"
         >
           Позвонить
-        </a>
-        <a
+        </TrackedLink>
+        <TrackedLink
+          goal="TG_CLICK"
+          goalParams={{ from: "sticky_bar" }}
           href="https://t.me/Istova_spa"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => track("TG_CLICK", { from: "sticky_bar" })}
           className="py-3 text-center text-xs uppercase tracking-widest text-brand-dark/80 active:bg-brand/5"
           aria-label="Написать в Telegram"
         >
           Telegram
-        </a>
+        </TrackedLink>
         <a
           href={bookingHref}
           onClick={() => track("BOOKING_CLICK", { from: "sticky_bar" })}

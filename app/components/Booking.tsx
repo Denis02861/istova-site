@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, FormEvent } from "react";
 import { track } from "../lib/track";
+import TrackedLink from "./TrackedLink";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -232,13 +233,14 @@ export default function Booking() {
           <div className="mt-8 pt-6 border-t border-brand/15 text-left">
             <p className="text-sm text-brand/70 mb-1">Или напишите нам напрямую</p>
             <p className="text-base text-brand">
-              <a
+              <TrackedLink
+                goal="TG_CLICK"
+                goalParams={{ from: "booking" }}
                 href="https://t.me/Istova_spa"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => track("TG_CLICK", { from: "booking" })}
                 className="hover:underline"
-              >@Istova_spa</a>
+              >@Istova_spa</TrackedLink>
             </p>
           </div>
         </div>

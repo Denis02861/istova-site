@@ -1,6 +1,6 @@
 "use client";
 
-import { AnchorHTMLAttributes, ReactNode } from "react";
+import { AnchorHTMLAttributes, ReactNode, useRef } from "react";
 import { track } from "../lib/track";
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -9,12 +9,27 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
 };
 
-export default function TrackedLink({ goal, goalParams, onClick, children, ...rest }: Props) {
+export default function TrackedLink({ goal, goalParams, onClick, onPointerDown, children, ...rest }: Props) {
+  const firedRef = useRef(false);
+
+  const fire = () => {
+    if (firedRef.current) return;
+    firedRef.current = true;
+    track(goal, goalParams);
+    setTimeout(() => {
+      firedRef.current = false;
+    }, 500);
+  };
+
   return (
     <a
       {...rest}
+      onPointerDown={(e) => {
+        fire();
+        onPointerDown?.(e);
+      }}
       onClick={(e) => {
-        track(goal, goalParams);
+        fire();
         onClick?.(e);
       }}
     >
