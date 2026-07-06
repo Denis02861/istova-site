@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, ReactNode } from "react";
+import { useEffect, useRef, useState, ReactNode, Children, cloneElement, isValidElement } from "react";
 
 type Variant = "up" | "left" | "right" | "scale" | "fade";
 
@@ -8,6 +8,8 @@ type Props = {
   children: ReactNode;
   variant?: Variant;
   delay?: number;
+  stagger?: number;  // если задан — каждый direct-child появляется с delay = index * stagger мс
+  className?: string;
 };
 
 const hidden: Record<Variant, string> = {
@@ -26,7 +28,7 @@ const shown: Record<Variant, string> = {
   fade:  "opacity-100",
 };
 
-export default function Reveal({ children, variant = "up", delay = 0 }: Props) {
+export default function Reveal({ children, variant = "up", delay = 0, stagger, className }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -74,13 +76,33 @@ export default function Reveal({ children, variant = "up", delay = 0 }: Props) {
     };
   }, [delay]);
 
+  const baseCls = "transition-all ease-out will-change-transform";
+  const baseStyle = { transitionDuration: "800ms", transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" };
+
+  if (stagger) {
+    // Стагер: каждому direct-child задаём индивидуальный transition-delay
+    return (
+      <div ref={ref} className={className}>
+        {Children.map(children, (child, i) => {
+          const delayMs = i * stagger;
+          return (
+            <div
+              className={`${baseCls} ${visible ? shown[variant] : hidden[variant]}`}
+              style={{ ...baseStyle, transitionDelay: `${delayMs}ms` }}
+            >
+              {child}
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
   return (
     <div
       ref={ref}
-      className={`transition-all ease-out will-change-transform ${
-        visible ? shown[variant] : hidden[variant]
-      }`}
-      style={{ transitionDuration: "800ms", transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" }}
+      className={`${baseCls} ${visible ? shown[variant] : hidden[variant]}`}
+      style={baseStyle}
     >
       {children}
     </div>

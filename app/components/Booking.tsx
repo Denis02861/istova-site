@@ -8,6 +8,26 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 const BOOKING_WEBHOOK = "https://n8nautomat.site/webhook/istova-booking";
 
+
+function formatPhone(raw: string): string {
+  const digits = raw.replace(/\D/g, "").replace(/^8/, "7").slice(0, 11);
+  if (!digits) return "";
+  const p1 = digits.slice(1, 4);
+  const p2 = digits.slice(4, 7);
+  const p3 = digits.slice(7, 9);
+  const p4 = digits.slice(9, 11);
+  let out = "+7";
+  if (p1) out += ` (${p1}`;
+  if (p1.length === 3) out += ")";
+  if (p2) out += ` ${p2}`;
+  if (p3) out += `-${p3}`;
+  if (p4) out += `-${p4}`;
+  return out;
+}
+function isPhoneValid(v: string): boolean {
+  return v.replace(/\D/g, "").length === 11;
+}
+
 const CHANNELS = [
   { value: "Позвонить", label: "Позвонить" },
   { value: "WhatsApp", label: "WhatsApp" },
@@ -16,6 +36,7 @@ const CHANNELS = [
 ];
 
 export default function Booking() {
+  const nameRef = useRef<HTMLInputElement | null>(null);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [channel, setChannel] = useState("");
@@ -36,6 +57,10 @@ export default function Booking() {
             viewedRef.current = true;
             track("BOOKING_FORM_VIEW");
             obs.disconnect();
+            // auto-focus на первое поле после появления секции — но только на desktop (на mobile выскакивает клава)
+            if (typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches) {
+              setTimeout(() => nameRef.current?.focus({ preventScroll: true }), 300);
+            }
           }
         }
       },
@@ -136,7 +161,12 @@ export default function Booking() {
         <p className="mb-12 text-sand/80 max-w-xl mx-auto leading-relaxed">Оставьте заявку — администратор свяжется с вами в течение часа и подтвердит запись.</p>
         <div className="bg-sand-soft text-brand p-12 max-w-xl mx-auto">
           {status === "sent" ? (
-            <div className="py-8">
+            <div className="py-8 flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-brand/10 flex items-center justify-center mb-5 animate-check-bounce">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-brand">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
               <p className="font-display text-2xl mb-3">Заявка отправлена</p>
               <p className="text-brand/70 mb-6">Администратор свяжется с вами в течение часа.</p>
               <button
@@ -150,6 +180,7 @@ export default function Booking() {
           ) : (
             <form onSubmit={onSubmit} className="space-y-4 text-left">
               <input
+                ref={nameRef}
                 type="text"
                 aria-label="Имя"
                 autoComplete="name"
@@ -161,18 +192,28 @@ export default function Booking() {
                 maxLength={100}
                 className="w-full px-4 py-3 bg-sand border border-brand/20 focus:border-brand outline-none disabled:opacity-60"
               />
-              <input
-                type="tel"
-                aria-label="Телефон"
-                autoComplete="tel"
-                placeholder="Телефон *"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                disabled={sending}
-                required
-                maxLength={30}
-                className="w-full px-4 py-3 bg-sand border border-brand/20 focus:border-brand outline-none disabled:opacity-60"
-              />
+              <div>
+                <input
+                  type="tel"
+                  aria-label="Телефон"
+                  autoComplete="tel"
+                  inputMode="tel"
+                  placeholder="+7 (___) ___-__-__"
+                  value={phone}
+                  onChange={(e) => setPhone(formatPhone(e.target.value))}
+                  disabled={sending}
+                  required
+                  maxLength={18}
+                  className={`w-full px-4 py-3 bg-sand border outline-none disabled:opacity-60 transition-colors ${
+                    phone.replace(/\D/g, "").length > 5 && !isPhoneValid(phone)
+                      ? "border-red-500/60 focus:border-red-500"
+                      : "border-brand/20 focus:border-brand"
+                  }`}
+                />
+                {phone.replace(/\D/g, "").length > 5 && !isPhoneValid(phone) && (
+                  <p className="text-xs text-red-500/80 mt-1">Введите номер полностью — 11 цифр</p>
+                )}
+              </div>
               <label htmlFor="booking-channel" className="sr-only">Как с вами связаться</label>
               <select
                 id="booking-channel"

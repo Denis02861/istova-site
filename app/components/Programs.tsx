@@ -11,6 +11,7 @@ const DISCLAIMER =
 export default function Programs() {
   const [open, setOpen] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [originRect, setOriginRect] = useState<{x: number; y: number} | null>(null);
   const active = programs.find((p) => p.slug === open);
 
   useEffect(() => { setMounted(true); }, []);
@@ -67,7 +68,11 @@ export default function Programs() {
     <button
       key={p.slug}
       type="button"
-      onClick={() => setOpen(p.slug)}
+      onClick={(e) => {
+        const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+        setOriginRect({ x: rect.left + rect.width/2, y: rect.top + rect.height/2 });
+        setOpen(p.slug);
+      }}
       className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-brand/30 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
     >
       <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col min-h-[360px] w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
@@ -172,15 +177,20 @@ export default function Programs() {
 
       {mounted && active && createPortal(
         <div
-          className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-8 bg-brand-dark/50 backdrop-blur-sm"
+          className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-8 bg-brand-dark/50 backdrop-blur-sm animate-modal-backdrop"
           onClick={() => setOpen(null)}
           role="dialog"
           aria-modal="true"
         >
           <div
             data-lenis-prevent
-            className="relative bg-sand-soft w-full max-w-2xl max-h-[90vh] overflow-y-auto overscroll-contain p-6 md:p-10 border border-brand/20 shadow-2xl"
-            style={{ WebkitOverflowScrolling: "touch" }}
+            className="relative bg-sand-soft w-full max-w-2xl max-h-[90vh] overflow-y-auto overscroll-contain p-6 md:p-10 border border-brand/20 shadow-2xl animate-modal-in"
+            style={{
+              WebkitOverflowScrolling: "touch",
+              transformOrigin: originRect
+                ? `${originRect.x}px ${originRect.y}px`
+                : "center center",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -191,7 +201,7 @@ export default function Programs() {
               ×
             </button>
 
-            <div className="pr-10">
+            <div className="pr-10 modal-stagger">
               {active.accent && (
                 <div className="text-[10px] uppercase tracking-widest text-brand/60 mb-3">{active.accent}</div>
               )}
