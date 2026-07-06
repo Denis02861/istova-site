@@ -11,19 +11,19 @@ type Props = {
 };
 
 const hidden: Record<Variant, string> = {
-  up:    "opacity-0 translate-y-20",
-  left:  "opacity-0 -translate-x-24",
-  right: "opacity-0 translate-x-24",
-  scale: "opacity-0 scale-[0.9]",
-  fade:  "opacity-0",
+  up:    "opacity-0 translate-y-20 blur-md",
+  left:  "opacity-0 -translate-x-24 blur-md",
+  right: "opacity-0 translate-x-24 blur-md",
+  scale: "opacity-0 scale-[0.9] blur-md",
+  fade:  "opacity-0 blur-sm",
 };
 
 const shown: Record<Variant, string> = {
-  up:    "opacity-100 translate-y-0",
-  left:  "opacity-100 translate-x-0",
-  right: "opacity-100 translate-x-0",
-  scale: "opacity-100 scale-100",
-  fade:  "opacity-100",
+  up:    "opacity-100 translate-y-0 blur-0",
+  left:  "opacity-100 translate-x-0 blur-0",
+  right: "opacity-100 translate-x-0 blur-0",
+  scale: "opacity-100 scale-100 blur-0",
+  fade:  "opacity-100 blur-0",
 };
 
 export default function Reveal({ children, variant = "up", delay = 0 }: Props) {

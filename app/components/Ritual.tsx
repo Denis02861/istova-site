@@ -21,7 +21,7 @@ export default function Ritual() {
           loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
       </Parallax>
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Пять шагов</div>
+        <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Пять шагов</span></div>
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">
           Как проходит ваш визит
         </h2>

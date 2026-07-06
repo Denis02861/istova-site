@@ -89,3 +89,10 @@ body::before {
   border: 2px solid #744436;
 }
 .skip-link:focus { top: 8px; }
+
+
+/* Soft-skill upgrades — Editorial Luxury cubic-bezier + Doppelrand */
+.transition-colors, [class*="transition-colors"] {
+  transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+  transition-duration: 500ms;
+}
