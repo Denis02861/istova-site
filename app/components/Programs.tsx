@@ -40,13 +40,22 @@ export default function Programs() {
         document.body.style.width = "";
         delete document.body.dataset.scrollLock;
         document.body.classList.remove("istova-modal-open");
-        // используем Lenis.scrollTo с immediate — иначе Lenis плавно едет от 0 до y
+        // Lenis нельзя оставлять живым во время scroll-восстановления —
+        // он подхватывает и едет с 0. Останавливаем → нативный scrollTo → запускаем.
         const lenis = (window as any).__lenis;
-        if (lenis && typeof lenis.scrollTo === "function") {
-          lenis.scrollTo(y, { immediate: true });
-        } else {
-          window.scrollTo({ top: y, left: 0, behavior: "auto" });
-        }
+        lenis?.stop?.();
+        const prevBehavior = document.documentElement.style.scrollBehavior;
+        document.documentElement.style.scrollBehavior = "auto";
+        window.scrollTo(0, y);
+        document.documentElement.style.scrollBehavior = prevBehavior;
+        // Возобновляем Lenis на следующем кадре, когда позиция уже установлена
+        requestAnimationFrame(() => {
+          lenis?.start?.();
+          // синхронизируем внутреннюю позицию Lenis с фактическим scroll
+          if (lenis && typeof lenis.scrollTo === "function") {
+            lenis.scrollTo(y, { immediate: true, force: true });
+          }
+        });
       }
       window.removeEventListener("keydown", onKey);
     };
