@@ -19,43 +19,25 @@ export default function Programs() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(null); };
     if (open) {
-      // iOS-safe scroll lock: фиксируем body с текущим scrollY
-      const scrollY = window.scrollY;
-      document.body.dataset.scrollLock = String(scrollY);
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.left = "0";
-      document.body.style.right = "0";
-      document.body.style.width = "100%";
+      // scroll-lock БЕЗ position:fixed — просто отключаем прокрутку
+      // и останавливаем Lenis. scroll-позиция остаётся на месте,
+      // при закрытии не надо ничего восстанавливать.
+      const lenis = (window as any).__lenis;
+      lenis?.stop?.();
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
       document.body.classList.add("istova-modal-open");
       window.addEventListener("keydown", onKey);
     }
     return () => {
-      if (document.body.dataset.scrollLock !== undefined) {
-        const y = parseInt(document.body.dataset.scrollLock || "0", 10);
-        document.body.style.position = "";
-        document.body.style.top = "";
-        document.body.style.left = "";
-        document.body.style.right = "";
-        document.body.style.width = "";
-        delete document.body.dataset.scrollLock;
-        document.body.classList.remove("istova-modal-open");
-        // Lenis нельзя оставлять живым во время scroll-восстановления —
-        // он подхватывает и едет с 0. Останавливаем → нативный scrollTo → запускаем.
+      if (document.body.classList.contains("istova-modal-open")) {
         const lenis = (window as any).__lenis;
-        lenis?.stop?.();
-        const prevBehavior = document.documentElement.style.scrollBehavior;
-        document.documentElement.style.scrollBehavior = "auto";
-        window.scrollTo(0, y);
-        document.documentElement.style.scrollBehavior = prevBehavior;
-        // Возобновляем Lenis на следующем кадре, когда позиция уже установлена
-        requestAnimationFrame(() => {
-          lenis?.start?.();
-          // синхронизируем внутреннюю позицию Lenis с фактическим scroll
-          if (lenis && typeof lenis.scrollTo === "function") {
-            lenis.scrollTo(y, { immediate: true, force: true });
-          }
-        });
+        document.documentElement.style.overflow = "";
+        document.body.style.overflow = "";
+        document.body.style.touchAction = "";
+        document.body.classList.remove("istova-modal-open");
+        lenis?.start?.();
       }
       window.removeEventListener("keydown", onKey);
     };
