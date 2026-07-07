@@ -18,6 +18,7 @@ export default function SmoothScroll() {
       // (Lenis без syncTouch не перехватывает touch-события)
     });
 
+    (window as any).__lenis = lenis;
     let raf = 0;
     const tick = (time: number) => {
       lenis.raf(time);
@@ -28,6 +29,7 @@ export default function SmoothScroll() {
     return () => {
       cancelAnimationFrame(raf);
       lenis.destroy();
+      delete (window as any).__lenis;
     };
   }, []);
 

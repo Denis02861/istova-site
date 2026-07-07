@@ -40,7 +40,13 @@ export default function Programs() {
         document.body.style.width = "";
         delete document.body.dataset.scrollLock;
         document.body.classList.remove("istova-modal-open");
-        window.scrollTo(0, y);
+        // используем Lenis.scrollTo с immediate — иначе Lenis плавно едет от 0 до y
+        const lenis = (window as any).__lenis;
+        if (lenis && typeof lenis.scrollTo === "function") {
+          lenis.scrollTo(y, { immediate: true });
+        } else {
+          window.scrollTo({ top: y, left: 0, behavior: "auto" });
+        }
       }
       window.removeEventListener("keydown", onKey);
     };
