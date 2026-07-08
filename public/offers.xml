@@ -44,6 +44,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-zarya-telo</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -63,6 +65,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-zarya-volosy</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -82,6 +86,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-sumerki-telo</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -101,6 +107,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-sumerki-volosy</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -120,6 +128,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-yav</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -139,6 +149,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-otzvuk</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -158,6 +170,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-kedr</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -177,6 +191,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-lada</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -196,6 +212,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-rodnik</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -215,6 +233,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-zarya-telo</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -234,6 +254,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-zarya-volosy</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -253,6 +275,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-sumerki-telo</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -272,6 +296,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-sumerki-volosy</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -291,6 +317,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-yav</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -310,6 +338,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-otzvuk</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -329,6 +359,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-kedr</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -348,6 +380,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-lada</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -367,6 +401,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-rodnik</set-ids>
       <vendor>Истова</vendor>
     </offer>
@@ -384,6 +420,8 @@
       <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">100</param>
+      <param name="Рейтинг">5.0</param>
+      <param name="Число отзывов">3</param>
       <set-ids>s-cert-any</set-ids>
       <vendor>Истова</vendor>
     </offer>
