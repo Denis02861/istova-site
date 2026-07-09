@@ -15,7 +15,7 @@ export default function Hero() {
         width={512} height={512}
       />
       <div className="container mx-auto px-6 text-center relative z-10">
-        <h1 className="sr-only">Истова</h1>
+        <h1 className="sr-only">Истова — head spa и спа для головы в Санкт-Петербурге, Васильевский остров</h1>
         <img
           src="/logo/istova-wordmark.webp"
           alt="ИСТŌВА"

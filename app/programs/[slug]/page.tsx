@@ -156,7 +156,7 @@ export default async function ProgramPage({
         "@type": "ListItem",
         position: 2,
         name: "Программы",
-        item: `${SITE_URL}/#programs`,
+        item: `${SITE_URL}/programs/`,
       },
       {
         "@type": "ListItem",
@@ -191,7 +191,7 @@ export default async function ProgramPage({
           <nav className="text-xs uppercase tracking-widest text-brand/60 mb-12">
             <Link href="/" className="hover:text-brand">Главная</Link>
             <span className="mx-2">·</span>
-            <Link href="/#programs" className="hover:text-brand">Программы</Link>
+            <Link href="/programs/" className="hover:text-brand">Программы</Link>
             <span className="mx-2">·</span>
             <span className="text-brand">{program.name}</span>
           </nav>
