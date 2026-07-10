@@ -53,7 +53,7 @@ export default function Certificates() {
                   <div
                     className={"absolute whitespace-nowrap " + st.cls}
                     style={{
-                      top: "52%",
+                      top: "53%",
                       left: "24%",
                       fontSize: st.size,
                       lineHeight: 1,
