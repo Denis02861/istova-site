@@ -8,13 +8,15 @@ interface CardTiltProps {
   className?: string;
   maxTilt?: number;
   scale?: number;
+  perspective?: number;
 }
 
 export default function CardTilt({
   children,
   className = "",
-  maxTilt = 12,
-  scale = 1.02,
+  maxTilt = 14,
+  scale = 1.04,
+  perspective = 900,
 }: CardTiltProps) {
   const ref = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
@@ -37,23 +39,21 @@ export default function CardTilt({
   };
 
   return (
-    <motion.div
+    <div
       ref={ref}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
-      whileHover={{ scale }}
-      transition={{ type: "spring", ...springConfig }}
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-        perspective: 1000,
-      }}
-      className={"relative " + className}
+      style={{ perspective: `${perspective}px` }}
+      className={className}
     >
-      <div style={{ transform: "translateZ(30px)" }} className="relative">
+      <motion.div
+        whileHover={{ scale }}
+        transition={{ type: "spring", ...springConfig }}
+        style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+        className="relative w-full h-full"
+      >
         {children}
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
