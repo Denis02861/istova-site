@@ -1,15 +1,32 @@
 "use client";
 
-import Parallax from "./Parallax";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Reveal from "./Reveal";
 import BlurFade from "./magicui/BlurFade";
 
 export default function Concept() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+
+  // Птица медленно улетает вправо-вверх по мере скролла
+  const birdX = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
+  const birdY = useTransform(scrollYProgress, [0, 1], ["0%", "-140%"]);
+  const birdRotate = useTransform(scrollYProgress, [0, 1], [-2, -18]);
+  const birdScale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
+  const birdOpacity = useTransform(scrollYProgress, [0, 0.55, 1], [0.85, 0.55, 0.1]);
+
   return (
-    <section id="concept" className="py-24 bg-sand-soft relative overflow-hidden">
-      <Parallax speed={0.4} className="absolute top-4 right-4 md:top-12 md:right-8 w-14 md:w-44 opacity-15 md:opacity-20 pointer-events-none">
-        <img src="/brand/decor/bird.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
-      </Parallax>
+    <section ref={sectionRef} id="concept" className="py-24 bg-sand-soft relative overflow-hidden">
+      <motion.img
+        src="/brand/decor/bird.webp"
+        alt=""
+        aria-hidden="true"
+        loading="lazy" decoding="async"
+        style={{ x: birdX, y: birdY, rotate: birdRotate, scale: birdScale, opacity: birdOpacity }}
+        className="absolute top-16 md:top-24 right-[20%] md:right-[26%] w-14 md:w-28 pointer-events-none will-change-transform"
+        width={512} height={512}
+      />
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
         <BlurFade delay={0.1} yOffset={20}>
           <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Место, не услуга</h2>

@@ -7,8 +7,16 @@ export default function Contacts() {
   const address = "Санкт-Петербург, ул. Беринга, 23 к. 2";
   const mapSrc = "https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=63939829435";
   return (
-    <section id="contacts" className="py-24 bg-sand">
-      <div className="container mx-auto px-6 max-w-5xl">
+    <section id="contacts" className="py-24 bg-sand relative overflow-hidden">
+      <img
+        src="/brand/decor/spiral.webp"
+        alt=""
+        aria-hidden="true"
+        loading="lazy" decoding="async"
+        className="absolute bottom-8 right-4 md:bottom-16 md:right-10 w-20 md:w-40 opacity-[0.07] md:opacity-[0.1] pointer-events-none"
+        width={512} height={512}
+      />
+      <div className="container mx-auto px-6 max-w-5xl relative z-10">
         <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center tracking-tight">Где нас найти</h2></BlurFade>
         <div className="grid md:grid-cols-2 gap-12">
           <div>

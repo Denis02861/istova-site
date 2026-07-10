@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "motion/react";
-import Parallax from "./Parallax";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Reveal from "./Reveal";
 import BlurFade from "./magicui/BlurFade";
 import Aurora from "./magicui/Aurora";
@@ -15,12 +15,25 @@ const steps = [
 ];
 
 export default function Ritual() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+  // Спираль вращается на полный оборот и уменьшается — иллюзия воронки
+  const spiralRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const spiralScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.35]);
+  const spiralOpacity = useTransform(scrollYProgress, [0, 0.35, 0.85, 1], [0.18, 0.22, 0.14, 0.06]);
+
   return (
-    <section id="ritual" className="py-24 bg-sand relative overflow-hidden">
+    <section ref={sectionRef} id="ritual" className="py-24 bg-sand relative overflow-hidden">
       <Aurora />
-      <Parallax speed={0.32} className="absolute bottom-6 left-4 md:top-12 md:left-8 md:bottom-auto w-14 md:w-44 opacity-10 md:opacity-15 pointer-events-none">
-        <img src="/brand/decor/spiral.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
-      </Parallax>
+      <motion.img
+        src="/brand/decor/spiral.webp"
+        alt=""
+        aria-hidden="true"
+        loading="lazy" decoding="async"
+        style={{ rotate: spiralRotate, scale: spiralScale, opacity: spiralOpacity }}
+        className="absolute bottom-4 left-[-20px] md:top-8 md:left-[-40px] md:bottom-auto w-40 md:w-[380px] pointer-events-none will-change-transform"
+        width={512} height={512}
+      />
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">Пять шагов</span></div>
         <BlurFade delay={0.05} yOffset={16}>

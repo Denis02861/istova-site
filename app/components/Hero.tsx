@@ -8,14 +8,6 @@ export default function Hero() {
   return (
     <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
       <Aurora />
-      <img
-        src="/brand/decor/spiral.webp"
-        alt=""
-        aria-hidden="true"
-        loading="lazy" decoding="async"
-        className="absolute bottom-8 right-4 md:bottom-24 md:right-8 w-16 md:w-48 opacity-10 md:opacity-20 pointer-events-none"
-        width={512} height={512}
-      />
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="sr-only">Истова — head spa и спа для головы в Санкт-Петербурге, Васильевский остров</h1>
         <img
