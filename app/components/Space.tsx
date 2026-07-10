@@ -1,53 +1,63 @@
 "use client";
 
 import BlurFade from "./magicui/BlurFade";
+import CardTilt from "./magicui/CardTilt";
+import Reveal from "./Reveal";
 
-const zones = [
-  { t: "Спа-зона", d: "Приватные кабинеты, чайная комната, зона тишины с тёплыми пледами" },
-  { t: "Парикмахерский зал", d: "Отдельный вход, авторские кресла, ритуал ухода в атмосфере спа" },
-  { t: "Ресепшн и холл", d: "Первая точка встречи, арома-выбор, чайная карта" },
-  { t: "Лаунж после ритуала", d: "Плед, приглушённый свет, время. Возвращение в мир — медленно" },
-  { t: "Спа-душ и сауна", d: "Финская сауна с эфирами, зона перехода между сухим и влажным теплом" },
-  { t: "Зона тишины", d: "Комната без звонков, без разговоров. Только вы и тепло" },
+type Zone = { title: string; desc: string; img?: string };
+
+const zones: Zone[] = [
+  { title: "Спа-зона", desc: "Приватные кабинеты, чайная комната, зона тишины с тёплыми пледами" },
+  { title: "Спа для головы", desc: "Азиатская техника, аква-медитация с водной дугой — авторская программа Истовы", img: "/services/04-head-spa.jpg" },
+  { title: "Финская сауна", desc: "70-90°C — идеальное расслабление мышц. Дополнение к уходам за телом", img: "/services/03-sauna.jpg" },
+  { title: "Ритуалы для тела", desc: "Скрабирование натуральными скрабами, тёплые обёртывания для питания и увлажнения кожи", img: "/services/06-body.jpg" },
+  { title: "Парикмахерский зал", desc: "Отдельный вход, авторские кресла, ритуал ухода в атмосфере спа" },
+  { title: "Лаунж после ритуала", desc: "Плед, приглушённый свет, время. Возвращение в мир — медленно" },
 ];
 
 export default function Space() {
   return (
-    <section id="space" className="py-24 bg-sand">
-      <div className="container mx-auto px-6 max-w-5xl relative z-10">
-        <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Пространство</span></div>
-        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-4xl md:text-5xl text-brand mb-6 text-center tracking-tight">
-          Два мира под одной крышей
-        </h2></BlurFade>
-        <p className="text-center text-lg text-brand-dark/80 max-w-2xl mx-auto mb-16 leading-relaxed">
-          256 квадратных метров на Васильевском острове, в шаге от Невы. Спа-зона с приватными кабинетами и общей зоной тишины. Парикмахерский зал с отдельным входом и атмосферой ритуала ухода.
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-4">
-          {zones.map((z, i) => (
-            <div
-              key={z.t}
-              className="group relative aspect-[4/5] bg-gradient-to-br from-sand-deep/60 via-sand-deep/40 to-sand-soft border border-brand/10 p-6 flex flex-col justify-end overflow-hidden transition-all duration-500 hover:border-brand/30 hover:shadow-[0_16px_40px_-16px_rgba(116,68,54,0.2)]"
-            >
-              <div className="absolute inset-0 flex items-center justify-center opacity-[0.08] pointer-events-none">
-                <span className="font-display text-[8rem] leading-none text-brand">
-                  0{i + 1}
-                </span>
-              </div>
-              <div className="relative">
-                <div className="font-display text-xl text-brand mb-2 uppercase tracking-wider">
-                  {z.t}
-                </div>
-                <p className="text-sm text-brand-dark/70 leading-relaxed">
-                  {z.d}
-                </p>
-              </div>
-            </div>
-          ))}
+    <section id="space" className="py-24 bg-sand-soft relative overflow-hidden">
+      <div className="container mx-auto px-6 max-w-6xl relative z-10">
+        <div className="text-center mb-6">
+          <span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">Пространство</span>
         </div>
-        <p className="text-center text-xs text-brand/50 mt-8 italic">
-          Фотогалерея появится после фотосессии пространства
-        </p>
+        <BlurFade delay={0.05} yOffset={16}>
+          <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">256 м² — 6 зон</h2>
+        </BlurFade>
+        <BlurFade delay={0.15} yOffset={16}>
+          <p className="text-center text-brand-dark/70 mb-14 max-w-xl mx-auto">
+            Каждая — со своим смыслом. Плавные переходы между теплом и прохладой, ароматом и тишиной, программой и отдыхом.
+          </p>
+        </BlurFade>
+        <Reveal stagger={140} className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+          {zones.map((z, i) => (
+            <CardTilt key={i} maxTilt={9} scale={1.03}>
+              <div className="relative aspect-[4/5] rounded-sm overflow-hidden border border-brand/10 shadow-[0_18px_50px_-15px_rgba(116,68,54,0.25)] hover:shadow-[0_30px_60px_-15px_rgba(116,68,54,0.4)] transition-shadow duration-500 bg-sand h-full">
+                {z.img ? (
+                  <>
+                    <img
+                      src={z.img}
+                      alt={z.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-sand">
+                      <h3 className="font-display text-2xl md:text-3xl mb-2 tracking-tight">{z.title}</h3>
+                      <p className="text-sm text-sand/90 leading-relaxed">{z.desc}</p>
+                    </div>
+                  </>
+                ) : (
+                  <div className="w-full h-full flex flex-col justify-end p-6 bg-brand/5">
+                    <h3 className="font-display text-2xl md:text-3xl text-brand mb-2 tracking-tight">{z.title}</h3>
+                    <p className="text-sm text-brand-dark/75 leading-relaxed">{z.desc}</p>
+                  </div>
+                )}
+              </div>
+            </CardTilt>
+          ))}
+        </Reveal>
       </div>
     </section>
   );
