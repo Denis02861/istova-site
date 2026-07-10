@@ -188,3 +188,146 @@ body::before {
     opacity: 1 !important;
   }
 }
+
+/* MagicUI custom animations */
+@keyframes ripple {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.92);
+  }
+}
+.animate-ripple {
+  animation: ripple 3.4s ease calc(var(--i, 0) * 0.2s) infinite;
+}
+
+@keyframes shiny-text {
+  0%, 90%, 100% {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+  30%, 60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+.animate-shiny-text {
+  animation: shiny-text 8s infinite;
+}
+
+@keyframes border-beam {
+  100% {
+    offset-distance: 100%;
+  }
+}
+.animate-border-beam {
+  animation: border-beam calc(var(--duration) * 1s) infinite linear;
+}
+
+
+@keyframes aurora-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  14%  { transform: translate(220px, 40px) scale(1.08); }
+  28%  { transform: translate(320px, -30px) scale(1.12); }
+  42%  { transform: translate(180px, 80px) scale(1.02); }
+  57%  { transform: translate(-80px, 60px) scale(0.95); }
+  71%  { transform: translate(-200px, -20px) scale(1.06); }
+  85%  { transform: translate(-40px, 100px) scale(1.0); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-1 { animation: aurora-1 20s ease-in-out infinite; }
+
+@keyframes aurora-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  16%  { transform: translate(-180px, 50px) scale(1.05); }
+  30%  { transform: translate(-260px, 120px) scale(1.1); }
+  46%  { transform: translate(-140px, -60px) scale(1.0); }
+  60%  { transform: translate(80px, -30px) scale(0.92); }
+  76%  { transform: translate(160px, 40px) scale(1.08); }
+  88%  { transform: translate(-40px, 80px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-2 { animation: aurora-2 24s ease-in-out infinite; }
+
+@keyframes aurora-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  18%  { transform: translate(200px, -80px) scale(1.1); }
+  34%  { transform: translate(340px, 40px) scale(1.15); }
+  50%  { transform: translate(160px, 120px) scale(1.0); }
+  66%  { transform: translate(-120px, 60px) scale(0.9); }
+  82%  { transform: translate(-260px, -40px) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-3 { animation: aurora-3 22s ease-in-out infinite; }
+
+@keyframes aurora-4 {
+  0%   { transform: translate(0, 0) scale(1); }
+  15%  { transform: translate(280px, -40px) scale(1.06); }
+  32%  { transform: translate(420px, 60px) scale(1.12); }
+  48%  { transform: translate(320px, 140px) scale(1.02); }
+  64%  { transform: translate(120px, 180px) scale(0.94); }
+  80%  { transform: translate(-40px, 80px) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-4 { animation: aurora-4 18s ease-in-out infinite; }
+
+@keyframes aurora-5 {
+  0%   { transform: translate(0, 0) scale(1); }
+  12%  { transform: translate(-160px, -100px) scale(1.08); }
+  28%  { transform: translate(-320px, -40px) scale(1.14); }
+  44%  { transform: translate(-240px, 100px) scale(1.02); }
+  60%  { transform: translate(-60px, 160px) scale(0.9); }
+  76%  { transform: translate(140px, 60px) scale(1.06); }
+  90%  { transform: translate(80px, -80px) scale(1.0); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-5 { animation: aurora-5 26s ease-in-out infinite; }
+
+
+@media (max-width: 767px) {
+  .animate-aurora-1, .animate-aurora-2, .animate-aurora-3, .animate-aurora-4, .animate-aurora-5 {
+    animation-duration: 26s;
+  }
+  @keyframes aurora-1 {
+    0%   { transform: translate(0, 0) scale(1); }
+    25%  { transform: translate(80px, 30px) scale(1.06); }
+    50%  { transform: translate(120px, -20px) scale(1.02); }
+    75%  { transform: translate(-40px, 60px) scale(0.96); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  @keyframes aurora-2 {
+    0%   { transform: translate(0, 0) scale(1); }
+    30%  { transform: translate(-90px, 40px) scale(1.05); }
+    60%  { transform: translate(-60px, -50px) scale(0.94); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  @keyframes aurora-3 {
+    0%   { transform: translate(0, 0) scale(1); }
+    35%  { transform: translate(70px, -40px) scale(1.08); }
+    70%  { transform: translate(-70px, 30px) scale(0.94); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  @keyframes aurora-4 {
+    0%   { transform: translate(0, 0) scale(1); }
+    33%  { transform: translate(90px, 20px) scale(1.06); }
+    66%  { transform: translate(-30px, 70px) scale(0.96); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  @keyframes aurora-5 {
+    0%   { transform: translate(0, 0) scale(1); }
+    30%  { transform: translate(-80px, -50px) scale(1.06); }
+    60%  { transform: translate(40px, 40px) scale(0.94); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+}
+@keyframes ken-burns {
+  0%   { transform: scale(1.05) translate(0%, 0%); }
+  25%  { transform: scale(1.14) translate(-2%, -1.5%); }
+  50%  { transform: scale(1.18) translate(0%, -2.5%); }
+  75%  { transform: scale(1.12) translate(2%, -1%); }
+  100% { transform: scale(1.05) translate(0%, 0%); }
+}
+.animate-ken-burns {
+  animation: ken-burns 14s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}

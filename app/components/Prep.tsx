@@ -1,3 +1,7 @@
+"use client";
+
+import BlurFade from "./magicui/BlurFade";
+
 const bring = [
   "Себя — без спешки и списка дел",
   "Косметичку (мы дадим косметику, но привычная — приятнее)",
@@ -15,9 +19,9 @@ export default function Prep() {
     <section id="prep" className="py-24 bg-sand-deep/30">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Первый визит</div>
-        <h2 className="font-display text-3xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">
+        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-3xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">
           Что взять и о чём не думать
-        </h2>
+        </h2></BlurFade>
         <p className="text-center text-brand-dark/70 mb-14 max-w-xl mx-auto">
           Короткая практическая заметка перед первым визитом. Всё остальное — расскажет администратор.
         </p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import BlurFade from "./magicui/BlurFade";
 
 const TEAS = [
   {
@@ -121,9 +122,9 @@ export default function TeaCard() {
   return (
     <section id="tea" className="bg-sand">
       <div className="bg-moss py-8">
-        <h2 className="font-display text-3xl md:text-4xl text-sand text-center tracking-tight">
+        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-3xl md:text-4xl text-sand text-center tracking-tight">
           Чайная карта
-        </h2>
+        </h2></BlurFade>
       </div>
 
       <div className="container mx-auto px-6 pt-12 md:pt-16 pb-16 relative">

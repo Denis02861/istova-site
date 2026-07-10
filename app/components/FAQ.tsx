@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import BlurFade from "./magicui/BlurFade";
 
 const items = [
   { q: "Что такое спа-ритуал?", a: "Это не «процедура» в привычном смысле. Это последовательность действий: подготовка пространства, аромавыбор, чай, основная работа с телом, отдых. От 60 до 180 минут." },
@@ -33,7 +34,7 @@ export default function FAQ() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
       />
       <div className="container mx-auto px-6 max-w-3xl">
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center tracking-tight">Частые вопросы</h2>
+        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center tracking-tight">Частые вопросы</h2></BlurFade>
         <div className="space-y-4">
           {items.map((it, i) => (
             <article key={i} className="border-b border-brand/10 pb-4">

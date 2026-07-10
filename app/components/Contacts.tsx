@@ -1,4 +1,7 @@
+"use client";
+
 import TrackedLink from "./TrackedLink";
+import BlurFade from "./magicui/BlurFade";
 
 export default function Contacts() {
   const address = "Санкт-Петербург, ул. Беринга, 23 к. 2";
@@ -6,7 +9,7 @@ export default function Contacts() {
   return (
     <section id="contacts" className="py-24 bg-sand">
       <div className="container mx-auto px-6 max-w-5xl">
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center tracking-tight">Где нас найти</h2>
+        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-4xl md:text-5xl text-brand mb-16 text-center tracking-tight">Где нас найти</h2></BlurFade>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="font-display text-2xl text-brand mb-4 ">Адрес</h3>

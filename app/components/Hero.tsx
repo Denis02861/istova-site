@@ -1,11 +1,13 @@
 "use client";
 
 import { track } from "../lib/track";
-import Parallax from "./Parallax";
+import NumberTicker from "./magicui/NumberTicker";
+import Aurora from "./magicui/Aurora";
 
 export default function Hero() {
   return (
     <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
+      <Aurora />
       <img
         src="/brand/decor/spiral.webp"
         alt=""
@@ -24,7 +26,7 @@ export default function Hero() {
           Не нужен особый день,<br/>чтобы почувствовать себя особенной
         </p>
         <p className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12">
-          СПА · 256 м² · Васильевский · открыт 2026
+          СПА · <NumberTicker value={256} className="tabular-nums" /> м² · Васильевский · открыт 2026
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
           <a

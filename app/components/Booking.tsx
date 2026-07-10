@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, FormEvent } from "react";
+import BlurFade from "./magicui/BlurFade";
 import { track } from "../lib/track";
 import TrackedLink from "./TrackedLink";
 
@@ -157,7 +158,7 @@ export default function Booking() {
         style={{ backgroundImage: "url('/textures/marble-dark.jpg')", mixBlendMode: "overlay" }}
       />
       <div className="container mx-auto px-6 max-w-3xl text-center relative z-10">
-        <h2 className="font-display text-4xl md:text-5xl mb-6 tracking-tight">Записаться на ритуал</h2>
+        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-4xl md:text-5xl mb-6 tracking-tight">Записаться на ритуал</h2></BlurFade>
         <p className="mb-12 text-sand/80 max-w-xl mx-auto leading-relaxed">Оставьте заявку — администратор свяжется с вами в течение часа и подтвердит запись.</p>
         <div className="bg-sand-soft text-brand p-12 max-w-xl mx-auto">
           {status === "sent" ? (
