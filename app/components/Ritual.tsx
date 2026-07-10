@@ -1,5 +1,11 @@
 "use client";
 
+import { motion } from "motion/react";
+import Parallax from "./Parallax";
+import Reveal from "./Reveal";
+import BlurFade from "./magicui/BlurFade";
+import Aurora from "./magicui/Aurora";
+
 const steps = [
   { n: "01", t: "Встреча", d: "Администратор встречает вас в холле, провожает в раздевалку и зону отдыха." },
   { n: "02", t: "Арома-выбор", d: "На ресепшене подбираете аромат, который будет сопровождать весь ритуал." },
@@ -7,11 +13,6 @@ const steps = [
   { n: "04", t: "Чайная пауза", d: "После ритуала — выбранный чай по карте в тишине лаунж-зоны." },
   { n: "05", t: "Возвращение", d: "Плед, приглушённый свет, время. Возвращаемся в мир медленно." },
 ];
-
-import Parallax from "./Parallax";
-import Reveal from "./Reveal";
-import BlurFade from "./magicui/BlurFade";
-import Aurora from "./magicui/Aurora";
 
 export default function Ritual() {
   return (
@@ -32,16 +33,23 @@ export default function Ritual() {
         <Reveal as="ol" stagger={220} className="max-w-3xl mx-auto relative">
           <div className="absolute left-[38px] md:left-[52px] top-4 bottom-4 w-px bg-gradient-to-b from-brand/5 via-brand/20 to-brand/5 pointer-events-none" aria-hidden="true" />
           {steps.map((step) => (
-            <li key={step.n} className="relative flex gap-6 md:gap-10 pb-10 md:pb-14 last:pb-0 group">
-              <div className="relative shrink-0 w-[76px] md:w-[104px] flex items-start justify-center">
-                <div className="relative">
-                  
-                  <span className="relative block font-display text-4xl md:text-6xl leading-none text-brand-dark group-hover:text-brand transition-colors duration-300">{step.n}</span>
-                </div>
+            <li key={step.n} className="relative flex gap-6 md:gap-10 pb-6 md:pb-8 last:pb-0 group">
+              <div className="relative shrink-0 w-[76px] md:w-[104px] flex items-start justify-center transition-transform duration-500 ease-out md:group-hover:-translate-y-1">
+                <span className="relative block font-display text-4xl md:text-6xl leading-none text-brand-dark transition-all duration-300 md:group-hover:text-brand md:group-hover:scale-105">{step.n}</span>
               </div>
-              <div className="flex-1 pt-1 md:pt-3">
-                <h3 className="font-display text-xl md:text-2xl text-brand mb-3">{step.t}</h3>
-                <p className="text-sm md:text-base text-brand-dark/75 leading-relaxed max-w-lg">{step.d}</p>
+              <div className="flex-1 pt-1 md:pt-3 transition-transform duration-500 ease-out md:group-hover:-translate-y-1">
+                <h3 className="font-display text-xl md:text-2xl text-brand mb-3 md:mb-0 transition-colors duration-300 md:group-hover:text-brand-dark">{step.t}</h3>
+                <div className="md:overflow-hidden md:max-h-0 md:opacity-0 md:group-hover:max-h-40 md:group-hover:opacity-100 md:transition-all md:duration-[600ms] md:ease-out md:pt-3">
+                  <motion.p
+                    initial={{ opacity: 0, y: 8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ delay: 0.4, duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+                    className="text-sm md:text-base text-brand-dark/75 leading-relaxed max-w-lg"
+                  >
+                    {step.d}
+                  </motion.p>
+                </div>
               </div>
             </li>
           ))}
