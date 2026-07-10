@@ -1,5 +1,8 @@
+"use client";
+
 import TrackedLink from "./TrackedLink";
 import Reveal from "./Reveal";
+import CardTilt from "./magicui/CardTilt";
 
 const tiers = [
   { amount: "5 000", note: "лёгкий подарок" },
@@ -15,10 +18,12 @@ export default function Certificates() {
         <p className="text-center text-brand-dark/80 mb-12 max-w-xl mx-auto">Сертификат можно подарить на любую сумму или конкретную программу. Действителен 6 месяцев. Бумажная или электронная версия — на ваш выбор.</p>
         <Reveal stagger={220} className="grid md:grid-cols-3 gap-6 mb-12">
           {tiers.map(t => (
-            <div key={t.amount} className="bg-sand-soft p-8 text-center border border-brand/10 transition-[transform,box-shadow,border-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:shadow-lg hover:border-brand/25">
-              <div className="font-display text-3xl text-brand mb-2">{t.amount} ₽</div>
-              <div className="text-sm text-brand-dark/60 italic">{t.note}</div>
-            </div>
+            <CardTilt key={t.amount} maxTilt={10} scale={1.03}>
+              <div className="bg-sand-soft p-8 text-center border border-brand/10 shadow-[0_10px_30px_-15px_rgba(116,68,54,0.15)] hover:shadow-[0_20px_50px_-15px_rgba(116,68,54,0.35)] hover:border-brand/25 transition-shadow duration-300">
+                <div className="font-display text-3xl text-brand mb-2">{t.amount} ₽</div>
+                <div className="text-sm text-brand-dark/60 italic">{t.note}</div>
+              </div>
+            </CardTilt>
           ))}
         </Reveal>
         <div className="text-center">

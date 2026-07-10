@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { programs, type Program } from "../lib/programs-data";
 import { track } from "../lib/track";
+import MagicCard from "./magicui/MagicCard";
 const DISCLAIMER =
   "*Перечень услуг составлен в соответствии с требованиями Приказа Росстандарта от 29.11.2012 №1597-ст и №1605-ст «ГОСТ Р 55317-2012». Истова не оказывает лечебные и оздоровительные процедуры.";
 
@@ -72,6 +73,7 @@ export default function Programs() {
       }}
       className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-brand/30 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
     >
+      <MagicCard className="rounded-[calc(2rem-0.375rem)] overflow-hidden w-full" gradientSize={280} gradientColor="#e6d4b3" gradientOpacity={0.55}>
       <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col min-h-[360px] w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
       <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
       <div className="flex items-center gap-2 mb-3 flex-wrap">
@@ -103,6 +105,7 @@ export default function Programs() {
         </div>
       </div>
       </div>
+      </MagicCard>
     </button>
   );
 
