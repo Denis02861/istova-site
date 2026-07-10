@@ -51,10 +51,8 @@ export default function Certificates() {
                     height={1241}
                   />
                   <div
-                    className={"absolute whitespace-nowrap " + st.cls}
+                    className={"absolute whitespace-nowrap top-[57%] md:top-[53%] left-[24%] " + st.cls}
                     style={{
-                      top: "53%",
-                      left: "24%",
                       fontSize: st.size,
                       lineHeight: 1,
                     }}
