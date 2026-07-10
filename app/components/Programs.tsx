@@ -70,9 +70,9 @@ export default function Programs() {
         setOriginRect({ x: rect.left + rect.width/2, y: rect.top + rect.height/2 });
         setOpen(p.slug);
       }}
-      className="group relative w-full h-full p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-brand/30 hover:shadow-[0_20px_60px_-20px_rgba(116,68,54,0.25)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
+      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-2 hover:ring-brand/40 hover:shadow-[0_30px_80px_-20px_rgba(116,68,54,0.35)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
     >
-      <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col h-full w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
+      <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col min-h-[360px] w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
       <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
       <div className="flex items-center gap-2 mb-3 flex-wrap">
         {p.accent && (
@@ -114,7 +114,7 @@ export default function Programs() {
           9 ритуалов Истовы
         </h2>
         <p className="text-center text-brand-dark/70 mb-10 max-w-2xl mx-auto">
-          4 базовых парных ритуала и 5 авторских. Каждый — со своим темпом, ароматом и финалом.
+          4 базовых парных ритуала и 5 авторских. Каждый — со своим темпом, ароматом и финалом. Свайпайте карточки →
         </p>
 
         <div className="max-w-3xl mx-auto mb-10 border border-brand/15 bg-sand-soft/60 p-6 md:p-8">
@@ -125,20 +125,33 @@ export default function Programs() {
         </div>
       </div>
 
-      <div className="container mx-auto px-6">
-        {(() => {
-          const bentoOrder = ["yav","zarya-telo","zarya-volosy","sumerki-telo","sumerki-volosy","kedr","rodnik","lada","otzvuk"];
-          const sorted = [...programs].sort((a,b) => bentoOrder.indexOf(a.slug) - bentoOrder.indexOf(b.slug));
-          return (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[260px] gap-4 grid-flow-dense">
-              {sorted.map(p => (
-                <div key={p.slug} className={p.slug === "yav" ? "md:col-span-2 md:row-span-2" : ""}>
-                  {renderCard(p)}
-                </div>
-              ))}
-            </div>
-          );
-        })()}
+      <div className="relative">
+        <div
+          ref={scrollRef}
+          data-lenis-prevent
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-6 px-6 md:px-[10vw] scroll-smooth touch-pan-x"
+          style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch" }}
+        >
+          {programs.map(renderCard)}
+          <div className="shrink-0 w-1 md:w-6" aria-hidden="true" />
+        </div>
+
+        <button
+          type="button"
+          onClick={() => scrollBy(-1)}
+          aria-label="Предыдущая программа"
+          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center bg-sand-soft border border-brand/20 text-brand hover:bg-brand hover:text-sand transition-colors shadow-lg z-10"
+        >
+          ←
+        </button>
+        <button
+          type="button"
+          onClick={() => scrollBy(1)}
+          aria-label="Следующая программа"
+          className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center bg-sand-soft border border-brand/20 text-brand hover:bg-brand hover:text-sand transition-colors shadow-lg z-10"
+        >
+          →
+        </button>
       </div>
 
       <div className="container mx-auto px-6 mt-10 flex flex-col items-center gap-4">

@@ -1,14 +1,22 @@
 "use client";
 
 import { track } from "../lib/track";
-import Parallax from "./Parallax";
 import NumberTicker from "./magicui/NumberTicker";
 import Particles from "./magicui/Particles";
+import Aurora from "./magicui/Aurora";
+import Marquee from "./magicui/Marquee";
+
+const ANCHORS = [
+  "Арома-выбор", "Чай в лаунже", "Натуральные масла", "Davines",
+  "256 м²", "Васильевский остров", "Head spa", "Финская сауна",
+  "Парные ритуалы", "Тишина внутри",
+];
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
-      <Particles quantity={55} color="#7a5b3c" size={1.4} />
+    <section id="hero" className="min-h-[100dvh] flex flex-col items-center justify-center bg-sand relative pt-20 overflow-hidden">
+      <Aurora />
+      <Particles quantity={100} color="#7a5b3c" colorLight="#e6d4b3" minSize={1.4} maxSize={4} />
       <img
         src="/brand/decor/spiral.webp"
         alt=""
@@ -17,7 +25,7 @@ export default function Hero() {
         className="absolute bottom-8 right-4 md:bottom-24 md:right-8 w-16 md:w-48 opacity-10 md:opacity-20 pointer-events-none"
         width={512} height={512}
       />
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 text-center relative z-10 flex-1 flex flex-col items-center justify-center">
         <h1 className="sr-only">Истова — head spa и спа для головы в Санкт-Петербурге, Васильевский остров</h1>
         <img
           src="/logo/istova-wordmark.webp"
@@ -46,6 +54,18 @@ export default function Hero() {
         </div>
 
         <p className="text-sm text-brand/60 tracking-wide mt-8 pt-8 border-t border-brand/10">ул. Беринга, 23 к. 2 · Васильевский остров</p>
+      </div>
+
+      {/* Marquee — тонкие брендовые якоря внизу */}
+      <div className="relative z-10 py-4 mt-auto border-t border-brand/10 bg-sand/40 backdrop-blur-sm w-full">
+        <Marquee duration={80}>
+          {ANCHORS.map((a, i) => (
+            <span key={i} className="inline-flex items-center gap-16 text-xs uppercase tracking-[0.25em] text-brand/50">
+              {a}
+              <span className="text-brand/25">·</span>
+            </span>
+          ))}
+        </Marquee>
       </div>
     </section>
   );
