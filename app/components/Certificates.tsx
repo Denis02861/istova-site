@@ -10,17 +10,17 @@ type Tier = { value: string; note: string; variant: "amount" | "program" | "plac
 const tiers: Tier[] = [
   { value: "10 000 ₽",    note: "лёгкий подарок",       variant: "amount" },
   { value: "ЗАРЯ",        note: "конкретная программа", variant: "program" },
-  { value: "выберите",    note: "на любой ритуал",      variant: "placeholder" },
+  { value: "выберите услугу",    note: "на любой ритуал",      variant: "placeholder" },
 ];
 
 const styleFor = (v: Tier["variant"]) => {
   switch (v) {
     case "amount":
-      return { cls: "font-display text-brand tracking-tight", size: "clamp(15px, 2.6vw, 28px)" };
+      return { cls: "font-display text-brand tracking-tight", size: "clamp(13px, 2.2vw, 24px)" };
     case "program":
-      return { cls: "font-display text-brand tracking-tight", size: "clamp(15px, 2.6vw, 28px)" };
+      return { cls: "font-display text-brand tracking-tight", size: "clamp(13px, 2.2vw, 24px)" };
     case "placeholder":
-      return { cls: "font-sans italic text-brand/60", size: "clamp(11px, 1.7vw, 17px)" };
+      return { cls: "font-sans italic text-brand/60", size: "clamp(11px, 1.7vw, 16px)" };
   }
 };
 
@@ -53,7 +53,7 @@ export default function Certificates() {
                   <div
                     className={"absolute whitespace-nowrap " + st.cls}
                     style={{
-                      top: "57%",
+                      top: "52%",
                       left: "24%",
                       fontSize: st.size,
                       lineHeight: 1,
