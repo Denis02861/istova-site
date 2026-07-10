@@ -1,3 +1,5 @@
+"use client";
+
 const zones = [
   { t: "Спа-зона", d: "Приватные кабинеты, чайная комната, зона тишины с тёплыми пледами" },
   { t: "Парикмахерский зал", d: "Отдельный вход, авторские кресла, ритуал ухода в атмосфере спа" },
@@ -12,9 +14,9 @@ export default function Space() {
     <section id="space" className="py-24 bg-sand">
       <div className="container mx-auto px-6 max-w-5xl relative z-10">
         <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Пространство</span></div>
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-6 text-center tracking-tight">
+        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-4xl md:text-5xl text-brand mb-6 text-center tracking-tight">
           Два мира под одной крышей
-        </h2>
+        </h2></BlurFade>
         <p className="text-center text-lg text-brand-dark/80 max-w-2xl mx-auto mb-16 leading-relaxed">
           256 квадратных метров на Васильевском острове, в шаге от Невы. Спа-зона с приватными кабинетами и общей зоной тишины. Парикмахерский зал с отдельным входом и атмосферой ритуала ухода.
         </p>

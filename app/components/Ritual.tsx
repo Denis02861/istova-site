@@ -10,10 +10,13 @@ const steps = [
 
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
+import Aurora from "./magicui/Aurora";
+import BlurFade from "./magicui/BlurFade";
 
 export default function Ritual() {
   return (
     <section id="ritual" className="py-24 bg-sand relative overflow-hidden">
+      <Aurora />
       <Parallax speed={0.32} className="absolute bottom-6 left-4 md:top-12 md:left-8 md:bottom-auto w-14 md:w-44 opacity-10 md:opacity-15 pointer-events-none">
         <img
           src="/brand/decor/spiral.webp"
@@ -23,9 +26,7 @@ export default function Ritual() {
       </Parallax>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Пять шагов</span></div>
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">
-          Как проходит ваш визит
-        </h2>
+        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">Как проходит ваш визит</h2></BlurFade>
         <p className="text-center text-brand-dark/70 max-w-xl mx-auto mb-20 leading-relaxed">
           От встречи в холле до тихого возвращения — путь, который не хочется прерывать.
         </p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import BlurFade from "./magicui/BlurFade";
 import { programs, type Program } from "../lib/programs-data";
 import { track } from "../lib/track";
 
@@ -136,9 +137,9 @@ export default function Quiz() {
     <section id="quiz" className="py-24 bg-sand-soft border-y border-brand/10">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Что вам ближе</span></div>
-        <h2 className="font-display text-3xl md:text-5xl text-brand mb-4 text-center tracking-tight">
+        <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-3xl md:text-5xl text-brand mb-4 text-center tracking-tight">
           Какой ритуал подойдёт вам
-        </h2>
+        </h2></BlurFade>
         <p className="text-center text-brand-dark/70 mb-12 max-w-xl mx-auto">
           Три вопроса — и подскажем 1-2 ритуала под ваш день.
         </p>
