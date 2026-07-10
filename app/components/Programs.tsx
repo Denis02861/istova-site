@@ -70,11 +70,11 @@ export default function Programs() {
         setOriginRect({ x: rect.left + rect.width/2, y: rect.top + rect.height/2 });
         setOpen(p.slug);
       }}
-      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:hover:-translate-y-3 md:hover:scale-[1.02] md:hover:ring-brand/45 md:hover:shadow-[0_40px_90px_-25px_rgba(116,68,54,0.45)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
+      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] md:hover:-translate-y-5 md:hover:scale-[1.04] md:hover:ring-brand/45 md:hover:shadow-[0_40px_90px_-25px_rgba(116,68,54,0.45)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
     >
       <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col min-h-[360px] w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
       {/* Мутная вуаль поверх — уходит на hover, эффект всплытия */}
-      <span className="absolute inset-0 pointer-events-none opacity-0 md:opacity-100 md:group-hover:opacity-0 transition-opacity duration-[700ms] ease-out bg-gradient-to-b from-sand-soft/70 via-sand-soft/35 to-sand-soft/15 backdrop-blur-[1.5px]" aria-hidden="true" />
+      <span className="absolute inset-0 pointer-events-none opacity-0 md:opacity-100 md:group-hover:opacity-0 transition-opacity duration-[1000ms] ease-out bg-gradient-to-b from-sand-soft/70 via-sand-soft/35 to-sand-soft/15 backdrop-blur-[1.5px]" aria-hidden="true" />
       <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
       <div className="relative z-10 flex items-center gap-2 mb-3 flex-wrap">
         {p.accent && (
@@ -94,7 +94,7 @@ export default function Programs() {
       <p className="relative z-10 font-sans text-[13px] md:text-[14px] text-brand-dark/70 leading-relaxed mb-6 flex-1">
         {p.teaser}
       </p>
-      <div className="relative z-10 mt-2 pt-4 border-t border-brand/10 md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-[550ms] ease-out md:delay-100">
+      <div className="relative z-10 mt-2 pt-4 border-t border-brand/10 md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-[800ms] ease-out md:delay-150">
         <div className="flex justify-between items-end">
           <div className="text-xs uppercase tracking-widest text-brand/80 flex items-center gap-1">
             Что внутри
@@ -132,7 +132,7 @@ export default function Programs() {
       <div className="relative">
         <div
           ref={scrollRef}
-          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-6 px-6 md:px-[10vw] scroll-smooth"
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pt-10 pb-10 px-6 md:px-[10vw] scroll-smooth"
           style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch" }}
         >
           {programs.map(renderCard)}
