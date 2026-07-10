@@ -243,6 +243,49 @@ body::before {
 }
 .animate-aurora-3 { animation: aurora-3 24s ease-in-out infinite; }
 
+
+@keyframes aurora-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(80px, 60px) scale(1.08); }
+  50%  { transform: translate(140px, 20px) scale(1.02); }
+  75%  { transform: translate(60px, 100px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-1 { animation: aurora-1 24s ease-in-out infinite; }
+
+@keyframes aurora-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(-70px, 80px) scale(1.06); }
+  66%  { transform: translate(-120px, -40px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-2 { animation: aurora-2 32s ease-in-out infinite; }
+
+@keyframes aurora-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  40%  { transform: translate(60px, -70px) scale(1.1); }
+  70%  { transform: translate(-40px, -30px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-3 { animation: aurora-3 28s ease-in-out infinite; }
+
+@keyframes aurora-4 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(120px, -60px) scale(1.05); }
+  50%  { transform: translate(200px, 40px) scale(1.1); }
+  75%  { transform: translate(80px, 80px) scale(0.92); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-4 { animation: aurora-4 20s ease-in-out infinite; }
+
+@keyframes aurora-5 {
+  0%   { transform: translate(0, 0) scale(1); }
+  30%  { transform: translate(-90px, -60px) scale(1.08); }
+  60%  { transform: translate(-40px, -140px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-aurora-5 { animation: aurora-5 26s ease-in-out infinite; }
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-33.333%); }
