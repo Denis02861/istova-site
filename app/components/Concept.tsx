@@ -2,6 +2,7 @@
 
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
+import BlurFade from "./magicui/BlurFade";
 
 export default function Concept() {
   return (
@@ -14,10 +15,12 @@ export default function Concept() {
           loading="lazy" decoding="async" className="w-full h-auto" width={512} height={512} />
       </Parallax>
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
-        <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Место, не услуга</h2>
+        <BlurFade delay={0.1} yOffset={20}>
+          <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Место, не услуга</h2>
+        </BlurFade>
         <div className="space-y-6 text-lg leading-relaxed text-brand-dark/90">
-          <p>Истова — спа в Петербурге. Место без масок, без спешки, без обещаний, которые невозможно сдержать.</p>
-          <p>Здесь работают по программам, проверенным временем. Натуральные масла, ритмика тёплого и прохладного, тишина внутри, в которой можно услышать собственное дыхание.</p>
+          <BlurFade delay={0.25} yOffset={16}><p>Истова — спа в Петербурге. Место без масок, без спешки, без обещаний, которые невозможно сдержать.</p></BlurFade>
+          <BlurFade delay={0.4} yOffset={16}><p>Здесь работают по программам, проверенным временем. Натуральные масла, ритмика тёплого и прохладного, тишина внутри, в которой можно услышать собственное дыхание.</p></BlurFade>
           <p>Место, в которое возвращаются не за процедурой, а за состоянием.</p>
         </div>
 

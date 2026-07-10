@@ -2,10 +2,14 @@
 
 import { track } from "../lib/track";
 import Parallax from "./Parallax";
+import Ripple from "./magicui/Ripple";
+import NumberTicker from "./magicui/NumberTicker";
+import AnimatedShinyText from "./magicui/AnimatedShinyText";
 
 export default function Hero() {
   return (
     <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
+      <Ripple mainCircleSize={280} mainCircleOpacity={0.14} numCircles={6} />
       <img
         src="/brand/decor/spiral.webp"
         alt=""
@@ -20,11 +24,13 @@ export default function Hero() {
           src="/logo/istova-wordmark.webp"
           alt="ИСТŌВА"
           fetchPriority="high" decoding="async" className="h-20 md:h-28 w-auto mx-auto mb-6" width={728} height={218} />
-        <p className="font-display italic text-2xl md:text-4xl text-brand mb-6 max-w-2xl mx-auto leading-snug">
-          Не нужен особый день,<br/>чтобы почувствовать себя особенной
+        <p className="font-display italic text-2xl md:text-4xl text-brand mb-6 max-w-2xl mx-auto leading-snug relative">
+          <AnimatedShinyText className="!text-brand !max-w-none">
+            Не нужен особый день,<br/>чтобы почувствовать себя особенной
+          </AnimatedShinyText>
         </p>
         <p className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12">
-          СПА · 256 м² · Васильевский · открыт 2026
+          СПА · <NumberTicker value={256} className="tabular-nums" /> м² · Васильевский · открыт 2026
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
           <a
