@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Concept from "./components/Concept";
-import Gallery from "./components/Gallery";
 import Ritual from "./components/Ritual";
 import Programs from "./components/Programs";
 import TeaCard from "./components/TeaCard";
@@ -26,7 +25,6 @@ export default function Page() {
       <main>
         <Hero />
         <Concept />
-        <Gallery />
         <Ritual />
         <Reveal variant="up"><Quiz /></Reveal>
         <Reveal variant="up"><Programs /></Reveal>
