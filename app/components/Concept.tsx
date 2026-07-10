@@ -10,11 +10,11 @@ export default function Concept() {
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
 
   // Птица медленно улетает вправо-вверх по мере скролла
-  const birdX = useTransform(scrollYProgress, [0, 1], ["0%", "140%"]);
-  const birdY = useTransform(scrollYProgress, [0, 1], ["0%", "-260%"]);
-  const birdRotate = useTransform(scrollYProgress, [0, 1], [-2, -28]);
-  const birdScale = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
-  const birdOpacity = useTransform(scrollYProgress, [0, 0.5, 0.9], [0.9, 0.55, 0]);
+  const birdX = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
+  const birdY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const birdRotate = useTransform(scrollYProgress, [0, 1], [-2, 6]);
+  const birdScale = useTransform(scrollYProgress, [0, 1], [1, 0.65]);
+  const birdOpacity = useTransform(scrollYProgress, [0, 0.6, 0.95], [0.9, 0.55, 0]);
 
   return (
     <section ref={sectionRef} id="concept" className="py-24 bg-sand-soft relative overflow-hidden">

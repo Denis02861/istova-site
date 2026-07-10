@@ -19,9 +19,9 @@ export default function Ritual() {
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
   // Спираль вращается на полный оборот и уменьшается — иллюзия воронки
   const spiralRotate = useTransform(scrollYProgress, [0, 1], [0, 400]);
-  const spiralY = useTransform(scrollYProgress, [0, 1], ["0px", "420px"]);
-  const spiralScale = useTransform(scrollYProgress, [0, 0.4, 0.55, 1], [1, 1, 0.35, 0.15]);
-  const spiralOpacity = useTransform(scrollYProgress, [0, 0.3, 0.55, 0.7], [0.2, 0.24, 0.05, 0]);
+  const spiralY = useTransform(scrollYProgress, [0, 1], ["0px", "520px"]);
+  const spiralScale = useTransform(scrollYProgress, [0, 0.4, 0.7, 1], [1, 1, 0.45, 0.2]);
+  const spiralOpacity = useTransform(scrollYProgress, [0, 0.35, 0.6, 0.8], [0.22, 0.22, 0.1, 0]);
 
   return (
     <section ref={sectionRef} id="ritual" className="py-24 bg-sand relative overflow-hidden">
