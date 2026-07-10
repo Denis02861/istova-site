@@ -3,10 +3,12 @@
 import { track } from "../lib/track";
 import Parallax from "./Parallax";
 import NumberTicker from "./magicui/NumberTicker";
+import Particles from "./magicui/Particles";
 
 export default function Hero() {
   return (
     <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
+      <Particles quantity={55} color="#7a5b3c" size={1.4} />
       <img
         src="/brand/decor/spiral.webp"
         alt=""
