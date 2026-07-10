@@ -250,11 +250,14 @@ body::before {
 .animate-marquee { animation: marquee linear infinite; }
 
 @keyframes ken-burns {
-  0%   { transform: scale(1.05) translate(0, 0); }
-  50%  { transform: scale(1.12) translate(-1.5%, -1.5%); }
-  100% { transform: scale(1.05) translate(0, 0); }
+  0%   { transform: scale(1.05) translate(0%, 0%); }
+  25%  { transform: scale(1.14) translate(-2%, -1.5%); }
+  50%  { transform: scale(1.18) translate(0%, -2.5%); }
+  75%  { transform: scale(1.12) translate(2%, -1%); }
+  100% { transform: scale(1.05) translate(0%, 0%); }
 }
 .animate-ken-burns {
-  animation: ken-burns 18s ease-in-out infinite;
+  animation: ken-burns 14s ease-in-out infinite;
   transform-origin: center center;
+  will-change: transform;
 }
