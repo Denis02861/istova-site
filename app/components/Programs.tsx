@@ -12,9 +12,54 @@ export default function Programs() {
   const [open, setOpen] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const [originRect, setOriginRect] = useState<{x: number; y: number} | null>(null);
+  const [activeIdx, setActiveIdx] = useState<number>(-1);
+  const cardRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
   const active = programs.find((p) => p.slug === open);
 
   useEffect(() => { setMounted(true); }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mql = window.matchMedia("(max-width: 767px)");
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let rafId: number | null = null;
+    const recompute = () => {
+      if (!mql.matches) { setActiveIdx(-1); return; }
+      const containerRect = el.getBoundingClientRect();
+      const centerX = containerRect.left + containerRect.width / 2;
+      let closestIdx = 0;
+      let closestDist = Infinity;
+      cardRefs.current.forEach((card, idx) => {
+        if (!card) return;
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+        const dist = Math.abs(cardCenter - centerX);
+        if (dist < closestDist) { closestDist = dist; closestIdx = idx; }
+      });
+      setActiveIdx(closestIdx);
+    };
+    const handler = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(recompute);
+    };
+
+    recompute();
+    el.addEventListener("scroll", handler, { passive: true });
+    window.addEventListener("resize", handler);
+    const onMqlChange = () => recompute();
+    mql.addEventListener("change", onMqlChange);
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      el.removeEventListener("scroll", handler);
+      window.removeEventListener("resize", handler);
+      mql.removeEventListener("change", onMqlChange);
+    };
+  }, []);
+
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(null); };
@@ -52,7 +97,6 @@ export default function Programs() {
     return () => window.removeEventListener("istova:open-program", onOpen);
   }, []);
 
-  const scrollRef = useRef<HTMLDivElement | null>(null);
   const scrollBy = (dir: 1 | -1) => {
     const el = scrollRef.current;
     if (!el) return;
@@ -61,20 +105,22 @@ export default function Programs() {
     el.scrollBy({ left: step * dir, behavior: "smooth" });
   };
 
-  const renderCard = (p: Program) => (
+  const renderCard = (p: Program, idx: number) => (
     <button
       key={p.slug}
+      ref={(el) => { cardRefs.current[idx] = el; }}
+      data-surfaced={activeIdx === idx ? "true" : "false"}
       type="button"
       onClick={(e) => {
         const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
         setOriginRect({ x: rect.left + rect.width/2, y: rect.top + rect.height/2 });
         setOpen(p.slug);
       }}
-      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] md:hover:-translate-y-5 md:hover:scale-[1.04] md:hover:ring-brand/45 md:hover:shadow-[0_40px_90px_-25px_rgba(116,68,54,0.45)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
+      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-center md:snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] data-[surfaced=true]:-translate-y-2 data-[surfaced=true]:scale-[1.02] data-[surfaced=true]:ring-brand/30 data-[surfaced=true]:shadow-[0_25px_60px_-20px_rgba(116,68,54,0.35)] md:hover:-translate-y-5 md:hover:scale-[1.04] md:hover:ring-brand/45 md:hover:shadow-[0_40px_90px_-25px_rgba(116,68,54,0.45)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
     >
       <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col min-h-[360px] w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
       {/* Мутная вуаль поверх — уходит на hover, эффект всплытия */}
-      <span className="absolute inset-0 pointer-events-none opacity-0 md:opacity-100 md:group-hover:opacity-0 transition-opacity duration-[1000ms] ease-out bg-gradient-to-b from-sand-soft/70 via-sand-soft/35 to-sand-soft/15 backdrop-blur-[1.5px]" aria-hidden="true" />
+      <span className="absolute inset-0 pointer-events-none opacity-100 group-data-[surfaced=true]:opacity-0 md:group-hover:opacity-0 transition-opacity duration-[1000ms] ease-out bg-gradient-to-b from-sand-soft/70 via-sand-soft/35 to-sand-soft/15 backdrop-blur-[1.5px]" aria-hidden="true" />
       <span className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-brand/0 via-brand/40 to-brand/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
       <div className="relative z-10 flex items-center gap-2 mb-3 flex-wrap">
         {p.accent && (
@@ -94,11 +140,11 @@ export default function Programs() {
       <p className="relative z-10 font-sans text-[13px] md:text-[14px] text-brand-dark/70 leading-relaxed mb-6 flex-1">
         {p.teaser}
       </p>
-      <div className="relative z-10 mt-2 pt-4 border-t border-brand/10 md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-[800ms] ease-out md:delay-150">
+      <div className="relative z-10 mt-2 pt-4 border-t border-brand/10 opacity-0 translate-y-3 group-data-[surfaced=true]:opacity-100 group-data-[surfaced=true]:translate-y-0 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-[800ms] ease-out md:delay-150">
         <div className="flex justify-between items-end">
           <div className="text-xs uppercase tracking-widest text-brand/80 flex items-center gap-1">
             Что внутри
-            <span className="inline-block transition-transform duration-300 md:group-hover:translate-x-1">→</span>
+            <span className="inline-block transition-transform duration-300 group-data-[surfaced=true]:translate-x-1 md:group-hover:translate-x-1">→</span>
           </div>
           <div className="text-right">
             <div className="font-display text-xl text-brand leading-none">{p.price}</div>
@@ -155,6 +201,17 @@ export default function Programs() {
         >
           →
         </button>
+      </div>
+
+      <div className="flex md:hidden justify-center gap-1.5 mt-6">
+        {programs.map((_, i) => (
+          <span
+            key={i}
+            data-active={activeIdx === i ? "true" : "false"}
+            className="h-1.5 w-1.5 rounded-full bg-brand/25 transition-all duration-500 ease-out data-[active=true]:w-8 data-[active=true]:bg-brand/60"
+            aria-hidden="true"
+          />
+        ))}
       </div>
 
       <div className="container mx-auto px-6 mt-10 flex flex-col items-center gap-4">

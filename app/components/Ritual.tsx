@@ -39,7 +39,7 @@ export default function Ritual() {
               </div>
               <div className="flex-1 pt-1 md:pt-3 transition-transform duration-500 ease-out md:group-hover:-translate-y-1">
                 <h3 className="font-display text-xl md:text-2xl text-brand mb-3 md:mb-0 transition-colors duration-300 md:group-hover:text-brand-dark">{step.t}</h3>
-                <div className="md:overflow-hidden md:max-h-0 md:opacity-0 md:group-hover:max-h-40 md:group-hover:opacity-100 md:transition-all md:duration-[600ms] md:ease-out md:pt-3">
+                <div className="md:pt-3 md:opacity-0 md:blur-[3px] md:translate-y-1 md:group-hover:opacity-100 md:group-hover:blur-0 md:group-hover:translate-y-0 md:transition-all md:duration-500 md:ease-out">
                   <motion.p
                     initial={{ opacity: 0, y: 8 }}
                     whileInView={{ opacity: 1, y: 0 }}
