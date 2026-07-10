@@ -1,5 +1,7 @@
 "use client";
 
+import BlurFade from "./magicui/BlurFade";
+
 const bring = [
   "Себя — без спешки и списка дел",
   "Косметичку (мы дадим косметику, но привычная — приятнее)",
