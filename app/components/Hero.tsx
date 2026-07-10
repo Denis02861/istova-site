@@ -5,11 +5,12 @@ import Parallax from "./Parallax";
 import Ripple from "./magicui/Ripple";
 import NumberTicker from "./magicui/NumberTicker";
 import AnimatedShinyText from "./magicui/AnimatedShinyText";
+import BorderBeam from "./magicui/BorderBeam";
 
 export default function Hero() {
   return (
     <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
-      <Ripple mainCircleSize={280} mainCircleOpacity={0.14} numCircles={6} />
+      <Ripple mainCircleSize={260} mainCircleOpacity={0.5} numCircles={9} />
       <img
         src="/brand/decor/spiral.webp"
         alt=""
@@ -25,7 +26,7 @@ export default function Hero() {
           alt="ИСТŌВА"
           fetchPriority="high" decoding="async" className="h-20 md:h-28 w-auto mx-auto mb-6" width={728} height={218} />
         <p className="font-display italic text-2xl md:text-4xl text-brand mb-6 max-w-2xl mx-auto leading-snug relative">
-          <AnimatedShinyText className="!text-brand !max-w-none">
+          <AnimatedShinyText shimmerWidth={140}>
             Не нужен особый день,<br/>чтобы почувствовать себя особенной
           </AnimatedShinyText>
         </p>
@@ -36,8 +37,9 @@ export default function Hero() {
           <a
             href="#booking"
             onClick={() => track("BOOKING_CLICK", { from: "hero" })}
-            className="inline-flex items-center px-8 py-3 bg-brand text-sand rounded-full font-medium hover:bg-brand-dark active:scale-[0.98] transition-[transform,background-color,color] duration-[180ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
+            className="relative inline-flex items-center px-8 py-3 bg-brand text-sand rounded-full font-medium hover:bg-brand-dark active:scale-[0.98] transition-[transform,background-color,color] duration-[180ms] ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden"
           >
+            <BorderBeam size={140} duration={5} borderWidth={2} colorFrom="#f5e9d3" colorTo="#e6d4b3" />
             Записаться
           </a>
           <a

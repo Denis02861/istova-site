@@ -3,7 +3,7 @@ import { CSSProperties, ReactNode } from "react";
 export default function AnimatedShinyText({
   children,
   className = "",
-  shimmerWidth = 100,
+  shimmerWidth = 120,
 }: {
   children: ReactNode;
   className?: string;
@@ -13,9 +13,10 @@ export default function AnimatedShinyText({
     <span
       style={{ "--shimmer-width": `${shimmerWidth}px` } as CSSProperties}
       className={
-        "mx-auto inline-block max-w-md text-brand/70 " +
-        "animate-shiny-text bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shimmer-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite] " +
-        "[--bg:linear-gradient(90deg,rgba(0,0,0,0)_40%,rgba(70,50,30,0.85)_50%,rgba(0,0,0,0)_60%)] [background-image:var(--bg)] " +
+        "inline-block bg-clip-text text-transparent bg-no-repeat " +
+        "[background-position:0_0] [background-size:var(--shimmer-width)_100%] " +
+        "[background-image:linear-gradient(110deg,#7a5b3c_0%,#7a5b3c_40%,#e6d4b3_45%,#f5e9d3_50%,#e6d4b3_55%,#7a5b3c_60%,#7a5b3c_100%)] " +
+        "animate-shiny-text " +
         className
       }
     >
