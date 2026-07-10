@@ -231,7 +231,7 @@ body::before {
   75%  { transform: translate(90px, 170px) scale(0.92); }
   100% { transform: translate(0, 0) scale(1); }
 }
-.animate-aurora-1 { animation: aurora-1 14s ease-in-out infinite; }
+.animate-aurora-1 { animation: aurora-1 9s ease-in-out infinite; }
 
 @keyframes aurora-2 {
   0%   { transform: translate(0, 0) scale(1); }
@@ -239,7 +239,7 @@ body::before {
   66%  { transform: translate(-200px, -80px) scale(0.88); }
   100% { transform: translate(0, 0) scale(1); }
 }
-.animate-aurora-2 { animation: aurora-2 16s ease-in-out infinite; }
+.animate-aurora-2 { animation: aurora-2 10s ease-in-out infinite; }
 
 @keyframes aurora-3 {
   0%   { transform: translate(0, 0) scale(1); }
@@ -247,7 +247,7 @@ body::before {
   70%  { transform: translate(-90px, -60px) scale(0.92); }
   100% { transform: translate(0, 0) scale(1); }
 }
-.animate-aurora-3 { animation: aurora-3 13s ease-in-out infinite; }
+.animate-aurora-3 { animation: aurora-3 8s ease-in-out infinite; }
 
 @keyframes aurora-4 {
   0%   { transform: translate(0, 0) scale(1); }
@@ -256,7 +256,7 @@ body::before {
   75%  { transform: translate(140px, 150px) scale(0.9); }
   100% { transform: translate(0, 0) scale(1); }
 }
-.animate-aurora-4 { animation: aurora-4 11s ease-in-out infinite; }
+.animate-aurora-4 { animation: aurora-4 7s ease-in-out infinite; }
 
 @keyframes aurora-5 {
   0%   { transform: translate(0, 0) scale(1); }
@@ -264,7 +264,7 @@ body::before {
   60%  { transform: translate(-70px, -240px) scale(0.88); }
   100% { transform: translate(0, 0) scale(1); }
 }
-.animate-aurora-5 { animation: aurora-5 15s ease-in-out infinite; }
+.animate-aurora-5 { animation: aurora-5 9s ease-in-out infinite; }
 @keyframes ken-burns {
   0%   { transform: scale(1.05) translate(0%, 0%); }
   25%  { transform: scale(1.14) translate(-2%, -1.5%); }

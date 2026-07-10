@@ -35,7 +35,7 @@ export default function Ritual() {
             <li key={step.n} className="relative flex gap-6 md:gap-10 pb-10 md:pb-14 last:pb-0 group">
               <div className="relative shrink-0 w-[76px] md:w-[104px] flex items-start justify-center">
                 <div className="relative">
-                  <span className="absolute inset-0 rounded-full bg-brand/5 scale-100 group-hover:scale-125 transition-transform duration-500 ease-out" aria-hidden="true" />
+                  
                   <span className="relative block font-display text-4xl md:text-6xl leading-none text-brand-dark group-hover:text-brand transition-colors duration-300">{step.n}</span>
                 </div>
               </div>
