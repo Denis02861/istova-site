@@ -6,17 +6,20 @@ const items = [
   {
     src: "/gallery/head-spa/jade.jpg",
     title: "Аква-медитация",
-    desc: "Head spa под тёплой водой. Голова омывается непрерывным потоком из водной дуги, мастер работает нефритовыми скребками по коже головы. Японская техника — расслабляет глубже классического массажа, снимает напряжение с висков и шеи за 30 минут."
+    tagline: "Расслабление глубже классического массажа",
+    tags: ["японская школа", "нефритовые скребки", "тёплая вода"],
   },
   {
     src: "/gallery/head-spa/wooden.jpg",
     title: "Массаж головы",
-    desc: "Ручной массаж с деревянными скребками. Работа по биоактивным точкам кожи головы усиливает микроциркуляцию, укрепляет корни волос, снимает мигренозное напряжение. Оливковое дерево в кабинете — символ восстановления и покоя."
+    tagline: "Точки, микроциркуляция, живые корни волос",
+    tags: ["деревянные скребки", "снимает мигрень", "оливковое дерево"],
   },
   {
     src: "/gallery/head-spa/aurora.jpg",
     title: "Массаж лица",
-    desc: "Пластичный массаж мышц лица и шейно-воротниковой зоны. Мягкие движения возвращают тонус, снимают отёки после долгого рабочего дня, разглаживают статические заломы. В свете aurora — глубже, чем просто уход."
+    tagline: "Пластика мышц без инъекций",
+    tags: ["тонус кожи", "снятие отёков", "шейно-воротниковая зона"],
   },
 ];
 
@@ -51,8 +54,11 @@ export default function HeadSpa() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 pointer-events-none" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-7 text-sand">
-                  <h3 className="font-display text-2xl md:text-3xl mb-3 tracking-tight">{it.title}</h3>
-                  <p className="text-[13px] md:text-sm text-sand/90 leading-relaxed">{it.desc}</p>
+                  <h3 className="font-display text-2xl md:text-3xl mb-2 tracking-tight">{it.title}</h3>
+                  <p className="text-sm md:text-base text-sand/95 mb-3 leading-snug italic">{it.tagline}</p>
+                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px] uppercase tracking-widest text-sand/70">
+                    {it.tags.map((t) => <span key={t}>{t}</span>)}
+                  </div>
                 </div>
               </div>
             </BlurFade>
