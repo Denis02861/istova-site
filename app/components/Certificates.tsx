@@ -5,10 +5,12 @@ import Reveal from "./Reveal";
 import CardTilt from "./magicui/CardTilt";
 import BlurFade from "./magicui/BlurFade";
 
-const tiers = [
-  { amount: "5 000", note: "лёгкий подарок" },
-  { amount: "10 000", note: "ритуал на двоих" },
-  { amount: "15 000", note: "глубокое погружение" },
+type Tier = { value: string; note: string; italic?: boolean };
+
+const tiers: Tier[] = [
+  { value: "10 000 ₽", note: "лёгкий подарок" },
+  { value: "ЗАРЯ",     note: "конкретная программа" },
+  { value: "Ваша сумма", note: "на любой ритуал", italic: true },
 ];
 
 export default function Certificates() {
@@ -24,30 +26,30 @@ export default function Certificates() {
           </p>
         </BlurFade>
         <Reveal stagger={220} className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12">
-          {tiers.map(t => (
-            <CardTilt key={t.amount} maxTilt={11} scale={1.04}>
-              <div className="relative aspect-[1748/1241] rounded-sm overflow-hidden shadow-[0_18px_50px_-12px_rgba(116,68,54,0.35)] hover:shadow-[0_30px_70px_-15px_rgba(116,68,54,0.45)] transition-shadow duration-500 border border-brand/10">
+          {tiers.map((t, i) => (
+            <CardTilt key={i} maxTilt={11} scale={1.04}>
+              <div className="group relative aspect-[1748/1241] rounded-sm overflow-hidden shadow-[0_18px_50px_-12px_rgba(116,68,54,0.35)] hover:shadow-[0_30px_70px_-15px_rgba(116,68,54,0.45)] transition-shadow duration-500 border border-brand/10">
                 <img
                   src="/certificates/blank.jpg"
-                  alt={`Подарочный сертификат ${t.amount} ₽`}
+                  alt={`Подарочный сертификат ${t.value}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
                   width={1748}
                   height={1241}
                 />
-                {/* overlay суммы поверх поля "сумма / услуга" на сертификате */}
+                {/* overlay поверх поля "сумма / услуга" на сертификате */}
                 <div
-                  className="absolute font-display text-brand"
+                  className={"absolute font-display text-brand whitespace-nowrap " + (t.italic ? "italic" : "")}
                   style={{
-                    top: "63%",
+                    top: "52%",
                     left: "24%",
-                    fontSize: "clamp(14px, 2.6vw, 28px)",
+                    fontSize: "clamp(15px, 2.8vw, 30px)",
                     lineHeight: 1,
                   }}
                 >
-                  {t.amount} ₽
+                  {t.value}
                 </div>
-                {/* подпись «на что» под сертификатом при hover */}
+                {/* подпись типа сертификата — выезжает снизу при hover */}
                 <div className="absolute bottom-0 left-0 right-0 bg-brand/95 text-sand text-center py-2 text-xs uppercase tracking-widest translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   {t.note}
                 </div>
