@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Concept from "./components/Concept";
+import Founder from "./components/Founder";
 import HeadSpa from "./components/HeadSpa";
 import Ritual from "./components/Ritual";
 import Programs from "./components/Programs";
@@ -26,6 +27,7 @@ export default function Page() {
       <main>
         <Hero />
         <Concept />
+        <Reveal variant="up"><Founder /></Reveal>
         <HeadSpa />
         <Ritual />
         <Reveal variant="up"><Quiz /></Reveal>

@@ -66,12 +66,6 @@ export default function Header() {
         </button>
       </div>
 
-      <div className={`bg-brand/5 border-t border-brand/10 overflow-hidden transition-[background-color,box-shadow,border-color,height,max-height,opacity] duration-300 ease-out ${scrolled ? "max-h-0 opacity-0" : "max-h-10 opacity-100"}`}>
-        <div className="container mx-auto px-6 py-1.5 text-center text-xs text-brand/70 tracking-wide">
-          Сайт в процессе разработки — возможны изменения
-        </div>
-      </div>
-
       {/* Мобильное меню */}
       <div
         className={`md:hidden fixed inset-x-0 top-full bg-sand/95 backdrop-blur-md border-b border-brand/10 transition-[max-height,opacity] duration-300 ease-out overflow-hidden ${
