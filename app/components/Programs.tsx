@@ -128,8 +128,7 @@ export default function Programs() {
       <div className="relative">
         <div
           ref={scrollRef}
-          data-lenis-prevent
-          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-6 px-6 md:px-[10vw] scroll-smooth touch-pan-x"
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-6 px-6 md:px-[10vw] scroll-smooth"
           style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch" }}
         >
           {programs.map(renderCard)}
