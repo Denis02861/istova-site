@@ -10,11 +10,11 @@ export default function Concept() {
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
 
   // Птица медленно улетает вправо-вверх по мере скролла
-  const birdX = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
-  const birdY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const birdX = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
+  const birdY = useTransform(scrollYProgress, [0, 1], ["0%", "110%"]);
   const birdRotate = useTransform(scrollYProgress, [0, 1], [-2, 6]);
   const birdScale = useTransform(scrollYProgress, [0, 1], [1, 0.65]);
-  const birdOpacity = useTransform(scrollYProgress, [0, 0.6, 0.95], [0.9, 0.55, 0]);
+  const birdOpacity = useTransform(scrollYProgress, [0, 0.9], [0.9, 0]);
 
   return (
     <section ref={sectionRef} id="concept" className="py-24 bg-sand-soft relative overflow-hidden">
@@ -24,7 +24,7 @@ export default function Concept() {
         aria-hidden="true"
         loading="lazy" decoding="async"
         style={{ x: birdX, y: birdY, rotate: birdRotate, scale: birdScale, opacity: birdOpacity }}
-        className="absolute top-16 md:top-24 right-[10%] md:right-[13%] w-14 md:w-28 pointer-events-none will-change-transform"
+        className="absolute top-2 md:top-24 right-3 md:right-[6%] w-12 md:w-28 pointer-events-none will-change-transform"
         width={512} height={512}
       />
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
