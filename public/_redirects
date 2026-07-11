@@ -1,2 +1,21 @@
-# Все несуществующие URL → 404.html с кодом 404 (не 200)
+# ---- www → non-www (устранение дубликата контента) ----
+https://www.istova.ru/*  https://istova.ru/:splat  301!
+
+# ---- Trailing slash: /path → /path/ ----
+# next export генерирует /path/index.html, но nginx Layero отдаёт
+# оба варианта с кодом 200. Canonical выравниваем принудительно.
+/programs                         /programs/                          301!
+/programs/kedr                    /programs/kedr/                     301!
+/programs/lada                    /programs/lada/                     301!
+/programs/otzvuk                  /programs/otzvuk/                   301!
+/programs/rodnik                  /programs/rodnik/                   301!
+/programs/sumerki-telo            /programs/sumerki-telo/             301!
+/programs/sumerki-volosy          /programs/sumerki-volosy/           301!
+/programs/yav                     /programs/yav/                      301!
+/programs/zarya-telo              /programs/zarya-telo/               301!
+/programs/zarya-volosy            /programs/zarya-volosy/             301!
+/oferta                           /oferta/                            301!
+/politika-obrabotki-personalnyh-dannyh  /politika-obrabotki-personalnyh-dannyh/  301!
+
+# ---- Все несуществующие URL → 404.html с кодом 404 (не 200) ----
 /*  /404.html  404
