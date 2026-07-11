@@ -15,13 +15,13 @@ const SHORT_DESC: Record<string, string> = {
   "zarya-volosy":
     "Утренний 90-минутный ритуал для кожи головы: тонизирующий массаж с криосферами, пенный СПА-массаж, Золотая дуга и СПА-уход Davines.",
   "sumerki-telo":
-    "Вечерний 100-минутный ритуал расслабления через тело: сауна с успокаивающими эфирами, лавандовый пилинг, сандаловое обёртывание и расслабляющий массаж на тёплом масле.",
+    "Вечерний 100-минутный ритуал расслабления через тело: сауна с успокаивающими эфирами, лавандовый пилинг, сандаловое обёртывание, расслабляющий массаж.",
   "sumerki-volosy":
     "Вечерний 90-минутный ритуал расслабления через кожу головы: тёплый травяной настой, Золотая дуга, СПА-уход Davines и расслабляющий массаж головы.",
   "otzvuk":
     "2-часовой ритуал глубокой тишины: sound bath, ASMR-аудиопогружение, сенсорный уход для лица, ритуалы заземления, финал под тяжёлым одеялом. Без водных практик.",
   "yav":
-    "70-минутный ритуал знакомства с Истовой: расслабляющий массаж спины и шейно-воротниковой зоны, освежающий уход за лицом, Золотая дуга и СПА-уход Davines для кожи головы.",
+    "70-минутный ритуал знакомства с Истовой: расслабляющий массаж спины и шейно-воротниковой зоны, освежающий уход за лицом, Золотая дуга, СПА-уход Davines.",
   "kedr":
     "Мужской спа-ритуал восстановления 2 ч 30 мин, спа для мужчин: финская сауна, креольский массаж бамбуковыми палочками, горячие камни, уход за лицом и бородой.",
   "lada":
@@ -49,7 +49,8 @@ export async function generateMetadata({
   if (!program) return {};
   const titleAccent = SHORT_TITLE_ACCENT[slug] ?? program.accent ?? "";
   const title = `${program.name} — ${titleAccent} | Истова`;
-  const description = SHORT_DESC[slug] ?? program.accent ?? "";
+  const rawDesc = SHORT_DESC[slug] ?? program.accent ?? "";
+  const description = `${rawDesc} ${program.dur}, ${program.price}.`.replace(/\s+/g, " ").trim();
   const url = `${SITE_URL}/programs/${slug}/`;
   return {
     title,
@@ -94,7 +95,8 @@ export default async function ProgramPage({
   const program = programs.find((p) => p.slug === slug);
   if (!program) notFound();
 
-  const description = SHORT_DESC[slug] ?? program.accent ?? "";
+  const rawDesc = SHORT_DESC[slug] ?? program.accent ?? "";
+  const description = `${rawDesc} ${program.dur}, ${program.price}.`.replace(/\s+/g, " ").trim();
   const url = `${SITE_URL}/programs/${slug}/`;
 
   const SERVICE_JSONLD = {

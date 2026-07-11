@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 const SITE_URL = "https://istova.ru";
 const TITLE = "Истова — head spa и спа для головы в Санкт-Петербурге";
 const DESCRIPTION =
-  "Head spa и спа для головы на Васильевском острове. Авторские ритуалы и спа для двоих в СПб, аква-массаж головы, sound bath. Ул. Беринга, 23 к. 2, Санкт-Петербург.";
+  "Head spa и спа для головы на Васильевском острове, м. Приморская. ✔ 9 авторских ритуалов ✔ Спа для двоих ✔ Аква-массаж ✔ Sound bath. Ул. Беринга, 23 к. 2.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
