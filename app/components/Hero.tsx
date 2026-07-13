@@ -14,8 +14,11 @@ export default function Hero() {
           src="/logo/istova-wordmark.webp"
           alt="ИСТŌВА"
           fetchPriority="high" decoding="async" className="h-20 md:h-28 w-auto mx-auto mb-6" width={728} height={218} />
-        <p className="font-display italic text-2xl md:text-4xl text-brand mb-6 max-w-2xl mx-auto leading-snug">
+        <p className="font-display italic text-2xl md:text-4xl text-brand mb-4 max-w-2xl mx-auto leading-snug">
           Не нужен особый день,<br/>чтобы почувствовать себя особенной
+        </p>
+        <p className="text-base md:text-lg text-brand/80 mb-6 max-w-xl mx-auto">
+          Head spa и авторские ритуалы для тела и волос
         </p>
         <p className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12">
           СПА · <NumberTicker value={256} className="tabular-nums" /> м² · Васильевский · скоро открытие
