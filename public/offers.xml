@@ -50,7 +50,7 @@
     <offer id="zarya-volosy-solo" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/zarya-volosy/?mode=solo</url>
-      <price>8200</price>
+      <price>8500</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=zarya-volosy-solo</picture>
@@ -69,7 +69,7 @@
     <offer id="sumerki-telo-solo" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/sumerki-telo/?mode=solo</url>
-      <price>10500</price>
+      <price>9900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=sumerki-telo-solo</picture>
@@ -88,7 +88,7 @@
     <offer id="sumerki-volosy-solo" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/sumerki-volosy/?mode=solo</url>
-      <price>9500</price>
+      <price>8500</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=sumerki-volosy-solo</picture>
@@ -145,7 +145,7 @@
     <offer id="kedr-solo" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/kedr/?mode=solo</url>
-      <price>12500</price>
+      <price>11900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=kedr-solo</picture>
@@ -164,7 +164,7 @@
     <offer id="lada-solo" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/lada/?mode=solo</url>
-      <price>12500</price>
+      <price>11900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=lada-solo</picture>
@@ -183,7 +183,7 @@
     <offer id="rodnik-solo" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/rodnik/?mode=solo</url>
-      <price>9500</price>
+      <price>7900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=rodnik-solo</picture>
