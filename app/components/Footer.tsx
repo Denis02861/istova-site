@@ -66,6 +66,9 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-sand/10 pt-6 text-center text-xs text-sand/60">
+          <div className="font-display italic text-sand text-sm md:text-base mb-6 text-center opacity-70">
+            «Истово — значит с полной отдачей»
+          </div>
           © 2026 ИП Карасёв Д.И. · Все права защищены
         </div>
       </div>
