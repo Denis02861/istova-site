@@ -150,7 +150,7 @@ export const programs: Program[] = [
       "Davines — линейка для восстановления волос",
       "Охлаждающий уход для ног",
     ],
-    pair_price: "16 500 ₽",
+    pair_price: "14 200 ₽",
   },
   {
     slug: "kedr",
