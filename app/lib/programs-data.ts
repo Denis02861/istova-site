@@ -8,6 +8,7 @@ export type Program = {
   note?: string;
   dur: string;
   price: string;
+  promo_price?: string;
   teaser: string;
   cosmetics?: string[];
   pair_price?: string;
