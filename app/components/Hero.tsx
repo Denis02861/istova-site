@@ -18,7 +18,7 @@ export default function Hero() {
           Не нужен особый день,<br/>чтобы почувствовать себя особенной
         </p>
         <p className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12">
-          СПА · <NumberTicker value={256} className="tabular-nums" /> м² · Васильевский · скоро открытие
+          СПА · <NumberTicker value={256} className="tabular-nums" /> м² · Васильевский · открытие записей 22.07.2026
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
           <a
