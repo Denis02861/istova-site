@@ -124,10 +124,14 @@ const ORG_JSONLD = {
     "https://t.me/Istova_spa",
   ],
   makesOffer: [
-    { "@type": "Offer", name: "ЗАРЯ | ТЕЛО", price: "9200", priceCurrency: "RUB", url: `${SITE_URL}/programs/zarya-telo/` },
-    { "@type": "Offer", name: "ЗАРЯ | ВОЛОСЫ", price: "8200", priceCurrency: "RUB", url: `${SITE_URL}/programs/zarya-volosy/` },
-    { "@type": "Offer", name: "СУМЕРКИ | ТЕЛО", price: "10500", priceCurrency: "RUB", url: `${SITE_URL}/programs/sumerki-telo/` },
-    { "@type": "Offer", name: "СУМЕРКИ | ВОЛОСЫ", price: "9500", priceCurrency: "RUB", url: `${SITE_URL}/programs/sumerki-volosy/` },
+    { "@type": "Offer", name: "ЗАРЯ | ТЕЛО", price: "8900", priceCurrency: "RUB", url: `${SITE_URL}/programs/zarya-telo/` },
+    { "@type": "Offer", name: "ЗАРЯ | ВОЛОСЫ", price: "8500", priceCurrency: "RUB", url: `${SITE_URL}/programs/zarya-volosy/` },
+    { "@type": "Offer", name: "СУМЕРКИ | ТЕЛО", price: "9900", priceCurrency: "RUB", url: `${SITE_URL}/programs/sumerki-telo/` },
+    { "@type": "Offer", name: "СУМЕРКИ | ВОЛОСЫ", price: "8500", priceCurrency: "RUB", url: `${SITE_URL}/programs/sumerki-volosy/` },
+    { "@type": "Offer", name: "РОДНИК", price: "7900", priceCurrency: "RUB", url: `${SITE_URL}/programs/rodnik/` },
+    { "@type": "Offer", name: "КЕДР", price: "11900", priceCurrency: "RUB", url: `${SITE_URL}/programs/kedr/` },
+    { "@type": "Offer", name: "ЛАДА", price: "11900", priceCurrency: "RUB", url: `${SITE_URL}/programs/lada/` },
+    { "@type": "Offer", name: "ЯВЬ", price: "6800", priceCurrency: "RUB", url: `${SITE_URL}/programs/yav/` },
     { "@type": "Offer", name: "КЕДР + ЛАДА", price: "21000", priceCurrency: "RUB", url: `${SITE_URL}/programs/kedr-lada/` },
   ],
   knowsAbout: [

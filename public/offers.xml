@@ -13,7 +13,7 @@
     <sets>
       <set id="s-kedr"/>
       <set id="s-lada"/>
-      <set id="s-otzvuk"/>
+      <set id="s-kedr-lada"/>
       <set id="s-rodnik"/>
       <set id="s-sumerki-telo"/>
       <set id="s-sumerki-volosy"/>
@@ -123,25 +123,6 @@
       <set-ids>s-yav</set-ids>
       <vendor>Истова</vendor>
     </offer>
-    <offer id="otzvuk-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/otzvuk/?mode=solo</url>
-      <price>13000</price>
-      <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=otzvuk-solo</picture>
-      <delivery>false</delivery>
-      <pickup>false</pickup>
-      <description>СПА-ритуал: ОТЗВУК — одному, 120 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">120 минут</param>
-      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
-      <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-otzvuk</set-ids>
-      <vendor>Истова</vendor>
-    </offer>
     <offer id="kedr-solo" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/kedr/?mode=solo</url>
@@ -202,7 +183,7 @@
     <offer id="zarya-telo-pair" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/zarya-telo/?mode=pair</url>
-      <price>16000</price>
+      <price>17000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=zarya-telo-pair</picture>
@@ -221,7 +202,7 @@
     <offer id="zarya-volosy-pair" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/zarya-volosy/?mode=pair</url>
-      <price>14300</price>
+      <price>16000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=zarya-volosy-pair</picture>
@@ -240,7 +221,7 @@
     <offer id="sumerki-telo-pair" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/sumerki-telo/?mode=pair</url>
-      <price>18300</price>
+      <price>18000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=sumerki-telo-pair</picture>
@@ -259,7 +240,7 @@
     <offer id="sumerki-volosy-pair" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/sumerki-volosy/?mode=pair</url>
-      <price>16500</price>
+      <price>16000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=sumerki-volosy-pair</picture>
@@ -294,29 +275,10 @@
       <set-ids>s-yav</set-ids>
       <vendor>Истова</vendor>
     </offer>
-    <offer id="otzvuk-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/otzvuk/?mode=pair</url>
-      <price>22100</price>
-      <currencyId>RUR</currencyId>
-      <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=otzvuk-pair</picture>
-      <delivery>false</delivery>
-      <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: ОТЗВУК — вдвоём, 120 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">120 минут</param>
-      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
-      <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-otzvuk</set-ids>
-      <vendor>Истова</vendor>
-    </offer>
     <offer id="kedr-pair" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/kedr/?mode=pair</url>
-      <price>21200</price>
+      <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=kedr-pair</picture>
@@ -335,7 +297,7 @@
     <offer id="lada-pair" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/lada/?mode=pair</url>
-      <price>21200</price>
+      <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=lada-pair</picture>
@@ -354,7 +316,7 @@
     <offer id="rodnik-pair" available="true">
       <name>Истова</name>
       <url>https://istova.ru/programs/rodnik/?mode=pair</url>
-      <price>14200</price>
+      <price>14000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <picture>https://istova.ru/og-image.webp?slug=rodnik-pair</picture>
@@ -387,6 +349,25 @@
       <set-ids>s-cert-any</set-ids>
       <vendor>Истова</vendor>
     </offer>
-    </offers>
+        <offer id="kedr-lada-pair" available="true">
+      <name>Истова</name>
+      <url>https://istova.ru/programs/kedr-lada/?mode=pair</url>
+      <price>21000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/og-image.webp?slug=kedr-lada-pair</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>СПА-ритуал для двоих: КЕДР + ЛАДА — он и она одновременно, 180 минут</description>
+      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <param name="Длительность">180 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Годы опыта">1</param>
+      <param name="Регион">Санкт-Петербург</param>
+      <param name="Конверсия">100</param>
+      <set-ids>s-kedr-lada</set-ids>
+      <vendor>Истова</vendor>
+    </offer>
+  </offers>
   </shop>
 </yml_catalog>
