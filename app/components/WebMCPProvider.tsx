@@ -28,7 +28,7 @@ const PROGRAM_SLUGS = [
   "kedr",
   "lada",
   "yav",
-  "otzvuk",
+  "kedr-lada",
 ];
 
 export default function WebMCPProvider() {

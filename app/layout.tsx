@@ -128,7 +128,7 @@ const ORG_JSONLD = {
     { "@type": "Offer", name: "ЗАРЯ | ВОЛОСЫ", price: "8200", priceCurrency: "RUB", url: `${SITE_URL}/programs/zarya-volosy/` },
     { "@type": "Offer", name: "СУМЕРКИ | ТЕЛО", price: "10500", priceCurrency: "RUB", url: `${SITE_URL}/programs/sumerki-telo/` },
     { "@type": "Offer", name: "СУМЕРКИ | ВОЛОСЫ", price: "9500", priceCurrency: "RUB", url: `${SITE_URL}/programs/sumerki-volosy/` },
-    { "@type": "Offer", name: "ОТЗВУК", price: "13000", priceCurrency: "RUB", url: `${SITE_URL}/programs/otzvuk/` },
+    { "@type": "Offer", name: "КЕДР + ЛАДА", price: "21000", priceCurrency: "RUB", url: `${SITE_URL}/programs/kedr-lada/` },
   ],
   knowsAbout: [
     "СПА-ритуалы",
