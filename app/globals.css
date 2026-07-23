@@ -331,3 +331,14 @@ body::before {
   transform-origin: center center;
   will-change: transform;
 }
+
+/* Фрагменты — плывущая лента фото */
+@keyframes frag-marquee     { from { transform: translateX(0); }      to { transform: translateX(-50%); } }
+@keyframes frag-marquee-rev { from { transform: translateX(-50%); }   to { transform: translateX(0); } }
+.frag-track     { animation: frag-marquee 64s linear infinite; }
+.frag-track-rev { animation: frag-marquee-rev 78s linear infinite; }
+.frag-wrap:hover .frag-track,
+.frag-wrap:hover .frag-track-rev { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .frag-track, .frag-track-rev { animation: none; transform: none; }
+}

@@ -5,8 +5,10 @@ import Founder from "./components/Founder";
 import HeadSpa from "./components/HeadSpa";
 import Ritual from "./components/Ritual";
 import Programs from "./components/Programs";
+import Teplota from "./components/Teplota";
 import TeaCard from "./components/TeaCard";
 import Space from "./components/Space";
+import Gallery from "./components/Gallery";
 import Certificates from "./components/Certificates";
 import FAQ from "./components/FAQ";
 import Contacts from "./components/Contacts";
@@ -32,8 +34,10 @@ export default function Page() {
         <Ritual />
         <Reveal variant="up"><Quiz /></Reveal>
         <Reveal variant="up"><Programs /></Reveal>
+        <Reveal variant="up"><Teplota /></Reveal>
         <TeaCard />
         <Reveal variant="up"><Space /></Reveal>
+        <Reveal variant="up"><Gallery /></Reveal>
         <Reveal variant="up"><Certificates /></Reveal>
         <Reveal variant="up"><FAQ /></Reveal>
         <Reveal variant="up"><Contacts /></Reveal>

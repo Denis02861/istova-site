@@ -13,7 +13,7 @@
     {
       "name": "view-program-details",
       "type": "browse",
-      "description": "View detailed information about a specific spa program. URL template: /programs/{slug}/ where slug is one of: zarya-telo, zarya-volosy, sumerki-telo, sumerki-volosy, rodnik, kedr, lada, yav, otzvuk.",
+      "description": "View detailed information about a specific spa program. URL template: /programs/{slug}/ where slug is one of: zarya-telo, zarya-volosy, sumerki-telo, sumerki-volosy, rodnik, kedr, lada, yav, kedr-lada.",
       "url": "https://istova.ru/programs/kedr/",
       "sha256": "c31657df128776790714e792269de6e09d997d62eee0b0813b8a4bc6e051ec53"
     },
