@@ -26,8 +26,30 @@ export default function SmoothScroll() {
     };
     raf = requestAnimationFrame(tick);
 
+    // Якорные ссылки ведём через Lenis — надёжно доводит до цели,
+    // даже если высота страницы меняется от ленивой подгрузки картинок.
+    const onAnchorClick = (e: MouseEvent) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const a = (e.target as HTMLElement)?.closest?.('a[href*="#"]') as HTMLAnchorElement | null;
+      if (!a) return;
+      const href = a.getAttribute("href") || "";
+      const i = href.indexOf("#");
+      if (i < 0) return;
+      const hash = href.slice(i);
+      if (hash.length < 2) return;
+      const path = href.slice(0, i);
+      if (path && path !== window.location.pathname) return; // ссылка на другую страницу
+      const el = document.querySelector(hash);
+      if (!el) return;
+      e.preventDefault();
+      lenis.scrollTo(el as HTMLElement, { offset: -84, duration: 1.2 });
+      history.pushState(null, "", hash);
+    };
+    document.addEventListener("click", onAnchorClick);
+
     return () => {
       cancelAnimationFrame(raf);
+      document.removeEventListener("click", onAnchorClick);
       lenis.destroy();
       delete (window as any).__lenis;
     };

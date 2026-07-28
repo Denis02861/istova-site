@@ -27,6 +27,7 @@ html, body {
 }
 
 html { scroll-behavior: smooth; }
+section[id], [id] { scroll-margin-top: 84px; }
 
 @keyframes breath {
   0%, 100% { transform: translateY(0); }
