@@ -51,15 +51,15 @@ export default function StickyMobileBar() {
           Telegram
         </TrackedLink>
         <TrackedLink
-          goal="IG_CLICK"
+          goal="WA_CLICK"
           goalParams={{ from: "sticky_bar" }}
-          href="https://www.instagram.com/istova.spa"
+          href="https://wa.me/79013201050?text=Здравствуйте!%20Пишу%20с%20сайта%20Истова"
           target="_blank"
           rel="noopener noreferrer"
           className="py-3 text-center text-[11px] uppercase tracking-widest text-brand-dark/80 active:bg-brand/5"
-          aria-label="Открыть Instagram"
+          aria-label="Написать в WhatsApp"
         >
-          Instagram
+          WhatsApp
         </TrackedLink>
         <a
           href={bookingHref}
