@@ -2,6 +2,7 @@
 
 import TrackedLink from "./TrackedLink";
 import BlurFade from "./magicui/BlurFade";
+import ContactLinks from "./ContactLinks";
 
 export default function Contacts() {
   const address = "Санкт-Петербург, ул. Беринга, 23 к. 2";
@@ -32,9 +33,7 @@ export default function Contacts() {
 
             <h3 className="font-display text-2xl text-brand mb-4 mt-8 ">Как с нами связаться</h3>
             <p className="text-brand-dark/80 mb-1">Телефон: <TrackedLink goal="PHONE_CLICK" goalParams={{from:"contacts"}} href="tel:+79013201050" className="hover:text-brand">+7 (901) 320-10-50</TrackedLink></p>
-            <p className="text-brand-dark/80 mb-1">
-              <TrackedLink goal="TG_CLICK" goalParams={{from:"contacts"}} href="https://t.me/Istova_spa" target="_blank" rel="noopener noreferrer" className="hover:text-brand">@Istova_spa</TrackedLink>
-            </p>
+            <div className="mt-5"><ContactLinks from="contacts" tone="brand" /></div>
           </div>
           <div className="aspect-square bg-sand-deep">
             <iframe
