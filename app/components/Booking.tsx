@@ -86,6 +86,7 @@ export default function Booking() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: d.name, phone: d.phone, comment: d.comment, partial: true }),
         keepalive: true,
+        cache: "no-store",
       }).catch(() => {});
     } catch {}
   }, []);
@@ -166,10 +167,11 @@ export default function Booking() {
       const res = await fetch(BOOKING_WEBHOOK, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        cache: "no-store",
         body: JSON.stringify({ name, phone, channel, comment }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok || !data.ok) {
+      if (!res.ok || data.ok === false) {
         throw new Error(data.error || "Ошибка отправки");
       }
       submittedRef.current = true;
@@ -182,7 +184,7 @@ export default function Booking() {
       setComment("");
     } catch (err) {
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Ошибка сети");
+      setErrorMsg("Не удалось отправить автоматически. Напишите напрямую кнопками ниже, ответим быстро.");
       track("BOOKING_ERROR");
     }
   }
@@ -193,6 +195,7 @@ export default function Booking() {
     <section
       ref={sectionRef}
       id="booking"
+      data-build="2026-07-29-form-resilient"
       className="py-24 bg-brand text-sand relative overflow-hidden"
     >
       <div
