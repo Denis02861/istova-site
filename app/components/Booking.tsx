@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, FormEvent } from "react";
+import { useState, useEffect, useRef, useCallback, FormEvent } from "react";
 import BlurFade from "./magicui/BlurFade";
 import { track } from "../lib/track";
 import TrackedLink from "./TrackedLink";
@@ -75,25 +75,26 @@ export default function Booking() {
     return () => obs.disconnect();
   }, []);
 
+  const sendPartial = useCallback(() => {
+    if (submittedRef.current || partialSentRef.current) return;
+    const d = dataRef.current;
+    if (d.phone.replace(/\D/g, "").length !== 11) return;
+    partialSentRef.current = true;
+    try {
+      const blob = new Blob(
+        [JSON.stringify({ name: d.name, phone: d.phone, comment: d.comment, partial: true })],
+        { type: "application/json" }
+      );
+      navigator.sendBeacon(BOOKING_WEBHOOK, blob);
+    } catch {}
+  }, []);
+
   useEffect(() => {
     dataRef.current = { name, phone, comment };
   }, [name, phone, comment]);
 
-  // Недозаявка: если ушёл со страницы с полным телефоном, но не отправил
+  // Недозаявка при уходе со страницы (свернул/закрыл/переключил вкладку)
   useEffect(() => {
-    const sendPartial = () => {
-      if (submittedRef.current || partialSentRef.current) return;
-      const d = dataRef.current;
-      if (d.phone.replace(/\D/g, "").length !== 11) return;
-      partialSentRef.current = true;
-      try {
-        const blob = new Blob(
-          [JSON.stringify({ name: d.name, phone: d.phone, comment: d.comment, partial: true })],
-          { type: "application/json" }
-        );
-        navigator.sendBeacon(BOOKING_WEBHOOK, blob);
-      } catch {}
-    };
     const onVis = () => { if (document.visibilityState === "hidden") sendPartial(); };
     window.addEventListener("pagehide", sendPartial);
     document.addEventListener("visibilitychange", onVis);
@@ -101,7 +102,15 @@ export default function Booking() {
       window.removeEventListener("pagehide", sendPartial);
       document.removeEventListener("visibilitychange", onVis);
     };
-  }, []);
+  }, [sendPartial]);
+
+  // Недозаявка по бездействию: 60 сек после ввода полного телефона без активности
+  useEffect(() => {
+    if (phone.replace(/\D/g, "").length !== 11) return;
+    if (submittedRef.current || partialSentRef.current) return;
+    const t = setTimeout(sendPartial, 60000);
+    return () => clearTimeout(t);
+  }, [phone, name, comment, sendPartial]);
 
   const applyPreselect = (name?: string, forDuo?: boolean) => {
     if (!name) return;
