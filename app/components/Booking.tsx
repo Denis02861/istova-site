@@ -49,6 +49,9 @@ export default function Booking() {
 
   const sectionRef = useRef<HTMLElement | null>(null);
   const viewedRef = useRef(false);
+  const submittedRef = useRef(false);
+  const partialSentRef = useRef(false);
+  const dataRef = useRef({ name: "", phone: "", comment: "" });
 
   useEffect(() => {
     if (!sectionRef.current || viewedRef.current) return;
@@ -70,6 +73,34 @@ export default function Booking() {
     );
     obs.observe(sectionRef.current);
     return () => obs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    dataRef.current = { name, phone, comment };
+  }, [name, phone, comment]);
+
+  // Недозаявка: если ушёл со страницы с полным телефоном, но не отправил
+  useEffect(() => {
+    const sendPartial = () => {
+      if (submittedRef.current || partialSentRef.current) return;
+      const d = dataRef.current;
+      if (d.phone.replace(/\D/g, "").length !== 11) return;
+      partialSentRef.current = true;
+      try {
+        const blob = new Blob(
+          [JSON.stringify({ name: d.name, phone: d.phone, comment: d.comment, partial: true })],
+          { type: "application/json" }
+        );
+        navigator.sendBeacon(BOOKING_WEBHOOK, blob);
+      } catch {}
+    };
+    const onVis = () => { if (document.visibilityState === "hidden") sendPartial(); };
+    window.addEventListener("pagehide", sendPartial);
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      window.removeEventListener("pagehide", sendPartial);
+      document.removeEventListener("visibilitychange", onVis);
+    };
   }, []);
 
   const applyPreselect = (name?: string, forDuo?: boolean) => {
@@ -131,6 +162,7 @@ export default function Booking() {
       if (!res.ok || !data.ok) {
         throw new Error(data.error || "Ошибка отправки");
       }
+      submittedRef.current = true;
       setStatus("sent");
       track("BOOKING_SUCCESS", { channel });
       try { sessionStorage.removeItem("istova-preselect"); } catch {}
