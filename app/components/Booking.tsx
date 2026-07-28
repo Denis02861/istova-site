@@ -81,11 +81,12 @@ export default function Booking() {
     if (d.phone.replace(/\D/g, "").length !== 11) return;
     partialSentRef.current = true;
     try {
-      const blob = new Blob(
-        [JSON.stringify({ name: d.name, phone: d.phone, comment: d.comment, partial: true })],
-        { type: "application/json" }
-      );
-      navigator.sendBeacon(BOOKING_WEBHOOK, blob);
+      fetch(BOOKING_WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: d.name, phone: d.phone, comment: d.comment, partial: true }),
+        keepalive: true,
+      }).catch(() => {});
     } catch {}
   }, []);
 
@@ -108,7 +109,7 @@ export default function Booking() {
   useEffect(() => {
     if (phone.replace(/\D/g, "").length !== 11) return;
     if (submittedRef.current || partialSentRef.current) return;
-    const t = setTimeout(sendPartial, 60000);
+    const t = setTimeout(sendPartial, 25000);
     return () => clearTimeout(t);
   }, [phone, name, comment, sendPartial]);
 
