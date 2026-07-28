@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 const SITE_URL = "https://istova.ru";
 const TITLE = "Истова — head spa и спа для головы в Санкт-Петербурге";
 const DESCRIPTION =
-  "Head spa и спа для головы на Васильевском острове, м. Приморская. ✔ 9 авторских ритуалов ✔ Спа для двоих ✔ Аква-массаж ✔ Sound bath. Ул. Беринга, 23 к. 2.";
+  "Head spa и спа для головы на Васильевском острове. 9 авторских ритуалов от 6800 ₽, спа для двоих, аква-массаж, sound bath. Онлайн-запись, ежедневно 10:00–22:00. Ул. Беринга, 23 к. 2.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -122,6 +122,8 @@ const ORG_JSONLD = {
   ],
   sameAs: [
     "https://t.me/Istova_spa",
+    "https://www.instagram.com/istova.spa",
+    "https://vk.ru/istova_spa",
   ],
   makesOffer: [
     { "@type": "Offer", name: "ЗАРЯ | ТЕЛО", price: "8900", priceCurrency: "RUB", url: `${SITE_URL}/programs/zarya-telo/` },
