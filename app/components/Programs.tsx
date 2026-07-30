@@ -225,7 +225,7 @@ export default function Programs() {
           href="#quiz"
           className="text-xs uppercase tracking-widest text-brand/70 hover:text-brand border-b border-brand/30 hover:border-brand pb-1 transition-colors"
         >
-          Не знаете какую выбрать — пройдите квиз ↑
+          Не знаете какую выбрать — пройдите опрос ↑
         </a>
         <p className="text-[10px] text-brand-dark/70 leading-relaxed max-w-4xl mx-auto mt-6 px-2 text-center">
           {DISCLAIMER}

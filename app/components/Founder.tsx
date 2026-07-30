@@ -11,7 +11,7 @@ export default function Founder() {
             «
           </span>
           <p className="font-display italic text-2xl md:text-3xl text-brand leading-snug relative z-10">
-            Мы строили место, в которое хочется возвращаться — не за процедурой, а за состоянием.
+            Мне важно, чтобы отсюда уходили по-настоящему отдохнувшими. Ради этого всё и затевалось.
           </p>
         </blockquote>
         <div className="mt-10 text-sm uppercase tracking-widest text-brand-dark/60">

@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="font-display text-2xl text-sand mb-2 tracking-wider">ИСТОВА</div>
             <p className="text-sm italic text-sand/60 mb-3">
-              Пространство истинного ухода
+              Head spa и уход на Васильевском
             </p>
             <p className="text-sm text-sand/70">
               Санкт-Петербург, Васильевский остров

@@ -32,32 +32,30 @@ export default function Concept() {
           <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Место, не услуга</h2>
         </BlurFade>
         <div className="space-y-6 text-lg leading-relaxed text-brand-dark/90">
-          <BlurFade delay={0.25} yOffset={16}><p>Истова — спа в Петербурге. Место без масок, без спешки, без обещаний, которые невозможно сдержать.</p></BlurFade>
-          <BlurFade delay={0.35} yOffset={16}><p>Здесь работают по программам, проверенным временем. Натуральные масла, ритмика тёплого и прохладного, тишина внутри, в которой можно услышать собственное дыхание.</p></BlurFade>
-          <BlurFade delay={0.45} yOffset={16}><p>Место, в которое возвращаются не за процедурой, а за состоянием.</p></BlurFade>
+          <BlurFade delay={0.25} yOffset={16}><p>Истова — спа в Петербурге, где не торопят и не обещают лишнего.</p></BlurFade>
+          <BlurFade delay={0.35} yOffset={16}><p>Работаем по проверенным программам. Натуральные масла, тёплая и холодная вода, тишина.</p></BlurFade>
+          <BlurFade delay={0.45} yOffset={16}><p>Сюда возвращаются, чтобы выдохнуть.</p></BlurFade>
         </div>
 
         <div className="mt-20 pt-16 border-t border-brand/15">
           <div className="text-center mb-8">
-            <span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">Три опоры</span>
+            <span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">Что для нас важно</span>
           </div>
           <Reveal stagger={220} className="grid md:grid-cols-6 gap-10 md:gap-14 mb-16">
             <div className="md:col-span-3 md:pr-8">
-              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Принятие</h3>
-              <p className="text-base text-brand-dark/80 leading-relaxed">Место, где вас не оценивают, а принимают такой, какая вы есть.</p>
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Без оценок</h3>
+              <p className="text-base text-brand-dark/80 leading-relaxed">Здесь вас не разглядывают. Можно прийти уставшей, без сил и настроения, это нормально.</p>
             </div>
             <div className="md:col-span-3 md:pl-8 md:mt-16">
-              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Искренность</h3>
-              <p className="text-base text-brand-dark/80 leading-relaxed">Без глянца. Настоящие люди, реальные фото, живой опыт.</p>
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">По-честному</h3>
+              <p className="text-base text-brand-dark/80 leading-relaxed">Настоящие фото места и программ, без стоков и глянца.</p>
             </div>
             <div className="md:col-span-4 md:col-start-2 md:mt-8">
-              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Целостность</h3>
-              <p className="text-base text-brand-dark/80 leading-relaxed">Красота как состояние наполненности, которое уносишь с собой.</p>
+              <h3 className="font-display text-2xl md:text-3xl text-brand mb-4 tracking-tight">Остаётся с вами</h3>
+              <p className="text-base text-brand-dark/80 leading-relaxed">После визита спокойствие держится ещё несколько дней: легче засыпается, в голове тише.</p>
             </div>
           </Reveal>
-          <p className="text-base md:text-lg text-brand-dark/85 leading-relaxed text-center italic max-w-2xl mx-auto">
-            Возможность отложить роль «всё контролирую сама» и почувствовать что тебя держат.
-          </p>
+          
         </div>
       </div>
     </section>
