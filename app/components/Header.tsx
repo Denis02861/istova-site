@@ -8,7 +8,9 @@ const NAV = [
   { href: "#concept", label: "О нас" },
   { href: "#ritual", label: "Ритуал" },
   { href: "#programs", label: "Программы" },
+  { href: "/massazh-golovy", label: "Массаж головы" },
   { href: "#tea", label: "Чай" },
+  { href: "/blog", label: "Блог" },
   { href: "#contacts", label: "Контакты" },
 ];
 
@@ -16,7 +18,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const onHome = pathname === "/" || pathname === "";
-  const link = (h: string) => (onHome ? h : `/${h}`);
+  const link = (h: string) => (h.startsWith("/") ? h : (onHome ? h : `/${h}`));
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

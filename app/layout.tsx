@@ -1,6 +1,7 @@
 import "./globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
+import CookieBanner from "./components/CookieBanner";
 
 const SITE_URL = "https://istova.ru";
 const TITLE = "Истова — head spa и спа для головы в Санкт-Петербурге";
@@ -208,6 +209,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans">
         <a href="#hero" className="skip-link">Перейти к содержимому</a>
         {children}
+        <CookieBanner />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSONLD) }}
