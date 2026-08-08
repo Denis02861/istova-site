@@ -116,7 +116,7 @@ export default function Programs() {
         setOriginRect({ x: rect.left + rect.width/2, y: rect.top + rect.height/2 });
         setOpen(p.slug);
       }}
-      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-center md:snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,--tw-ring-color] duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] data-[surfaced=true]:-translate-y-2 data-[surfaced=true]:scale-[1.02] data-[surfaced=true]:ring-brand/30 data-[surfaced=true]:shadow-[0_25px_60px_-20px_rgba(116,68,54,0.35)] md:hover:-translate-y-5 md:hover:scale-[1.04] md:hover:ring-brand/45 md:hover:shadow-[0_40px_90px_-25px_rgba(116,68,54,0.45)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99]"
+      className="group relative shrink-0 w-[80vw] sm:w-[340px] md:w-[380px] snap-center md:snap-start p-1.5 rounded-[2rem] bg-brand/5 ring-1 ring-brand/10 flex text-left transition-[transform,box-shadow,opacity,filter,--tw-ring-color] duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] data-[surfaced=true]:-translate-y-2 data-[surfaced=true]:scale-[1.02] data-[surfaced=true]:ring-brand/30 data-[surfaced=true]:shadow-[0_25px_60px_-20px_rgba(116,68,54,0.35)] md:hover:-translate-y-5 md:hover:scale-[1.04] md:hover:ring-brand/45 md:hover:shadow-[0_40px_90px_-25px_rgba(116,68,54,0.45)] focus:outline-none focus:ring-2 focus:ring-brand/40 active:scale-[0.99] group-hover/row:opacity-50 group-hover/row:blur-[1.5px] hover:!opacity-100 hover:!blur-none focus:!opacity-100 focus:!blur-none"
     >
       <div className="relative bg-sand-soft rounded-[calc(2rem-0.375rem)] p-8 flex flex-col min-h-[360px] w-full overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
       {/* Мутная вуаль поверх — уходит на hover, эффект всплытия */}
@@ -157,7 +157,7 @@ export default function Programs() {
   );
 
   return (
-    <section id="programs" className="py-24 bg-sand-deep/30 overflow-hidden">
+    <section id="programs" className="py-16 md:py-24 bg-sand-deep/30 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Программы</span></div>
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">
@@ -178,7 +178,7 @@ export default function Programs() {
       <div className="relative">
         <div
           ref={scrollRef}
-          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pt-10 pb-10 px-6 md:px-[10vw] scroll-smooth"
+          className="group/row flex gap-5 overflow-x-auto snap-x snap-mandatory pt-10 pb-10 px-6 md:px-[10vw] scroll-smooth"
           style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch" }}
         >
           {programs.map(renderCard)}

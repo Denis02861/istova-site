@@ -26,7 +26,7 @@ const styleFor = (v: Tier["variant"]) => {
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="py-24 bg-sand">
+    <section id="certificates" className="py-16 md:py-24 bg-sand">
       <div className="container mx-auto px-6 max-w-6xl">
         <BlurFade delay={0.05} yOffset={16}>
           <h2 className="font-display text-4xl md:text-5xl text-brand mb-6 text-center tracking-tight">Подарите ритуал</h2>

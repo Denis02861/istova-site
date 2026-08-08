@@ -48,10 +48,20 @@ const groups: Group[] = [
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 export default function Teplota() {
-  const [active, setActive] = useState<number | null>(0);
+  // независимые блоки: открытие одного не трогает другие, без авто-скролла
+  const [openSet, setOpenSet] = useState<Set<number>>(() => new Set([0]));
+
+  const onToggle = (i: number) => {
+    setOpenSet((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
+  };
 
   return (
-    <section id="teplota" className="py-24 md:py-32 bg-brand-dark relative overflow-hidden">
+    <section id="teplota" className="py-16 md:py-32 bg-brand-dark relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
         <div className="text-center mb-6">
           <span className="inline-block px-3 py-1 rounded-full border border-sand/25 text-[10px] uppercase tracking-[0.2em] text-sand/70 font-medium">
@@ -72,7 +82,7 @@ export default function Teplota() {
 
         <div className="space-y-4">
           {groups.map((g, i) => {
-            const isActive = active === i;
+            const isActive = openSet.has(i);
             return (
               <BlurFade key={g.title} delay={0.1 + i * 0.08} yOffset={20}>
                 <div
@@ -84,7 +94,7 @@ export default function Teplota() {
                 >
                   <button
                     type="button"
-                    onClick={() => setActive(isActive ? null : i)}
+                    onClick={() => onToggle(i)}
                     aria-expanded={isActive}
                     className="group w-full text-left p-5 sm:p-6 flex items-start justify-between gap-3"
                   >
@@ -113,8 +123,8 @@ export default function Teplota() {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{
-                          height: { duration: 0.75, ease: easeOut },
-                          opacity: { duration: 0.5, ease: "easeOut" },
+                          height: { duration: 0.45, ease: easeOut },
+                          opacity: { duration: 0.35, ease: "easeOut" },
                         }}
                         className="overflow-hidden"
                       >
@@ -122,7 +132,7 @@ export default function Teplota() {
                           initial="hidden"
                           animate="show"
                           exit="hidden"
-                          variants={{ show: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }}
+                          variants={{ show: { transition: { staggerChildren: 0.045, delayChildren: 0.06 } } }}
                           className="px-5 sm:px-6 pb-2 divide-y divide-sand/10 border-t border-sand/12"
                         >
                           {g.items.map((it) => (
@@ -130,7 +140,7 @@ export default function Teplota() {
                               key={it.name}
                               variants={{
                                 hidden: { opacity: 0, y: 18 },
-                                show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
+                                show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: easeOut } },
                               }}
                               className="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6"
                             >

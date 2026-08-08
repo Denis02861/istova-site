@@ -11,6 +11,7 @@ import Space from "./components/Space";
 import Gallery from "./components/Gallery";
 import Certificates from "./components/Certificates";
 import FAQ from "./components/FAQ";
+import Reviews from "./components/Reviews";
 import Contacts from "./components/Contacts";
 import Booking from "./components/Booking";
 import Footer from "./components/Footer";
@@ -39,6 +40,7 @@ export default function Page() {
         <Reveal variant="up"><Gallery /></Reveal>
         <Reveal variant="up"><Certificates /></Reveal>
         <Reveal variant="up"><FAQ /></Reveal>
+        <Reveal variant="up"><Reviews /></Reveal>
         <Reveal variant="up"><Contacts /></Reveal>
         <Reveal variant="up"><Booking /></Reveal>
       </main>

@@ -196,7 +196,7 @@ export default function Booking() {
       ref={sectionRef}
       id="booking"
       data-build="2026-07-29-form-resilient"
-      className="py-24 bg-brand text-sand relative overflow-hidden"
+      className="py-16 md:py-24 bg-brand text-sand relative overflow-hidden"
     >
       <div
         aria-hidden="true"

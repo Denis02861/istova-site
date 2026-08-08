@@ -16,7 +16,7 @@ const skip = [
 
 export default function Prep() {
   return (
-    <section id="prep" className="py-24 bg-sand-deep/30">
+    <section id="prep" className="py-16 md:py-24 bg-sand-deep/30">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-xs uppercase tracking-widest text-brand/60 mb-4 text-center">Первый визит</div>
         <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-3xl md:text-5xl text-brand mb-4 text-center uppercase tracking-wider">

@@ -8,7 +8,7 @@ export default function Contacts() {
   const address = "Санкт-Петербург, ул. Беринга, 23 к. 2";
   const mapSrc = "https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=63939829435";
   return (
-    <section id="contacts" className="py-24 bg-sand relative overflow-hidden">
+    <section id="contacts" className="py-16 md:py-24 bg-sand relative overflow-hidden">
       <img
         src="/brand/decor/spiral.webp"
         alt=""

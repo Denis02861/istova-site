@@ -17,7 +17,7 @@ export default function Concept() {
   const birdOpacity = useTransform(scrollYProgress, [0, 0.9], [0.9, 0]);
 
   return (
-    <section ref={sectionRef} id="concept" className="py-24 bg-sand-soft relative overflow-hidden">
+    <section ref={sectionRef} id="concept" className="py-16 md:py-24 bg-sand-soft relative overflow-hidden">
       <motion.img
         src="/brand/decor/bird.webp"
         alt=""

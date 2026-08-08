@@ -16,7 +16,7 @@ const zones: Zone[] = [
 
 export default function Space() {
   return (
-    <section id="space" className="py-24 bg-sand-soft relative overflow-hidden">
+    <section id="space" className="py-16 md:py-24 bg-sand-soft relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         <div className="text-center mb-6">
           <span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">Пространство</span>

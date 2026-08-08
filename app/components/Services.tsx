@@ -16,7 +16,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-sand-soft relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-sand-soft relative overflow-hidden">
       <Aurora />
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-6">

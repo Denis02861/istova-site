@@ -24,7 +24,7 @@ export default function Ritual() {
   const spiralOpacity = useTransform(scrollYProgress, [0, 0.85], [0.24, 0]);
 
   return (
-    <section ref={sectionRef} id="ritual" className="py-24 bg-sand relative overflow-hidden">
+    <section ref={sectionRef} id="ritual" className="py-16 md:py-24 bg-sand relative overflow-hidden">
       <Aurora />
       <motion.img
         src="/brand/decor/spiral.webp"
