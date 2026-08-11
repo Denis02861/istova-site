@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import CookieBanner from "./components/CookieBanner";
 
 const SITE_URL = "https://istova.ru";
-const TITLE = "Истова — head spa и спа для головы в Санкт-Петербурге";
+const TITLE = "Истова — head spa, спа и массаж головы в Санкт-Петербурге";
 const DESCRIPTION =
   "Head spa и спа для головы на Васильевском острове. 9 авторских ритуалов от 6800 ₽, спа для двоих, аква-массаж, sound bath. Онлайн-запись, ежедневно 10:00–22:00. Ул. Беринга, 23 к. 2.";
 
