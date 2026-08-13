@@ -123,13 +123,13 @@ export default function ProgramsCatalogPage() {
               9 ритуалов Истовы
             </h1>
             <p className="text-base md:text-lg text-brand-dark/80 max-w-2xl mx-auto leading-relaxed">
-              4 базовых парных ритуала (ЗАРЯ и СУМЕРКИ, тело и волосы) — темпоритмы утра и вечера. 5 авторских программ — знакомство с Истовой, глубокое женское и мужское восстановление, бережный ритуал для будущей мамы, глубокая тишина.
+              9 авторских ритуалов Истовы. Массаж тела и лица, спа для головы с тёплой водой, уход за волосами, сауна и обёртывания — собранные в спокойные сценарии с выбором аромата, тишиной и чаем в финале. Каждый — от 70 до 150 минут.
             </p>
           </header>
 
           <div className="mb-8">
             <div className="text-center text-xs uppercase tracking-widest text-brand/60 mb-6">
-              Базовые парные ритуалы
+              Парные ритуалы · утро и вечер
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6 mb-16">
@@ -138,7 +138,7 @@ export default function ProgramsCatalogPage() {
 
           <div className="mb-8">
             <div className="text-center text-xs uppercase tracking-widest text-brand/60 mb-6">
-              Авторские программы
+              Большие и особые ритуалы
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6 mb-16">

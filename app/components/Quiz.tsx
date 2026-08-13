@@ -37,6 +37,10 @@ function recommend(focus: Focus, time: Time, care: Care, special: Special, mode:
   }
 
   // Голова и волосы
+  // Хочется ещё прогрева или скраба тела — большие ритуалы, где есть и сауна, и работа с головой
+  if (care === "sauna" || care === "peeling") {
+    return [byslug("lada"), byslug("kedr")];
+  }
   const primary = time === "morning" ? "zarya-volosy" : "sumerki-volosy";
   const second = time === "morning" ? "sumerki-volosy" : "zarya-volosy";
   return [byslug(primary), byslug(second)];
@@ -76,7 +80,7 @@ export default function Quiz() {
   const OPTIONS = {
     focus: [
       { v: "body" as Focus, label: "На тело", d: "массаж, тепло, кожа" },
-      { v: "hair" as Focus, label: "Голова и волосы", d: "head spa, уход, распускание" },
+      { v: "hair" as Focus, label: "Голова и волосы", d: "head spa, уход, расслабление" },
       { v: "both" as Focus, label: "Всё вместе", d: "тело и голова, полный ритуал" },
     ],
     time: [
@@ -218,7 +222,7 @@ export default function Quiz() {
               {recs.length === 1 ? "Ваш ритуал" : "Ваш ритуал и ещё один вариант"}
             </div>
             <div className={`grid gap-5 ${recs.length > 1 ? "md:grid-cols-2" : "max-w-md mx-auto"}`}>
-              {recs.map((p) => renderSingle(p, mode === "duo"))}
+              {recs.map((p) => renderSingle(p, false))}
             </div>
             <div className="text-center mt-8">
               <button onClick={reset} className="text-xs uppercase tracking-widest text-brand/60 hover:text-brand">
