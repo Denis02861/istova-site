@@ -164,7 +164,7 @@ export default function Programs() {
           9 ритуалов Истовы
         </h2>
         <p className="text-center text-brand-dark/70 mb-10 max-w-2xl mx-auto">
-          4 базовых парных ритуала и 5 авторских. Каждый — со своим темпом, ароматом и финалом. Свайпайте карточки →
+          9 авторских ритуалов Истовы, у каждого свой темп, аромат и финал. Свайпайте карточки →
         </p>
 
         <div className="max-w-3xl mx-auto mb-10 border border-brand/15 bg-sand-soft/60 p-6 md:p-8">

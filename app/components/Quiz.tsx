@@ -103,7 +103,7 @@ export default function Quiz() {
     ],
     mode: [
       { v: "solo" as Mode, label: "Одному", d: "только для себя" },
-      { v: "duo" as Mode, label: "Вдвоём", d: "парный ритуал, цена за двоих" },
+      { v: "duo" as Mode, label: "Вдвоём", d: "парный ритуал" },
     ],
   };
 
