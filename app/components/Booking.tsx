@@ -8,7 +8,7 @@ import ContactLinks from "./ContactLinks";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
-const BOOKING_WEBHOOK = "https://n8nautomat.site/webhook/istova-booking";
+const BOOKING_WEBHOOK = "https://n8nautoma.site/webhook/istova-booking";
 
 
 function formatPhone(raw: string): string {
