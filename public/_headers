@@ -1,7 +1,7 @@
 # Security headers — все страницы
 /*
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self' https://webvisor.com https://*.webvisor.com https://metrika.yandex.ru https://metrika.yandex.by https://metrica.yandex.com https://metrica.yandex.com.tr https://mc.yandex.ru
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
