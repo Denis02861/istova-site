@@ -35,6 +35,19 @@ const SHORT_TITLE_ACCENT: Record<string, string> = {
   "sumerki-volosy": "ВЕЧЕР · Расслабление кожи головы",
 };
 
+// SEO-суффикс для title: услуга + гео под поисковый спрос (H1/дизайн не затрагивает)
+const SEO_SUFFIX: Record<string, string> = {
+  "zarya-telo": "спа для тела в СПб, Васильевский",
+  "zarya-volosy": "head spa и спа для волос в СПб, Васильевский",
+  "sumerki-telo": "спа для тела в СПб, Васильевский",
+  "sumerki-volosy": "head spa и спа для волос в СПб, Васильевский",
+  "kedr-lada": "спа для двоих в СПб, Васильевский",
+  "yav": "спа-ритуал в СПб, Васильевский",
+  "kedr": "спа-ритуал для тела в СПб, Васильевский",
+  "lada": "женский спа в СПб, Васильевский",
+  "rodnik": "женский спа в СПб, Васильевский",
+};
+
 export function generateStaticParams() {
   return programs.map((p) => ({ slug: p.slug }));
 }
@@ -48,7 +61,8 @@ export async function generateMetadata({
   const program = programs.find((p) => p.slug === slug);
   if (!program) return {};
   const titleAccent = SHORT_TITLE_ACCENT[slug] ?? program.accent ?? "";
-  const title = `${program.name} — ${titleAccent} | Истова`;
+  const seoSuffix = SEO_SUFFIX[slug] ?? titleAccent;
+  const title = `${program.name} — ${seoSuffix} | Истова`;
   const rawDesc = SHORT_DESC[slug] ?? program.accent ?? "";
   const description = `${rawDesc} ${program.dur}, ${program.price}.`.replace(/\s+/g, " ").trim();
   const url = `${SITE_URL}/programs/${slug}/`;
