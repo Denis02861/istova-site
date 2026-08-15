@@ -5,7 +5,7 @@ Allow: /
 # Яндекс / Google
 User-agent: Yandex
 Allow: /
-Clean-param: etext
+Clean-param: etext&ybaip
 
 User-agent: Googlebot
 Allow: /
