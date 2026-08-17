@@ -1,373 +1,574 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-07-04T18:50:00+03:00">
+<yml_catalog date="2026-08-17T14:40:00+03:00">
   <shop>
     <name>Истова</name>
     <company>ИП Карасёв Денис Игоревич</company>
     <url>https://istova.ru/</url>
-    <email>istomaspa@yandex.ru</email>
+    <email>istovaspa@yandex.ru</email>
     <phone>+7 (901) 320-10-50</phone>
-    <currencies>
-      <currency id="RUR" rate="1"/>
-    </currencies>
-
-    <sets>
-      <set id="s-kedr"/>
-      <set id="s-lada"/>
-      <set id="s-kedr-lada"/>
-      <set id="s-rodnik"/>
-      <set id="s-sumerki-telo"/>
-      <set id="s-sumerki-volosy"/>
-      <set id="s-yav"/>
-      <set id="s-zarya-telo"/>
-      <set id="s-zarya-volosy"/>
-      <set id="s-cert-any"/>
-    </sets>
+    <currencies><currency id="RUR" rate="1"/></currencies>
     <categories>
       <category id="1">СПА-ритуалы</category>
       <category id="2">СПА-ритуалы для двоих</category>
-      <category id="3">Подарочные сертификаты</category>
+      <category id="3">Отдельные практики (Теплота)</category>
+      <category id="4">Подарочные сертификаты</category>
     </categories>
     <offers>
-    <offer id="zarya-telo-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/zarya-telo/?mode=solo</url>
-      <price>8900</price>
-      <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=zarya-telo-solo</picture>
-      <delivery>false</delivery>
-      <pickup>false</pickup>
-      <description>СПА-ритуал: ЗАРЯ | ТЕЛО — одному, 100 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">100 минут</param>
-      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
-      <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-zarya-telo</set-ids>
+    <offer id="teplota-tyazhest" available="true">
+      <name>Тяжесть и тишина</name>
       <vendor>Истова</vendor>
-    </offer>
-    <offer id="zarya-volosy-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/zarya-volosy/?mode=solo</url>
-      <price>8500</price>
+      <url>https://istova.ru/#teplota</url>
+      <price>1300</price>
       <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=zarya-volosy-solo</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал: ЗАРЯ | ВОЛОСЫ — одному, 90 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">90 минут</param>
+      <description>Отдых под тяжёлым одеялом с тёплым компрессом для глаз. Практика для тех, кому нужно просто полежать в тишине и выдохнуть. Длительность 20 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-zarya-volosy</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="sumerki-telo-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/sumerki-telo/?mode=solo</url>
-      <price>9900</price>
+    <offer id="teplota-travy" available="true">
+      <name>Травяное тепло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>2500</price>
       <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=sumerki-telo-solo</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал: СУМЕРКИ | ТЕЛО — одному, 100 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">100 минут</param>
+      <description>Локальный ритуал с тёплыми травяными мешочками: мелисса, ромашка и лаванда. Мягкое тепло и аромат для кистей и стоп. Длительность 20 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-sumerki-telo</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="sumerki-volosy-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/sumerki-volosy/?mode=solo</url>
-      <price>8500</price>
+    <offer id="teplota-stopy-t" available="true">
+      <name>Тёплые стопы</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>2900</price>
       <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=sumerki-volosy-solo</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал: СУМЕРКИ | ВОЛОСЫ — одному, 90 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">90 минут</param>
+      <description>Массаж стоп и голеней с согреванием тёплыми травяными мешочками. Прогревание и мягкая проработка после долгого дня на ногах. Длительность 30 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">30 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-sumerki-volosy</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="yav-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/yav/?mode=solo</url>
-      <price>6800</price>
+    <offer id="teplota-stopy-l" available="true">
+      <name>Лёгкие стопы</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>2200</price>
       <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=yav-solo</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал: ЯВЬ — одному, 70 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <description>Массаж стоп и голеней для снятия усталости. Лёгкие движения снизу вверх, работа со сводом стопы. Длительность 20 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">20 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="teplota-kisti" available="true">
+      <name>Тёплые кисти</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>2000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Массаж кистей и рук с тёплым кремом. Короткая практика для тех, кто много печатает или работает руками. Длительность 20 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">20 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="teplota-obn-ukut" available="true">
+      <name>Обновление + Укутывание</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>6500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Полный спа-уход за кожей тела: финская сауна, скрабирование, питательное обёртывание, отдых в тепле и завершающий уход. Длительность 70 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Длительность">70 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-yav</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="kedr-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/kedr/?mode=solo</url>
-      <price>11900</price>
+    <offer id="teplota-ukutyvanie" available="true">
+      <name>Укутывание</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>4200</price>
       <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=kedr-solo</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал: КЕДР — одному, 150 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">150 минут</param>
+      <description>Укутывание для тела: финская сауна, питательное обёртывание, отдых в тепле под пледом и завершающий уход. Кожа становится мягкой и увлажнённой. Длительность 50 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">50 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-kedr</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="lada-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/lada/?mode=solo</url>
-      <price>11900</price>
+    <offer id="teplota-obnovlenie" available="true">
+      <name>Обновление</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>3500</price>
       <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=lada-solo</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал: ЛАДА — одному, 150 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">150 минут</param>
+      <description>Обновление кожи тела: скрабирование с двух сторон, тёплый душ и завершающий уход кремом или баттером. Аромат средств выбираете перед началом. Длительность 30 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">30 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-lada</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="rodnik-solo" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/rodnik/?mode=solo</url>
-      <price>7900</price>
+    <offer id="teplota-kamen" available="true">
+      <name>Камень</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>3500</price>
       <currencyId>RUR</currencyId>
-      <categoryId>1</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=rodnik-solo</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/frag-care.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал: РОДНИК — одному, 90 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <description>Косметический массаж лица гуаша, роликами и криосферами. Дренажные техники, работа со скулами, лбом и нижней третью лица, завершающий уход. Длительность 30 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">30 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="teplota-glubina" available="true">
+      <name>Глубина</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>4200</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Массаж лица, шейно-воротниковой зоны и кожи головы с гребнями. Снимает зажатость в шее и плечах, работает с лицом по массажным линиям. Длительность 40 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">40 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="teplota-tishina" available="true">
+      <name>Тишина</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>2500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Массаж кожи головы руками и гребнями. Спа для головы в коротком формате: медленные техники по всей волосистой части, вискам и затылку. Длительность 20 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">20 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="teplota-stone-90" available="true">
+      <name>Энергия камня (90 мин)</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>6300</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Массаж горячими камнями (стоун-терапия) в полном формате. Ручные техники и тёплые базальтовые камни по всему телу, включая кисти и стопы. Длительность 90 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-rodnik</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="zarya-telo-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/zarya-telo/?mode=pair</url>
-      <price>17000</price>
+    <offer id="teplota-stone-60" available="true">
+      <name>Энергия камня (60 мин)</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>4800</price>
       <currencyId>RUR</currencyId>
-      <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=zarya-telo-pair</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: ЗАРЯ | ТЕЛО — вдвоём, 100 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">100 минут</param>
+      <description>Массаж горячими камнями (стоун-терапия). Ручные техники и тёплые базальтовые камни: глубокое прогревание мышц спины, ног и плеч. Длительность 60 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-zarya-telo</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="zarya-volosy-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/zarya-volosy/?mode=pair</url>
-      <price>16000</price>
+    <offer id="teplota-warm-90" available="true">
+      <name>Тёплый массаж тела (90 мин)</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>6100</price>
       <currencyId>RUR</currencyId>
-      <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=zarya-volosy-pair</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: ЗАРЯ | ВОЛОСЫ — вдвоём, 90 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <description>Тёплый массаж тела на масле массажной свечи в полном формате. Тёплое масло, плавные обволакивающие движения по всему телу. Длительность 90 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-zarya-volosy</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="sumerki-telo-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/sumerki-telo/?mode=pair</url>
-      <price>18000</price>
+    <offer id="teplota-warm-60" available="true">
+      <name>Тёплый массаж тела (60 мин)</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>4500</price>
       <currencyId>RUR</currencyId>
-      <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=sumerki-telo-pair</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: СУМЕРКИ | ТЕЛО — вдвоём, 100 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">100 минут</param>
+      <description>Тёплый массаж тела на масле массажной свечи. Мягкая практика для глубокого расслабления: тёплое масло, плавные движения без давления. Длительность 60 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-sumerki-telo</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="sumerki-volosy-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/sumerki-volosy/?mode=pair</url>
-      <price>16000</price>
+    <offer id="teplota-massage-90" available="true">
+      <name>Расслабляющий СПА-массаж (90 мин)</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>5900</price>
       <currencyId>RUR</currencyId>
-      <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=sumerki-volosy-pair</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: СУМЕРКИ | ВОЛОСЫ — вдвоём, 90 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
+      <description>Расслабляющий спа-массаж тела в полном формате. Медленные обволакивающие техники по всему телу, включая кисти и стопы. Длительность 90 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-sumerki-volosy</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="yav-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/yav/?mode=pair</url>
-      <price>12000</price>
+    <offer id="teplota-massage-60" available="true">
+      <name>Расслабляющий СПА-массаж (60 мин)</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/#teplota</url>
+      <price>4300</price>
       <currencyId>RUR</currencyId>
-      <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=yav-pair</picture>
+      <categoryId>3</categoryId>
+      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: ЯВЬ — вдвоём, 70 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">70 минут</param>
+      <description>Расслабляющий спа-массаж тела. Медленные обволакивающие техники без резкой проработки: снимает напряжение, возвращает лёгкость. Длительность 60 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-yav</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-    <offer id="kedr-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/kedr/?mode=pair</url>
+    <offer id="kedr-lada-pair" available="true">
+      <name>КЕДР + ЛАДА — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/kedr-lada/</url>
       <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=kedr-pair</picture>
+      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: КЕДР — вдвоём, 150 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">150 минут</param>
+      <description>Спа для двоих для тех, кто не хочет выбирать одинаковую программу: ей — ЛАДА, ему — КЕДР. Ритуалы проходят одновременно, каждый со своим мастером, в общем пространстве. Длительность 3 часа. Цена указана за двоих.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">3 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-kedr</set-ids>
-      <vendor>Истова</vendor>
-    </offer>
-    <offer id="lada-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/lada/?mode=pair</url>
-      <price>21000</price>
-      <currencyId>RUR</currencyId>
-      <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=lada-pair</picture>
-      <delivery>false</delivery>
-      <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: ЛАДА — вдвоём, 150 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">150 минут</param>
-      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
-      <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-lada</set-ids>
-      <vendor>Истова</vendor>
-    </offer>
-    <offer id="rodnik-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/rodnik/?mode=pair</url>
-      <price>14000</price>
-      <currencyId>RUR</currencyId>
-      <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=rodnik-pair</picture>
-      <delivery>false</delivery>
-      <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: РОДНИК — вдвоём, 90 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">90 минут</param>
-      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
-      <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-rodnik</set-ids>
-      <vendor>Истова</vendor>
     </offer>
     <offer id="cert-any" available="true">
-      <name>Истова</name>
+      <name>Подарочный сертификат на любую сумму</name>
+      <vendor>Истова</vendor>
       <url>https://istova.ru/#booking</url>
       <price>3000</price>
       <currencyId>RUR</currencyId>
-      <categoryId>3</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=cert-any</picture>
+      <categoryId>4</categoryId>
+      <picture>https://istova.ru/certificates/blank.jpg</picture>
       <delivery>false</delivery>
-      <pickup>true</pickup>
-      <description>Подарочный сертификат: Подарочный сертификат Истовы (любая сумма)</description>
-      <sales_notes>От 3 000 ₽ до любой суммы. Оформление онлайн или в салоне.</sales_notes>
-      <param name="Годы опыта">1</param>
+      <pickup>false</pickup>
+      <description>Электронный или бумажный подарочный сертификат на любую сумму от 3 000 ₽. Подходит на любой спа-ритуал и отдельные практики. Оформляется онлайн или в салоне. Срок действия 6 месяцев.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-cert-any</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-        <offer id="kedr-lada-pair" available="true">
-      <name>Истова</name>
-      <url>https://istova.ru/programs/kedr-lada/?mode=pair</url>
+    <offer id="rodnik-pair" available="true">
+      <name>РОДНИК — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/rodnik/</url>
+      <price>14000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Бережное спа для двоих без нагрузки на тело. Идёте одновременно, каждый со своим мастером: массаж лица, спа для головы с «Золотой дугой», уход Davines, ритуал лёгкости для ног. Доступен будущим мамам со второго триместра. Длительность 1 час 45 минут. Цена указана за двоих.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">1 час 45 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="lada-pair" available="true">
+      <name>ЛАДА — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/lada/</url>
       <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <picture>https://istova.ru/og-image.webp?slug=kedr-lada-pair</picture>
+      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>СПА-ритуал для двоих: КЕДР + ЛАДА — он и она одновременно, 180 минут</description>
-      <sales_notes>Оплата в салоне. Запись за 12 часов до визита.</sales_notes>
-      <param name="Длительность">180 минут</param>
+      <description>Большой женский ритуал вдвоём: спа для двоих на 3 часа, каждая со своим мастером. Финская сауна, турецкое очищение кесе, массаж тела, массаж лица гуаша, спа для головы и уход Davines. Цена указана за двоих.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
-      <param name="Годы опыта">1</param>
       <param name="Регион">Санкт-Петербург</param>
-      <param name="Конверсия">100</param>
-      <set-ids>s-kedr-lada</set-ids>
-      <vendor>Истова</vendor>
     </offer>
-  </offers>
+    <offer id="kedr-pair" available="true">
+      <name>КЕДР — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/kedr/</url>
+      <price>21000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Большой ритуал силы вдвоём: спа для двоих на 3 часа, каждый со своим мастером. Хвойная сауна, скраб с кедровым орехом, бамбуковые веники, массаж тёплыми камнями, спа для головы и уход Davines. Цена указана за двоих.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="yav-pair" available="true">
+      <name>ЯВЬ — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/yav/</url>
+      <price>12000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Знакомство с Истовой вдвоём. Спа для двоих в общем пространстве, каждый со своим мастером: работа с телом, массаж головы, уход за лицом, «Золотая дуга», уход Davines. Длительность 1 час 45 минут. Цена указана за двоих. Хороший вариант для первого совместного визита.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">1 час 45 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="sumerki-volosy-pair" available="true">
+      <name>СУМЕРКИ | ВОЛОСЫ — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/sumerki-volosy/</url>
+      <price>16000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Спа для двоих вечером через кожу головы. Идёте одновременно, каждый со своим мастером: расслабляющий массаж лица, травяной ритуал для кожи головы, «Золотая дуга», уход Davines. Длительность 2 часа. Цена указана за двоих.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">2 часа</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="sumerki-telo-pair" available="true">
+      <name>СУМЕРКИ | ТЕЛО — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/sumerki-telo/</url>
+      <price>18000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Спа для двоих вечером. Программы идут одновременно, каждый гость со своим мастером: сауна с успокаивающими эфирами, обновление кожи, обёртывание, расслабляющий массаж тела. Длительность 2 часа. Цена указана за двоих.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">2 часа</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="zarya-volosy-pair" available="true">
+      <name>ЗАРЯ | ВОЛОСЫ — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/zarya-volosy/</url>
+      <price>16000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Спа для двоих утром через кожу головы. Идёте одновременно, каждый со своим мастером: массаж лица с криосферами, авторский водный ритуал «Золотая дуга», уход Davines, пенный массаж головы. Длительность 2 часа. Цена указана за двоих.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">2 часа</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="zarya-telo-pair" available="true">
+      <name>ЗАРЯ | ТЕЛО — вдвоём</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/zarya-telo/</url>
+      <price>17000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>2</categoryId>
+      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Спа для двоих утром. Программы проходят одновременно, каждый гость со своим мастером, в общем пространстве: бодрящая сауна, скраб, тонизирующий массаж тела, уход за лицом. Длительность 1 час 40 минут. Цена указана за двоих.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">1 час 40 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="rodnik-solo" available="true">
+      <name>РОДНИК — соло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/rodnik/</url>
+      <price>7900</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/gallery/06-body.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Бережный спа-ритуал без нагрузки на тело. Подходит будущим мамам со второго триместра беременности. Косметический массаж лица и шеи, массаж нефритовыми роликами, деликатный уход за лицом, пенный массаж кожи головы, авторский водный ритуал «Золотая дуга», уход Davines, ритуал лёгкости для уставших голеней и стоп. Длительность 75 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">75 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="lada-solo" available="true">
+      <name>ЛАДА — соло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/lada/</url>
+      <price>11900</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/gallery/06-body.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Большой женский спа-ритуал на 150 минут. Финская сауна с цветочными эфирами, турецкое очищение кожи рукавицей кесе, расслабляющий массаж тела с тёплым кремом 40 минут, косметический массаж лица гуаша, спа-уход за лицом, спа для головы с «Золотой дугой» и уходом Davines, тёплый ритуал для кистей и стоп.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="kedr-solo" available="true">
+      <name>КЕДР — соло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/kedr/</url>
+      <price>11900</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/gallery/06-body.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Большой мужской спа-ритуал на 150 минут. Финская сауна с хвойными эфирами, скраб с солью и скорлупой кедрового ореха, ритмичная проработка тела бамбуковыми вениками, расслабляющий массаж тёплыми камнями 60 минут, спа-уход за лицом, спа для головы с «Золотой дугой» и уходом Davines.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="yav-solo" available="true">
+      <name>ЯВЬ — соло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/yav/</url>
+      <price>6800</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/gallery/06-body.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Знакомство с Истовой: в одном ритуале собраны ключевые практики для тела, лица, кожи головы и волос. Расслабляющая работа со спиной, плечами и руками, массаж головы руками и гребнями, спа-уход за лицом, авторский водный ритуал «Золотая дуга», уход Davines, завершающее звучание чаши. Длительность 75 минут. Оптимальный вариант для первого визита.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">75 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="sumerki-volosy-solo" available="true">
+      <name>СУМЕРКИ | ВОЛОСЫ — соло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/sumerki-volosy/</url>
+      <price>8500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Вечернее спа для головы. Расслабляющий массаж лица и шейно-воротниковой зоны, тёплая маска для глаз, авторский водный ритуал «Золотая дуга», травяной ритуал для кожи головы, уход Davines, согревание кистей и стоп. Длительность 90 минут. После — сушка со спа-мастером или самостоятельно.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">90 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="sumerki-telo-solo" available="true">
+      <name>СУМЕРКИ | ТЕЛО — соло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/sumerki-telo/</url>
+      <price>9900</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Вечерний спа-ритуал для тела. Сауна с успокаивающими эфирами, кремовое обновление кожи с лавандой, питательное обёртывание, расслабляющий спа-массаж тела 45 минут, массаж лица, согревание тёплыми травяными мешочками. Длительность 120 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">120 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="zarya-volosy-solo" available="true">
+      <name>ЗАРЯ | ВОЛОСЫ — соло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/zarya-volosy/</url>
+      <price>8500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Утреннее спа для головы. Тонизирующий массаж лица и шеи с криосферами, охлаждающая каменная маска для глаз, авторский водный ритуал «Золотая дуга», уход Davines для кожи головы и волос, пенный массаж головы, массаж кистей. Длительность 90 минут. После — сушка со спа-мастером или самостоятельно.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">90 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    <offer id="zarya-telo-solo" available="true">
+      <name>ЗАРЯ | ТЕЛО — соло</name>
+      <vendor>Истова</vendor>
+      <url>https://istova.ru/programs/zarya-telo/</url>
+      <price>8900</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <delivery>false</delivery>
+      <pickup>false</pickup>
+      <description>Утренний спа-ритуал для тела. Бодрящая финская сауна, скраб с гималайской солью и розовым грейпфрутом, тонизирующий массаж тела 45 минут, гидрогелевая маска против отёчности, массаж лица нефритовыми роликами, пробуждение через стопы. Длительность 100 минут.</description>
+      <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
+      <param name="Длительность">100 минут</param>
+      <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
+      <param name="Регион">Санкт-Петербург</param>
+    </offer>
+    </offers>
   </shop>
 </yml_catalog>
