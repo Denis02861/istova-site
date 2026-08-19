@@ -6,7 +6,7 @@ import CookieBanner from "./components/CookieBanner";
 const SITE_URL = "https://istova.ru";
 const TITLE = "Истова — head spa, спа и массаж головы в Санкт-Петербурге";
 const DESCRIPTION =
-  "Head spa и спа для головы на Васильевском острове. 9 авторских ритуалов от 6800 ₽, спа для двоих, аква-массаж, sound bath. Онлайн-запись, ежедневно 10:00–22:00. Ул. Беринга, 23 к. 2.";
+  "Head spa и спа для головы на Васильевском острове. 9 авторских ритуалов от 6800 ₽, спа для двоих. Онлайн-запись, ежедневно 10:00–22:00.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
