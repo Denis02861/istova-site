@@ -23,6 +23,8 @@ export type Article = {
   faq: ArticleFAQ[];
   stats?: { value: string; label: string }[];
   sources?: { title: string; url: string }[];
+  relatedSlugs?: string[]; // slug двух других статей блога для перелинковки
+  programSlug?: string; // slug программы из programs-data.ts, на которую ведёт статья
 };
 
 export const articles: Article[] = [

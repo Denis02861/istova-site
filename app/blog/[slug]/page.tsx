@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { articles } from "../../lib/blog-data";
+import { programs } from "../../lib/programs-data";
 import Header from "../../components/Header";
 import TrackedLink from "../../components/TrackedLink";
 import Footer from "../../components/Footer";
@@ -96,7 +97,15 @@ export default async function ArticlePage({
     ],
   };
 
-  const related = articles.filter((a) => a.slug !== slug).slice(0, 2);
+  const related = article.relatedSlugs
+    ? article.relatedSlugs
+        .map((s) => articles.find((a) => a.slug === s))
+        .filter((a): a is (typeof articles)[number] => Boolean(a))
+    : articles.filter((a) => a.slug !== slug).slice(0, 2);
+
+  const linkedProgram = article.programSlug
+    ? programs.find((p) => p.slug === article.programSlug)
+    : undefined;
 
   return (
     <>
@@ -217,6 +226,15 @@ export default async function ArticlePage({
             >
               Записаться на ритуал
             </TrackedLink>
+            {linkedProgram && (
+              <p className="mt-6 text-sm text-brand-dark/70">
+                Ближе всего к теме статьи программа{" "}
+                <Link href={`/programs/${linkedProgram.slug}/`} className="underline hover:text-brand">
+                  {linkedProgram.name}
+                </Link>
+                .
+              </p>
+            )}
           </section>
 
           {/* Другие статьи */}
