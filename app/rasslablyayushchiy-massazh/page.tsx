@@ -92,8 +92,6 @@ export default function RelaxMassagePage() {
           eyebrow="Санкт-Петербург · Васильевский остров"
           title="Расслабляющий массаж"
           lead="Мягкие техники, тёплая вода и неспешный темп для тех, кому нужно дать телу и нервной системе полноценно отдохнуть, а не проработать конкретную боль."
-          photo="/gallery/frag-massage.jpg"
-          photoAlt="Расслабляющий массаж в Истове"
           ctaFrom="rasslablyayushchiy_massazh_hero"
           priceHint="от 6800 ₽ · 75-150 минут"
         />
