@@ -3,6 +3,8 @@ import Link from "next/link";
 import Header from "../components/Header";
 import TrackedLink from "../components/TrackedLink";
 import Footer from "../components/Footer";
+import LandingHero from "../components/LandingHero";
+import { SplitBlock, PhotoStrip, ProgramCards, FeatureRow, FaqBlock } from "../components/LandingBlocks";
 import { programs } from "../lib/programs-data";
 
 const SITE_URL = "https://istova.ru";
@@ -11,8 +13,15 @@ const TITLE = "Расслабляющий массаж в СПб на Васил
 const DESCRIPTION =
   "Расслабляющий массаж тела и головы в Истове: мягкие техники, тёплая вода, без глубокой проработки боли. От 6800 ₽, м. Приморская. Записаться онлайн.";
 
-const RELAX_SLUGS = ["sumerki-telo", "lada", "kedr", "sumerki-volosy"];
-const RELAX_PROGRAMS = programs.filter((p) => RELAX_SLUGS.includes(p.slug));
+const SLUGS = ["sumerki-telo", "lada", "kedr", "sumerki-volosy"];
+const RELAX_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
+
+const PHOTOS: Record<string, string> = {
+  "sumerki-telo": "/gallery/05-massage.jpg",
+  "lada": "/gallery/frag-body.jpg",
+  "kedr": "/gallery/03-sauna.jpg",
+  "sumerki-volosy": "/gallery/frag-headspa.jpg",
+};
 
 const FAQ = [
   {
@@ -28,6 +37,10 @@ const FAQ = [
     a: "И для тела, и для головы: в наших ритуалах расслабляющий массаж тела сочетается с работой с кожей головы и шейно-воротниковой зоной, откуда чаще всего идёт напряжение.",
   },
   {
+    q: "Что происходит с организмом во время расслабляющего массажа?",
+    a: "Исследования показывают, что при умеренном давлении растёт активность парасимпатической нервной системы, отвечающей за покой и восстановление. Тело физически переключается из режима тревоги в режим отдыха.",
+  },
+  {
     q: "Как записаться на расслабляющий массаж?",
     a: "Через форму на сайте, по телефону +7 (901) 320-10-50 или в Telegram @Istova_spa. Администратор поможет выбрать программу под ваш запрос.",
   },
@@ -37,66 +50,30 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: URL },
-  keywords: [
-    "расслабляющий массаж спб",
-    "релакс массаж спб",
-    "расслабляющий массаж тела спб",
-    "массаж для расслабления",
-    "Истова",
-  ],
+  keywords: ["расслабляющий массаж спб", "релакс массаж спб", "расслабляющий массаж тела спб", "массаж для расслабления", "Истова"],
   authors: [{ name: "Истова", url: SITE_URL }],
   robots: { index: true, follow: true },
   openGraph: {
-    type: "website",
-    url: URL,
-    siteName: "Истова",
-    title: TITLE,
-    description: DESCRIPTION,
-    locale: "ru_RU",
+    type: "website", url: URL, siteName: "Истова", title: TITLE, description: DESCRIPTION, locale: "ru_RU",
     images: [{ url: `${SITE_URL}/og-image.webp`, width: 1200, height: 630, alt: "Расслабляющий массаж в Истове" }],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: TITLE,
-    description: DESCRIPTION,
-    images: [`${SITE_URL}/og-image.webp`],
-  },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [`${SITE_URL}/og-image.webp`] },
 };
 
 export default function RelaxMassagePage() {
   const SERVICE_JSONLD = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${URL}#service`,
-    serviceType: "Расслабляющий массаж",
-    name: "Расслабляющий массаж в Санкт-Петербурге",
-    description: DESCRIPTION,
-    provider: { "@id": `${SITE_URL}/#organization` },
-    areaServed: { "@type": "City", name: "Санкт-Петербург" },
-    url: URL,
-    offers: {
-      "@type": "Offer",
-      price: "6800",
-      priceCurrency: "RUB",
-      availability: "https://schema.org/InStock",
-      url: URL,
-    },
+    "@context": "https://schema.org", "@type": "Service", "@id": `${URL}#service`,
+    serviceType: "Расслабляющий массаж", name: "Расслабляющий массаж в Санкт-Петербурге", description: DESCRIPTION,
+    provider: { "@id": `${SITE_URL}/#organization` }, areaServed: { "@type": "City", name: "Санкт-Петербург" }, url: URL,
+    offers: { "@type": "Offer", price: "6800", priceCurrency: "RUB", availability: "https://schema.org/InStock", url: URL },
     inLanguage: "ru-RU",
   };
-
   const FAQ_JSONLD = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQ.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   };
-
   const BREADCRUMB_JSONLD = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Главная", item: `${SITE_URL}/` },
       { "@type": "ListItem", position: 2, name: "Расслабляющий массаж", item: URL },
@@ -105,129 +82,101 @@ export default function RelaxMassagePage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_JSONLD) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_JSONLD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }} />
       <Header />
-      <main className="bg-sand py-24">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <nav className="text-xs uppercase tracking-widest text-brand/60 mb-12">
+
+      <main className="bg-sand">
+        <LandingHero
+          eyebrow="Санкт-Петербург · Васильевский остров"
+          title="Расслабляющий массаж"
+          lead="Мягкие техники, тёплая вода и неспешный темп для тех, кому нужно дать телу и нервной системе полноценно отдохнуть, а не проработать конкретную боль."
+          photo="/gallery/frag-massage.jpg"
+          photoAlt="Расслабляющий массаж в Истове"
+          ctaFrom="rasslablyayushchiy_massazh_hero"
+          priceHint="от 6800 ₽ · 75-150 минут"
+        />
+
+        <div className="container mx-auto px-6 max-w-5xl">
+          <nav className="text-xs uppercase tracking-widest text-brand/50 pt-8">
             <Link href="/" className="hover:text-brand">Главная</Link>
             <span className="mx-2">·</span>
             <span className="text-brand">Расслабляющий массаж</span>
           </nav>
 
-          <header className="mb-16 pb-12 border-b border-brand/10">
-            <div className="text-xs uppercase tracking-widest text-brand/60 mb-4">
-              Санкт-Петербург · Васильевский остров
-            </div>
-            <h1 className="font-display text-4xl md:text-6xl text-brand mb-6 leading-tight">
-              Расслабляющий массаж в Санкт-Петербурге
-            </h1>
-            <p className="text-base md:text-lg text-brand-dark/85 leading-relaxed max-w-2xl mb-8">
-              Мягкие техники, тёплая вода и неспешный темп для тех, кому нужно дать телу и нервной системе полноценно отдохнуть, а не проработать конкретную боль.
-            </p>
-            <TrackedLink
-              goal="BOOKING_CLICK"
-              goalParams={{ from: "rasslablyayushchiy_massazh_hero" }}
-              href="/#booking"
-              className="inline-block text-sm uppercase tracking-widest px-8 py-4 bg-brand text-sand hover:bg-brand-dark transition-colors"
-            >
-              Записаться
-            </TrackedLink>
-          </header>
+          <SplitBlock
+            title="Что это"
+            paragraphs={[
+              "Расслабляющий массаж работает мягче и ровнее лечебного: длинные плавные движения вместо глубокого продавливания мышц. Задача снизить общую активность нервной системы и дать телу почувствовать покой, а не исправить конкретную проблему.",
+              "В Истове это часть спа-ритуала, а не отдельная десятиминутная процедура: тёплая вода, массаж тела, головы и шейно-воротниковой зоны, где обычно и копится напряжение от сидячей работы.",
+            ]}
+            photo="/gallery/06-body.jpg"
+            photoAlt="Массаж тела в Истове"
+          />
 
-          <section className="mb-14">
-            <h2 className="font-display text-2xl md:text-3xl text-brand mb-5 leading-snug">
-              Что это
-            </h2>
-            <div className="space-y-4 text-base text-brand-dark/85 leading-relaxed">
-              <p>
-                Расслабляющий массаж работает мягче и ровнее лечебного: длинные плавные движения вместо глубокого продавливания мышц. Задача снизить общую активность нервной системы и дать телу почувствовать покой, а не исправить конкретную проблему.
-              </p>
-              <p>
-                В Истове это часть спа-ритуала, а не отдельная десятиминутная процедура: тёплая вода, массаж тела, головы и шейно-воротниковой зоны, где обычно и копится напряжение от сидячей работы и постоянной занятости.
-              </p>
-            </div>
-          </section>
+          <FeatureRow
+            items={[
+              { title: "Умеренное давление", text: "Исследования фиксируют рост активности парасимпатической нервной системы именно при таком воздействии." },
+              { title: "Тело и голова вместе", text: "Массаж тела сочетается с работой с кожей головы и шеей, а не идёт отдельно от них." },
+              { title: "Без работы через боль", text: "Если нужна точечная проработка спазма, это другой формат. Мастер скажет об этом прямо." },
+            ]}
+          />
 
-          <section className="mb-14">
-            <h2 className="font-display text-2xl md:text-3xl text-brand mb-5 leading-snug">
-              Программы с расслабляющим массажем
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {RELAX_PROGRAMS.map((p) => (
-                <Link
-                  key={p.slug}
-                  href={`/programs/${p.slug}/`}
-                  className="group block border border-brand/10 bg-sand-soft p-6 hover:border-brand/30 hover:-translate-y-0.5 transition-all"
-                >
-                  <div className="font-display text-xl text-brand mb-2">{p.name}</div>
-                  <div className="text-sm text-brand-dark/70 leading-relaxed mb-4">{p.teaser}</div>
-                  <div className="flex justify-between items-end pt-3 border-t border-brand/10 text-xs">
-                    <span className="uppercase tracking-widest text-brand/70 group-hover:text-brand transition-colors">
-                      Открыть →
-                    </span>
-                    <span className="text-right">
-                      <span className="font-display text-lg text-brand block">{p.price}</span>
-                      <span className="text-brand-dark/60">~ {p.dur}</span>
-                    </span>
-                  </div>
-                </Link>
-              ))}
+          <PhotoStrip
+            photo="/gallery/frag-water.jpg"
+            alt="Водный ритуал в Истове"
+            caption="Тело замедляется, дыхание выравнивается, напряжение отпускает слой за слоем"
+          />
+
+          <ProgramCards title="Программы с расслабляющим массажем" programs={RELAX_PROGRAMS} photos={PHOTOS} />
+
+          <section className="pb-4">
+            <div className="rounded-[28px] bg-sand-soft border border-brand/10 p-8 md:p-10">
+              <div className="text-[11px] uppercase tracking-[0.18em] text-brand/55 mb-4">Разобраться подробнее</div>
+              <div className="grid sm:grid-cols-3 gap-5">
+                {[
+                  { href: "/blog/rasslablyayushchiy-massazh/", t: "Расслабляющий или лечебный", d: "Чем отличаются и когда нужен какой" },
+                  { href: "/blog/sheya-posle-raboty/", t: "Шея после рабочего дня", d: "Откуда зажимы и почему болит голова" },
+                  { href: "/blog/kak-snizit-kortizol/", t: "Кортизол и массаж", d: "Что показали исследования" },
+                ].map((l) => (
+                  <Link key={l.href} href={l.href} className="group block">
+                    <div className="font-display text-lg text-brand mb-1.5 leading-snug group-hover:text-brand-dark transition-colors">
+                      {l.t}
+                    </div>
+                    <div className="text-sm text-brand-dark/65 leading-relaxed">{l.d}</div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </section>
 
-          <section className="mb-16 border-t border-brand/10 pt-12">
-            <h2 className="text-xs uppercase tracking-widest text-brand/60 mb-8 font-normal">
-              Частые вопросы
-            </h2>
-            <div className="space-y-6">
-              {FAQ.map((f, i) => (
-                <div key={i}>
-                  <h3 className="font-display text-lg text-brand mb-2">{f.q}</h3>
-                  <p className="text-sm text-brand-dark/80 leading-relaxed">{f.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FaqBlock items={FAQ} />
+        </div>
 
-          <section className="p-10 bg-brand text-sand text-center">
-            <h2 className="font-display text-2xl md:text-3xl mb-4">
-              Записаться на расслабляющий массаж
-            </h2>
-            <p className="text-base text-sand/85 leading-relaxed max-w-xl mx-auto mb-8">
-              Истова на Васильевском острове, ул. Беринга, 23 к. 2, 10 минут пешком от м. Приморская. Мастер поможет выбрать программу под ваше состояние.
+        <section className="bg-brand text-sand">
+          <div className="container mx-auto px-6 max-w-3xl py-20 text-center">
+            <h2 className="font-display text-3xl md:text-4xl mb-5">Записаться на расслабляющий массаж</h2>
+            <p className="text-base text-sand/80 leading-relaxed mb-9">
+              Истова на Васильевском острове, ул. Беринга, 23 к. 2, десять минут пешком от метро Приморская.
+              Мастер поможет выбрать программу под ваше состояние.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <TrackedLink
-                goal="BOOKING_CLICK"
-                goalParams={{ from: "rasslablyayushchiy_massazh_cta" }}
-                href="/#booking"
-                className="inline-block text-sm uppercase tracking-widest px-8 py-4 bg-sand text-brand hover:bg-sand-soft transition-colors"
+                goal="BOOKING_CLICK" goalParams={{ from: "rasslablyayushchiy_massazh_cta" }} href="/#booking"
+                className="inline-flex items-center justify-center px-9 py-3.5 bg-sand text-brand rounded-full font-medium hover:bg-white active:scale-[0.98] transition-[transform,background-color] duration-[220ms]"
               >
                 Записаться онлайн
               </TrackedLink>
               <TrackedLink
-                goal="PHONE_CLICK"
-                goalParams={{ from: "rasslablyayushchiy_massazh_cta" }}
-                href="tel:+79013201050"
-                className="inline-block text-sm uppercase tracking-widest px-8 py-4 border border-sand/40 text-sand hover:bg-sand hover:text-brand transition-colors"
+                goal="PHONE_CLICK" goalParams={{ from: "rasslablyayushchiy_massazh_cta" }} href="tel:+79013201050"
+                className="inline-flex items-center justify-center px-9 py-3.5 border border-sand/40 text-sand rounded-full hover:bg-sand hover:text-brand active:scale-[0.98] transition-[transform,background-color,color] duration-[220ms]"
               >
                 +7 (901) 320-10-50
               </TrackedLink>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
