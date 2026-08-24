@@ -23,6 +23,28 @@ export default function Footer() {
           </div>
 
           <div>
+            <h4 className="text-sand mb-3 text-sm tracking-wide uppercase">Услуги</h4>
+            <ul className="space-y-1.5 text-sm mb-7">
+              <li>
+                <a href="/programs/" className="hover:text-sand">Все программы</a>
+              </li>
+              <li>
+                <a href="/spa-dlya-dvoih/" className="hover:text-sand">Спа для двоих</a>
+              </li>
+              <li>
+                <a href="/massazh-golovy/" className="hover:text-sand">Массаж головы</a>
+              </li>
+              <li>
+                <a href="/rasslablyayushchiy-massazh/" className="hover:text-sand">Расслабляющий массаж</a>
+              </li>
+              <li>
+                <a href="/antistress/" className="hover:text-sand">Антистресс</a>
+              </li>
+              <li>
+                <a href="/blog/" className="hover:text-sand">Блог</a>
+              </li>
+            </ul>
+
             <h4 className="text-sand mb-3 text-sm tracking-wide uppercase">Документы</h4>
             <ul className="space-y-1.5 text-sm">
               <li>
@@ -33,11 +55,6 @@ export default function Footer() {
               <li>
                 <a href="/oferta/" className="hover:text-sand">
                   Публичная оферта
-                </a>
-              </li>
-              <li>
-                <a href="/programs/" className="hover:text-sand">
-                  Все программы
                 </a>
               </li>
             </ul>

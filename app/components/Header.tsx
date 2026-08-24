@@ -9,6 +9,7 @@ const NAV = [
   { href: "#ritual", label: "Ритуал" },
   { href: "#programs", label: "Программы" },
   { href: "/massazh-golovy", label: "Массаж головы" },
+  { href: "/spa-dlya-dvoih", label: "Для двоих" },
   { href: "#tea", label: "Чай" },
   { href: "/blog", label: "Блог" },
   { href: "#contacts", label: "Контакты" },
