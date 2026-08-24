@@ -92,7 +92,7 @@ export default function MassazhGolovyPage() {
           eyebrow="Санкт-Петербург · Васильевский остров"
           title="Массаж головы"
           lead="Спокойный спа-массаж для тех, кто много думает и к вечеру ощущает тяжесть в затылке и шее. Мягкие техники, тёплая вода, уход за волосами и тишина, в которой можно наконец ни о чём не думать."
-          photo="/gallery/04-head-spa.jpg"
+          photo="/gallery/clean/massazh-golovy.jpg"
           photoAlt="Массаж головы в Истове"
           ctaFrom="massazh_golovy_hero"
           priceHint="от 6800 ₽ · 75-150 минут"

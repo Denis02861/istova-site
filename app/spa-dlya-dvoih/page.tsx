@@ -17,14 +17,14 @@ const PAIR_PROGRAMS = programs.filter((p) => p.pair_price);
 const KEDR_LADA = programs.find((p) => p.slug === "kedr-lada");
 
 const PHOTOS: Record<string, string> = {
-  "zarya-telo": "/gallery/06-body.jpg",
-  "zarya-volosy": "/gallery/04-head-spa.jpg",
-  "sumerki-telo": "/gallery/05-massage.jpg",
+  "zarya-telo": "/gallery/clean/skrab.jpg",
+  "zarya-volosy": "/gallery/head-spa/aurora.jpg",
+  "sumerki-telo": "/gallery/clean/massazh-golovy.jpg",
   "sumerki-volosy": "/gallery/frag-headspa.jpg",
   "rodnik": "/gallery/frag-care.jpg",
-  "kedr": "/gallery/03-sauna.jpg",
+  "kedr": "/gallery/clean/sauna.jpg",
   "lada": "/gallery/frag-body.jpg",
-  "yav": "/gallery/01-nastroyka.jpg",
+  "yav": "/gallery/clean/chasha.jpg",
 };
 
 const FAQ = [
@@ -96,7 +96,7 @@ export default function SpaDlyaDvoihPage() {
           eyebrow="Санкт-Петербург · Васильевский остров"
           title="Спа для двоих"
           lead="Провести время вместе, не разговаривая по очереди с телефоном в руке. Ритуалы проходят рядом: у каждого свой мастер, общий темп и тишина, в которой не нужно ничего решать."
-          photo="/gallery/02-spa-zone.jpg"
+          photo="/gallery/frag-lounge.jpg"
           photoAlt="Спа-пространство Истовы для двоих"
           ctaFrom="spa_dlya_dvoih_hero"
           priceHint="от 12 000 ₽ за двоих · 90-180 минут"
@@ -115,8 +115,8 @@ export default function SpaDlyaDvoihPage() {
               "Первый вариант проще: вы вдвоём проходите одну и ту же программу одновременно, каждый со своим мастером, а не по очереди. Так работает большинство ритуалов Истовы, и почти у каждого есть отдельная цена на двоих.",
               `Второй вариант для тех, кому одинаковая программа не подходит. Ритуал ${KEDR_LADA?.name ?? "КЕДР + ЛАДА"} собран из двух разных сценариев: для неё женская программа ЛАДА, для него мужская КЕДР. Оба идут параллельно, в одном пространстве, с общим финалом.`,
             ]}
-            photo="/gallery/frag-lounge.jpg"
-            photoAlt="Лаунж-зона Истовы"
+            photo="/gallery/frag-tea.jpg"
+            photoAlt="Чайная зона Истовы"
           />
 
           <FeatureRow
@@ -149,7 +149,7 @@ export default function SpaDlyaDvoihPage() {
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto md:min-h-[280px] overflow-hidden">
                     <img
-                      src="/gallery/03-sauna.jpg"
+                      src="/gallery/frag-sauna.jpg"
                       alt={KEDR_LADA.name}
                       loading="lazy"
                       decoding="async"

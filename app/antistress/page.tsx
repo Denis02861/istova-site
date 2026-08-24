@@ -17,11 +17,11 @@ const SLUGS = ["sumerki-telo", "sumerki-volosy", "kedr", "lada", "yav"];
 const ANTISTRESS_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "sumerki-telo": "/gallery/05-massage.jpg",
+  "sumerki-telo": "/gallery/clean/massazh-golovy.jpg",
   "sumerki-volosy": "/gallery/frag-headspa.jpg",
-  "kedr": "/gallery/03-sauna.jpg",
+  "kedr": "/gallery/clean/sauna.jpg",
   "lada": "/gallery/frag-body.jpg",
-  "yav": "/gallery/01-nastroyka.jpg",
+  "yav": "/gallery/clean/chasha.jpg",
 };
 
 const FAQ = [
@@ -112,7 +112,7 @@ export default function AntistressPage() {
               "Отдельной процедуры под названием антистресс в Истове нет, и мы не хотим обещать больше, чем можем дать. Вместо этого у нас спокойные спа-ритуалы, которые решают ту же задачу: снимают телесное напряжение, дают нервной системе паузу и помогают выдохнуть после тяжёлого периода.",
               "Мастер расспрашивает о вашем состоянии перед началом и подбирает программу под запрос: кому-то нужна работа с шеей и плечами, кому-то расслабляющий массаж тела, кому-то мягкий уход за кожей головы.",
             ]}
-            photo="/gallery/05-massage.jpg"
+            photo="/gallery/frag-massage.jpg"
             photoAlt="Расслабляющий массаж в Истове"
           />
 

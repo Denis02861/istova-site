@@ -17,9 +17,9 @@ const SLUGS = ["sumerki-telo", "lada", "kedr", "sumerki-volosy"];
 const RELAX_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "sumerki-telo": "/gallery/05-massage.jpg",
+  "sumerki-telo": "/gallery/clean/massazh-golovy.jpg",
   "lada": "/gallery/frag-body.jpg",
-  "kedr": "/gallery/03-sauna.jpg",
+  "kedr": "/gallery/clean/sauna.jpg",
   "sumerki-volosy": "/gallery/frag-headspa.jpg",
 };
 
@@ -111,8 +111,8 @@ export default function RelaxMassagePage() {
               "Расслабляющий массаж работает мягче и ровнее лечебного: длинные плавные движения вместо глубокого продавливания мышц. Задача снизить общую активность нервной системы и дать телу почувствовать покой, а не исправить конкретную проблему.",
               "В Истове это часть спа-ритуала, а не отдельная десятиминутная процедура: тёплая вода, массаж тела, головы и шейно-воротниковой зоны, где обычно и копится напряжение от сидячей работы.",
             ]}
-            photo="/gallery/06-body.jpg"
-            photoAlt="Массаж тела в Истове"
+            photo="/gallery/clean/skrab.jpg"
+            photoAlt="Ритуал ухода за телом в Истове"
           />
 
           <FeatureRow
