@@ -6,6 +6,7 @@ import { programs } from "../../lib/programs-data";
 import { coverFor, inlineFor } from "../../lib/blog-covers";
 import Reveal from "../../components/Reveal";
 import Parallax from "../../components/Parallax";
+import Aurora from "../../components/magicui/Aurora";
 import Header from "../../components/Header";
 import TrackedLink from "../../components/TrackedLink";
 import Footer from "../../components/Footer";
@@ -126,29 +127,22 @@ export default async function ArticlePage({
       />
       <Header />
 
-      {/* Обложка */}
-      <section className="relative min-h-[62vh] md:min-h-[72vh] flex items-end overflow-hidden">
-        <img
-          src={coverFor(article.slug)}
-          alt={article.h1}
-          fetchPriority="high"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/92 via-brand-dark/50 to-brand-dark/15" />
-        <div className="container mx-auto px-6 max-w-3xl relative z-10 pb-14 md:pb-20 pt-32">
-          <nav className="text-[11px] uppercase tracking-[0.18em] text-sand/60 mb-6">
-            <Link href="/" className="hover:text-sand">Главная</Link>
+      {/* Обложка: светлый фон с плавающими пятнами, как на главной */}
+      <section className="relative min-h-[52vh] md:min-h-[58vh] flex items-center overflow-hidden bg-sand pt-28 pb-14">
+        <Aurora />
+        <div className="container mx-auto px-6 max-w-3xl relative z-10">
+          <nav className="text-[11px] uppercase tracking-[0.18em] text-brand/50 mb-7">
+            <Link href="/" className="hover:text-brand">Главная</Link>
             <span className="mx-2">·</span>
-            <Link href="/blog/" className="hover:text-sand">Блог</Link>
+            <Link href="/blog/" className="hover:text-brand">Блог</Link>
           </nav>
-          <div className="text-[11px] uppercase tracking-[0.18em] text-sand/70 mb-4">
+          <div className="text-[11px] uppercase tracking-[0.18em] text-brand/55 mb-5">
             {article.keyword_main}
           </div>
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-sand mb-5 leading-[1.08]">
+          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-brand mb-6 leading-[1.08]">
             {article.h1}
           </h1>
-          <p className="text-base md:text-lg text-sand/85 leading-relaxed max-w-2xl">
+          <p className="text-base md:text-lg text-brand-dark/80 leading-relaxed max-w-2xl">
             {article.description}
           </p>
         </div>
