@@ -31,11 +31,11 @@ export default function HeadSpa() {
           <span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">Наша визитка</span>
         </div>
         <BlurFade delay={0.05} yOffset={16}>
-          <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">Head spa</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">Спа для головы</h2>
         </BlurFade>
         <BlurFade delay={0.15} yOffset={16}>
           <p className="text-center text-brand-dark/70 mb-16 max-w-2xl mx-auto leading-relaxed">
-            Восточная техника ухода за головой и лицом. То, за чем возвращаются к нам чаще всего.
+            Восточная техника ухода за головой и лицом, её ещё называют head spa. То, за чем возвращаются к нам чаще всего.
           </p>
         </BlurFade>
 

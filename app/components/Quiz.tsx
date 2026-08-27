@@ -80,7 +80,7 @@ export default function Quiz() {
   const OPTIONS = {
     focus: [
       { v: "body" as Focus, label: "На тело", d: "массаж, тепло, кожа" },
-      { v: "hair" as Focus, label: "Голова и волосы", d: "head spa, уход, расслабление" },
+      { v: "hair" as Focus, label: "Голова и волосы", d: "спа для головы, уход, расслабление" },
       { v: "both" as Focus, label: "Всё вместе", d: "тело и голова, полный ритуал" },
     ],
     time: [
