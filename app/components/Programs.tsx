@@ -161,10 +161,10 @@ export default function Programs() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Программы</span></div>
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">
-          9 ритуалов Истовы
+          8 ритуалов Истовы
         </h2>
         <p className="text-center text-brand-dark/70 mb-10 max-w-2xl mx-auto">
-          9 авторских ритуалов Истовы, у каждого свой темп, аромат и финал. Свайпайте карточки →
+          8 авторских ритуалов Истовы, у каждого свой темп, аромат и финал. Плюс парный вариант КЕДР + ЛАДА. Свайпайте карточки →
         </p>
 
         <div className="max-w-3xl mx-auto mb-10 border border-brand/15 bg-sand-soft/60 p-6 md:p-8">

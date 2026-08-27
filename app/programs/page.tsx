@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 const SITE_URL = "https://istova.ru";
 const TITLE = "Все программы Истовы — 9 спа-ритуалов и спа для двоих в СПб";
 const DESCRIPTION =
-  "9 авторских спа-ритуалов Истовы и спа для двоих на Васильевском острове, м. Приморская. ✔ Утренние и вечерние ✔ Мужская и женская ✔ Для беременных ✔ Тишина.";
+  "8 авторских спа-ритуалов Истовы и спа для двоих на Васильевском острове, м. Приморская. ✔ Утренние и вечерние ✔ Мужская и женская ✔ Для беременных ✔ Тишина.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -120,10 +120,10 @@ export default function ProgramsCatalogPage() {
           <header className="mb-16 text-center">
             <div className="text-xs uppercase tracking-widest text-brand/60 mb-4">Программы</div>
             <h1 className="font-display text-4xl md:text-6xl text-brand uppercase tracking-wider mb-6">
-              9 ритуалов Истовы
+              8 ритуалов Истовы
             </h1>
             <p className="text-base md:text-lg text-brand-dark/80 max-w-2xl mx-auto leading-relaxed">
-              9 авторских ритуалов Истовы. Массаж тела и лица, спа для головы с тёплой водой, уход за волосами, сауна и обёртывания — собранные в спокойные сценарии с выбором аромата, тишиной и чаем в финале. Каждый — от 70 до 150 минут.
+              8 авторских ритуалов Истовы плюс парный вариант КЕДР + ЛАДА. Массаж тела и лица, спа для головы с тёплой водой, уход за волосами, сауна и обёртывания — собранные в спокойные сценарии с выбором аромата, тишиной и чаем в финале. Каждый — от 70 до 150 минут.
             </p>
           </header>
 
