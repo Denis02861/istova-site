@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const SITE_URL = "https://istova.ru";
-const TITLE = "Все программы Истовы — 9 спа-ритуалов и спа для двоих в СПб";
+const TITLE = "Все программы Истовы — 8 спа-ритуалов и спа для двоих в СПб";
 const DESCRIPTION =
   "8 авторских спа-ритуалов Истовы и спа для двоих на Васильевском острове, м. Приморская. ✔ Утренние и вечерние ✔ Мужская и женская ✔ Для беременных ✔ Тишина.";
 

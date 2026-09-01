@@ -11,7 +11,7 @@ const SITE_URL = "https://istova.ru";
 const URL = `${SITE_URL}/massazh-golovy/`;
 const TITLE = "Массаж головы в СПб: спа-массаж головы на Васильевском | Истова";
 const DESCRIPTION =
-  "Расслабляющий спа-массаж головы в СПб: тёплая вода, мягкие техники, уход Davines. Уходит тяжесть в голове и зажатость в шее. От 6800 ₽, м. Приморская.";
+  "Спа-массаж головы 75–150 минут: тёплая вода «золотой дуги», работа с шеей и плечами, уход Davines, сушка и укладка в финале. От 6800 ₽, м. Приморская.";
 
 const SLUGS = ["zarya-volosy", "sumerki-volosy", "rodnik", "yav"];
 const HEAD_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
