@@ -199,7 +199,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png" />
         <link rel="preload" as="image" href="/logo/istova-wordmark.webp" fetchPriority="high" type="image/webp" />
-        <link rel="preload" as="font" href="/fonts/Inter-Variable.woff2" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" href="/fonts/GolosText-Variable.woff2" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" href="/fonts/UNCAGE-Variable.woff2" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://mc.yandex.ru" />
         <link rel="dns-prefetch" href="https://yandex.ru" />
         <link rel="preconnect" href="https://mc.yandex.ru" />
@@ -221,11 +222,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=${YM_ID}", "ym");ym(${YM_ID}, "init", {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});`}
         </Script>
+        {/* GA4 дублирует Яндекс.Метрику, поэтому грузим его после window.load:
+            он перестаёт влиять на Total Blocking Time, а данные почти не теряются. */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-980B4F1TWG"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4-init" strategy="afterInteractive">
+        <Script id="ga4-init" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-980B4F1TWG');`}
         </Script>
         <noscript>

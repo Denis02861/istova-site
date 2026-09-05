@@ -28,6 +28,7 @@ TOKEN = os.environ.get("APIFY_API_KEY2")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
 
 PREVIEW_SECONDS = 6
+POSTER_WIDTH = 400
 PREVIEW_WIDTH = 480
 
 
@@ -71,6 +72,17 @@ def make_preview(full_mp4, out_mp4):
     subprocess.run(cmd, check=True)
 
 
+def make_poster_webp(src_jpg, out_webp):
+    """Лёгкий постер для ленты: плитка на сайте 160-192px, поэтому 400px хватает
+    с запасом под retina. Даёт примерно минус 80% веса против исходного JPEG."""
+    cmd = [
+        "ffmpeg", "-y", "-loglevel", "error", "-i", str(src_jpg),
+        "-vf", f"scale={POSTER_WIDTH}:-2",
+        "-c:v", "libwebp", "-quality", "80", str(out_webp),
+    ]
+    subprocess.run(cmd, check=True)
+
+
 def clean_alt(caption):
     if not caption:
         return "Кадр из жизни Истовы"
@@ -103,21 +115,25 @@ def main():
                 size = download(p["videoUrl"], full)
                 download(p.get("displayUrl"), poster)
                 make_preview(full, prev)
+                poster_webp = FEED_DIR / f"{code}.webp"
+                make_poster_webp(poster, poster_webp)
                 feed.append({
                     "type": "video",
                     "src": f"/gallery/feed/{full.name}",
                     "preview": f"/gallery/feed/{prev.name}",
-                    "poster": f"/gallery/feed/{poster.name}",
+                    "poster": f"/gallery/feed/{poster_webp.name}",
                     "alt": alt, "link": link,
                 })
                 log(f"  [video] {code} ({size // 1024} KB) + preview")
             else:
                 img = FEED_DIR / f"{code}.jpg"
                 size = download(p.get("displayUrl"), img)
+                img_webp = FEED_DIR / f"{code}.webp"
+                make_poster_webp(img, img_webp)
                 feed.append({
                     "type": "image",
                     "src": f"/gallery/feed/{img.name}",
-                    "poster": f"/gallery/feed/{img.name}",
+                    "poster": f"/gallery/feed/{img_webp.name}",
                     "alt": alt, "link": link,
                 })
                 log(f"  [image] {code} ({size // 1024} KB)")

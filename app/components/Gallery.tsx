@@ -1,8 +1,43 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 import BlurFade from "./magicui/BlurFade";
+
+// Видео в ленте грузится и запускается только когда плитка попала в кадр.
+// Раньше все семь клипов стартовали при загрузке страницы, включая те,
+// что за краем экрана: около 1,8 МБ трафика и лишняя работа процессора.
+function LazyVideo({ src, poster, className }: { src: string; poster: string; className: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    // Без поддержки IntersectionObserver просто грузим как раньше
+    if (typeof IntersectionObserver === "undefined") {
+      el.src = src;
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (!el.src) el.src = src;
+          el.play().catch(() => {});
+        } else {
+          el.pause();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    io.observe(el);
+    return () => io.disconnect();
+  }, [src]);
+
+  return <video ref={ref} poster={poster} muted loop playsInline preload="none" className={className} />;
+}
 
 type Item = {
   type: "image" | "video";
@@ -15,16 +50,16 @@ type Item = {
 
 // Первая линия — студийные фото Истовы (все в одну ленту)
 const studioPhotos: Item[] = [
-  { type: "image", src: "/gallery/frag-lounge.jpg",  poster: "/gallery/frag-lounge.jpg",  alt: "Зона отдыха с закатным светом" },
-  { type: "image", src: "/gallery/frag-tea.jpg",     poster: "/gallery/frag-tea.jpg",     alt: "Чайный ритуал" },
-  { type: "image", src: "/gallery/frag-headspa.jpg", poster: "/gallery/frag-headspa.jpg", alt: "Кабинет спа для головы" },
-  { type: "image", src: "/gallery/frag-aroma.jpg",   poster: "/gallery/frag-aroma.jpg",   alt: "Арома-ритуалы Истовы" },
-  { type: "image", src: "/gallery/frag-sauna.jpg",   poster: "/gallery/frag-sauna.jpg",   alt: "Финская сауна" },
-  { type: "image", src: "/gallery/frag-water.jpg",   poster: "/gallery/frag-water.jpg",   alt: "Welcome-зона" },
-  { type: "image", src: "/gallery/frag-massage.jpg", poster: "/gallery/frag-massage.jpg", alt: "Массажный кабинет" },
-  { type: "image", src: "/gallery/frag-care.jpg",    poster: "/gallery/frag-care.jpg",    alt: "Уход и косметика Davines" },
-  { type: "image", src: "/gallery/frag-body.jpg",    poster: "/gallery/frag-body.jpg",    alt: "Ритуалы для тела" },
-  { type: "image", src: "/gallery/frag-apples.jpg",  poster: "/gallery/frag-apples.jpg",  alt: "Лаунж-зона" },
+  { type: "image", src: "/gallery/frag-lounge.jpg",  poster: "/gallery/frag-lounge.webp",  alt: "Зона отдыха с закатным светом" },
+  { type: "image", src: "/gallery/frag-tea.jpg",     poster: "/gallery/frag-tea.webp",     alt: "Чайный ритуал" },
+  { type: "image", src: "/gallery/frag-headspa.jpg", poster: "/gallery/frag-headspa.webp", alt: "Кабинет спа для головы" },
+  { type: "image", src: "/gallery/frag-aroma.jpg",   poster: "/gallery/frag-aroma.webp",   alt: "Арома-ритуалы Истовы" },
+  { type: "image", src: "/gallery/frag-sauna.jpg",   poster: "/gallery/frag-sauna.webp",   alt: "Финская сауна" },
+  { type: "image", src: "/gallery/frag-water.jpg",   poster: "/gallery/frag-water.webp",   alt: "Welcome-зона" },
+  { type: "image", src: "/gallery/frag-massage.jpg", poster: "/gallery/frag-massage.webp", alt: "Массажный кабинет" },
+  { type: "image", src: "/gallery/frag-care.jpg",    poster: "/gallery/frag-care.webp",    alt: "Уход и косметика Davines" },
+  { type: "image", src: "/gallery/frag-body.jpg",    poster: "/gallery/frag-body.webp",    alt: "Ритуалы для тела" },
+  { type: "image", src: "/gallery/frag-apples.jpg",  poster: "/gallery/frag-apples.webp",  alt: "Лаунж-зона" },
 ];
 
 export default function Gallery() {
@@ -76,14 +111,9 @@ export default function Gallery() {
       className="group relative shrink-0 w-40 sm:w-48 aspect-[3/4] rounded-lg overflow-hidden border border-brand/10 bg-brand/5 cursor-pointer"
     >
       {item.type === "video" ? (
-        <video
+        <LazyVideo
           src={item.preview || item.src}
           poster={item.poster}
-          muted
-          loop
-          autoPlay
-          playsInline
-          preload="metadata"
           className={`w-full h-full object-cover transition-all duration-700 ease-out ${live ? "opacity-85 group-hover:opacity-100" : "blur-[2.5px] opacity-70 scale-105 group-hover:blur-0 group-hover:opacity-100 group-hover:scale-100"}`}
         />
       ) : (
