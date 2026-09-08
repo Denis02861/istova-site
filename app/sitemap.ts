@@ -13,6 +13,7 @@ const STATIC_PAGES: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/massazh-golovy/", priority: 0.9, changefreq: "monthly" },
   { path: "/antistress/", priority: 0.9, changefreq: "monthly" },
   { path: "/rasslablyayushchiy-massazh/", priority: 0.9, changefreq: "monthly" },
+  { path: "/kak-prohodit/", priority: 0.85, changefreq: "monthly" },
   { path: "/blog/", priority: 0.7, changefreq: "weekly" },
   { path: "/politika-obrabotki-personalnyh-dannyh/", priority: 0.3, changefreq: "yearly" },
   { path: "/oferta/", priority: 0.3, changefreq: "yearly" },

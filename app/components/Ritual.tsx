@@ -40,9 +40,18 @@ export default function Ritual() {
         <BlurFade delay={0.05} yOffset={16}>
           <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">Как проходит ваш визит</h2>
         </BlurFade>
-        <p className="text-center text-brand-dark/70 max-w-xl mx-auto mb-20 leading-relaxed">
+        <p className="text-center text-brand-dark/70 max-w-xl mx-auto mb-8 leading-relaxed">
           От встречи в холле до тихого возвращения — путь, который не хочется прерывать.
         </p>
+        <div className="text-center mb-16">
+          <a
+            href="/kak-prohodit/"
+            className="inline-flex items-center gap-2 text-sm text-brand border-b border-brand/30 pb-0.5 hover:border-brand transition-colors duration-300"
+          >
+            Подробно: сколько длится каждый шаг и что взять с собой
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
 
         <Reveal as="ol" stagger={220} className="max-w-3xl mx-auto relative">
           <div className="absolute left-[38px] md:left-[52px] top-4 bottom-4 w-px bg-gradient-to-b from-brand/5 via-brand/20 to-brand/5 pointer-events-none" aria-hidden="true" />
