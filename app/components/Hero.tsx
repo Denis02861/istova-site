@@ -10,8 +10,6 @@ export default function Hero() {
     <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
       <Aurora />
       <div className="container mx-auto px-6 text-center relative z-10">
-        <h1 className="sr-only">Истова — head spa и спа для головы в Санкт-Петербурге, Васильевский остров</h1>
-
         <BlurFade delay={0.1} yOffset={20}>
           <img
             src="/logo/istova-wordmark.webp"
@@ -26,9 +24,11 @@ export default function Hero() {
         </BlurFade>
 
         <BlurFade delay={0.42} yOffset={14}>
-          <p className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12">
-            СПА · <NumberTicker value={256} className="tabular-nums" /> м² · Васильевский · запишитесь онлайн
-          </p>
+          {/* Видимый H1: тот же вид, что был у служебной строки, но заголовок
+              теперь читают и гость, и поисковик. Раньше он стоял скрытым (sr-only). */}
+          <h1 className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12 font-normal">
+            Head spa и спа для головы в Санкт-Петербурге · <NumberTicker value={256} className="tabular-nums" /> м² · Васильевский
+          </h1>
         </BlurFade>
 
         <BlurFade delay={0.56} yOffset={14}>
