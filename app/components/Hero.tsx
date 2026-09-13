@@ -27,7 +27,7 @@ export default function Hero() {
           {/* Видимый H1: тот же вид, что был у служебной строки, но заголовок
               теперь читают и гость, и поисковик. Раньше он стоял скрытым (sr-only). */}
           <h1 className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12 font-normal">
-            Head spa и спа для головы в Санкт-Петербурге · <NumberTicker value={256} className="tabular-nums" /> м² · Васильевский
+            Head spa и спа для головы в Санкт-Петербурге · <span className="tabular-nums">256</span> м² · Васильевский
           </h1>
         </BlurFade>
 
