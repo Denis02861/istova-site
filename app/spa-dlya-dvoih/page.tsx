@@ -17,14 +17,14 @@ const PAIR_PROGRAMS = programs.filter((p) => p.pair_price);
 const KEDR_LADA = programs.find((p) => p.slug === "kedr-lada");
 
 const PHOTOS: Record<string, string> = {
-  "zarya-telo": "/gallery/clean/skrab.jpg",
-  "zarya-volosy": "/gallery/head-spa/aurora.jpg",
-  "sumerki-telo": "/gallery/clean/massazh-golovy.jpg",
-  "sumerki-volosy": "/gallery/frag-headspa.jpg",
-  "rodnik": "/gallery/frag-care.jpg",
+  "zarya-telo": "/gallery/clean/skrab.webp",
+  "zarya-volosy": "/gallery/head-spa/aurora.webp",
+  "sumerki-telo": "/gallery/clean/massazh-golovy.webp",
+  "sumerki-volosy": "/gallery/frag-headspa.webp",
+  "rodnik": "/gallery/frag-care.webp",
   "kedr": "/gallery/clean/sauna.jpg",
-  "lada": "/gallery/frag-body.jpg",
-  "yav": "/gallery/clean/chasha.jpg",
+  "lada": "/gallery/frag-body.webp",
+  "yav": "/gallery/clean/chasha.webp",
 };
 
 const FAQ = [
@@ -113,7 +113,7 @@ export default function SpaDlyaDvoihPage() {
               "Первый вариант проще: вы вдвоём проходите одну и ту же программу одновременно, каждый со своим мастером, а не по очереди. Так работает большинство ритуалов Истовы, и почти у каждого есть отдельная цена на двоих.",
               `Второй вариант для тех, кому одинаковая программа не подходит. Ритуал ${KEDR_LADA?.name ?? "КЕДР + ЛАДА"} собран из двух разных сценариев: для неё женская программа ЛАДА, для него мужская КЕДР. Оба идут параллельно, в одном пространстве, с общим финалом.`,
             ]}
-            photo="/gallery/frag-tea.jpg"
+            photo="/gallery/frag-tea.webp"
             photoAlt="Чайная зона Истовы"
           />
 
@@ -126,7 +126,7 @@ export default function SpaDlyaDvoihPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/frag-water.jpg"
+            photo="/gallery/frag-water.webp"
             alt="Водный ритуал в Истове"
             caption="Не нужен особый день, чтобы почувствовать себя особенной"
           />
@@ -147,7 +147,7 @@ export default function SpaDlyaDvoihPage() {
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto md:min-h-[280px] overflow-hidden">
                     <img
-                      src="/gallery/frag-sauna.jpg"
+                      src="/gallery/frag-sauna.webp"
                       alt={KEDR_LADA.name}
                       loading="lazy"
                       decoding="async"
@@ -182,7 +182,7 @@ export default function SpaDlyaDvoihPage() {
               "Годовщина, день рождения, просто выходной, который хочется провести не за экраном. Спа для двоих подходит и для первого свидания без суеты, и для пары, которая вместе уже много лет и ищет повод отложить дела и побыть рядом.",
               "Отдельно это работает как подарок: сертификат на парную программу можно оформить заранее и вручить без привязки к конкретной дате визита.",
             ]}
-            photo="/gallery/frag-tea.jpg"
+            photo="/gallery/frag-tea.webp"
             photoAlt="Чайная церемония в Истове"
           />
 

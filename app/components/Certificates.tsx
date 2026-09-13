@@ -43,7 +43,7 @@ export default function Certificates() {
               <CardTilt key={i} maxTilt={11} scale={1.04}>
                 <div className="group relative aspect-[1748/1241] rounded-sm overflow-hidden shadow-[0_18px_50px_-12px_rgba(116,68,54,0.35)] hover:shadow-[0_30px_70px_-15px_rgba(116,68,54,0.45)] transition-shadow duration-500 border border-brand/10">
                   <img
-                    src="/certificates/blank.jpg"
+                    src="/certificates/blank.webp"
                     alt={`Подарочный сертификат ${t.value}`}
                     className="w-full h-full object-cover"
                     loading="lazy"

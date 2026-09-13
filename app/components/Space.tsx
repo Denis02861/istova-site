@@ -6,12 +6,12 @@ import Reveal from "./Reveal";
 type Zone = { title: string; desc: string; img: string };
 
 const zones: Zone[] = [
-  { title: "Спа для головы",   desc: "Азиатская техника, аква-медитация с водной дугой",           img: "/gallery/04-head-spa.jpg" },
-  { title: "Финская сауна",    desc: "70-90°C — расслабление мышц, дополняет уходы за телом",     img: "/gallery/03-sauna.jpg" },
-  { title: "Ритуалы для тела", desc: "Скрабирование натуральными скрабами, тёплые обёртывания",  img: "/gallery/06-body.jpg" },
-  { title: "Массаж",           desc: "Мастера владеют техниками расслабляющего массажа",           img: "/gallery/05-massage.jpg" },
-  { title: "Настройка",        desc: "Первые минуты — плавное переключение из внешней суеты",      img: "/gallery/01-nastroyka.jpg" },
-  { title: "Спа-зона",         desc: "Приватные кабинеты, чайная комната, зона тишины",           img: "/gallery/02-spa-zone.jpg" },
+  { title: "Спа для головы",   desc: "Азиатская техника, аква-медитация с водной дугой",           img: "/gallery/04-head-spa.webp" },
+  { title: "Финская сауна",    desc: "70-90°C — расслабление мышц, дополняет уходы за телом",     img: "/gallery/03-sauna.webp" },
+  { title: "Ритуалы для тела", desc: "Скрабирование натуральными скрабами, тёплые обёртывания",  img: "/gallery/06-body.webp" },
+  { title: "Массаж",           desc: "Мастера владеют техниками расслабляющего массажа",           img: "/gallery/05-massage.webp" },
+  { title: "Настройка",        desc: "Первые минуты — плавное переключение из внешней суеты",      img: "/gallery/01-nastroyka.webp" },
+  { title: "Спа-зона",         desc: "Приватные кабинеты, чайная комната, зона тишины",           img: "/gallery/02-spa-zone.webp" },
 ];
 
 export default function Space() {

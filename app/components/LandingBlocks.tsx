@@ -97,7 +97,7 @@ export function ProgramCards({
             >
               <div className="relative h-52 overflow-hidden">
                 <img
-                  src={photos[p.slug] || "/gallery/frag-sauna.jpg"}
+                  src={photos[p.slug] || "/gallery/frag-sauna.webp"}
                   alt={p.name}
                   loading="lazy"
                   decoding="async"

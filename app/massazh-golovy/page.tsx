@@ -17,10 +17,10 @@ const SLUGS = ["zarya-volosy", "sumerki-volosy", "rodnik", "yav"];
 const HEAD_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "zarya-volosy": "/gallery/head-spa/aurora.jpg",
-  "sumerki-volosy": "/gallery/head-spa/jade.jpg",
-  "rodnik": "/gallery/frag-care.jpg",
-  "yav": "/gallery/head-spa/wooden.jpg",
+  "zarya-volosy": "/gallery/head-spa/aurora.webp",
+  "sumerki-volosy": "/gallery/head-spa/jade.webp",
+  "rodnik": "/gallery/frag-care.webp",
+  "yav": "/gallery/head-spa/wooden.webp",
 };
 
 const FAQ = [
@@ -109,7 +109,7 @@ export default function MassazhGolovyPage() {
               "Массаж головы в Истове это не быстрая процедура между делом, а часть спокойного спа-ритуала. Мастер работает с кожей головы, висками, затылком и зоной шеи и плеч, куда чаще всего уходит дневное напряжение.",
               "Мы не ставим задачу что-то исправить во внешности. Задача другая: помочь расслабиться и дать голове отдохнуть так, как это редко получается в обычном дне.",
             ]}
-            photo="/gallery/head-spa/aurora.jpg"
+            photo="/gallery/head-spa/aurora.webp"
             photoAlt="Водный ритуал Золотая дуга"
           />
 
@@ -122,7 +122,7 @@ export default function MassazhGolovyPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/head-spa/jade.jpg"
+            photo="/gallery/head-spa/jade.webp"
             alt="Ритуал ухода за кожей головы"
             caption="Уходит тяжесть в голове, ночью легче засыпается, мысли становятся тише"
           />
@@ -136,7 +136,7 @@ export default function MassazhGolovyPage() {
               "Сначала короткий разговор с мастером: как вы себя чувствуете, есть ли чувствительность кожи, какой аромат приятнее. Дальше начинается сам уход, с мягким массажем и тёплой водой, без спешки и лишних движений.",
               "Точную последовательность мастер выстраивает под вас на месте. Ближе к финалу приводит волосы в порядок, и остаётся время спокойно посидеть с чаем. Ничего активного сразу после планировать не стоит.",
             ]}
-            photo="/gallery/head-spa/wooden.jpg"
+            photo="/gallery/head-spa/wooden.webp"
             photoAlt="Гребни для массажа головы"
           />
 

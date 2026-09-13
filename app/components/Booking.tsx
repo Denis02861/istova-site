@@ -201,7 +201,7 @@ export default function Booking() {
       <div
         aria-hidden="true"
         className="absolute inset-0 opacity-30 bg-cover bg-center pointer-events-none"
-        style={{ backgroundImage: "url('/textures/marble-dark.jpg')", mixBlendMode: "overlay" }}
+        style={{ backgroundImage: "url('/textures/marble-dark.webp')", mixBlendMode: "overlay" }}
       />
       <div className="container mx-auto px-6 max-w-3xl text-center relative z-10">
         <BlurFade delay={0.05} yOffset={16}><h2 className="font-display text-4xl md:text-5xl mb-6 tracking-tight">Записаться на ритуал</h2></BlurFade>

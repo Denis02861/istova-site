@@ -4,19 +4,19 @@ import BlurFade from "./magicui/BlurFade";
 
 const items = [
   {
-    src: "/gallery/head-spa/jade.jpg",
+    src: "/gallery/head-spa/jade.webp",
     title: "Аква-медитация",
     tagline: "Расслабление глубже классического массажа",
     tags: ["японская школа", "нефритовые скребки", "тёплая вода"],
   },
   {
-    src: "/gallery/head-spa/wooden.jpg",
+    src: "/gallery/head-spa/wooden.webp",
     title: "Массаж головы",
     tagline: "Точки, микроциркуляция, живые корни волос",
     tags: ["деревянные скребки", "снимает мигрень"],
   },
   {
-    src: "/gallery/head-spa/aurora.jpg",
+    src: "/gallery/head-spa/aurora.webp",
     title: "Массаж лица",
     tagline: "Тонус и свежесть, мягкие техники",
     tags: ["тонус кожи", "снятие отёков", "шейно-воротниковая зона"],
