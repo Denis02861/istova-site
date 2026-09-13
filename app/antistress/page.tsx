@@ -17,11 +17,11 @@ const SLUGS = ["sumerki-telo", "sumerki-volosy", "kedr", "lada", "yav"];
 const ANTISTRESS_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "sumerki-telo": "/gallery/clean/massazh-golovy.jpg",
-  "sumerki-volosy": "/gallery/frag-headspa.jpg",
+  "sumerki-telo": "/gallery/clean/massazh-golovy.webp",
+  "sumerki-volosy": "/gallery/frag-headspa.webp",
   "kedr": "/gallery/clean/sauna.jpg",
-  "lada": "/gallery/frag-body.jpg",
-  "yav": "/gallery/clean/chasha.jpg",
+  "lada": "/gallery/frag-body.webp",
+  "yav": "/gallery/clean/chasha.webp",
 };
 
 const FAQ = [
@@ -110,7 +110,7 @@ export default function AntistressPage() {
               "Отдельной процедуры под названием антистресс в Истове нет, и мы не хотим обещать больше, чем можем дать. Вместо этого у нас спокойные спа-ритуалы, которые решают ту же задачу: снимают телесное напряжение, дают нервной системе паузу и помогают выдохнуть после тяжёлого периода.",
               "Мастер расспрашивает о вашем состоянии перед началом и подбирает программу под запрос: кому-то нужна работа с шеей и плечами, кому-то расслабляющий массаж тела, кому-то мягкий уход за кожей головы.",
             ]}
-            photo="/gallery/frag-massage.jpg"
+            photo="/gallery/frag-massage.webp"
             photoAlt="Расслабляющий массаж в Истове"
           />
 
@@ -123,7 +123,7 @@ export default function AntistressPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/frag-sauna.jpg"
+            photo="/gallery/frag-sauna.webp"
             alt="Финская сауна в Истове"
             caption="Тишина, в которой не нужно ничего решать"
           />
@@ -137,7 +137,7 @@ export default function AntistressPage() {
               "Мы не медицинский центр и не ставим диагнозов. Спа-ритуалы снимают накопленное напряжение в теле и дают нервной системе передышку, но это уход и поддержка, а не лечение тревожных состояний или выгорания.",
               "Если состояние держится месяцами и мешает жить, разумнее сначала обратиться к психологу или врачу. Спа в этом случае хорошо работает рядом с такой поддержкой, но не вместо неё.",
             ]}
-            photo="/gallery/frag-tea.jpg"
+            photo="/gallery/frag-tea.webp"
             photoAlt="Чай в лаунж-зоне Истовы"
           />
 

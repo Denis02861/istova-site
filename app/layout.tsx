@@ -89,7 +89,7 @@ const ORG_JSONLD = {
   name: "Истова",
   alternateName: "Istova SPA",
   url: SITE_URL,
-  logo: `${SITE_URL}/logo/istova-icon.png`,
+  logo: `${SITE_URL}/logo/istova-icon.webp`,
   image: [`${SITE_URL}/og-image.webp`],
   description: DESCRIPTION,
   telephone: "+7 (901) 320-10-50",

@@ -50,16 +50,16 @@ type Item = {
 
 // Первая линия — студийные фото Истовы (все в одну ленту)
 const studioPhotos: Item[] = [
-  { type: "image", src: "/gallery/frag-lounge.jpg",  poster: "/gallery/frag-lounge.webp",  alt: "Зона отдыха с закатным светом" },
-  { type: "image", src: "/gallery/frag-tea.jpg",     poster: "/gallery/frag-tea.webp",     alt: "Чайный ритуал" },
-  { type: "image", src: "/gallery/frag-headspa.jpg", poster: "/gallery/frag-headspa.webp", alt: "Кабинет спа для головы" },
-  { type: "image", src: "/gallery/frag-aroma.jpg",   poster: "/gallery/frag-aroma.webp",   alt: "Арома-ритуалы Истовы" },
-  { type: "image", src: "/gallery/frag-sauna.jpg",   poster: "/gallery/frag-sauna.webp",   alt: "Финская сауна" },
-  { type: "image", src: "/gallery/frag-water.jpg",   poster: "/gallery/frag-water.webp",   alt: "Welcome-зона" },
-  { type: "image", src: "/gallery/frag-massage.jpg", poster: "/gallery/frag-massage.webp", alt: "Массажный кабинет" },
-  { type: "image", src: "/gallery/frag-care.jpg",    poster: "/gallery/frag-care.webp",    alt: "Уход и косметика Davines" },
-  { type: "image", src: "/gallery/frag-body.jpg",    poster: "/gallery/frag-body.webp",    alt: "Ритуалы для тела" },
-  { type: "image", src: "/gallery/frag-apples.jpg",  poster: "/gallery/frag-apples.webp",  alt: "Лаунж-зона" },
+  { type: "image", src: "/gallery/frag-lounge.webp",  poster: "/gallery/frag-lounge.webp",  alt: "Зона отдыха с закатным светом" },
+  { type: "image", src: "/gallery/frag-tea.webp",     poster: "/gallery/frag-tea.webp",     alt: "Чайный ритуал" },
+  { type: "image", src: "/gallery/frag-headspa.webp", poster: "/gallery/frag-headspa.webp", alt: "Кабинет спа для головы" },
+  { type: "image", src: "/gallery/frag-aroma.webp",   poster: "/gallery/frag-aroma.webp",   alt: "Арома-ритуалы Истовы" },
+  { type: "image", src: "/gallery/frag-sauna.webp",   poster: "/gallery/frag-sauna.webp",   alt: "Финская сауна" },
+  { type: "image", src: "/gallery/frag-water.webp",   poster: "/gallery/frag-water.webp",   alt: "Welcome-зона" },
+  { type: "image", src: "/gallery/frag-massage.webp", poster: "/gallery/frag-massage.webp", alt: "Массажный кабинет" },
+  { type: "image", src: "/gallery/frag-care.webp",    poster: "/gallery/frag-care.webp",    alt: "Уход и косметика Davines" },
+  { type: "image", src: "/gallery/frag-body.webp",    poster: "/gallery/frag-body.webp",    alt: "Ритуалы для тела" },
+  { type: "image", src: "/gallery/frag-apples.webp",  poster: "/gallery/frag-apples.webp",  alt: "Лаунж-зона" },
 ];
 
 export default function Gallery() {
