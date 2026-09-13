@@ -1,2 +1,6 @@
+# www-версия склеивается с основным доменом: две живые копии делят вес ссылок
+http://www.istova.ru/*   https://istova.ru/:splat   301!
+https://www.istova.ru/*  https://istova.ru/:splat   301!
+
 # Все несуществующие URL → 404.html с кодом 404 (не 200)
 /*  /404.html  404
