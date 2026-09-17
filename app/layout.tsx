@@ -113,6 +113,16 @@ const ORG_JSONLD = {
     "@type": "City",
     name: "Санкт-Петербург",
   },
+  // Рейтинг с Яндекс.Карт (org 63939829435), сверено 17.09.2026: 44 оценки, все пятёрки.
+  // Цифры обязаны совпадать с тем, что видит гость в блоке отзывов, иначе разметку
+  // снимут. Обновлять вместе с Reviews.tsx.
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: 44,
+    bestRating: "5",
+    worstRating: "1",
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
