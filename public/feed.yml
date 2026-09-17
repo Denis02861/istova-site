@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-09-17 11:25">
+  <shop>
+    <name>Истова</name>
+    <company>ИП Карасёв Денис Игоревич</company>
+    <url>https://istova.ru</url>
+    <currencies>
+      <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Спа-ритуалы</category>
+      <category id="2">Спа-ритуалы для двоих</category>
+    </categories>
+    <offers>
+      <offer id="zarya-telo" available="true">
+        <url>https://istova.ru/programs/zarya-telo/</url>
+        <price>8900</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://istova.ru/gallery/06-body.webp</picture>
+        <vendor>Истова</vendor>
+        <name>ЗАРЯ | ТЕЛО · спа-ритуал 100 мин</name>
+        <description>Утренний ритуал через тело: финская сауна, пилинг с гималайской солью, тонизирующий массаж 45 мин, уход за лицом.</description>
+        <param name="Длительность">100 мин</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="zarya-telo-pair" available="true">
+        <url>https://istova.ru/programs/zarya-telo/</url>
+        <price>17000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/06-body.webp</picture>
+        <vendor>Истова</vendor>
+        <name>ЗАРЯ | ТЕЛО для двоих · спа-ритуал 100 мин</name>
+        <description>Утренний ритуал через тело: финская сауна, пилинг с гималайской солью, тонизирующий массаж 45 мин, уход за лицом. Цена указана за двоих, каждый со своим мастером.</description>
+        <param name="Длительность">100 мин</param>
+        <param name="Количество гостей">2</param>
+        <param name="Район">Васильевский остров</param>
+      </offer>
+      <offer id="zarya-volosy" available="true">
+        <url>https://istova.ru/programs/zarya-volosy/</url>
+        <price>8500</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://istova.ru/gallery/04-head-spa.webp</picture>
+        <vendor>Истова</vendor>
+        <name>ЗАРЯ | ВОЛОСЫ · спа-ритуал 90 мин</name>
+        <description>Утреннее спа для головы: массаж с криосферами, «Золотая дуга», уход Davines, пенный массаж головы.</description>
+        <param name="Длительность">90 мин</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="zarya-volosy-pair" available="true">
+        <url>https://istova.ru/programs/zarya-volosy/</url>
+        <price>16000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/04-head-spa.webp</picture>
+        <vendor>Истова</vendor>
+        <name>ЗАРЯ | ВОЛОСЫ для двоих · спа-ритуал 90 мин</name>
+        <description>Утреннее спа для головы: массаж с криосферами, «Золотая дуга», уход Davines, пенный массаж головы. Цена указана за двоих, каждый со своим мастером.</description>
+        <param name="Длительность">90 мин</param>
+        <param name="Количество гостей">2</param>
+        <param name="Район">Васильевский остров</param>
+      </offer>
+      <offer id="sumerki-telo" available="true">
+        <url>https://istova.ru/programs/sumerki-telo/</url>
+        <price>9900</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://istova.ru/gallery/05-massage.webp</picture>
+        <vendor>Истова</vendor>
+        <name>СУМЕРКИ | ТЕЛО · спа-ритуал 120 мин</name>
+        <description>Вечерний ритуал: сауна с лавандой, кремовый пилинг, обёртывание, спа-массаж 45 мин, согревание кистей и стоп.</description>
+        <param name="Длительность">120 мин</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="sumerki-telo-pair" available="true">
+        <url>https://istova.ru/programs/sumerki-telo/</url>
+        <price>18000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/05-massage.webp</picture>
+        <vendor>Истова</vendor>
+        <name>СУМЕРКИ | ТЕЛО для двоих · спа-ритуал 120 мин</name>
+        <description>Вечерний ритуал: сауна с лавандой, кремовый пилинг, обёртывание, спа-массаж 45 мин, согревание кистей и стоп. Цена указана за двоих, каждый со своим мастером.</description>
+        <param name="Длительность">120 мин</param>
+        <param name="Количество гостей">2</param>
+        <param name="Район">Васильевский остров</param>
+      </offer>
+      <offer id="sumerki-volosy" available="true">
+        <url>https://istova.ru/programs/sumerki-volosy/</url>
+        <price>8500</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://istova.ru/gallery/frag-headspa.webp</picture>
+        <vendor>Истова</vendor>
+        <name>СУМЕРКИ | ВОЛОСЫ · спа-ритуал 90 мин</name>
+        <description>Вечернее спа для головы: расслабляющий массаж лица, травяной ритуал, «Золотая дуга», уход Davines.</description>
+        <param name="Длительность">90 мин</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="sumerki-volosy-pair" available="true">
+        <url>https://istova.ru/programs/sumerki-volosy/</url>
+        <price>16000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/frag-headspa.webp</picture>
+        <vendor>Истова</vendor>
+        <name>СУМЕРКИ | ВОЛОСЫ для двоих · спа-ритуал 90 мин</name>
+        <description>Вечернее спа для головы: расслабляющий массаж лица, травяной ритуал, «Золотая дуга», уход Davines. Цена указана за двоих, каждый со своим мастером.</description>
+        <param name="Длительность">90 мин</param>
+        <param name="Количество гостей">2</param>
+        <param name="Район">Васильевский остров</param>
+      </offer>
+      <offer id="rodnik" available="true">
+        <url>https://istova.ru/programs/rodnik/</url>
+        <price>7900</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://istova.ru/gallery/frag-care.webp</picture>
+        <vendor>Истова</vendor>
+        <name>РОДНИК · спа-ритуал 75 мин</name>
+        <description>Бережный ритуал без нагрузки: массаж лица, спа для головы с «Золотой дугой», уход Davines, ритуал лёгкости для ног.</description>
+        <param name="Длительность">75 мин</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="rodnik-pair" available="true">
+        <url>https://istova.ru/programs/rodnik/</url>
+        <price>14000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/frag-care.webp</picture>
+        <vendor>Истова</vendor>
+        <name>РОДНИК для двоих · спа-ритуал 75 мин</name>
+        <description>Бережный ритуал без нагрузки: массаж лица, спа для головы с «Золотой дугой», уход Davines, ритуал лёгкости для ног. Цена указана за двоих, каждый со своим мастером.</description>
+        <param name="Длительность">75 мин</param>
+        <param name="Количество гостей">2</param>
+        <param name="Район">Васильевский остров</param>
+      </offer>
+      <offer id="kedr" available="true">
+        <url>https://istova.ru/programs/kedr/</url>
+        <price>11900</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://istova.ru/gallery/03-sauna.webp</picture>
+        <vendor>Истова</vendor>
+        <name>КЕДР · спа-ритуал 150 мин</name>
+        <description>Мужской ритуал силы: хвойная сауна, кедровый пилинг, бамбук, массаж тёплыми камнями 60 мин, спа для головы.</description>
+        <param name="Длительность">150 мин</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="kedr-pair" available="true">
+        <url>https://istova.ru/programs/kedr/</url>
+        <price>21000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/03-sauna.webp</picture>
+        <vendor>Истова</vendor>
+        <name>КЕДР для двоих · спа-ритуал 150 мин</name>
+        <description>Мужской ритуал силы: хвойная сауна, кедровый пилинг, бамбук, массаж тёплыми камнями 60 мин, спа для головы. Цена указана за двоих, каждый со своим мастером.</description>
+        <param name="Длительность">150 мин</param>
+        <param name="Количество гостей">2</param>
+        <param name="Район">Васильевский остров</param>
+      </offer>
+      <offer id="lada" available="true">
+        <url>https://istova.ru/programs/lada/</url>
+        <price>11900</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://istova.ru/gallery/frag-body.webp</picture>
+        <vendor>Истова</vendor>
+        <name>ЛАДА · спа-ритуал 150 мин</name>
+        <description>Женский спа-ритуал: финская сауна, турецкий пилинг кесе, массаж тела 45 мин, гуаша для лица, спа для головы.</description>
+        <param name="Длительность">150 мин</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="lada-pair" available="true">
+        <url>https://istova.ru/programs/lada/</url>
+        <price>21000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/frag-body.webp</picture>
+        <vendor>Истова</vendor>
+        <name>ЛАДА для двоих · спа-ритуал 150 мин</name>
+        <description>Женский спа-ритуал: финская сауна, турецкий пилинг кесе, массаж тела 45 мин, гуаша для лица, спа для головы. Цена указана за двоих, каждый со своим мастером.</description>
+        <param name="Длительность">150 мин</param>
+        <param name="Количество гостей">2</param>
+        <param name="Район">Васильевский остров</param>
+      </offer>
+      <offer id="kedr-lada" available="true">
+        <url>https://istova.ru/programs/kedr-lada/</url>
+        <price>21000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/02-spa-zone.webp</picture>
+        <vendor>Истова</vendor>
+        <name>КЕДР + ЛАДА · спа-ритуал 3 ч</name>
+        <description>Спа для двоих: ей ЛАДА, ему КЕДР — одновременно, каждый со своим мастером. Цена за двоих.</description>
+        <param name="Длительность">3 ч</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="yav" available="true">
+        <url>https://istova.ru/programs/yav/</url>
+        <price>6800</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1</categoryId>
+        <picture>https://istova.ru/gallery/frag-water.webp</picture>
+        <vendor>Истова</vendor>
+        <name>ЯВЬ · спа-ритуал 75 мин</name>
+        <description>Знакомство с Истовой: массаж спины и плеч, массаж головы, уход за лицом, «Золотая дуга», Davines.</description>
+        <param name="Длительность">75 мин</param>
+        <param name="Район">Васильевский остров</param>
+        <param name="Адрес">ул. Беринга, 23 к. 2</param>
+      </offer>
+      <offer id="yav-pair" available="true">
+        <url>https://istova.ru/programs/yav/</url>
+        <price>12000</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>2</categoryId>
+        <picture>https://istova.ru/gallery/frag-water.webp</picture>
+        <vendor>Истова</vendor>
+        <name>ЯВЬ для двоих · спа-ритуал 75 мин</name>
+        <description>Знакомство с Истовой: массаж спины и плеч, массаж головы, уход за лицом, «Золотая дуга», Davines. Цена указана за двоих, каждый со своим мастером.</description>
+        <param name="Длительность">75 мин</param>
+        <param name="Количество гостей">2</param>
+        <param name="Район">Васильевский остров</param>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
