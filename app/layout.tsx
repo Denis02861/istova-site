@@ -123,6 +123,43 @@ const ORG_JSONLD = {
     bestRating: "5",
     worstRating: "1",
   },
+  // Сами отзывы, а не только средний балл: поисковики охотнее рисуют звёзды,
+  // когда видят конкретные тексты. Все четыре реальные, с Яндекс.Карт, и они же
+  // показаны гостю в блоке отзывов. Тексты обязаны совпадать с Reviews.tsx.
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Екатерина Р." },
+      datePublished: "2026-09-09",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Невероятное уникальное место, которое помогает почувствовать себя живым человеком. Здесь прекрасно и комфортно всё: начиная от приёма с выбора ароматических масел, заканчивая вкусным чаем с мёдом и сладостями в завершении посещения.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Анастасия Калашникова" },
+      datePublished: "2026-09-09",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Очень давно хотела отказаться от телефона и провести время наедине с собой, и это место мне в этом помогло. На целых 75 минут я выпала из этого мира. У мастера самые золотые руки.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Сурая А." },
+      datePublished: "2026-09-16",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Были с подружкой на совместном спа-ритуале Явь. Остались в полном восторге. Атмосфера пространства очень приятная и спокойная.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Суровцев А." },
+      datePublished: "2026-09-09",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Были на парном спа, всё очень понравилось, рекомендую мастеров Анну и Екатерину, программа Лада. А ещё у них очень вкусный чай.",
+    },
+  ],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
