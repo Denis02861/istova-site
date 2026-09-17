@@ -9,7 +9,18 @@ import BlurFade from "./magicui/BlurFade";
  * Обновлять по мере накопления. Источник виден ссылкой на карточку.
  */
 const YANDEX_URL = "https://yandex.ru/maps/org/istova/63939829435/reviews/";
+const GIS_URL = "https://2gis.ru/spb/search/Истова%20Беринга%2023";
 const EASE = "cubic-bezier(0.23,1,0.32,1)";
+
+/**
+ * Рейтинг по площадкам. Цифры сверены 17.09.2026 и обязаны совпадать с
+ * aggregateRating в layout.tsx: расхождение видимого и размеченного рейтинга
+ * площадки считают нарушением. Обновлять оба места разом.
+ */
+const RATINGS = [
+  { place: "оценки на Яндекс Картах", count: 44, href: YANDEX_URL },
+  { place: "оценок в 2ГИС", count: 16, href: GIS_URL },
+];
 
 type Review = { text: string; name: string; date: string };
 
@@ -144,20 +155,25 @@ export default function Reviews() {
           {/* Плашка рейтинга. Цифры обязаны совпадать с aggregateRating в layout.tsx
               и с тем, что сейчас на карточке Яндекса. Сверено 17.09.2026. */}
           <div className="flex flex-col items-center gap-4 mb-14">
-            <a
-              href={YANDEX_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-4 rounded-full bg-sand-soft ring-1 ring-brand/10 pl-6 pr-7 py-3 shadow-[0_18px_44px_-26px_rgba(116,68,54,0.55)] hover:ring-brand/25 hover:-translate-y-0.5 transition-[box-shadow,transform,--tw-ring-color] duration-[450ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
-            >
-              <span className="font-display text-[28px] leading-none text-brand tabular-nums">5,0</span>
-              <span className="flex flex-col gap-1.5">
-                <Stars />
-                <span className="text-[10px] uppercase tracking-[0.16em] text-brand/50">
-                  44 оценки на Яндекс Картах
-                </span>
-              </span>
-            </a>
+            <div className="flex flex-wrap items-stretch justify-center gap-3">
+              {RATINGS.map((r) => (
+                <a
+                  key={r.place}
+                  href={r.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-4 rounded-full bg-sand-soft ring-1 ring-brand/10 pl-6 pr-7 py-3 shadow-[0_18px_44px_-26px_rgba(116,68,54,0.55)] hover:ring-brand/25 hover:-translate-y-0.5 transition-[box-shadow,transform,--tw-ring-color] duration-[450ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
+                >
+                  <span className="font-display text-[28px] leading-none text-brand tabular-nums">5,0</span>
+                  <span className="flex flex-col gap-1.5">
+                    <Stars />
+                    <span className="text-[10px] uppercase tracking-[0.16em] text-brand/50">
+                      {r.count} {r.place}
+                    </span>
+                  </span>
+                </a>
+              ))}
+            </div>
             <p className="text-center text-brand-dark/70 max-w-xl mx-auto">
               Живые отзывы гостей. Пролистайте и раскройте любой целиком.
             </p>
