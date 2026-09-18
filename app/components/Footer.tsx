@@ -29,7 +29,8 @@ export default function Footer() {
                 <a href="/programs/" className="hover:text-sand">Все программы</a>
               </li>
               <li>
-                <a href="/spa-dlya-dvoih/" className="hover:text-sand">Спа для двоих</a>
+                <a href="/spa-dlya-dvoih/" className="hover:text-sand">Спа для двоих</a></li>
+              <li><a href="/spa-vasileostrovskiy/" className="hover:text-sand">Спа на Васильевском острове</a>
               </li>
               <li>
                 <a href="/massazh-golovy/" className="hover:text-sand">Массаж головы</a>

@@ -297,7 +297,16 @@ export default async function ProgramPage({
                   Вдвоём · выгоднее
                 </h3>
                 <div className="font-display text-3xl md:text-4xl text-brand">{program.pair_price}</div>
-                <div className="text-xs text-brand/60 mt-1">в двух смежных кабинетах</div>
+                <div className="text-xs text-brand/60 mt-1">
+                  в двух смежных кабинетах ·{" "}
+                  {/* Осмысленная ссылка на раздел для двоих с точным анкором.
+                      До этого на /spa-dlya-dvoih/ вели только шапка и подвал, поэтому
+                      по запросу «спа для двоих» Яндекс показывал главную, а страница
+                      висела на 96 месте (Топвизор, 18.09.2026). */}
+                  <Link href="/spa-dlya-dvoih/" className="underline underline-offset-2 decoration-brand/30 hover:decoration-brand">
+                    спа для двоих в СПб
+                  </Link>
+                </div>
               </div>
             )}
             <TrackedLink
@@ -320,7 +329,14 @@ export default async function ProgramPage({
               </div>
               <div>
                 <h3 className="font-display text-lg text-brand mb-2">Сколько стоит ритуал?</h3>
-                <p className="text-sm text-brand-dark/80 leading-relaxed">Стоимость одиночного визита — {program.price}. Ритуал можно провести вдвоём в двух смежных кабинетах со скидкой{program.pair_price ? ` (${program.pair_price})` : ""}.</p>
+                <p className="text-sm text-brand-dark/80 leading-relaxed">
+                  Стоимость одиночного визита — {program.price}. Ритуал можно провести вдвоём
+                  в двух смежных кабинетах со скидкой{program.pair_price ? ` (${program.pair_price})` : ""}:
+                  все парные варианты собраны в разделе{" "}
+                  <Link href="/spa-dlya-dvoih/" className="underline underline-offset-2 decoration-brand/30 hover:decoration-brand">
+                    спа для двоих
+                  </Link>.
+                </p>
               </div>
               <div>
                 <h3 className="font-display text-lg text-brand mb-2">Что взять с собой?</h3>

@@ -25,8 +25,25 @@ export default function Space() {
           <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">256 м² — из чего сложены ритуалы</h2>
         </BlurFade>
         <BlurFade delay={0.15} yOffset={16}>
-          <p className="text-center text-brand-dark/70 mb-16 max-w-xl mx-auto leading-relaxed">
+          {/* Контекстные ссылки на посадочные страницы с точными анкорами.
+              Раньше на них вели только меню и подвал, поэтому по своим запросам
+              Яндекс показывал главную вместо этих страниц (Топвизор, 18.09.2026:
+              «расслабляющий спа массаж» 14 место, «спа массаж головы» 1, но кликов нет). */}
+          <p className="text-center text-brand-dark/70 mb-16 max-w-2xl mx-auto leading-relaxed">
             Каждая зона работает вместе с другими. Плавные переходы между теплом и прохладой.
+            Отсюда складываются{" "}
+            <a href="/massazh-golovy/" className="underline underline-offset-2 decoration-brand/30 hover:decoration-brand">
+              массаж головы и head spa
+            </a>
+            ,{" "}
+            <a href="/rasslablyayushchiy-massazh/" className="underline underline-offset-2 decoration-brand/30 hover:decoration-brand">
+              расслабляющий массаж
+            </a>{" "}
+            и{" "}
+            <a href="/antistress/" className="underline underline-offset-2 decoration-brand/30 hover:decoration-brand">
+              антистресс-ритуалы
+            </a>
+            .
           </p>
         </BlurFade>
         <Reveal stagger={140} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
