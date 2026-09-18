@@ -29,6 +29,9 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-travy" available="true">
       <name>Травяное тепло</name>
@@ -45,6 +48,9 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-stopy-t" available="true">
       <name>Тёплые стопы</name>
@@ -61,6 +67,9 @@
       <param name="Длительность">30 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-stopy-l" available="true">
       <name>Лёгкие стопы</name>
@@ -77,6 +86,9 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-kisti" available="true">
       <name>Тёплые кисти</name>
@@ -93,6 +105,9 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-obn-ukut" available="true">
       <name>Обновление + Укутывание</name>
@@ -109,6 +124,9 @@
       <param name="Длительность">70 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-ukutyvanie" available="true">
       <name>Укутывание</name>
@@ -125,6 +143,9 @@
       <param name="Длительность">50 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-obnovlenie" available="true">
       <name>Обновление</name>
@@ -141,6 +162,9 @@
       <param name="Длительность">30 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-kamen" available="true">
       <name>Камень</name>
@@ -157,6 +181,9 @@
       <param name="Длительность">30 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-glubina" available="true">
       <name>Глубина</name>
@@ -173,6 +200,9 @@
       <param name="Длительность">40 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-tishina" available="true">
       <name>Тишина</name>
@@ -189,6 +219,9 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-stone-90" available="true">
       <name>Энергия камня (90 мин)</name>
@@ -205,6 +238,9 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-stone-60" available="true">
       <name>Энергия камня (60 мин)</name>
@@ -221,6 +257,9 @@
       <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-warm-90" available="true">
       <name>Тёплый массаж тела (90 мин)</name>
@@ -237,6 +276,9 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-warm-60" available="true">
       <name>Тёплый массаж тела (60 мин)</name>
@@ -253,6 +295,9 @@
       <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-massage-90" available="true">
       <name>Расслабляющий СПА-массаж (90 мин)</name>
@@ -269,6 +314,9 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="teplota-massage-60" available="true">
       <name>Расслабляющий СПА-массаж (60 мин)</name>
@@ -285,6 +333,9 @@
       <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="kedr-lada-pair" available="true">
       <name>КЕДР + ЛАДА — вдвоём</name>
@@ -301,6 +352,9 @@
       <param name="Длительность">3 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="cert-any" available="true">
       <name>Подарочный сертификат на любую сумму</name>
@@ -316,6 +370,9 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="rodnik-pair" available="true">
       <name>РОДНИК — вдвоём</name>
@@ -332,6 +389,9 @@
       <param name="Длительность">1 час 45 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="lada-pair" available="true">
       <name>ЛАДА — вдвоём</name>
@@ -347,6 +407,9 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="kedr-pair" available="true">
       <name>КЕДР — вдвоём</name>
@@ -362,6 +425,9 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="yav-pair" available="true">
       <name>ЯВЬ — вдвоём</name>
@@ -378,6 +444,9 @@
       <param name="Длительность">1 час 45 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="sumerki-volosy-pair" available="true">
       <name>СУМЕРКИ | ВОЛОСЫ — вдвоём</name>
@@ -394,6 +463,9 @@
       <param name="Длительность">2 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="sumerki-telo-pair" available="true">
       <name>СУМЕРКИ | ТЕЛО — вдвоём</name>
@@ -410,6 +482,9 @@
       <param name="Длительность">2 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="zarya-volosy-pair" available="true">
       <name>ЗАРЯ | ВОЛОСЫ — вдвоём</name>
@@ -426,6 +501,9 @@
       <param name="Длительность">2 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="zarya-telo-pair" available="true">
       <name>ЗАРЯ | ТЕЛО — вдвоём</name>
@@ -442,6 +520,9 @@
       <param name="Длительность">1 час 40 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="rodnik-solo" available="true">
       <name>РОДНИК — соло</name>
@@ -458,6 +539,9 @@
       <param name="Длительность">75 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="lada-solo" available="true">
       <name>ЛАДА — соло</name>
@@ -473,6 +557,9 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="kedr-solo" available="true">
       <name>КЕДР — соло</name>
@@ -488,6 +575,9 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="yav-solo" available="true">
       <name>ЯВЬ — соло</name>
@@ -504,6 +594,9 @@
       <param name="Длительность">75 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="sumerki-volosy-solo" available="true">
       <name>СУМЕРКИ | ВОЛОСЫ — соло</name>
@@ -520,6 +613,9 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="sumerki-telo-solo" available="true">
       <name>СУМЕРКИ | ТЕЛО — соло</name>
@@ -536,6 +632,9 @@
       <param name="Длительность">120 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="zarya-volosy-solo" available="true">
       <name>ЗАРЯ | ВОЛОСЫ — соло</name>
@@ -552,6 +651,9 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     <offer id="zarya-telo-solo" available="true">
       <name>ЗАРЯ | ТЕЛО — соло</name>
@@ -568,6 +670,9 @@
       <param name="Длительность">100 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="годы опыта">1</param>
+      <param name="число отзывов">44</param>
+      <param name="рейтинг">5</param>
     </offer>
     </offers>
   </shop>
