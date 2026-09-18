@@ -186,6 +186,28 @@ export default function SpaDlyaDvoihPage() {
             photoAlt="Чайная церемония в Истове"
           />
 
+          {/* Раздел для двоих не ссылался на блог вообще, хотя соседние посадочные
+              ведут на три статьи каждая. Связь была односторонней. */}
+          <section className="pb-4">
+            <div className="rounded-[28px] bg-sand-soft border border-brand/10 p-8 md:p-10">
+              <div className="text-[11px] uppercase tracking-[0.18em] text-brand/55 mb-4">Разобраться подробнее</div>
+              <div className="grid sm:grid-cols-3 gap-5">
+                {[
+                  { href: "/blog/kak-rasslabitsya/", t: "Как расслабиться по-настоящему", d: "Что работает, а что только кажется отдыхом" },
+                  { href: "/blog/chto-takoe-head-spa/", t: "Что такое head spa", d: "Откуда пришла техника и как проходит" },
+                  { href: "/blog/rasslablyayushchiy-massazh/", t: "Расслабляющий массаж", d: "Чем отличается от лечебного" },
+                ].map((l) => (
+                  <Link key={l.href} href={l.href} className="group block">
+                    <div className="font-display text-lg text-brand mb-1.5 leading-snug group-hover:text-brand-dark transition-colors">
+                      {l.t}
+                    </div>
+                    <div className="text-sm text-brand-dark/65 leading-relaxed">{l.d}</div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
           <FaqBlock items={FAQ} />
         </div>
 

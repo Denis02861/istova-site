@@ -171,6 +171,9 @@ export default function VasileostrovskiyPage() {
                   { href: "/massazh-golovy/", t: "Массаж головы и head spa", d: "Азиатская техника с водной дугой" },
                   { href: "/spa-dlya-dvoih/", t: "Спа для двоих", d: "Парные ритуалы в смежных кабинетах" },
                   { href: "/rasslablyayushchiy-massazh/", t: "Расслабляющий массаж", d: "Когда напряжение копилось неделями" },
+                  { href: "/blog/chto-takoe-head-spa/", t: "Что такое head spa", d: "Откуда пришла техника и как проходит" },
+                  { href: "/blog/kak-rasslabitsya/", t: "Как расслабиться", d: "Что работает, а что кажется отдыхом" },
+                  { href: "/blog/sheya-posle-raboty/", t: "Шея после работы", d: "Почему затекает и что с этим делать" },
                 ].map((l) => (
                   <Link key={l.href} href={l.href} className="group block">
                     <div className="font-display text-lg text-brand mb-1.5 leading-snug group-hover:text-brand-dark transition-colors">

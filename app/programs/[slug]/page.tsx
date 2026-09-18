@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { programs } from "../../lib/programs-data";
+import { articles } from "../../lib/blog-data";
 import Header from "../../components/Header";
 import TrackedLink from "../../components/TrackedLink";
 import Footer from "../../components/Footer";
@@ -193,6 +194,10 @@ export default async function ProgramPage({
 
   const related = programs.filter((p) => p.slug !== slug).slice(0, 4);
 
+  // Статьи, которые сами указывают на этот ритуал через programSlug.
+  // Если таких нет, ничего не подставляем: случайная статья тут только мешает.
+  const relatedArticles = articles.filter((a) => a.programSlug === slug).slice(0, 2);
+
   return (
     <>
       <script
@@ -376,6 +381,33 @@ export default async function ProgramPage({
               ))}
             </div>
           </section>
+
+          {/* Обратная связь с блогом. Статьи давно ссылаются на ритуалы через
+              programSlug, а со страниц ритуалов на блог не вело ни одной ссылки.
+              Связь была односторонней, из-за чего вес статей никуда не возвращался. */}
+          {relatedArticles.length > 0 && (
+            <section className="mb-16 border-t border-brand/10 pt-12">
+              <h2 className="text-xs uppercase tracking-widest text-brand/60 mb-8 text-center font-normal">
+                Почитать по теме
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {relatedArticles.map((a) => (
+                  <Link
+                    key={a.slug}
+                    href={`/blog/${a.slug}/`}
+                    className="group border border-brand/10 p-6 hover:border-brand/30 hover:-translate-y-0.5 transition-all bg-sand-soft"
+                  >
+                    <div className="font-display text-xl text-brand mb-2 leading-snug group-hover:text-brand-dark transition-colors">
+                      {a.h1}
+                    </div>
+                    <div className="text-sm text-brand-dark/70 leading-relaxed">
+                      {a.description.length > 120 ? a.description.slice(0, 120) + "..." : a.description}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </main>
       <Footer />
