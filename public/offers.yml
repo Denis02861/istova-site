@@ -29,6 +29,7 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -48,6 +49,7 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -67,6 +69,7 @@
       <param name="Длительность">30 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -86,6 +89,7 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -105,6 +109,7 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -124,6 +129,7 @@
       <param name="Длительность">70 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -143,6 +149,7 @@
       <param name="Длительность">50 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -162,6 +169,7 @@
       <param name="Длительность">30 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -181,6 +189,7 @@
       <param name="Длительность">30 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -200,6 +209,7 @@
       <param name="Длительность">40 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -219,6 +229,7 @@
       <param name="Длительность">20 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -238,6 +249,7 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -257,6 +269,7 @@
       <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -276,6 +289,7 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -295,6 +309,7 @@
       <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -314,6 +329,7 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -333,6 +349,7 @@
       <param name="Длительность">60 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -352,6 +369,7 @@
       <param name="Длительность">3 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -370,6 +388,7 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -389,6 +408,7 @@
       <param name="Длительность">1 час 45 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -407,6 +427,7 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -425,6 +446,7 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -444,6 +466,7 @@
       <param name="Длительность">1 час 45 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -463,6 +486,7 @@
       <param name="Длительность">2 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -482,6 +506,7 @@
       <param name="Длительность">2 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -501,6 +526,7 @@
       <param name="Длительность">2 часа</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -520,6 +546,7 @@
       <param name="Длительность">1 час 40 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -539,6 +566,7 @@
       <param name="Длительность">75 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -557,6 +585,7 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -575,6 +604,7 @@
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -594,6 +624,7 @@
       <param name="Длительность">75 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -613,6 +644,7 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -632,6 +664,7 @@
       <param name="Длительность">120 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -651,6 +684,7 @@
       <param name="Длительность">90 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
@@ -670,6 +704,7 @@
       <param name="Длительность">100 минут</param>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
+      <param name="конверсия">1</param>
       <param name="годы опыта">1</param>
       <param name="число отзывов">44</param>
       <param name="рейтинг">5</param>
