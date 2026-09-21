@@ -68,7 +68,7 @@ export default function Certificates() {
           })}
         </Reveal>
         <div className="text-center">
-          <TrackedLink goal="BOOKING_CLICK" goalParams={{from:"certificates"}} href="#booking" className="inline-block px-8 py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Заказать сертификат</TrackedLink>
+          <TrackedLink goal="BOOKING_CLICK" goalParams={{from:"certificates"}} href="/podarochnyy-sertifikat/" className="inline-block px-8 py-3 bg-brand text-sand hover:bg-brand-dark transition-colors">Заказать сертификат</TrackedLink>
         </div>
       </div>
     </section>
