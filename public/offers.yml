@@ -17,7 +17,7 @@
     <offer id="teplota-tyazhest" available="true">
       <name>Тяжесть и тишина</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-tyazhest#teplota-tyazhest</url>
       <price>1300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -37,7 +37,7 @@
     <offer id="teplota-travy" available="true">
       <name>Травяное тепло</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-travy#teplota-travy</url>
       <price>2500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -57,7 +57,7 @@
     <offer id="teplota-stopy-t" available="true">
       <name>Тёплые стопы</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-stopy-t#teplota-stopy-t</url>
       <price>2900</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -77,7 +77,7 @@
     <offer id="teplota-stopy-l" available="true">
       <name>Лёгкие стопы</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-stopy-l#teplota-stopy-l</url>
       <price>2200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -97,7 +97,7 @@
     <offer id="teplota-kisti" available="true">
       <name>Тёплые кисти</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-kisti#teplota-kisti</url>
       <price>2000</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -117,7 +117,7 @@
     <offer id="teplota-obn-ukut" available="true">
       <name>Обновление + Укутывание</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-obn-ukut#teplota-obn-ukut</url>
       <price>6500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -137,7 +137,7 @@
     <offer id="teplota-ukutyvanie" available="true">
       <name>Укутывание</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-ukutyvanie#teplota-ukutyvanie</url>
       <price>4200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -157,7 +157,7 @@
     <offer id="teplota-obnovlenie" available="true">
       <name>Обновление</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-obnovlenie#teplota-obnovlenie</url>
       <price>3500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -177,7 +177,7 @@
     <offer id="teplota-kamen" available="true">
       <name>Камень</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-kamen#teplota-kamen</url>
       <price>3500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -197,7 +197,7 @@
     <offer id="teplota-glubina" available="true">
       <name>Глубина</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-glubina#teplota-glubina</url>
       <price>4200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -217,7 +217,7 @@
     <offer id="teplota-tishina" available="true">
       <name>Тишина</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-tishina#teplota-tishina</url>
       <price>2500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -237,7 +237,7 @@
     <offer id="teplota-stone-90" available="true">
       <name>Энергия камня (90 мин)</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-stone-90#teplota-stone</url>
       <price>6300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -257,7 +257,7 @@
     <offer id="teplota-stone-60" available="true">
       <name>Энергия камня (60 мин)</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-stone-60#teplota-stone</url>
       <price>4800</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -277,7 +277,7 @@
     <offer id="teplota-warm-90" available="true">
       <name>Тёплый массаж тела (90 мин)</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-warm-90#teplota-warm</url>
       <price>6100</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -297,7 +297,7 @@
     <offer id="teplota-warm-60" available="true">
       <name>Тёплый массаж тела (60 мин)</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-warm-60#teplota-warm</url>
       <price>4500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -317,7 +317,7 @@
     <offer id="teplota-massage-90" available="true">
       <name>Расслабляющий СПА-массаж (90 мин)</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-massage-90#teplota-massage</url>
       <price>5900</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -337,7 +337,7 @@
     <offer id="teplota-massage-60" available="true">
       <name>Расслабляющий СПА-массаж (60 мин)</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#teplota</url>
+      <url>https://istova.ru/?p=teplota-massage-60#teplota-massage</url>
       <price>4300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -357,7 +357,7 @@
     <offer id="kedr-lada-pair" available="true">
       <name>КЕДР + ЛАДА — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/kedr-lada/</url>
+      <url>https://istova.ru/programs/kedr-lada/?p=kedr-lada-pair#dlya-dvoih</url>
       <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
@@ -396,7 +396,7 @@
     <offer id="rodnik-pair" available="true">
       <name>РОДНИК — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/rodnik/</url>
+      <url>https://istova.ru/programs/rodnik/?p=rodnik-pair#dlya-dvoih</url>
       <price>14000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
@@ -416,7 +416,7 @@
     <offer id="lada-pair" available="true">
       <name>ЛАДА — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/lada/</url>
+      <url>https://istova.ru/programs/lada/?p=lada-pair#dlya-dvoih</url>
       <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
@@ -435,7 +435,7 @@
     <offer id="kedr-pair" available="true">
       <name>КЕДР — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/kedr/</url>
+      <url>https://istova.ru/programs/kedr/?p=kedr-pair#dlya-dvoih</url>
       <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
@@ -454,7 +454,7 @@
     <offer id="yav-pair" available="true">
       <name>ЯВЬ — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/yav/</url>
+      <url>https://istova.ru/programs/yav/?p=yav-pair#dlya-dvoih</url>
       <price>12000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
@@ -474,7 +474,7 @@
     <offer id="sumerki-volosy-pair" available="true">
       <name>СУМЕРКИ | ВОЛОСЫ — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/sumerki-volosy/</url>
+      <url>https://istova.ru/programs/sumerki-volosy/?p=sumerki-volosy-pair#dlya-dvoih</url>
       <price>16000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
@@ -494,7 +494,7 @@
     <offer id="sumerki-telo-pair" available="true">
       <name>СУМЕРКИ | ТЕЛО — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/sumerki-telo/</url>
+      <url>https://istova.ru/programs/sumerki-telo/?p=sumerki-telo-pair#dlya-dvoih</url>
       <price>18000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
@@ -514,7 +514,7 @@
     <offer id="zarya-volosy-pair" available="true">
       <name>ЗАРЯ | ВОЛОСЫ — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/zarya-volosy/</url>
+      <url>https://istova.ru/programs/zarya-volosy/?p=zarya-volosy-pair#dlya-dvoih</url>
       <price>16000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
@@ -534,7 +534,7 @@
     <offer id="zarya-telo-pair" available="true">
       <name>ЗАРЯ | ТЕЛО — вдвоём</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/programs/zarya-telo/</url>
+      <url>https://istova.ru/programs/zarya-telo/?p=zarya-telo-pair#dlya-dvoih</url>
       <price>17000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>

@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import BlurFade from "./magicui/BlurFade";
 
-type Item = { name: string; desc: string; price: string };
+type Item = { name: string; desc: string; price: string; anchor: string };
 type Group = { title: string; subtitle: string; hint: string; items: Item[] };
 
 const groups: Group[] = [
@@ -13,12 +13,12 @@ const groups: Group[] = [
     subtitle: "Массажные практики",
     hint: "Для лица и тела",
     items: [
-      { name: "Расслабляющий СПА-массаж", desc: "Медленные глубокие техники для снятия напряжения и возвращения лёгкости телу.", price: "60 мин — 4 300 ₽ · 90 мин — 5 900 ₽" },
-      { name: "Тёплый массаж тела", desc: "Мягкая практика на тёплом масле свечи — для глубокого расслабления и ощущения тепла.", price: "60 мин — 4 500 ₽ · 90 мин — 6 100 ₽" },
-      { name: "Энергия камня", desc: "Ручные техники и тёплые камни для глубокой проработки и расслабления тела.", price: "60 мин — 4 800 ₽ · 90 мин — 6 300 ₽" },
-      { name: "Тишина", desc: "Расслабляющий массаж кожи головы руками и гребнями.", price: "20 мин — 2 500 ₽" },
-      { name: "Глубина", desc: "Массаж лица, шейно-воротниковой зоны и кожи головы — для полного переключения.", price: "40 мин — 4 200 ₽" },
-      { name: "Камень", desc: "Косметический массаж лица гуаша, роликами или криосферами — для свежести кожи.", price: "30 мин — 3 500 ₽" },
+      { anchor: "massage", name: "Расслабляющий СПА-массаж", desc: "Медленные глубокие техники для снятия напряжения и возвращения лёгкости телу.", price: "60 мин — 4 300 ₽ · 90 мин — 5 900 ₽" },
+      { anchor: "warm", name: "Тёплый массаж тела", desc: "Мягкая практика на тёплом масле свечи — для глубокого расслабления и ощущения тепла.", price: "60 мин — 4 500 ₽ · 90 мин — 6 100 ₽" },
+      { anchor: "stone", name: "Энергия камня", desc: "Ручные техники и тёплые камни для глубокой проработки и расслабления тела.", price: "60 мин — 4 800 ₽ · 90 мин — 6 300 ₽" },
+      { anchor: "tishina", name: "Тишина", desc: "Расслабляющий массаж кожи головы руками и гребнями.", price: "20 мин — 2 500 ₽" },
+      { anchor: "glubina", name: "Глубина", desc: "Массаж лица, шейно-воротниковой зоны и кожи головы — для полного переключения.", price: "40 мин — 4 200 ₽" },
+      { anchor: "kamen", name: "Камень", desc: "Косметический массаж лица гуаша, роликами или криосферами — для свежести кожи.", price: "30 мин — 3 500 ₽" },
     ],
   },
   {
@@ -26,9 +26,9 @@ const groups: Group[] = [
     subtitle: "Самостоятельные уходы",
     hint: "Скраб · обёртывание · сауна",
     items: [
-      { name: "Обновление", desc: "Скрабирование тела, тёплый душ и завершающий уход. Аромат выбираете перед практикой.", price: "30 мин — 3 500 ₽" },
-      { name: "Укутывание", desc: "Финская сауна, питательное обёртывание, отдых в тепле и завершающий уход.", price: "50 мин — 4 200 ₽" },
-      { name: "Обновление + Укутывание", desc: "Полный СПА-уход для кожи тела: прогревание, обновление, обёртывание и завершающий уход.", price: "70 мин — 6 500 ₽" },
+      { anchor: "obnovlenie", name: "Обновление", desc: "Скрабирование тела, тёплый душ и завершающий уход. Аромат выбираете перед практикой.", price: "30 мин — 3 500 ₽" },
+      { anchor: "ukutyvanie", name: "Укутывание", desc: "Финская сауна, питательное обёртывание, отдых в тепле и завершающий уход.", price: "50 мин — 4 200 ₽" },
+      { anchor: "obn-ukut", name: "Обновление + Укутывание", desc: "Полный СПА-уход для кожи тела: прогревание, обновление, обёртывание и завершающий уход.", price: "70 мин — 6 500 ₽" },
     ],
   },
   {
@@ -36,11 +36,11 @@ const groups: Group[] = [
     subtitle: "Небольшие практики",
     hint: "Дополнение к любому ритуалу",
     items: [
-      { name: "Тёплые кисти", desc: "Массаж кистей и уход с тёплым кремом.", price: "20 мин — 2 000 ₽" },
-      { name: "Лёгкие стопы", desc: "Массаж стоп и голеней для снятия усталости и лёгкости.", price: "20 мин — 2 200 ₽" },
-      { name: "Тёплые стопы", desc: "Массаж стоп и голеней с согреванием травяными мешочками.", price: "30 мин — 2 900 ₽" },
-      { name: "Травяное тепло", desc: "Локальный ритуал с тёплыми травяными мешочками для выбранной зоны тела.", price: "20 мин — 2 500 ₽" },
-      { name: "Тяжесть и тишина", desc: "Отдых под тяжёлым одеялом с тёплым компрессом для глаз — полное замедление.", price: "20 мин — 1 300 ₽" },
+      { anchor: "kisti", name: "Тёплые кисти", desc: "Массаж кистей и уход с тёплым кремом.", price: "20 мин — 2 000 ₽" },
+      { anchor: "stopy-l", name: "Лёгкие стопы", desc: "Массаж стоп и голеней для снятия усталости и лёгкости.", price: "20 мин — 2 200 ₽" },
+      { anchor: "stopy-t", name: "Тёплые стопы", desc: "Массаж стоп и голеней с согреванием травяными мешочками.", price: "30 мин — 2 900 ₽" },
+      { anchor: "travy", name: "Травяное тепло", desc: "Локальный ритуал с тёплыми травяными мешочками для выбранной зоны тела.", price: "20 мин — 2 500 ₽" },
+      { anchor: "tyazhest", name: "Тяжесть и тишина", desc: "Отдых под тяжёлым одеялом с тёплым компрессом для глаз — полное замедление.", price: "20 мин — 1 300 ₽" },
     ],
   },
 ];
@@ -50,6 +50,20 @@ const easeOut = [0.22, 1, 0.36, 1] as const;
 export default function Teplota() {
   // независимые блоки: открытие одного не трогает другие, без авто-скролла
   const [openSet, setOpenSet] = useState<Set<number>>(() => new Set([0]));
+
+
+  // переход по ссылке вида /#teplota-tishina: открываем нужную группу и подводим к практике
+  useEffect(() => {
+    const anchor = window.location.hash.replace("#teplota-", "");
+    if (!anchor || anchor === window.location.hash) return;
+    const idx = groups.findIndex((g) => g.items.some((i) => i.anchor === anchor));
+    if (idx < 0) return;
+    setOpenSet((prev) => new Set(prev).add(idx));
+    const t = setTimeout(() => {
+      document.getElementById(`teplota-${anchor}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 350);
+    return () => clearTimeout(t);
+  }, []);
 
   const onToggle = (i: number) => {
     setOpenSet((prev) => {
@@ -138,11 +152,12 @@ export default function Teplota() {
                           {g.items.map((it) => (
                             <motion.li
                               key={it.name}
+                              id={`teplota-${it.anchor}`}
                               variants={{
                                 hidden: { opacity: 0, y: 18 },
                                 show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: easeOut } },
                               }}
-                              className="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6"
+                              className="py-5 scroll-mt-28 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6"
                             >
                               <div className="sm:flex-1">
                                 <span className="text-sand text-[15px] font-medium tracking-wide uppercase">
