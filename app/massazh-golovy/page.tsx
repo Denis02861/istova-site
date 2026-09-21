@@ -148,6 +148,7 @@ export default function MassazhGolovyPage() {
                   { href: "/blog/chto-takoe-head-spa/", t: "Что такое head spa", d: "Формат простыми словами" },
                   { href: "/blog/kak-snizit-kortizol/", t: "Массаж и кортизол", d: "Что показали исследования" },
                   { href: "/blog/vypadenie-volos-i-massazh-golovy/", t: "Массаж и волосы", d: "Честно про то, чего ждать не стоит" },
+                  { href: "/blog/piling-kozhi-golovy/", t: "Пилинг кожи головы", d: "Зачем нужен и как часто его делать" },
                 ].map((l) => (
                   <Link key={l.href} href={l.href} className="group block">
                     <div className="font-display text-lg text-brand mb-1.5 leading-snug group-hover:text-brand-dark transition-colors">
