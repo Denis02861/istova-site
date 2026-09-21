@@ -242,6 +242,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="agent-skills" href="/.well-known/agent-skills/index.json" type="application/json" />
         <link rel="describedby" href="/llms.txt" type="text/markdown" />
         <link rel="alternate" href="/sitemap.xml" type="application/xml" title="Sitemap" />
+        <link rel="alternate" href="/rss.xml" type="application/rss+xml" title="Истова — блог" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png" />
