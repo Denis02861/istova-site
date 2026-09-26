@@ -5,7 +5,13 @@ Allow: /
 # Яндекс / Google
 User-agent: Yandex
 Allow: /
+# Служебные параметры самого Яндекса
 Clean-param: etext&ybaip&p
+# Рекламные и UTM-метки. Выгрузка GSC от 26.09.2026 показала, что из 25 адресов
+# в обходе 21 отличался только метками Директа и yclid: робот тратил бюджет
+# на один и тот же контент. Canonical стоит верно, но обход всё равно шёл.
+Clean-param: yclid&gclid&_openstat&from
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
 
 User-agent: Googlebot
 Allow: /
