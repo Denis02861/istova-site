@@ -350,7 +350,7 @@ export default async function ProgramPage({
             <TrackedLink
               goal="BOOKING_CLICK"
               goalParams={{from:"program_page", slug: program.slug}}
-              href={`/go/zapis/?from=page_program_${program.slug.replace(/-/g, "_")}`}
+              href={`/go/zapis/?from=page_program_${program.slug.replace(/-/g, "_")}`} rel="nofollow"
               className="text-sm uppercase tracking-widest px-8 py-4 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors"
             >
               Записаться на ритуал

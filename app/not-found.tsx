@@ -47,7 +47,7 @@ export default function NotFound() {
             На главную
           </Link>
           <Link
-            href="/go/zapis/?from=page_404"
+            href="/go/zapis/?from=page_404" rel="nofollow"
             className="inline-flex items-center justify-center px-8 py-3.5 border border-brand/25 text-brand rounded-full hover:border-brand/60 transition-colors duration-200"
           >
             Записаться

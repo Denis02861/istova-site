@@ -222,7 +222,7 @@ export default function SpaDlyaDvoihPage() {
               <TrackedLink
                 goal="BOOKING_CLICK"
                 goalParams={{ from: "spa_dlya_dvoih_cta" }}
-                href="/go/zapis/?from=page_spa_dlya_dvoih"
+                href="/go/zapis/?from=page_spa_dlya_dvoih" rel="nofollow"
                 className="inline-flex items-center justify-center px-9 py-3.5 bg-sand text-brand rounded-full font-medium hover:bg-white active:scale-[0.98] transition-[transform,background-color] duration-[220ms]"
               >
                 Записаться онлайн
