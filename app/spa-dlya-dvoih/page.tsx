@@ -129,9 +129,9 @@ export default function SpaDlyaDvoihPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/frag-water.webp"
-            alt="Водный ритуал в Истове"
-            caption="Не нужен особый день, чтобы почувствовать себя особенной"
+            photo="/gallery/2026-09/dvoe-parallelno.webp"
+            alt="Два ритуала идут одновременно в смежных кабинетах"
+            caption="Два кабинета рядом: ритуалы идут одновременно и заканчиваются вместе"
           />
 
           <ProgramCards

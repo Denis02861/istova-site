@@ -59,6 +59,8 @@ const studioPhotos: Item[] = [
   { type: "image", src: "/gallery/2026-09/g-sauna.webp",     poster: "/gallery/2026-09/g-sauna.webp",     alt: "Двое в финской сауне" },
   { type: "image", src: "/gallery/2026-09/g-duga-voda.webp", poster: "/gallery/2026-09/g-duga-voda.webp", alt: "Нефритовая маска для лица во время ритуала для головы" },
   { type: "image", src: "/gallery/2026-09/g-litso.webp",     poster: "/gallery/2026-09/g-litso.webp",     alt: "Работа мастера с лицом и шеей" },
+  { type: "image", src: "/gallery/2026-09/g-muzhchina.webp",  poster: "/gallery/2026-09/g-muzhchina.webp", alt: "Мужской ритуал для головы, в зеркале виден второй кабинет" },
+  { type: "image", src: "/gallery/2026-09/g-konvert.webp",    poster: "/gallery/2026-09/g-konvert.webp",   alt: "Подарочный сертификат и витрина с уходом" },
   { type: "image", src: "/gallery/frag-lounge.webp",  poster: "/gallery/frag-lounge.webp",  alt: "Зона отдыха с закатным светом" },
   { type: "image", src: "/gallery/frag-tea.webp",     poster: "/gallery/frag-tea.webp",     alt: "Чайный ритуал" },
   { type: "image", src: "/gallery/frag-headspa.webp", poster: "/gallery/frag-headspa.webp", alt: "Кабинет спа для головы" },
