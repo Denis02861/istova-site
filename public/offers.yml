@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-09-23T17:10:00+03:00">
+<yml_catalog date="2026-09-26T14:19:43+03:00">
   <shop>
     <name>Истова</name>
     <company>ИП Карасёв Денис Игоревич</company>
@@ -15,7 +15,7 @@
     </categories>
     <offers>
     <offer id="teplota-tyazhest" available="true">
-      <name>Истова, Тяжесть и тишина</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-tyazhest#teplota-tyazhest</url>
       <price>1300</price>
@@ -31,11 +31,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-travy" available="true">
-      <name>Истова, Травяное тепло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-travy#teplota-travy</url>
       <price>2500</price>
@@ -51,11 +51,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-stopy-t" available="true">
-      <name>Истова, Тёплые стопы</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-stopy-t#teplota-stopy-t</url>
       <price>2900</price>
@@ -71,11 +71,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-stopy-l" available="true">
-      <name>Истова, Лёгкие стопы</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-stopy-l#teplota-stopy-l</url>
       <price>2200</price>
@@ -91,11 +91,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-kisti" available="true">
-      <name>Истова, Тёплые кисти</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-kisti#teplota-kisti</url>
       <price>2000</price>
@@ -111,11 +111,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-obn-ukut" available="true">
-      <name>Истова, Обновление + Укутывание</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-obn-ukut#teplota-obn-ukut</url>
       <price>6500</price>
@@ -131,11 +131,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-ukutyvanie" available="true">
-      <name>Истова, Укутывание</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-ukutyvanie#teplota-ukutyvanie</url>
       <price>4200</price>
@@ -151,11 +151,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-obnovlenie" available="true">
-      <name>Истова, Обновление</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-obnovlenie#teplota-obnovlenie</url>
       <price>3500</price>
@@ -171,11 +171,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-kamen" available="true">
-      <name>Истова, Камень</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-kamen#teplota-kamen</url>
       <price>3500</price>
@@ -191,11 +191,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-glubina" available="true">
-      <name>Истова, Глубина</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-glubina#teplota-glubina</url>
       <price>4200</price>
@@ -211,11 +211,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-tishina" available="true">
-      <name>Истова, Тишина</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-tishina#teplota-tishina</url>
       <price>2500</price>
@@ -231,11 +231,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-stone-90" available="true">
-      <name>Истова, Энергия камня (90 мин)</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-stone-90#teplota-stone</url>
       <price>6300</price>
@@ -251,11 +251,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-stone-60" available="true">
-      <name>Истова, Энергия камня (60 мин)</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-stone-60#teplota-stone</url>
       <price>4800</price>
@@ -271,11 +271,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-warm-90" available="true">
-      <name>Истова, Тёплый массаж тела (90 мин)</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-warm-90#teplota-warm</url>
       <price>6100</price>
@@ -291,11 +291,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-warm-60" available="true">
-      <name>Истова, Тёплый массаж тела (60 мин)</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-warm-60#teplota-warm</url>
       <price>4500</price>
@@ -311,11 +311,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-massage-90" available="true">
-      <name>Истова, Расслабляющий СПА-массаж (90 мин)</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-massage-90#teplota-massage</url>
       <price>5900</price>
@@ -331,11 +331,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-massage-60" available="true">
-      <name>Истова, Расслабляющий СПА-массаж (60 мин)</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/?p=teplota-massage-60#teplota-massage</url>
       <price>4300</price>
@@ -351,11 +351,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="kedr-lada-pair" available="true">
-      <name>Истова, КЕДР + ЛАДА — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/kedr-lada/?p=kedr-lada-pair#dlya-dvoih</url>
       <price>21000</price>
@@ -371,11 +371,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="cert-any" available="true">
-      <name>Истова, Подарочный сертификат на любую сумму</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/#booking</url>
       <price>3000</price>
@@ -390,11 +390,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="rodnik-pair" available="true">
-      <name>Истова, РОДНИК — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/rodnik/?p=rodnik-pair#dlya-dvoih</url>
       <price>14000</price>
@@ -410,11 +410,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="lada-pair" available="true">
-      <name>Истова, ЛАДА — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/lada/?p=lada-pair#dlya-dvoih</url>
       <price>21000</price>
@@ -429,11 +429,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="kedr-pair" available="true">
-      <name>Истова, КЕДР — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/kedr/?p=kedr-pair#dlya-dvoih</url>
       <price>21000</price>
@@ -448,11 +448,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="yav-pair" available="true">
-      <name>Истова, ЯВЬ — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/yav/?p=yav-pair#dlya-dvoih</url>
       <price>12000</price>
@@ -468,11 +468,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="sumerki-volosy-pair" available="true">
-      <name>Истова, СУМЕРКИ | ВОЛОСЫ — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/sumerki-volosy/?p=sumerki-volosy-pair#dlya-dvoih</url>
       <price>16000</price>
@@ -488,11 +488,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="sumerki-telo-pair" available="true">
-      <name>Истова, СУМЕРКИ | ТЕЛО — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/sumerki-telo/?p=sumerki-telo-pair#dlya-dvoih</url>
       <price>18000</price>
@@ -508,11 +508,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="zarya-volosy-pair" available="true">
-      <name>Истова, ЗАРЯ | ВОЛОСЫ — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/zarya-volosy/?p=zarya-volosy-pair#dlya-dvoih</url>
       <price>16000</price>
@@ -528,11 +528,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="zarya-telo-pair" available="true">
-      <name>Истова, ЗАРЯ | ТЕЛО — вдвоём</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/zarya-telo/?p=zarya-telo-pair#dlya-dvoih</url>
       <price>17000</price>
@@ -548,11 +548,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="rodnik-solo" available="true">
-      <name>Истова, РОДНИК — соло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/rodnik/</url>
       <price>7900</price>
@@ -568,11 +568,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="lada-solo" available="true">
-      <name>Истова, ЛАДА — соло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/lada/</url>
       <price>11900</price>
@@ -587,11 +587,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="kedr-solo" available="true">
-      <name>Истова, КЕДР — соло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/kedr/</url>
       <price>11900</price>
@@ -606,11 +606,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="yav-solo" available="true">
-      <name>Истова, ЯВЬ — соло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/yav/</url>
       <price>6800</price>
@@ -626,11 +626,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="sumerki-volosy-solo" available="true">
-      <name>Истова, СУМЕРКИ | ВОЛОСЫ — соло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/sumerki-volosy/</url>
       <price>8500</price>
@@ -646,11 +646,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="sumerki-telo-solo" available="true">
-      <name>Истова, СУМЕРКИ | ТЕЛО — соло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/sumerki-telo/</url>
       <price>9900</price>
@@ -666,11 +666,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="zarya-volosy-solo" available="true">
-      <name>Истова, ЗАРЯ | ВОЛОСЫ — соло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/zarya-volosy/</url>
       <price>8500</price>
@@ -686,11 +686,11 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="zarya-telo-solo" available="true">
-      <name>Истова, ЗАРЯ | ТЕЛО — соло</name>
+      <name>Истова</name>
       <vendor>Истова</vendor>
       <url>https://istova.ru/programs/zarya-telo/</url>
       <price>8900</price>
@@ -706,7 +706,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">57</param>
+      <param name="Число отзывов">58</param>
       <param name="Рейтинг">5</param>
     </offer>
     </offers>
