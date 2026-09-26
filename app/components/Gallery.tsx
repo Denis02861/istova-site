@@ -49,7 +49,16 @@ type Item = {
 };
 
 // Первая линия — студийные фото Истовы (все в одну ленту)
+// Съёмка 26.09.2026 стоит первой: до неё в ленте были только интерьеры и предметы,
+// самой процедуры не было видно ни на одном кадре. Карточки вертикальные 3:4,
+// поэтому здесь лежат вертикальные версии, а не те же кадры, что на страницах.
 const studioPhotos: Item[] = [
+  { type: "image", src: "/gallery/2026-09/g-duga.webp",      poster: "/gallery/2026-09/g-duga.webp",      alt: "Массаж головы под тёплой водой золотой дуги" },
+  { type: "image", src: "/gallery/2026-09/g-pena.webp",      poster: "/gallery/2026-09/g-pena.webp",      alt: "Пенный массаж кожи головы" },
+  { type: "image", src: "/gallery/2026-09/g-guasha.webp",    poster: "/gallery/2026-09/g-guasha.webp",    alt: "Массаж лица пластинами гуаша" },
+  { type: "image", src: "/gallery/2026-09/g-sauna.webp",     poster: "/gallery/2026-09/g-sauna.webp",     alt: "Двое в финской сауне" },
+  { type: "image", src: "/gallery/2026-09/g-duga-voda.webp", poster: "/gallery/2026-09/g-duga-voda.webp", alt: "Золотая дуга над раковиной для головы" },
+  { type: "image", src: "/gallery/2026-09/g-litso.webp",     poster: "/gallery/2026-09/g-litso.webp",     alt: "Работа мастера с лицом и шеей" },
   { type: "image", src: "/gallery/frag-lounge.webp",  poster: "/gallery/frag-lounge.webp",  alt: "Зона отдыха с закатным светом" },
   { type: "image", src: "/gallery/frag-tea.webp",     poster: "/gallery/frag-tea.webp",     alt: "Чайный ритуал" },
   { type: "image", src: "/gallery/frag-headspa.webp", poster: "/gallery/frag-headspa.webp", alt: "Кабинет спа для головы" },
