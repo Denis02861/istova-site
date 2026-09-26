@@ -42,6 +42,12 @@ export default function Footer() {
                 <a href="/massazh-golovy/" className="hover:text-sand">Массаж головы</a>
               </li>
               <li>
+                <a href="/yaponskoe-spa-dlya-golovy/" className="hover:text-sand">Японский массаж головы</a>
+              </li>
+              <li>
+                <a href="/spa-dlya-volos/" className="hover:text-sand">Спа для волос</a>
+              </li>
+              <li>
                 <a href="/rasslablyayushchiy-massazh/" className="hover:text-sand">Расслабляющий массаж</a>
               </li>
               <li>

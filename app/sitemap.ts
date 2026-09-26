@@ -11,6 +11,8 @@ const STATIC_PAGES: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/programs/", priority: 0.95, changefreq: "monthly" },
   { path: "/spa-dlya-dvoih/", priority: 0.9, changefreq: "monthly" },
   { path: "/massazh-golovy/", priority: 0.9, changefreq: "monthly" },
+  { path: "/yaponskoe-spa-dlya-golovy/", priority: 0.9, changefreq: "monthly" },
+  { path: "/spa-dlya-volos/", priority: 0.9, changefreq: "monthly" },
   { path: "/antistress/", priority: 0.9, changefreq: "monthly" },
   { path: "/rasslablyayushchiy-massazh/", priority: 0.9, changefreq: "monthly" },
   { path: "/spa-vasileostrovskiy/", priority: 0.9, changefreq: "monthly" },

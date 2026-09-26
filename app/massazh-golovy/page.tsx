@@ -162,6 +162,8 @@ export default function MassazhGolovyPage() {
               <div className="grid sm:grid-cols-3 gap-5">
                 {[
                   { href: "/blog/chto-takoe-head-spa/", t: "Что такое head spa", d: "Формат простыми словами" },
+                  { href: "/yaponskoe-spa-dlya-golovy/", t: "Японский массаж головы", d: "Тот же формат, другое название" },
+                  { href: "/spa-dlya-volos/", t: "Спа для волос", d: "Когда важнее не расслабление, а уход" },
                   { href: "/blog/kak-snizit-kortizol/", t: "Массаж и кортизол", d: "Что показали исследования" },
                   { href: "/blog/vypadenie-volos-i-massazh-golovy/", t: "Массаж и волосы", d: "Честно про то, чего ждать не стоит" },
                   { href: "/blog/piling-kozhi-golovy/", t: "Пилинг кожи головы", d: "Зачем нужен и как часто его делать" },
