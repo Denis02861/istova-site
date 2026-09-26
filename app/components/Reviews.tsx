@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import BlurFade from "./magicui/BlurFade";
+import { RATING } from "../lib/rating";
 
 /**
  * Реальные отзывы гостей с Яндекс.Карт (org 63939829435).
@@ -13,12 +14,12 @@ const GIS_URL = "https://2gis.ru/spb/search/Истова%20Беринга%2023";
 const EASE = "cubic-bezier(0.23,1,0.32,1)";
 
 /**
- * Рейтинг по площадкам. Цифры сверены 26.09.2026 и обязаны совпадать с
- * aggregateRating в layout.tsx: расхождение видимого и размеченного рейтинга
- * площадки считают нарушением. Обновлять вместе с layout.tsx и public/offers.yml.
+ * Рейтинг по площадкам. Число с Яндекс.Карт берём из app/lib/rating.ts, чтобы
+ * видимая гостю цифра и размеченная в schema.org не могли разойтись: расхождение
+ * площадки считают нарушением. 2ГИС ведём руками, его в разметке нет.
  */
 const RATINGS = [
-  { place: "оценки на Яндекс Картах", count: 58, href: YANDEX_URL },
+  { place: "оценки на Яндекс Картах", count: RATING.count, href: YANDEX_URL },
   { place: "оценок в 2ГИС", count: 16, href: GIS_URL },
 ];
 

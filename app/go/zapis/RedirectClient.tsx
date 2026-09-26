@@ -17,13 +17,20 @@ const SOURCES: Record<string, { utm_source: string; utm_medium: string; label: s
 
 const FALLBACK = { utm_source: "direct", utm_medium: "link", label: "прямой переход" };
 
+// Кнопки со страниц самого сайта. Их много и список будет расти, поэтому
+// перечислять каждую в SOURCES смысла нет: ловим по префиксу page_ и кладём
+// имя страницы в utm_content. В Метрике видно, с какой страницы пришёл человек.
+const PAGE_PREFIX = "page_";
+const PAGE_SOURCE = { utm_source: "site", utm_medium: "page_cta", label: "страница сайта" };
+
 export default function RedirectClient() {
   const [target, setTarget] = useState<string>(DIKIDI_URL);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const from = (params.get("from") || "").toLowerCase();
-    const src = SOURCES[from] ?? FALLBACK;
+    const src =
+      SOURCES[from] ?? (from.startsWith(PAGE_PREFIX) ? PAGE_SOURCE : FALLBACK);
 
     const url = new URL(DIKIDI_URL);
     url.searchParams.set("utm_source", src.utm_source);

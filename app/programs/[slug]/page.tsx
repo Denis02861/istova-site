@@ -36,6 +36,22 @@ const SHORT_TITLE_ACCENT: Record<string, string> = {
   "sumerki-volosy": "ВЕЧЕР · Расслабление кожи головы",
 };
 
+// Начало title: то, что человек набирает в поиске. До 26.09.2026 title начинался
+// с внутреннего названия ритуала («ЗАРЯ | ВОЛОСЫ — head spa...»), и первые два слова
+// сниппета не говорили ищущему ничего. У конкурентов в тех же выдачах впереди стоит
+// услуга, город и цена. Название ритуала остаётся, но уходит во вторую часть.
+const SEO_LEAD: Record<string, string> = {
+  "zarya-telo": "Спа для тела в СПб",
+  "zarya-volosy": "Спа для волос и head spa в СПб",
+  "sumerki-telo": "Вечернее спа для тела в СПб",
+  "sumerki-volosy": "Вечернее head spa в СПб",
+  "kedr-lada": "Спа для двоих в СПб",
+  "yav": "Спа-ритуал в СПб",
+  "kedr": "Мужское спа в СПб",
+  "lada": "Женское спа в СПб",
+  "rodnik": "Бережное спа для головы в СПб",
+};
+
 // SEO-суффикс для title: услуга + гео под поисковый спрос (H1/дизайн не затрагивает)
 const SEO_SUFFIX: Record<string, string> = {
   "zarya-telo": "спа для тела в СПб, Васильевский",
@@ -63,7 +79,13 @@ export async function generateMetadata({
   if (!program) return {};
   const titleAccent = SHORT_TITLE_ACCENT[slug] ?? program.accent ?? "";
   const seoSuffix = SEO_SUFFIX[slug] ?? titleAccent;
-  const title = `${program.name} — ${seoSuffix} | Истова`;
+  // Вертикальную черту из названия убираем: в title уже есть разделитель, три палки
+  // подряд в выдаче читаются как мусор. «ЗАРЯ | ВОЛОСЫ» становится «ЗАРЯ ВОЛОСЫ».
+  const nameFlat = program.name.replace(/\s*\|\s*/g, " ");
+  const lead = SEO_LEAD[slug];
+  const title = lead
+    ? `${lead} — ${nameFlat}, ${program.price} · Истова`
+    : `${program.name} — ${seoSuffix} | Истова`;
   const rawDesc = SHORT_DESC[slug] ?? program.accent ?? "";
   const description = `${rawDesc} ${program.dur}, ${program.price}.`.replace(/\s+/g, " ").trim();
   const url = `${SITE_URL}/programs/${slug}/`;
@@ -116,15 +138,21 @@ export default async function ProgramPage({
   const description = `${rawDesc} ${program.dur}, ${program.price}.`.replace(/\s+/g, " ").trim();
   const url = `${SITE_URL}/programs/${slug}/`;
 
-  const SERVICE_JSONLD = {
+  // Страница ритуала это карточка конкретного предложения с ценой, поэтому размечаем
+  // её как Product, а не Service. Для Service поисковики цену в сниппете не рисуют,
+  // для Product с Offer рисуют — у конкурентов в выдаче цена стоит отдельной строкой,
+  // а у нас её не было. Сам салон по-прежнему описан в layout.tsx как организация,
+  // сюда он входит продавцом.
+  const PRODUCT_JSONLD = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${url}#service`,
-    serviceType: program.name,
+    "@type": "Product",
+    "@id": `${url}#product`,
     name: program.name,
     description,
-    provider: { "@id": `${SITE_URL}/#organization` },
-    areaServed: { "@type": "City", name: "Санкт-Петербург" },
+    image: [`${SITE_URL}/og/${program.slug}.jpg`],
+    brand: { "@type": "Brand", name: "Истова" },
+    category: "Спа-ритуалы",
+    url,
     offers: {
       "@type": "Offer",
       price: program.price.replace(/[^\d]/g, ""),
@@ -132,12 +160,17 @@ export default async function ProgramPage({
       availability: "https://schema.org/InStock",
       url,
       validFrom: "2026-06-09",
+      // Без срока Google считает цену протухшей и может не показать её в сниппете.
+      priceValidUntil: "2027-12-31",
+      seller: { "@id": `${SITE_URL}/#organization` },
+      areaServed: { "@type": "City", name: "Санкт-Петербург" },
     },
-    datePublished: "2026-06-09",
-    dateModified: "2026-07-03",
-    author: { "@id": `${SITE_URL}/#organization` },
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    inLanguage: "ru-RU",
+    isRelatedTo: {
+      "@type": "Service",
+      name: program.name,
+      serviceType: program.name,
+      provider: { "@id": `${SITE_URL}/#organization` },
+    },
   };
 
   const FAQ_JSONLD = {
@@ -202,7 +235,7 @@ export default async function ProgramPage({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_JSONLD) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PRODUCT_JSONLD) }}
       />
       <script
         type="application/ld+json"
@@ -317,7 +350,7 @@ export default async function ProgramPage({
             <TrackedLink
               goal="BOOKING_CLICK"
               goalParams={{from:"program_page", slug: program.slug}}
-              href="/#booking"
+              href={`/go/zapis/?from=page_program_${program.slug.replace(/-/g, "_")}`}
               className="text-sm uppercase tracking-widest px-8 py-4 border border-brand text-brand hover:bg-brand hover:text-sand transition-colors"
             >
               Записаться на ритуал

@@ -4,11 +4,12 @@
 
 Зачем: Яндекс.Вебмастер сверяет число отзывов и рейтинг в фиде с МИКРОРАЗМЕТКОЙ
 на самом сайте (istova.ru), а не с карточкой на Картах. Поэтому цифра живёт
-в трёх местах сразу и все три обязаны совпадать:
-  public/offers.yml            — фид для Вебмастера
-  app/layout.tsx               — aggregateRating в schema.org
-  app/components/Reviews.tsx   — то, что видит гость на странице
-Если развести хотя бы два, Вебмастер пометит фид ошибкой, а разметку могут снять.
+в двух местах и оба обязаны совпадать:
+  public/offers.yml   — фид для Вебмастера
+  app/lib/rating.ts   — единый источник для сайта: оттуда её берут и schema.org
+                        в layout.tsx, и видимый блок отзывов в Reviews.tsx
+Раньше цифра лежала в layout.tsx и Reviews.tsx порознь, и их можно было развести.
+Если развести, Вебмастер пометит фид ошибкой, а разметку могут снять.
 Отзывы копятся сами, поэтому цифра устаревает каждый месяц.
 
 Запуск:
@@ -35,8 +36,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FEED = ROOT / "public" / "offers.yml"
-LAYOUT = ROOT / "app" / "layout.tsx"            # микроразметка schema.org
-REVIEWS = ROOT / "app" / "components" / "Reviews.tsx"  # видимый блок отзывов
+RATING_TS = ROOT / "app" / "lib" / "rating.ts"  # единый источник рейтинга для сайта
 
 # Карточка Истовы на Яндекс.Картах
 ORG_ID = "63939829435"
@@ -148,35 +148,36 @@ def main():
     FEED.write_text(new, encoding="utf-8")
     print(f"[правка] {FEED.relative_to(ROOT)} обновлён")
 
-    if not sync_site(count_s):
+    if not sync_site(rating_s, count_s):
         return 2
 
     return git_push(rating_s, count_s)
 
 
-def sync_site(count_s):
-    """Правит число отзывов в микроразметке и в видимом блоке.
-    Яндекс сверяет фид именно с ними, поэтому цифра должна быть одна на три файла."""
-    ok = True
-    for path, pattern, repl in (
-        (LAYOUT, r"(reviewCount:\s*)\d+", rf"\g<1>{count_s}"),
-        (REVIEWS, r'(\{ place: "оценки на Яндекс Картах", count: )\d+',
-         rf"\g<1>{count_s}"),
-    ):
-        if not path.exists():
-            print(f"[ошибка] нет файла {path.relative_to(ROOT)}")
-            ok = False
-            continue
-        src = path.read_text(encoding="utf-8")
-        out, n = re.subn(pattern, repl, src)
-        if n == 0:
-            print(f"[ошибка] в {path.relative_to(ROOT)} не нашёл, что править")
-            print("[ошибка] структура файла изменилась, правь руками")
-            ok = False
-            continue
-        path.write_text(out, encoding="utf-8")
-        print(f"[правка] {path.relative_to(ROOT)}: {n} замен")
-    return ok
+def sync_site(rating_s, count_s):
+    """Правит единый источник рейтинга. Его импортируют и микроразметка в layout.tsx,
+    и видимый блок отзывов, поэтому расходиться между собой они физически не могут."""
+    if not RATING_TS.exists():
+        print(f"[ошибка] нет файла {RATING_TS.relative_to(ROOT)}")
+        return False
+
+    src = RATING_TS.read_text(encoding="utf-8")
+    out, n_count = re.subn(r"(\n  count: )\d+", rf"\g<1>{count_s}", src)
+    out, n_value = re.subn(r'(\n  value: ")[^"]+(")', rf"\g<1>{rating_s}\g<2>", out)
+
+    if n_count != 1 or n_value != 1:
+        print(f"[ошибка] в {RATING_TS.relative_to(ROOT)} не нашёл, что править "
+              f"(count: {n_count}, value: {n_value})")
+        print("[ошибка] структура файла изменилась, правь руками")
+        return False
+
+    today = f"{datetime.now(MSK):%d.%m.%Y}"
+    out = re.sub(r"Сверено \d{2}\.\d{2}\.\d{4}: \d+ оценок",
+                 f"Сверено {today}: {count_s} оценок", out)
+
+    RATING_TS.write_text(out, encoding="utf-8")
+    print(f"[правка] {RATING_TS.relative_to(ROOT)}: рейтинг {rating_s}, отзывов {count_s}")
+    return True
 
 
 def git_push(rating_s, count_s):
@@ -185,15 +186,14 @@ def git_push(rating_s, count_s):
         return subprocess.run(["git", "-C", str(ROOT), *a],
                               capture_output=True, text=True, **kw)
 
-    tracked = ["public/offers.yml", "app/layout.tsx",
-               "app/components/Reviews.tsx"]
+    tracked = ["public/offers.yml", "app/lib/rating.ts"]
     if not git("diff", "--quiet", "--", *tracked).returncode:
         print("[git]    нечего коммитить")
         return 0
 
     git("add", *tracked)
-    msg = (f"[agent] отзывы {count_s}, рейтинг {rating_s}: фид, разметка и блок "
-           f"отзывов синхронизированы с Яндекс.Картами")
+    msg = (f"[agent] отзывы {count_s}, рейтинг {rating_s}: фид и rating.ts "
+           f"синхронизированы с Яндекс.Картами")
     r = git("commit", "-m", msg)
     if r.returncode:
         print(f"[ошибка] commit: {r.stderr.strip()}")

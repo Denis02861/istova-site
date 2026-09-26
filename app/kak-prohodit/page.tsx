@@ -231,10 +231,17 @@ export default function KakProhoditPage() {
                 Смотреть программы
               </Link>
               <TrackedLink
-                goal="BOOKING_CLICK" goalParams={{ from: "kak_prohodit_cta" }} href="/#booking"
+                goal="BOOKING_CLICK" goalParams={{ from: "kak_prohodit_cta" }} href="/go/zapis/?from=page_kak_prohodit"
                 className="inline-flex items-center justify-center px-9 py-3.5 border border-sand/40 text-sand rounded-full hover:bg-sand hover:text-brand active:scale-[0.98] transition-[transform,background-color,color] duration-[220ms]"
               >
                 Записаться
+              </TrackedLink>
+              <TrackedLink
+                goal="TG_CLICK" goalParams={{ from: "kak_prohodit_cta" }} href="https://t.me/Istova_spa"
+                target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-9 py-3.5 border border-sand/40 text-sand rounded-full hover:bg-sand hover:text-brand active:scale-[0.98] transition-[transform,background-color,color] duration-[220ms]"
+              >
+                Написать администратору
               </TrackedLink>
             </div>
           </div>

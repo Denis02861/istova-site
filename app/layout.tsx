@@ -2,6 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
 import CookieBanner from "./components/CookieBanner";
+import { AGGREGATE_RATING } from "./lib/rating";
 
 const SITE_URL = "https://istova.ru";
 const TITLE = "Массаж головы и head spa в СПб — Истова, м. Приморская";
@@ -113,17 +114,10 @@ const ORG_JSONLD = {
     "@type": "City",
     name: "Санкт-Петербург",
   },
-  // Рейтинг с Яндекс.Карт (org 63939829435), сверено 26.09.2026: 58 оценок, все пятёрки.
-  // Цифры обязаны совпадать с тем, что видит гость в блоке отзывов, иначе разметку
-  // снимут. Обновлять вместе с Reviews.tsx И с public/offers.yml: Яндекс.Вебмастер
-  // сверяет фид именно с этой разметкой, расхождение помечает ошибкой фида.
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: 58,
-    bestRating: "5",
-    worstRating: "1",
-  },
+  // Рейтинг с Яндекс.Карт. Цифра живёт в app/lib/rating.ts: оттуда же её берут
+  // Reviews.tsx и страницы услуг, а скрипт sync-feed-reviews.py правит её вместе
+  // с public/offers.yml. Руками здесь не менять, иначе файлы разъедутся.
+  aggregateRating: AGGREGATE_RATING,
   // Сами отзывы, а не только средний балл: поисковики охотнее рисуют звёзды,
   // когда видят конкретные тексты. Все четыре реальные, с Яндекс.Карт, и они же
   // показаны гостю в блоке отзывов. Тексты обязаны совпадать с Reviews.tsx.

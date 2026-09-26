@@ -177,7 +177,7 @@ export default function BlogIndexPage() {
 
           <div className="text-center pt-16 mt-16 border-t border-brand/10">
             <Link
-              href="/#booking"
+              href="/go/zapis/?from=page_blog"
               className="inline-flex items-center justify-center px-9 py-3.5 bg-brand text-sand rounded-full font-medium shadow-[0_12px_40px_-12px_rgba(116,68,54,0.5)] hover:bg-brand-dark active:scale-[0.98] transition-[transform,background-color,box-shadow] duration-[220ms]"
             >
               Записаться на ритуал

@@ -189,7 +189,7 @@ export default function MassazhGolovyPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <TrackedLink
-                goal="BOOKING_CLICK" goalParams={{ from: "massazh_golovy_cta" }} href="/#booking"
+                goal="BOOKING_CLICK" goalParams={{ from: "massazh_golovy_cta" }} href="/go/zapis/?from=page_massazh_golovy"
                 className="inline-flex items-center justify-center px-9 py-3.5 bg-sand text-brand rounded-full font-medium hover:bg-white active:scale-[0.98] transition-[transform,background-color] duration-[220ms]"
               >
                 Записаться онлайн
@@ -199,6 +199,13 @@ export default function MassazhGolovyPage() {
                 className="inline-flex items-center justify-center px-9 py-3.5 border border-sand/40 text-sand rounded-full hover:bg-sand hover:text-brand active:scale-[0.98] transition-[transform,background-color,color] duration-[220ms]"
               >
                 +7 (901) 320-10-50
+              </TrackedLink>
+              <TrackedLink
+                goal="TG_CLICK" goalParams={{ from: "massazh_golovy_cta" }} href="https://t.me/Istova_spa"
+                target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-9 py-3.5 border border-sand/40 text-sand rounded-full hover:bg-sand hover:text-brand active:scale-[0.98] transition-[transform,background-color,color] duration-[220ms]"
+              >
+                Написать администратору
               </TrackedLink>
             </div>
           </div>

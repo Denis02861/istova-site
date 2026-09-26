@@ -147,7 +147,7 @@ export default function ProgramsCatalogPage() {
 
           <div className="text-center pt-12 border-t border-brand/10">
             <Link
-              href="/#booking"
+              href="/go/zapis/?from=page_programs"
               className="inline-block px-10 py-4 bg-brand text-sand uppercase tracking-widest text-sm hover:bg-brand-dark transition-colors"
             >
               Записаться на ритуал
