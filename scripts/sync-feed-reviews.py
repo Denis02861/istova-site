@@ -2,8 +2,13 @@
 """
 Синхронизация рейтинга и числа отзывов в YML-фиде с карточкой Яндекс.Карт.
 
-Зачем: Яндекс.Вебмастер сверяет <param name="Число отзывов"> и <param name="Рейтинг">
-в фиде с реальной карточкой организации. Расходятся — фид помечается ошибкой.
+Зачем: Яндекс.Вебмастер сверяет число отзывов и рейтинг в фиде с МИКРОРАЗМЕТКОЙ
+на самом сайте (istova.ru), а не с карточкой на Картах. Поэтому цифра живёт
+в трёх местах сразу и все три обязаны совпадать:
+  public/offers.yml            — фид для Вебмастера
+  app/layout.tsx               — aggregateRating в schema.org
+  app/components/Reviews.tsx   — то, что видит гость на странице
+Если развести хотя бы два, Вебмастер пометит фид ошибкой, а разметку могут снять.
 Отзывы копятся сами, поэтому цифра устаревает каждый месяц.
 
 Запуск:
@@ -30,6 +35,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FEED = ROOT / "public" / "offers.yml"
+LAYOUT = ROOT / "app" / "layout.tsx"            # микроразметка schema.org
+REVIEWS = ROOT / "app" / "components" / "Reviews.tsx"  # видимый блок отзывов
 
 # Карточка Истовы на Яндекс.Картах
 ORG_ID = "63939829435"
@@ -141,7 +148,35 @@ def main():
     FEED.write_text(new, encoding="utf-8")
     print(f"[правка] {FEED.relative_to(ROOT)} обновлён")
 
+    if not sync_site(count_s):
+        return 2
+
     return git_push(rating_s, count_s)
+
+
+def sync_site(count_s):
+    """Правит число отзывов в микроразметке и в видимом блоке.
+    Яндекс сверяет фид именно с ними, поэтому цифра должна быть одна на три файла."""
+    ok = True
+    for path, pattern, repl in (
+        (LAYOUT, r"(reviewCount:\s*)\d+", rf"\g<1>{count_s}"),
+        (REVIEWS, r'(\{ place: "оценки на Яндекс Картах", count: )\d+',
+         rf"\g<1>{count_s}"),
+    ):
+        if not path.exists():
+            print(f"[ошибка] нет файла {path.relative_to(ROOT)}")
+            ok = False
+            continue
+        src = path.read_text(encoding="utf-8")
+        out, n = re.subn(pattern, repl, src)
+        if n == 0:
+            print(f"[ошибка] в {path.relative_to(ROOT)} не нашёл, что править")
+            print("[ошибка] структура файла изменилась, правь руками")
+            ok = False
+            continue
+        path.write_text(out, encoding="utf-8")
+        print(f"[правка] {path.relative_to(ROOT)}: {n} замен")
+    return ok
 
 
 def git_push(rating_s, count_s):
@@ -150,13 +185,15 @@ def git_push(rating_s, count_s):
         return subprocess.run(["git", "-C", str(ROOT), *a],
                               capture_output=True, text=True, **kw)
 
-    if not git("diff", "--quiet", "--", "public/offers.yml").returncode:
+    tracked = ["public/offers.yml", "app/layout.tsx",
+               "app/components/Reviews.tsx"]
+    if not git("diff", "--quiet", "--", *tracked).returncode:
         print("[git]    нечего коммитить")
         return 0
 
-    git("add", "public/offers.yml")
-    msg = (f"[agent] feed: отзывы {count_s}, рейтинг {rating_s} "
-           f"(синхронизация с Яндекс.Картами)")
+    git("add", *tracked)
+    msg = (f"[agent] отзывы {count_s}, рейтинг {rating_s}: фид, разметка и блок "
+           f"отзывов синхронизированы с Яндекс.Картами")
     r = git("commit", "-m", msg)
     if r.returncode:
         print(f"[ошибка] commit: {r.stderr.strip()}")
