@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-09-26T14:19:43+03:00">
+<yml_catalog date="2026-09-28T09:01:10+03:00">
   <shop>
     <name>Истова</name>
     <company>ИП Карасёв Денис Игоревич</company>
@@ -31,7 +31,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-travy" available="true">
@@ -51,7 +51,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-stopy-t" available="true">
@@ -71,7 +71,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-stopy-l" available="true">
@@ -91,7 +91,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-kisti" available="true">
@@ -111,7 +111,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-obn-ukut" available="true">
@@ -131,7 +131,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-ukutyvanie" available="true">
@@ -151,7 +151,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-obnovlenie" available="true">
@@ -171,7 +171,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-kamen" available="true">
@@ -191,7 +191,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-glubina" available="true">
@@ -211,7 +211,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-tishina" available="true">
@@ -231,7 +231,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-stone-90" available="true">
@@ -251,7 +251,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-stone-60" available="true">
@@ -271,7 +271,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-warm-90" available="true">
@@ -291,7 +291,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-warm-60" available="true">
@@ -311,7 +311,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-massage-90" available="true">
@@ -331,7 +331,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="teplota-massage-60" available="true">
@@ -351,7 +351,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="kedr-lada-pair" available="true">
@@ -371,7 +371,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="cert-any" available="true">
@@ -390,7 +390,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="rodnik-pair" available="true">
@@ -410,7 +410,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="lada-pair" available="true">
@@ -429,7 +429,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="kedr-pair" available="true">
@@ -448,7 +448,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="yav-pair" available="true">
@@ -468,7 +468,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="sumerki-volosy-pair" available="true">
@@ -488,7 +488,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="sumerki-telo-pair" available="true">
@@ -508,7 +508,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="zarya-volosy-pair" available="true">
@@ -528,7 +528,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="zarya-telo-pair" available="true">
@@ -548,7 +548,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="rodnik-solo" available="true">
@@ -568,7 +568,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="lada-solo" available="true">
@@ -587,7 +587,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="kedr-solo" available="true">
@@ -606,7 +606,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="yav-solo" available="true">
@@ -626,7 +626,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="sumerki-volosy-solo" available="true">
@@ -646,7 +646,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="sumerki-telo-solo" available="true">
@@ -666,7 +666,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="zarya-volosy-solo" available="true">
@@ -686,7 +686,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     <offer id="zarya-telo-solo" available="true">
@@ -706,7 +706,7 @@
       <param name="Регион">Санкт-Петербург</param>
       <param name="Конверсия">1</param>
       <param name="Годы опыта">1</param>
-      <param name="Число отзывов">58</param>
+      <param name="Число отзывов">66</param>
       <param name="Рейтинг">5</param>
     </offer>
     </offers>
