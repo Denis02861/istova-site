@@ -10,8 +10,24 @@ import { RATING } from "../lib/rating";
  * Обновлять по мере накопления. Источник виден ссылкой на карточку.
  */
 const YANDEX_URL = "https://yandex.ru/maps/org/istova/63939829435/reviews/";
-const GIS_URL = "https://2gis.ru/spb/search/Истова%20Беринга%2023";
+const GIS_URL = "https://2gis.ru/spb/firm/70000001115194634/tab/reviews";
 const EASE = "cubic-bezier(0.23,1,0.32,1)";
+
+/**
+ * Ссылки сразу на форму отзыва, взяты из интерфейсов площадок 28.09.2026.
+ * Не сокращать и не собирать руками: у обеих площадок форма открывается только
+ * с полным набором параметров, урезанная ссылка ведёт на карточку без формы.
+ */
+const ADD_REVIEW = [
+  {
+    place: "на Яндекс Картах",
+    href: "https://yandex.ru/maps/2/saint-petersburg/?add-review=true&ll=30.240737%2C59.945759&mode=poi&poi%5Bpoint%5D=30.240697%2C59.945698&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D63939829435&tab=reviews&z=18.6",
+  },
+  {
+    place: "в 2ГИС",
+    href: "https://2gis.ru/spb/firm/70000001115194634/30.240748%2C59.945775/tab/reviews/addreview?m=30.240865%2C59.945702%2F18.97",
+  },
+];
 
 /**
  * Рейтинг по площадкам. Число с Яндекс.Карт берём из app/lib/rating.ts, чтобы
