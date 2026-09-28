@@ -194,6 +194,24 @@ export default function Reviews() {
             <p className="text-center text-brand-dark/70 max-w-xl mx-auto">
               Живые отзывы гостей. Пролистайте и раскройте любой целиком.
             </p>
+            {/* Приглашение оставить отзыв. Ведёт сразу на форму, не на карточку:
+                гость, который уже был, не должен искать кнопку сам. */}
+            <p className="text-center text-[13px] text-brand/55">
+              Были у нас? Оставьте отзыв{" "}
+              {ADD_REVIEW.map((r, i) => (
+                <span key={r.href}>
+                  {i > 0 && " или "}
+                  <a
+                    href={r.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-brand/25 underline-offset-4 hover:text-brand hover:decoration-brand/60 transition-colors duration-[450ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
+                  >
+                    {r.place}
+                  </a>
+                </span>
+              ))}
+            </p>
           </div>
         </BlurFade>
 
