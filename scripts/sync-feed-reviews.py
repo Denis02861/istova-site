@@ -213,7 +213,68 @@ def git_push(rating_s, count_s):
         return 2
 
     print("[git]    запушено в main, Layero пересоберёт сайт")
+    recrawl()
     return 0
+
+
+# Страницы, которые Вебмастер сверяет с фидом: на них есть aggregateRating,
+# и на них же ведут url предложений. Пока робот держит в индексе старое число
+# отзывов, фид помечается ошибкой «рейтинг не соответствует сайту» — даже когда
+# и фид, и сайт уже верные. Ровно это случилось 29.09.2026.
+RECRAWL_URLS = [
+    "https://istova.ru/",
+    "https://istova.ru/programs/",
+    "https://istova.ru/programs/zarya-telo/",
+    "https://istova.ru/programs/zarya-volosy/",
+    "https://istova.ru/programs/sumerki-telo/",
+    "https://istova.ru/programs/sumerki-volosy/",
+    "https://istova.ru/programs/rodnik/",
+    "https://istova.ru/programs/kedr/",
+    "https://istova.ru/programs/lada/",
+    "https://istova.ru/programs/yav/",
+    "https://istova.ru/programs/kedr-lada/",
+    "https://istova.ru/spa-dlya-dvoih/",
+    "https://istova.ru/podarochnyy-sertifikat/",
+]
+WM_USER_ID = "870823394"
+WM_HOST = "https:istova.ru:443"
+
+
+def recrawl():
+    """Просит Яндекс переобойти страницы с рейтингом.
+
+    Без этого робот ещё сутки-двое сверяет свежий фид со старой копией сайта.
+    Токен тот же OAuth, что у Метрики и Директа (один на все сервисы Яндекса).
+    Ошибки здесь не критичны: фид уже обновлён, переобход только ускоряет.
+    Квота 150 адресов в сутки, тут расходуется 13.
+    """
+    token = os.environ.get("YA_METRIKA_DIRECT_TOKEN") or os.environ.get("YA_DIRECT_TOKEN")
+    if not token:
+        print("[обход]  нет токена Яндекса, переобход пропущен")
+        return
+
+    url_api = (f"https://api.webmaster.yandex.net/v4/user/{WM_USER_ID}"
+               f"/hosts/{WM_HOST}/recrawl/queue/")
+    sent, failed = 0, 0
+    for page in RECRAWL_URLS:
+        req = urllib.request.Request(
+            url_api,
+            data=json.dumps({"url": page}).encode(),
+            headers={"Authorization": f"OAuth {token}",
+                     "Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                json.load(r)
+                sent += 1
+        except Exception as e:
+            # кончилась квота или страница уже в очереди — не повод падать
+            failed += 1
+            print(f"[обход]  не принято: {page} ({type(e).__name__})")
+
+    print(f"[обход]  на переобход отправлено {sent} из {len(RECRAWL_URLS)}"
+          + (f", отклонено {failed}" if failed else ""))
 
 
 if __name__ == "__main__":
