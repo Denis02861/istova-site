@@ -5,6 +5,9 @@ import TrackedLink from "../components/TrackedLink";
 import Footer from "../components/Footer";
 import LandingHero from "../components/LandingHero";
 import Reveal from "../components/Reveal";
+import Booking from "../components/Booking";
+import { FaqBlock } from "../components/LandingBlocks";
+import { RATING } from "../lib/rating";
 
 // Короткая посадочная под SMS-рассылку: первый экран, три причины с фото,
 // все контакты одним блоком и уход на основной сайт. Длинного скролла быть не должно —
@@ -12,7 +15,7 @@ import Reveal from "../components/Reveal";
 // В поиске страница не нужна: холодный трафик нельзя мешать с поисковым в статистике.
 const SITE_URL = "https://istova.ru";
 const URL = `${SITE_URL}/tishina/`;
-const TITLE = "Тишина на 70 минут — Истова";
+const TITLE = "Тишина на 75 минут — Истова";
 const DESCRIPTION =
   "Спа для головы на Васильевском острове: тёплая вода, работа с шеей, сушка и укладка в финале. От 6800 ₽, м. Приморская.";
 
@@ -30,7 +33,30 @@ const REASONS = [
   {
     photo: "/gallery/frag-tea.webp",
     title: "Время без спешки",
-    text: "От 70 до 150 минут, отсчёт от начала ритуала. В финале чай и лаунж-зона.",
+    text: "От 75 до 150 минут, отсчёт от начала ритуала. В финале чай и лаунж-зона.",
+  },
+];
+
+// Вопросы взяты дословно из блока FAQ на главной (app/components/FAQ.tsx) —
+// это уже утверждённые ответы, выдумывать для посадочной ничего нельзя.
+// Отобраны те четыре, что закрывают главные страхи из портрета аудитории
+// (reports/istova-sms-portret.txt): мокрая голова, боль, что взять с собой, спешка.
+const FAQ_ITEMS = [
+  {
+    q: "Голова и волосы остаются мокрыми после?",
+    a: "Нет. После аква-медитации мастер сушит и делает лёгкую укладку. В программах ЗАРЯ | ВОЛОСЫ и СУМЕРКИ | ВОЛОСЫ можно выбрать: самостоятельная сушка или со спа-мастером.",
+  },
+  {
+    q: "Больно ли во время массажа головы?",
+    a: "Нет. Все техники в Истове мягкие. Мы работаем с расслаблением, а не с силовой проработкой. Если давление некомфортно — говорите мастеру, он сразу поменяет технику.",
+  },
+  {
+    q: "Нужно ли что-то с собой?",
+    a: "Всё необходимое у нас: полотенца, халат, тапочки, душ. Снять украшения и контактные линзы — на месте всё расскажет администратор.",
+  },
+  {
+    q: "Как добраться и есть ли парковка?",
+    a: "Мы на Васильевском острове, ул. Беринга, 23 к. 2. Ближайшее метро — «Приморская» (10 мин пешком). Бесплатная парковка прямо у салона.",
   },
 ];
 
@@ -38,7 +64,6 @@ const LINKS = [
   { href: "tel:+79013201050", label: "+7 (901) 320-10-50", note: "Позвонить", goal: "PHONE_CLICK" },
   { href: "https://wa.me/79013201050", label: "WhatsApp", note: "Написать в мессенджер", goal: "WA_CLICK" },
   { href: "https://t.me/Istova_spa", label: "Telegram", note: "@Istova_spa", goal: "TG_CLICK" },
-  { href: "https://instagram.com/istova.spa", label: "Instagram", note: "@istova.spa", goal: "IG_CLICK" },
   { href: "https://dikidi.ru/2107431", label: "Онлайн-запись", note: "Выбрать время самому", goal: "BOOKING_CLICK" },
   {
     href: "https://yandex.ru/maps/org/istova/63939829435/",
@@ -75,7 +100,7 @@ export default function TishinaPage() {
           title="Когда голова не выключается сама"
           lead="Здесь от вас ничего не требуется: вы ложитесь, дальше всё делают за вас. Тёплая вода, тишина и чай в финале."
           ctaFrom="sms_hero"
-          priceHint="от 6800 ₽ · 70-150 минут"
+          priceHint="от 6800 ₽ · 75-150 минут"
         />
 
         <div className="container mx-auto px-6 max-w-5xl">
@@ -100,15 +125,26 @@ export default function TishinaPage() {
               ))}
             </div>
 
+            {/* Доказательство вместо увода на главную. Раньше здесь стояла кнопка
+                «Смотреть весь сайт»: человек с SMS уходил с посадочной, так и не
+                записавшись. Цифра берётся из единого источника app/lib/rating.ts,
+                который синхронизируется с карточкой Яндекс.Карт. */}
             <div className="text-center mt-10">
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center px-8 py-3 border border-brand/25 text-brand rounded-full hover:bg-brand hover:text-sand active:scale-[0.98] transition-[transform,background-color,color] duration-[220ms]"
+              <TrackedLink
+                goal="MAPS_CLICK"
+                goalParams={{ from: "sms_rating" }}
+                href="https://yandex.ru/maps/org/istova/63939829435/reviews/"
+                className="inline-flex items-baseline gap-2 text-brand hover:text-brand-dark transition-colors"
               >
-                Смотреть весь сайт
-              </Link>
+                <span className="font-display text-3xl">{RATING.value},0</span>
+                <span className="text-sm text-brand-dark/65">
+                  на Яндекс.Картах · {RATING.count} оценок
+                </span>
+              </TrackedLink>
             </div>
           </section>
+
+          <FaqBlock items={FAQ_ITEMS} />
 
           <section className="pb-14">
             <div className="rounded-[28px] bg-sand-soft border border-brand/10 p-8 md:p-10">
@@ -137,20 +173,25 @@ export default function TishinaPage() {
           </section>
         </div>
 
-        <section className="bg-brand text-sand">
-          <div className="container mx-auto px-6 max-w-3xl py-16 text-center">
-            <h2 className="font-display text-2xl md:text-3xl mb-4">Хотите посмотреть всё?</h2>
-            <p className="text-base text-sand/80 leading-relaxed mb-8">
-              Девять авторских программ, цены, как проходит визит и фотографии пространства.
-            </p>
-            <Link
-              href="/"
-              className="inline-flex items-center justify-center px-9 py-3.5 bg-sand text-brand rounded-full font-medium hover:bg-white active:scale-[0.98] transition-[transform,background-color] duration-[220ms]"
-            >
-              Перейти на основной сайт
-            </Link>
-          </div>
-        </section>
+        {/* Форма. До 30.09.2026 её на посадочной не было вовсе: единственным
+            действием была кнопка в онлайн-запись. По рассылке №1 из 59 человек
+            9 кликнули телефон и 9 телеграм — то есть связаться хотели, но
+            выбирать время в чужом календаре были не готовы. Цель «заявка
+            отправлена» показывала ноль не потому, что никто не заполнил,
+            а потому что заполнять было нечего. */}
+        <Booking />
+
+        {/* Уход на основной сайт оставлен, но неброско. Раньше здесь стоял
+            полноэкранный баннер «Хотите посмотреть всё?» — он забирал человека
+            с посадочной прямо перед точкой записи. */}
+        <div className="container mx-auto px-6 max-w-5xl pb-16 text-center">
+          <Link
+            href="/"
+            className="text-sm text-brand/60 hover:text-brand underline underline-offset-4 decoration-brand/25 transition-colors"
+          >
+            Все девять программ, цены и фотографии пространства
+          </Link>
+        </div>
       </main>
       <Footer />
     </>
