@@ -94,7 +94,9 @@ const ORG_JSONLD = {
   image: [`${SITE_URL}/og-image.webp`],
   description: DESCRIPTION,
   telephone: "+7 (901) 320-10-50",
-  priceRange: "6800—13000 ₽",
+  // Диапазон по programs-data.ts: ЯВЬ 6 800 ₽ — парная КЕДР + ЛАДА 21 000 ₽.
+  // Стояло 13000: такой цены в прайсе нет, цифра осталась от старой сетки.
+  priceRange: "6800—21000 ₽",
   currenciesAccepted: "RUB",
   paymentAccepted: "Cash, Credit Card, СБП",
   address: {
