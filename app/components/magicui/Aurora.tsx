@@ -1,6 +1,21 @@
+/**
+ * Плавающие световые пятна для первого экрана.
+ *
+ * Маска снизу обязательна. Пятна крупнее секции и часть из них специально свисает
+ * за нижний край (-bottom-24 и -bottom-40), а секция режет их по overflow-hidden —
+ * получалась чёткая горизонтальная линия на стыке со следующим блоком.
+ * Маска гасит пятна к низу, поэтому резать нечего: от 68% высоты цвет уходит
+ * в прозрачность, и переход читается как растворение, а не как шов.
+ * Маскируем сами пятна, а не кладём сверху градиент цвета фона — так починка
+ * работает на любом фоне, а Aurora стоит на пяти экранах с разной подложкой.
+ */
+const FADE =
+  "[mask-image:linear-gradient(to_bottom,#000_0%,#000_68%,transparent_100%)] " +
+  "[-webkit-mask-image:linear-gradient(to_bottom,#000_0%,#000_68%,transparent_100%)]";
+
 export default function Aurora() {
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div className={`pointer-events-none absolute inset-0 overflow-hidden ${FADE}`}>
       {/* верх-лево, тёплый крем */}
       <div className="absolute -top-20 -left-20 md:-top-32 md:-left-32 w-[280px] h-[280px] md:w-[520px] md:h-[520px] rounded-full blur-2xl opacity-45 md:opacity-70 bg-gradient-to-br from-[#e6d4b3] to-[#f5e9d3] animate-aurora-1" />
       {/* верх-право, охра */}
