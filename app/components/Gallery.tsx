@@ -154,7 +154,7 @@ export default function Gallery() {
   const active = open ? list[index as number] : null;
 
   return (
-    <section id="gallery" className="py-20 md:py-28 bg-sand relative overflow-hidden">
+    <section id="gallery" className="py-20 md:py-28 bg-sand fade-top-soft relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         <div className="text-center mb-6">
           <span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium">

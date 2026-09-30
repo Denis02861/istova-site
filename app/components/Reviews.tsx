@@ -156,7 +156,7 @@ export default function Reviews() {
   };
 
   return (
-    <section id="reviews" className="py-20 md:py-32 bg-sand-deep/25 overflow-hidden">
+    <section id="reviews" className="py-20 md:py-32 bg-sand-deep fade-top-soft/25 overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
         <BlurFade delay={0.05} yOffset={16}>
           <div className="text-center mb-3">

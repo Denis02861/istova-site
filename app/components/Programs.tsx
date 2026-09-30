@@ -157,7 +157,7 @@ export default function Programs() {
   );
 
   return (
-    <section id="programs" className="py-16 md:py-24 bg-sand-deep/30 overflow-hidden">
+    <section id="programs" className="py-16 md:py-24 bg-sand-deep fade-top-soft/30 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-6"><span className="inline-block px-3 py-1 rounded-full border border-brand/20 text-[10px] uppercase tracking-[0.2em] text-brand/70 font-medium ">Программы</span></div>
         <h2 className="font-display text-4xl md:text-5xl text-brand mb-4 text-center tracking-tight">
