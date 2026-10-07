@@ -45,7 +45,10 @@ export default function Concept() {
           <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Место, не услуга</h2>
         </BlurFade>
         <div className="space-y-6 text-lg leading-relaxed text-brand-dark/90">
-          <BlurFade delay={0.25} yOffset={16}><p>Истова — спа в Петербурге, где не торопят и не обещают лишнего.</p></BlurFade>
+          {/* «спа салон спб» даёт 2549 показов в месяц, а слова на главной не было
+              вовсе (Вордстат СПб, 07.10.2026). Решение Дениса: добавить мягко,
+              одним упоминанием в видимом тексте. Заголовок и h1 не трогаем. */}
+          <BlurFade delay={0.25} yOffset={16}><p>Истова — спа-салон в Петербурге, где не торопят и не обещают лишнего.</p></BlurFade>
           <BlurFade delay={0.35} yOffset={16}><p>Работаем по проверенным программам. Натуральные масла, тёплая и холодная вода, тишина.</p></BlurFade>
           <BlurFade delay={0.45} yOffset={16}><p>Сюда возвращаются, чтобы выдохнуть.</p></BlurFade>
         </div>
