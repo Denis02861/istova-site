@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-09-29T15:02:31+03:00">
+<yml_catalog date="2026-10-07T15:13:57+03:00">
   <shop>
     <name>Истова</name>
     <company>ИП Карасёв Денис Игоревич</company>
@@ -14,145 +14,57 @@
       <category id="4">Подарочные сертификаты</category>
     </categories>
     <sets>
-      <set id="s-teplota-tyazhest">
-        <name>Тяжесть и тишина</name>
-        <url>https://istova.ru/?p=teplota-tyazhest#teplota-tyazhest</url>
+      <set id="s-programs">
+        <name>Спа-ритуалы Истовы</name>
+        <url>https://istova.ru/programs/</url>
       </set>
-      <set id="s-teplota-travy">
-        <name>Травяное тепло</name>
-        <url>https://istova.ru/?p=teplota-travy#teplota-travy</url>
+      <set id="s-dvoih">
+        <name>Спа для двоих</name>
+        <url>https://istova.ru/spa-dlya-dvoih/</url>
       </set>
-      <set id="s-teplota-stopy-t">
-        <name>Тёплые стопы</name>
-        <url>https://istova.ru/?p=teplota-stopy-t#teplota-stopy-t</url>
+      <set id="s-teplota">
+        <name>Отдельные практики</name>
+        <url>https://istova.ru/</url>
       </set>
-      <set id="s-teplota-stopy-l">
-        <name>Лёгкие стопы</name>
-        <url>https://istova.ru/?p=teplota-stopy-l#teplota-stopy-l</url>
+      <set id="s-cert">
+        <name>Подарочный сертификат</name>
+        <url>https://istova.ru/podarochnyy-sertifikat/</url>
       </set>
-      <set id="s-teplota-kisti">
-        <name>Тёплые кисти</name>
-        <url>https://istova.ru/?p=teplota-kisti#teplota-kisti</url>
+      <set id="s-zarya-telo">
+        <name>ЗАРЯ | ТЕЛО</name>
+        <url>https://istova.ru/programs/zarya-telo/</url>
       </set>
-      <set id="s-teplota-obn-ukut">
-        <name>Обновление + Укутывание</name>
-        <url>https://istova.ru/?p=teplota-obn-ukut#teplota-obn-ukut</url>
-      </set>
-      <set id="s-teplota-ukutyvanie">
-        <name>Укутывание</name>
-        <url>https://istova.ru/?p=teplota-ukutyvanie#teplota-ukutyvanie</url>
-      </set>
-      <set id="s-teplota-obnovlenie">
-        <name>Обновление</name>
-        <url>https://istova.ru/?p=teplota-obnovlenie#teplota-obnovlenie</url>
-      </set>
-      <set id="s-teplota-kamen">
-        <name>Камень</name>
-        <url>https://istova.ru/?p=teplota-kamen#teplota-kamen</url>
-      </set>
-      <set id="s-teplota-glubina">
-        <name>Глубина</name>
-        <url>https://istova.ru/?p=teplota-glubina#teplota-glubina</url>
-      </set>
-      <set id="s-teplota-tishina">
-        <name>Тишина</name>
-        <url>https://istova.ru/?p=teplota-tishina#teplota-tishina</url>
-      </set>
-      <set id="s-teplota-stone-90">
-        <name>Энергия камня (90 мин)</name>
-        <url>https://istova.ru/?p=teplota-stone-90#teplota-stone</url>
-      </set>
-      <set id="s-teplota-stone-60">
-        <name>Энергия камня (60 мин)</name>
-        <url>https://istova.ru/?p=teplota-stone-60#teplota-stone</url>
-      </set>
-      <set id="s-teplota-warm-90">
-        <name>Тёплый массаж тела (90 мин)</name>
-        <url>https://istova.ru/?p=teplota-warm-90#teplota-warm</url>
-      </set>
-      <set id="s-teplota-warm-60">
-        <name>Тёплый массаж тела (60 мин)</name>
-        <url>https://istova.ru/?p=teplota-warm-60#teplota-warm</url>
-      </set>
-      <set id="s-teplota-massage-90">
-        <name>Расслабляющий СПА-массаж (90 мин)</name>
-        <url>https://istova.ru/?p=teplota-massage-90#teplota-massage</url>
-      </set>
-      <set id="s-teplota-massage-60">
-        <name>Расслабляющий СПА-массаж (60 мин)</name>
-        <url>https://istova.ru/?p=teplota-massage-60#teplota-massage</url>
-      </set>
-      <set id="s-kedr-lada-pair">
-        <name>КЕДР + ЛАДА — вдвоём</name>
-        <url>https://istova.ru/programs/kedr-lada/?p=kedr-lada-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-cert-any">
-        <name>Подарочный сертификат на любую сумму</name>
-        <url>https://istova.ru/#booking</url>
-      </set>
-      <set id="s-rodnik-pair">
-        <name>РОДНИК — вдвоём</name>
-        <url>https://istova.ru/programs/rodnik/?p=rodnik-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-lada-pair">
-        <name>ЛАДА — вдвоём</name>
-        <url>https://istova.ru/programs/lada/?p=lada-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-kedr-pair">
-        <name>КЕДР — вдвоём</name>
-        <url>https://istova.ru/programs/kedr/?p=kedr-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-yav-pair">
-        <name>ЯВЬ — вдвоём</name>
-        <url>https://istova.ru/programs/yav/?p=yav-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-sumerki-volosy-pair">
-        <name>СУМЕРКИ | ВОЛОСЫ — вдвоём</name>
-        <url>https://istova.ru/programs/sumerki-volosy/?p=sumerki-volosy-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-sumerki-telo-pair">
-        <name>СУМЕРКИ | ТЕЛО — вдвоём</name>
-        <url>https://istova.ru/programs/sumerki-telo/?p=sumerki-telo-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-zarya-volosy-pair">
-        <name>ЗАРЯ | ВОЛОСЫ — вдвоём</name>
-        <url>https://istova.ru/programs/zarya-volosy/?p=zarya-volosy-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-zarya-telo-pair">
-        <name>ЗАРЯ | ТЕЛО — вдвоём</name>
-        <url>https://istova.ru/programs/zarya-telo/?p=zarya-telo-pair#dlya-dvoih</url>
-      </set>
-      <set id="s-rodnik-solo">
-        <name>РОДНИК — соло</name>
-        <url>https://istova.ru/programs/rodnik/</url>
-      </set>
-      <set id="s-lada-solo">
-        <name>ЛАДА — соло</name>
-        <url>https://istova.ru/programs/lada/</url>
-      </set>
-      <set id="s-kedr-solo">
-        <name>КЕДР — соло</name>
-        <url>https://istova.ru/programs/kedr/</url>
-      </set>
-      <set id="s-yav-solo">
-        <name>ЯВЬ — соло</name>
-        <url>https://istova.ru/programs/yav/</url>
-      </set>
-      <set id="s-sumerki-volosy-solo">
-        <name>СУМЕРКИ | ВОЛОСЫ — соло</name>
-        <url>https://istova.ru/programs/sumerki-volosy/</url>
-      </set>
-      <set id="s-sumerki-telo-solo">
-        <name>СУМЕРКИ | ТЕЛО — соло</name>
-        <url>https://istova.ru/programs/sumerki-telo/</url>
-      </set>
-      <set id="s-zarya-volosy-solo">
-        <name>ЗАРЯ | ВОЛОСЫ — соло</name>
+      <set id="s-zarya-volosy">
+        <name>ЗАРЯ | ВОЛОСЫ</name>
         <url>https://istova.ru/programs/zarya-volosy/</url>
       </set>
-      <set id="s-zarya-telo-solo">
-        <name>ЗАРЯ | ТЕЛО — соло</name>
-        <url>https://istova.ru/programs/zarya-telo/</url>
+      <set id="s-sumerki-telo">
+        <name>СУМЕРКИ | ТЕЛО</name>
+        <url>https://istova.ru/programs/sumerki-telo/</url>
+      </set>
+      <set id="s-sumerki-volosy">
+        <name>СУМЕРКИ | ВОЛОСЫ</name>
+        <url>https://istova.ru/programs/sumerki-volosy/</url>
+      </set>
+      <set id="s-rodnik">
+        <name>РОДНИК</name>
+        <url>https://istova.ru/programs/rodnik/</url>
+      </set>
+      <set id="s-kedr">
+        <name>КЕДР</name>
+        <url>https://istova.ru/programs/kedr/</url>
+      </set>
+      <set id="s-lada">
+        <name>ЛАДА</name>
+        <url>https://istova.ru/programs/lada/</url>
+      </set>
+      <set id="s-yav">
+        <name>ЯВЬ</name>
+        <url>https://istova.ru/programs/yav/</url>
+      </set>
+      <set id="s-kedr-lada">
+        <name>КЕДР + ЛАДА</name>
+        <url>https://istova.ru/programs/kedr-lada/</url>
       </set>
     </sets>
     <offers>
@@ -163,7 +75,7 @@
       <price>1300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-tyazhest</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -184,7 +96,7 @@
       <price>2500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-travy</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -205,7 +117,7 @@
       <price>2900</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-stopy-t</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -226,7 +138,7 @@
       <price>2200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-stopy-l</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -247,7 +159,7 @@
       <price>2000</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-kisti</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/frag-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -268,7 +180,7 @@
       <price>6500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-obn-ukut</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -289,7 +201,7 @@
       <price>4200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-ukutyvanie</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -310,7 +222,7 @@
       <price>3500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-obnovlenie</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -331,7 +243,7 @@
       <price>3500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-kamen</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/frag-care.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -352,7 +264,7 @@
       <price>4200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-glubina</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -373,7 +285,7 @@
       <price>2500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-tishina</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -394,7 +306,7 @@
       <price>6300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-stone-90</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -415,7 +327,7 @@
       <price>4800</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-stone-60</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -436,7 +348,7 @@
       <price>6100</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-warm-90</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -457,7 +369,7 @@
       <price>4500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-warm-60</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -478,7 +390,7 @@
       <price>5900</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-massage-90</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -499,7 +411,7 @@
       <price>4300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota-massage-60</set-ids>
+      <set-ids>s-teplota</set-ids>
       <picture>https://istova.ru/gallery/05-massage.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -520,7 +432,7 @@
       <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-kedr-lada-pair</set-ids>
+      <set-ids>s-dvoih,s-kedr-lada</set-ids>
       <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -541,7 +453,7 @@
       <price>3000</price>
       <currencyId>RUR</currencyId>
       <categoryId>4</categoryId>
-      <set-ids>s-cert-any</set-ids>
+      <set-ids>s-cert</set-ids>
       <picture>https://istova.ru/certificates/blank.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -561,7 +473,7 @@
       <price>14000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-rodnik-pair</set-ids>
+      <set-ids>s-dvoih,s-rodnik</set-ids>
       <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -582,7 +494,7 @@
       <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-lada-pair</set-ids>
+      <set-ids>s-dvoih,s-lada</set-ids>
       <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -603,7 +515,7 @@
       <price>21000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-kedr-pair</set-ids>
+      <set-ids>s-dvoih,s-kedr</set-ids>
       <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -624,7 +536,7 @@
       <price>12000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-yav-pair</set-ids>
+      <set-ids>s-dvoih,s-yav</set-ids>
       <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -645,7 +557,7 @@
       <price>16000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-sumerki-volosy-pair</set-ids>
+      <set-ids>s-dvoih,s-sumerki-volosy</set-ids>
       <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -666,7 +578,7 @@
       <price>18000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-sumerki-telo-pair</set-ids>
+      <set-ids>s-dvoih,s-sumerki-telo</set-ids>
       <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -687,7 +599,7 @@
       <price>16000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-zarya-volosy-pair</set-ids>
+      <set-ids>s-dvoih,s-zarya-volosy</set-ids>
       <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -708,7 +620,7 @@
       <price>17000</price>
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
-      <set-ids>s-zarya-telo-pair</set-ids>
+      <set-ids>s-dvoih,s-zarya-telo</set-ids>
       <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -729,7 +641,7 @@
       <price>7900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-rodnik-solo</set-ids>
+      <set-ids>s-programs,s-rodnik</set-ids>
       <picture>https://istova.ru/gallery/06-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -750,7 +662,7 @@
       <price>11900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-lada-solo</set-ids>
+      <set-ids>s-programs,s-lada</set-ids>
       <picture>https://istova.ru/gallery/06-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -771,7 +683,7 @@
       <price>11900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-kedr-solo</set-ids>
+      <set-ids>s-programs,s-kedr</set-ids>
       <picture>https://istova.ru/gallery/06-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -792,7 +704,7 @@
       <price>6800</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-yav-solo</set-ids>
+      <set-ids>s-programs,s-yav</set-ids>
       <picture>https://istova.ru/gallery/06-body.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -813,7 +725,7 @@
       <price>8500</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-sumerki-volosy-solo</set-ids>
+      <set-ids>s-programs,s-sumerki-volosy</set-ids>
       <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -834,7 +746,7 @@
       <price>9900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-sumerki-telo-solo</set-ids>
+      <set-ids>s-programs,s-sumerki-telo</set-ids>
       <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -855,7 +767,7 @@
       <price>8500</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-zarya-volosy-solo</set-ids>
+      <set-ids>s-programs,s-zarya-volosy</set-ids>
       <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
@@ -876,7 +788,7 @@
       <price>8900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-zarya-telo-solo</set-ids>
+      <set-ids>s-programs,s-zarya-telo</set-ids>
       <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
