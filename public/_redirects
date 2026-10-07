@@ -2,5 +2,24 @@
 http://www.istova.ru/*   https://istova.ru/:splat   301!
 https://www.istova.ru/*  https://istova.ru/:splat   301!
 
+# Адреса без завершающего слеша склеиваем с основной версией.
+# Next собран с trailingSlash: true, но хостинг отдаёт 200 и на вариант без слеша.
+# Для Метрики это две разные страницы, и у версии без слеша показатели мусорные:
+# 07.10.2026 /massazh-golovy дал 78% отказов при 3 секундах на странице.
+# Canonical указывает верно, но лишний живой адрес лучше убрать совсем.
+/programs                    /programs/                    301!
+/spa-dlya-dvoih              /spa-dlya-dvoih/              301!
+/massazh-golovy              /massazh-golovy/              301!
+/yaponskoe-spa-dlya-golovy   /yaponskoe-spa-dlya-golovy/   301!
+/spa-dlya-volos              /spa-dlya-volos/              301!
+/antistress                  /antistress/                  301!
+/rasslablyayushchiy-massazh  /rasslablyayushchiy-massazh/  301!
+/spa-vasileostrovskiy        /spa-vasileostrovskiy/        301!
+/podarochnyy-sertifikat      /podarochnyy-sertifikat/      301!
+/kak-prohodit                /kak-prohodit/                301!
+/o-nas                       /o-nas/                       301!
+/blog                        /blog/                        301!
+/tishina                     /tishina/                     301!
+
 # Все несуществующие URL → 404.html с кодом 404 (не 200)
 /*  /404.html  404
