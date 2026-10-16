@@ -2,49 +2,9 @@
 
 import { useMemo, useState } from "react";
 import BlurFade from "./magicui/BlurFade";
-import { programs, type Program } from "../lib/programs-data";
+import { type Program } from "../lib/programs-data";
+import { recommend, type Focus, type Time, type Care, type Special, type Mode, type Pick } from "../lib/quiz-logic";
 import { track } from "../lib/track";
-
-type Focus = "body" | "hair" | "both";
-type Time = "morning" | "evening";
-type Care = "peeling" | "sauna" | "aroma_fresh" | "aroma_soft" | "any";
-type Special = "none" | "pregnancy" | "first" | "him" | "her";
-type Mode = "solo" | "duo";
-
-const byslug = (s: string) => programs.find((p) => p.slug === s)!;
-
-function recommend(focus: Focus, time: Time, care: Care, special: Special, mode: Mode): Program[] {
-  // Особый запрос перебивает всё
-  if (special === "pregnancy") return [byslug("rodnik")];
-  if (special === "first") return [byslug("yav")];
-  if (special === "him") return [byslug("kedr")];
-  if (special === "her") return [byslug("lada")];
-
-  // Всё вместе — полный ритуал
-  if (focus === "both") {
-    if (mode === "duo") return [byslug("kedr-lada")];
-    const p = care === "aroma_soft" ? "lada" : care === "aroma_fresh" ? "kedr" : time === "morning" ? "kedr" : "lada";
-    return [byslug(p)];
-  }
-
-  // Тело
-  if (focus === "body") {
-    const primary = time === "morning" ? "zarya-telo" : "sumerki-telo";
-    let second: string;
-    if (care === "peeling" || care === "sauna") second = "kedr";
-    else second = time === "morning" ? "sumerki-telo" : "zarya-telo";
-    return [byslug(primary), byslug(second)];
-  }
-
-  // Голова и волосы
-  // Хочется ещё прогрева или скраба тела — большие ритуалы, где есть и сауна, и работа с головой
-  if (care === "sauna" || care === "peeling") {
-    return [byslug("lada"), byslug("kedr")];
-  }
-  const primary = time === "morning" ? "zarya-volosy" : "sumerki-volosy";
-  const second = time === "morning" ? "sumerki-volosy" : "zarya-volosy";
-  return [byslug(primary), byslug(second)];
-}
 
 function openProgram(slug: string) {
   if (typeof window === "undefined") return;
@@ -63,8 +23,8 @@ export default function Quiz() {
   const [special, setSpecial] = useState<Special | null>(null);
   const [mode, setMode] = useState<Mode | null>(null);
 
-  const recs = useMemo(
-    () => (focus && time && care && special && mode ? recommend(focus, time, care, special, mode) : []),
+  const recs: Pick[] = useMemo(
+    () => (focus && time && care && special && mode ? recommend({ focus, time, care, special, mode }) : []),
     [focus, time, care, special, mode]
   );
 
@@ -107,17 +67,8 @@ export default function Quiz() {
     ],
   };
 
-  const renderSingle = (p: Program, asDuo = false) => {
+  const renderSingle = (p: Program, asDuo = false, why: string[] = []) => {
     const showPair = asDuo && p.pair_price;
-    let struckSoloDoubleFmt = "";
-    let discountPct = 0;
-    if (showPair) {
-      const solo = parseInt(p.price.replace(/\D/g, ""), 10);
-      const pair = parseInt((p.pair_price as string).replace(/\D/g, ""), 10);
-      const soloDouble = solo * 2;
-      struckSoloDoubleFmt = soloDouble.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ₽";
-      discountPct = Math.max(0, Math.round((1 - pair / soloDouble) * 100));
-    }
     return (
       <button
         key={p.slug}
@@ -137,14 +88,17 @@ export default function Quiz() {
         </div>
         <div className="font-display text-2xl text-brand uppercase tracking-wider mb-3">{p.name}</div>
         <p className="text-sm text-brand-dark/75 italic mb-4">{p.teaser}</p>
+        {why.length > 0 && (
+          <p className="text-xs text-brand/80 mb-4">Подходит вам: {why.join(" · ")}</p>
+        )}
         {showPair ? (
           <div className="mt-auto flex flex-col gap-1 pt-3 border-t border-brand/10">
             <div className="flex justify-between items-baseline">
               <div className="text-xs uppercase tracking-widest text-brand/70">
                 Вдвоём одновременно
-                <div className="text-[10px] normal-case text-brand/50 mt-0.5">
-                  <span className="line-through">{struckSoloDoubleFmt}</span> · −{discountPct}%
-                </div>
+                {/* Без зачёркнутой цены и процента: скидок в Истове нет (решение владельцев),
+                    парная цена — это просто цена ритуала на двоих. */}
+                <div className="text-[10px] normal-case text-brand/50 mt-0.5">за двоих · ~ {p.dur}</div>
               </div>
               <div className="font-display text-xl text-brand">{p.pair_price}</div>
             </div>
@@ -155,7 +109,7 @@ export default function Quiz() {
             <div className="text-xs uppercase tracking-widest text-brand/70">Открыть →</div>
             <div className="text-right">
               <div className="font-display text-xl text-brand">{p.price}</div>
-              <div className="text-[10px] text-brand-dark/60">~ {p.dur}</div>
+              <div className="text-[10px] text-brand-dark/60">~ {p.dur}{p.slug === "kedr-lada" ? " · за двоих" : ""}</div>
             </div>
           </div>
         )}
@@ -222,7 +176,7 @@ export default function Quiz() {
               {recs.length === 1 ? "Ваш ритуал" : "Ваш ритуал и ещё один вариант"}
             </div>
             <div className={`grid gap-5 ${recs.length > 1 ? "md:grid-cols-2" : "max-w-md mx-auto"}`}>
-              {recs.map((p) => renderSingle(p, false))}
+              {recs.map((r) => renderSingle(r.program, mode === "duo", r.reasons))}
             </div>
             <div className="text-center mt-8">
               <button onClick={reset} className="text-xs uppercase tracking-widest text-brand/60 hover:text-brand">
