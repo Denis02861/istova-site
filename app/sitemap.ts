@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { articles } from "./lib/blog-data";
 import { programs } from "./lib/programs-data";
+import { practices } from "./lib/practices-data";
 
 const SITE_URL = "https://istova.ru";
 
@@ -17,6 +18,7 @@ const STATIC_PAGES: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/rasslablyayushchiy-massazh/", priority: 0.9, changefreq: "monthly" },
   { path: "/spa-vasileostrovskiy/", priority: 0.9, changefreq: "monthly" },
   { path: "/podarochnyy-sertifikat/", priority: 0.9, changefreq: "monthly" },
+  { path: "/praktiki/", priority: 0.85, changefreq: "monthly" },
   { path: "/o-nas/", priority: 0.85, changefreq: "yearly" },
   { path: "/kak-prohodit/", priority: 0.85, changefreq: "monthly" },
   { path: "/blog/", priority: 0.7, changefreq: "weekly" },
@@ -50,5 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...statics, ...programPages, ...articlePages];
+  const practicePages = practices.map((p) => ({
+    url: `${SITE_URL}/praktiki/${p.slug}/`,
+    lastModified: today,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [...statics, ...programPages, ...practicePages, ...articlePages];
 }

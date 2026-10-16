@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import BlurFade from "./magicui/BlurFade";
+import Link from "next/link";
+import { practiceHref } from "../lib/practices-data";
 
 type Item = { name: string; desc: string; price: string; anchor: string };
 type Group = { title: string; subtitle: string; hint: string; items: Item[] };
@@ -160,9 +162,13 @@ export default function Teplota() {
                               className="py-5 scroll-mt-28 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6"
                             >
                               <div className="sm:flex-1">
-                                <span className="text-sand text-[15px] font-medium tracking-wide uppercase">
+                                {/* С 16.10.2026 у каждой практики своя страница: для поиска их до этого не было */}
+                                <Link
+                                  href={practiceHref(it.anchor) ?? "/praktiki/"}
+                                  className="text-sand text-[15px] font-medium tracking-wide uppercase underline-offset-4 decoration-sand/30 hover:underline transition-colors"
+                                >
                                   {it.name}
-                                </span>
+                                </Link>
                                 <p className="text-sand/55 text-sm leading-relaxed mt-0.5">{it.desc}</p>
                               </div>
                               <span className="text-sand/85 text-sm whitespace-nowrap tabular-nums shrink-0">
@@ -183,6 +189,11 @@ export default function Teplota() {
         <BlurFade delay={0.2} yOffset={16}>
           <p className="text-center text-sand/45 text-xs mt-12 max-w-lg mx-auto leading-relaxed">
             Любую практику можно прожить отдельно или добавить к основному ритуалу Истовы.
+          </p>
+          <p className="text-center mt-6">
+            <Link href="/praktiki/" className="text-xs uppercase tracking-widest text-sand/70 hover:text-sand underline-offset-4 hover:underline">
+              Все практики подробно
+            </Link>
           </p>
         </BlurFade>
       </div>
