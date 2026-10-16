@@ -51,6 +51,9 @@ export default function Footer() {
                 <a href="/rasslablyayushchiy-massazh/" className="hover:text-sand">Расслабляющий массаж</a>
               </li>
               <li>
+                <a href="/praktiki/" className="hover:text-sand">Отдельные практики</a>
+              </li>
+              <li>
                 <a href="/antistress/" className="hover:text-sand">Антистресс</a>
               </li>
               <li>
