@@ -123,7 +123,7 @@ export const practices: Practice[] = [
     group: "body",
     desc: "Полный СПА-уход для кожи тела: прогревание, обновление, обёртывание и завершающий уход.",
     variants: [{ dur: "70 минут", price: "6 500 ₽", offerId: "teplota-obn-ukut" }],
-    seoLead: "Спа-уход для тела: сауна, скраб и обёртывание в СПб",
+    seoLead: "Скраб, сауна и обёртывание в СПб",
     picture: "/gallery/03-sauna.jpg",
   },
   {

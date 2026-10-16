@@ -22,7 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!p) return {};
   const from = p.variants[0];
   // Как у страниц ритуалов: впереди то, что набирают в поиске, потом название и цена.
-  const title = `${p.seoLead} — ${p.name}, от ${from.price} · Истова`;
+  const priceFrom = p.variants.length > 1 ? `от ${from.price}` : from.price;
+  const title = `${p.seoLead} — ${p.name}, ${priceFrom} · Истова`;
   const description = `${p.desc} ${priceLine(p)}. Васильевский остров, м. Приморская.`.replace(/\s+/g, " ");
   const url = `${SITE_URL}/praktiki/${slug}/`;
   return {
