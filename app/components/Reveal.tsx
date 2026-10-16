@@ -14,18 +14,21 @@ type Props = {
   as?: keyof React.JSX.IntrinsicElements;
 };
 
+// Боковой выезд только на широком экране. На телефоне блок, ждущий прокрутки, стоял
+// за правым краем, страница становилась шире экрана (433 px при 360), и 16.10.2026
+// Вебмастер признал istova.ru «не оптимизированным для мобильных»: робот не листает.
 const hidden: Record<Variant, string> = {
   up:    "opacity-0 translate-y-16",
-  left:  "opacity-0 -translate-x-24",
-  right: "opacity-0 translate-x-24",
+  left:  "opacity-0 translate-y-16 md:translate-y-0 md:-translate-x-24",
+  right: "opacity-0 translate-y-16 md:translate-y-0 md:translate-x-24",
   scale: "opacity-0 scale-[0.95]",
   fade:  "opacity-0",
 };
 
 const shown: Record<Variant, string> = {
   up:    "opacity-100 translate-y-0",
-  left:  "opacity-100 translate-x-0",
-  right: "opacity-100 translate-x-0",
+  left:  "opacity-100 translate-y-0 translate-x-0",
+  right: "opacity-100 translate-y-0 translate-x-0",
   scale: "opacity-100 scale-100",
   fade:  "opacity-100",
 };

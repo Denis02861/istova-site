@@ -27,6 +27,10 @@ html, body {
 }
 
 html { scroll-behavior: smooth; }
+/* Страховка от горизонтальной прокрутки на телефоне: что бы ни вылезло за край
+   (анимация, длинное слово), страница не станет шире экрана. clip, а не hidden:
+   hidden ломает position: sticky у шапки и нижней панели записи. */
+html, body { overflow-x: clip; }
 section[id], [id] { scroll-margin-top: 84px; }
 
 @keyframes breath {
