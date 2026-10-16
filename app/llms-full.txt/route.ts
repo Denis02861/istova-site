@@ -1,5 +1,6 @@
 import { articles } from "../lib/blog-data";
 import { programs } from "../lib/programs-data";
+import { practices, GROUPS, MASSAGE, MASSAGE_LANDING, priceLine } from "../lib/practices-data";
 
 /**
  * llms-full.txt — полный текстовый дамп содержания сайта для нейросетей.
@@ -40,6 +41,21 @@ export async function GET() {
 ${p.teaser ?? ""}
 ${p.note ? `Важно: ${p.note}` : ""}
 ${p.steps?.length ? "Из чего состоит: " + p.steps.join("; ") + "." : ""}
+`);
+  }
+
+  // Отдельные практики «Теплоты»: с 16.10.2026 у каждой своя страница.
+  parts.push(`\n## Отдельные практики (Теплота)
+Практики можно выбрать отдельно или дополнить ими любой подходящий ритуал Истовы. Все: ${SITE_URL}/praktiki/
+`);
+  parts.push(`### ${MASSAGE.name}
+Ссылка: ${SITE_URL}${MASSAGE_LANDING}
+${MASSAGE.desc} ${MASSAGE.priceLine}.
+`);
+  for (const pr of practices) {
+    parts.push(`### ${pr.name} (${GROUPS[pr.group].title})
+Ссылка: ${SITE_URL}/praktiki/${pr.slug}/
+${pr.desc} ${priceLine(pr)}.
 `);
   }
 
