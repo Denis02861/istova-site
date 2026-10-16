@@ -180,6 +180,11 @@ export const practices: Practice[] = [
 
 // Практика, у которой вместо своей страницы — существующая посадочная.
 export const MASSAGE_LANDING = "/rasslablyayushchiy-massazh/";
+export const MASSAGE = {
+  name: "Расслабляющий СПА-массаж",
+  desc: "Медленные глубокие техники для снятия напряжения и возвращения ощущения лёгкости в теле.",
+  priceLine: "60 мин — 4 300 ₽ · 90 мин — 5 900 ₽",
+};
 
 export function practiceHref(anchor: string): string | null {
   if (anchor === "massage") return MASSAGE_LANDING;
