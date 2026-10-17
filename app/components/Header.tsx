@@ -4,14 +4,16 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { track } from "../lib/track";
 
+// Адреса со слешем на конце, как в canonical. Без слеша это отдельные страницы-дубли:
+// за 19.09-16.10 на них ушло ~300 просмотров, статистика и вес в поиске делились надвое.
 const NAV = [
   { href: "#concept", label: "О нас" },
   { href: "#ritual", label: "Ритуал" },
   { href: "#programs", label: "Программы" },
-  { href: "/massazh-golovy", label: "Массаж головы" },
-  { href: "/spa-dlya-dvoih", label: "Для двоих" },
+  { href: "/massazh-golovy/", label: "Массаж головы" },
+  { href: "/spa-dlya-dvoih/", label: "Для двоих" },
   { href: "#tea", label: "Чай" },
-  { href: "/blog", label: "Блог" },
+  { href: "/blog/", label: "Блог" },
   { href: "#contacts", label: "Контакты" },
 ];
 
