@@ -185,7 +185,7 @@ export default async function ProgramPage({
       {
         "@type": "Question",
         name: `Сколько стоит ритуал \"${program.name}\"?`,
-        acceptedAnswer: { "@type": "Answer", text: `Стоимость одиночного визита — ${program.price}. Ритуал можно провести вдвоём в двух смежных кабинетах со скидкой (для этого ритуала — ${program.pair_price ?? "уточните у администратора"}).` },
+        acceptedAnswer: { "@type": "Answer", text: `Стоимость одиночного визита — ${program.price}. Ритуал можно провести вдвоём в двух смежных кабинетах, цена за двоих — ${program.pair_price ?? "уточните у администратора"}.` },
       },
       {
         "@type": "Question",
@@ -369,7 +369,7 @@ export default async function ProgramPage({
                 <h3 className="font-display text-lg text-brand mb-2">Сколько стоит ритуал?</h3>
                 <p className="text-sm text-brand-dark/80 leading-relaxed">
                   Стоимость одиночного визита — {program.price}. Ритуал можно провести вдвоём
-                  в двух смежных кабинетах со скидкой{program.pair_price ? ` (${program.pair_price})` : ""}:
+                  в двух смежных кабинетах{program.pair_price ? `, за двоих ${program.pair_price}` : ""}:
                   все парные варианты собраны в разделе{" "}
                   <Link href="/spa-dlya-dvoih/" className="underline underline-offset-2 decoration-brand/30 hover:decoration-brand">
                     спа для двоих
