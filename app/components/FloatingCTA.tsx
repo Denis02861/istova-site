@@ -28,7 +28,7 @@ export default function FloatingCTA() {
   const actions: Action[] = [
     { label: "Записаться", href: bookingHref, goal: "BOOKING_CLICK", primary: true,
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-4 h-4"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v3M16 3v3M9 14l2 2 4-4"/></svg>) },
-    { label: "Онлайн-запись", href: "https://dikidi.ru/2107431", goal: "DIKIDI_CLICK", ext: true,
+    { label: "Онлайн-запись", href: "https://dikidi.ru/2107431?p=2.pi-po-ssm&o=7", goal: "DIKIDI_CLICK", ext: true,
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-4 h-4"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v3M16 3v3M9 14l2 2 4-4"/></svg>) },
     { label: "WhatsApp", href: "https://wa.me/79013201050?text=Здравствуйте!%20Пишу%20с%20сайта%20Истова", goal: "WA_CLICK", ext: true,
       icon: (<svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99 0-1.42.75-2.12 1.01-2.41.26-.29.57-.36.76-.36h.55c.18 0 .41-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.91 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.28.36-.23.6-.14.24.09 1.55.73 1.81.86.26.14.44.21.5.32.06.11.06.64-.18 1.32z"/></svg>) },

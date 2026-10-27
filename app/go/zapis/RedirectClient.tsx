@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const DIKIDI_URL = "https://dikidi.ru/2107431";
+const DIKIDI_URL = "https://dikidi.ru/2107431?p=2.pi-po-ssm&o=7";
 const YM_ID = 109992381;
 
 // Источники, которые умеем размечать. Ключ приходит в ?from=

@@ -64,7 +64,7 @@ const LINKS = [
   { href: "tel:+79013201050", label: "+7 (901) 320-10-50", note: "Позвонить", goal: "PHONE_CLICK" },
   { href: "https://wa.me/79013201050", label: "WhatsApp", note: "Написать в мессенджер", goal: "WA_CLICK" },
   { href: "https://t.me/Istova_spa", label: "Telegram", note: "@Istova_spa", goal: "TG_CLICK" },
-  { href: "https://dikidi.ru/2107431", label: "Онлайн-запись", note: "Выбрать время самому", goal: "BOOKING_CLICK" },
+  { href: "https://dikidi.ru/2107431?p=2.pi-po-ssm&o=7", label: "Онлайн-запись", note: "Выбрать время самому", goal: "BOOKING_CLICK" },
   {
     href: "https://yandex.ru/maps/org/istova/63939829435/",
     label: "Яндекс Карты",

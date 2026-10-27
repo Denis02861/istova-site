@@ -66,7 +66,7 @@ export default function ContactLinks({
         <TrackedLink
           goal="DIKIDI_CLICK"
           goalParams={{ from }}
-          href="https://dikidi.ru/2107431"
+          href="https://dikidi.ru/2107431?p=2.pi-po-ssm&o=7"
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-flex items-center gap-2 h-11 px-5 rounded-full transition-colors ${
