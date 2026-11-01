@@ -6,13 +6,14 @@
 - Для видео делает лёгкое 6-сек превью (ffmpeg) для ленты, полное mp4 — для модалки.
 - Пишет public/gallery/feed.json.
 
-Запуск: APIFY_API_KEY2=... python3 scripts/istova-ig-feed.py [--limit N]
+Запуск: python3 scripts/istova-ig-feed.py [--limit N]  (ключи APIFY_API_KEY2, затем APIFY_API_KEY из окружения)
 """
 import os
 import sys
 import re
 import json
 import subprocess
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -24,7 +25,10 @@ if "--limit" in sys.argv:
 ROOT = Path(__file__).resolve().parent.parent
 FEED_DIR = ROOT / "public" / "gallery" / "feed"
 FEED_JSON = ROOT / "public" / "gallery" / "feed.json"
-TOKEN = os.environ.get("APIFY_API_KEY2")
+# Сначала второй ключ, потом первый: 01.11.2026 второй был выбран до сброса, и лента не обновлялась.
+TOKENS = [t for t in (os.environ.get("APIFY_API_KEY2"), os.environ.get("APIFY_API_KEY")) if t]
+# Потолок расхода на один прогон: 29.10 помощник без потолка съел 3,26 $ вместо 1,5.
+MAX_CHARGE_USD = "0.10"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
 
 PREVIEW_SECONDS = 6
@@ -37,20 +41,29 @@ def log(m):
 
 
 def apify_posts():
-    if not TOKEN:
-        sys.exit("APIFY_API_KEY2 не задан")
-    url = f"https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?token={TOKEN}"
+    if not TOKENS:
+        sys.exit("нет ни APIFY_API_KEY2, ни APIFY_API_KEY")
     payload = {
         "directUrls": [f"https://www.instagram.com/{ACCOUNT}/"],
         "resultsType": "posts",
         "resultsLimit": LIMIT,
         "addParentData": False,
     }
-    req = urllib.request.Request(url, data=json.dumps(payload).encode(),
-                                 headers={"Content-Type": "application/json"})
     log(f"Apify: тяну до {LIMIT} постов @{ACCOUNT}…")
-    with urllib.request.urlopen(req, timeout=300) as r:
-        return json.loads(r.read())
+    for i, token in enumerate(TOKENS):
+        url = ("https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items"
+               f"?maxTotalChargeUsd={MAX_CHARGE_USD}")
+        req = urllib.request.Request(url, data=json.dumps(payload).encode(),
+                                     headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"})
+        try:
+            with urllib.request.urlopen(req, timeout=300) as r:
+                return json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            # 402/403 — ключ выбран до конца месяца, пробуем следующий.
+            if e.code in (402, 403) and i + 1 < len(TOKENS):
+                log(f"Apify: ключ {i + 1} не принят ({e.code}), беру следующий")
+                continue
+            raise
 
 
 def download(src, dest):
