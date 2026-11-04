@@ -96,6 +96,34 @@ def make_poster_webp(src_jpg, out_webp):
     subprocess.run(cmd, check=True)
 
 
+# Полное видео для окна просмотра (04.11.2026): из инсты приходит до 8 МБ на ролик.
+# Ужимаем до 720 по ширине — в модалке на телефоне разницы не видно, а весит в разы меньше.
+FULL_VIDEO_WIDTH = 720
+FULL_IMAGE_WIDTH = 1080
+
+
+def shrink_video(path):
+    tmp = path.with_suffix(".tmp.mp4")
+    cmd = [
+        "ffmpeg", "-y", "-loglevel", "error", "-i", str(path),
+        "-vf", f"scale='min({FULL_VIDEO_WIDTH},iw)':-2",
+        "-c:v", "libx264", "-preset", "medium", "-crf", "28", "-pix_fmt", "yuv420p",
+        "-c:a", "aac", "-b:a", "96k",
+        "-movflags", "+faststart", str(tmp),
+    ]
+    subprocess.run(cmd, check=True)
+    tmp.replace(path)
+
+
+def full_image_webp(src_jpg, out_webp):
+    cmd = [
+        "ffmpeg", "-y", "-loglevel", "error", "-i", str(src_jpg),
+        "-vf", f"scale='min({FULL_IMAGE_WIDTH},iw)':-2",
+        "-c:v", "libwebp", "-quality", "82", str(out_webp),
+    ]
+    subprocess.run(cmd, check=True)
+
+
 def clean_alt(caption):
     if not caption:
         return "Кадр из жизни Истовы"
@@ -128,8 +156,10 @@ def main():
                 size = download(p["videoUrl"], full)
                 download(p.get("displayUrl"), poster)
                 make_preview(full, prev)
+                shrink_video(full)
                 poster_webp = FEED_DIR / f"{code}.webp"
                 make_poster_webp(poster, poster_webp)
+                poster.unlink()  # на сайте обложка только webp, jpg не нужен
                 feed.append({
                     "type": "video",
                     "src": f"/gallery/feed/{full.name}",
@@ -137,15 +167,18 @@ def main():
                     "poster": f"/gallery/feed/{poster_webp.name}",
                     "alt": alt, "link": link,
                 })
-                log(f"  [video] {code} ({size // 1024} KB) + preview")
+                log(f"  [video] {code} ({size // 1024} KB → {full.stat().st_size // 1024} KB) + preview")
             else:
                 img = FEED_DIR / f"{code}.jpg"
                 size = download(p.get("displayUrl"), img)
                 img_webp = FEED_DIR / f"{code}.webp"
                 make_poster_webp(img, img_webp)
+                full_webp = FEED_DIR / f"{code}.full.webp"
+                full_image_webp(img, full_webp)
+                img.unlink()
                 feed.append({
                     "type": "image",
-                    "src": f"/gallery/feed/{img.name}",
+                    "src": f"/gallery/feed/{full_webp.name}",
                     "poster": f"/gallery/feed/{img_webp.name}",
                     "alt": alt, "link": link,
                 })
