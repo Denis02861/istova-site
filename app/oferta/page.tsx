@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     locale: "ru_RU",
     publishedTime: "2026-06-09T00:00:00+03:00",
-    modifiedTime: "2026-07-03T00:00:00+03:00",
+    modifiedTime: "2026-11-04T00:00:00+03:00",
     images: [{ url: `${SITE_URL}/og-image.webp`, width: 1200, height: 630, alt: TITLE }],
   },
   twitter: {
@@ -47,7 +47,7 @@ const ARTICLE_JSONLD = {
   description: DESCRIPTION,
   url: `${SITE_URL}/oferta/`,
   datePublished: "2026-06-09",
-  dateModified: "2026-07-03",
+  dateModified: "2026-11-04",
   inLanguage: "ru-RU",
   author: { "@id": `${SITE_URL}/#organization` },
   publisher: { "@id": `${SITE_URL}/#organization` },
@@ -85,7 +85,7 @@ export default function OfertaPage() {
 
           <h1 className="font-serif text-3xl md:text-4xl text-brand mb-3">Публичная оферта</h1>
           <p className="text-xs uppercase tracking-widest text-brand/60 mb-10">
-            Редакция от 03.07.2026 · действует с 09.06.2026
+            Редакция от 04.11.2026 · действует с 09.06.2026
           </p>
 
           <div className="text-brand-dark/85 space-y-6 text-sm leading-relaxed">
@@ -149,6 +149,11 @@ export default function OfertaPage() {
               4.3. Оплата производится наличными, банковской картой, через СБП или иным
               согласованным способом непосредственно перед оказанием или сразу после оказания
               услуги, если иное не согласовано в предоплате.
+            </p>
+            <p>
+              4.4. Накануне визита администратор Салона просит Клиента подтвердить запись.
+              Подтвердить запись нужно до 21:00 дня, предшествующего визиту. Если подтверждения
+              нет, Исполнитель вправе отменить запись и предложить это время другим клиентам.
             </p>
 
             <h2 className="font-serif text-xl text-brand mt-8">5. Отмена и перенос записи</h2>
