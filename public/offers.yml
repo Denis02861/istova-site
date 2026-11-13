@@ -24,7 +24,7 @@
       </set>
       <set id="s-teplota">
         <name>Отдельные практики</name>
-        <url>https://istova.ru/</url>
+        <url>https://istova.ru/praktiki/</url>
       </set>
       <set id="s-cert">
         <name>Подарочный сертификат</name>
@@ -386,7 +386,7 @@
     <offer id="teplota-massage-90" available="true">
       <name>Истова</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/rasslablyayushchiy-massazh/?p=teplota-massage-90</url>
+      <url>https://istova.ru/praktiki/?p=teplota-massage-90</url>
       <price>5900</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -407,7 +407,7 @@
     <offer id="teplota-massage-60" available="true">
       <name>Истова</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/rasslablyayushchiy-massazh/?p=teplota-massage-60</url>
+      <url>https://istova.ru/praktiki/?p=teplota-massage-60</url>
       <price>4300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
@@ -449,15 +449,15 @@
     <offer id="cert-any" available="true">
       <name>Истова</name>
       <vendor>Истова</vendor>
-      <url>https://istova.ru/#booking</url>
-      <price>3000</price>
+      <url>https://istova.ru/podarochnyy-sertifikat/</url>
+      <price>6800</price>
       <currencyId>RUR</currencyId>
       <categoryId>4</categoryId>
       <set-ids>s-cert</set-ids>
       <picture>https://istova.ru/certificates/blank.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
-      <description>Электронный или бумажный подарочный сертификат на любую сумму от 3 000 ₽. Подходит на любой спа-ритуал и отдельные практики. Оформляется онлайн или в салоне. Срок действия 6 месяцев.</description>
+      <description>Электронный или бумажный подарочный сертификат на любую сумму от 6 800 ₽ (стоимость самого короткого ритуала) или на конкретную программу. Оформляется онлайн или в салоне. Срок действия 6 месяцев.</description>
       <sales_notes>Запись онлайн или по телефону. Оплата в салоне.</sales_notes>
       <param name="Адрес">Санкт-Петербург, ул. Беринга, 23 к. 2 (Васильевский остров)</param>
       <param name="Регион">Санкт-Петербург</param>
