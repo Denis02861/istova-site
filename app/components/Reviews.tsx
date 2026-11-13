@@ -34,9 +34,25 @@ const ADD_REVIEW = [
  * видимая гостю цифра и размеченная в schema.org не могли разойтись: расхождение
  * площадки считают нарушением. 2ГИС ведём руками, его в разметке нет.
  */
+// Форма слова по числу: 1 отзыв, 2 отзыва, 5 отзывов. Раньше подпись была зашита
+// под 84 («оценки») и при 87 читалась как «87 оценки».
+function ruPlural(n: number, one: string, few: string, many: string) {
+  const d = n % 10;
+  const dd = n % 100;
+  if (d === 1 && dd !== 11) return one;
+  if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) return few;
+  return many;
+}
+
+// На Яндексе число отзывов (его же считает sync-feed-reviews.py и пишет в фид),
+// в 2ГИС число оценок.
 const RATINGS = [
-  { place: "оценки на Яндекс Картах", count: RATING.count, href: YANDEX_URL },
-  { place: "оценок в 2ГИС", count: 16, href: GIS_URL },
+  {
+    place: `${ruPlural(RATING.count, "отзыв", "отзыва", "отзывов")} на Яндекс Картах`,
+    count: RATING.count,
+    href: YANDEX_URL,
+  },
+  { place: `${ruPlural(16, "оценка", "оценки", "оценок")} в 2ГИС`, count: 16, href: GIS_URL },
 ];
 
 type Review = { text: string; name: string; date: string };

@@ -114,8 +114,10 @@ const ORG_JSONLD = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 59.9520,
-    longitude: 30.2440,
+    // Точка самой карточки на Яндекс Картах (org 63939829435), сверено 13.11.2026.
+    // Прежние 59.9520 / 30.2440 стояли примерно в 750 м от салона.
+    latitude: 59.945698,
+    longitude: 30.240697,
   },
   areaServed: {
     "@type": "City",
