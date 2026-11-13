@@ -48,10 +48,10 @@ MSK = timezone(timedelta(hours=3))
 
 def fetch_maps_stats():
     """Рейтинг и число отзывов с карточки. Бросает исключение, если данные негодные."""
-    # С 29.10.2026 Apify на втором ключе, первый — запасной.
-    token = os.environ.get("APIFY_API_KEY2") or os.environ.get("APIFY_API_KEY")
+    # С 13.11.2026 Apify на первом ключе, второй — запасной.
+    token = os.environ.get("APIFY_API_KEY") or os.environ.get("APIFY_API_KEY2")
     if not token:
-        raise RuntimeError("нет APIFY_API_KEY2 / APIFY_API_KEY в окружении")
+        raise RuntimeError("нет APIFY_API_KEY / APIFY_API_KEY2 в окружении")
 
     url = (f"https://api.apify.com/v2/acts/{ACTOR}"
            f"/run-sync-get-dataset-items?token={token}")

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
 Парсер контента Instagram @istova.spa для второй бегущей линии блока «Фрагменты».
-- Тянет последние посты через Apify (apify~instagram-scraper), ключ APIFY_API_KEY2.
+- Тянет последние посты через Apify (apify~instagram-scraper), ключ APIFY_API_KEY.
 - Качает медиа в public/gallery/feed/ (ссылки инсты протухают — держим файлы локально).
 - Для видео делает лёгкое 6-сек превью (ffmpeg) для ленты, полное mp4 — для модалки.
 - Пишет public/gallery/feed.json.
 
-Запуск: python3 scripts/istova-ig-feed.py [--limit N]  (ключи APIFY_API_KEY2, затем APIFY_API_KEY из окружения)
+Запуск: python3 scripts/istova-ig-feed.py [--limit N]  (ключи APIFY_API_KEY, затем APIFY_API_KEY2 из окружения)
 """
 import os
 import sys
@@ -25,8 +25,8 @@ if "--limit" in sys.argv:
 ROOT = Path(__file__).resolve().parent.parent
 FEED_DIR = ROOT / "public" / "gallery" / "feed"
 FEED_JSON = ROOT / "public" / "gallery" / "feed.json"
-# Сначала второй ключ, потом первый: 01.11.2026 второй был выбран до сброса, и лента не обновлялась.
-TOKENS = [t for t in (os.environ.get("APIFY_API_KEY2"), os.environ.get("APIFY_API_KEY")) if t]
+# С 13.11.2026 сначала первый ключ (новый аккаунт, цикл с 9-го), второй запасной.
+TOKENS = [t for t in (os.environ.get("APIFY_API_KEY"), os.environ.get("APIFY_API_KEY2")) if t]
 # Потолок расхода на один прогон: 29.10 помощник без потолка съел 3,26 $ вместо 1,5.
 MAX_CHARGE_USD = "0.10"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
@@ -42,7 +42,7 @@ def log(m):
 
 def apify_posts():
     if not TOKENS:
-        sys.exit("нет ни APIFY_API_KEY2, ни APIFY_API_KEY")
+        sys.exit("нет ни APIFY_API_KEY, ни APIFY_API_KEY2")
     payload = {
         "directUrls": [f"https://www.instagram.com/{ACCOUNT}/"],
         "resultsType": "posts",
