@@ -215,7 +215,7 @@ const ORG_JSONLD = {
     contactType: "reservations",
     areaServed: "RU",
     availableLanguage: ["Russian"],
-    email: "istomaspa@yandex.ru",
+    email: "istovaspa@yandex.ru",
   },
 };
 
