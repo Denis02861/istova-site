@@ -2,7 +2,7 @@
 
 import { motion, useInView, Variants } from "motion/react";
 import { useRef } from "react";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 interface BlurFadeProps {
   children: ReactNode;
@@ -12,6 +12,13 @@ interface BlurFadeProps {
   yOffset?: number;
   blur?: string;
   once?: boolean;
+  /**
+   * Первый экран: то же проявление, но чистым CSS, без ожидания JS.
+   * Через motion блок приходит в HTML с opacity:0 и становится виден только
+   * после загрузки скриптов: 13.11.2026 на телефоне это давало первый экран
+   * за 7-8 с, а робот без JS видел пустой заголовок.
+   */
+  instant?: boolean;
 }
 
 export default function BlurFade({
@@ -22,7 +29,33 @@ export default function BlurFade({
   yOffset = 24,
   blur = "8px",
   once = true,
+  instant = false,
 }: BlurFadeProps) {
+  if (instant) {
+    const style = {
+      animationDelay: `${delay}s`,
+      animationDuration: `${duration}s`,
+      "--bf-y": `${yOffset}px`,
+      "--bf-blur": blur,
+    } as CSSProperties;
+    return (
+      <div className={`blur-fade-instant${className ? ` ${className}` : ""}`} style={style}>
+        {children}
+      </div>
+    );
+  }
+  return <BlurFadeMotion {...{ children, className, delay, duration, yOffset, blur, once }} />;
+}
+
+function BlurFadeMotion({
+  children,
+  className,
+  delay,
+  duration,
+  yOffset,
+  blur,
+  once,
+}: Required<Omit<BlurFadeProps, "className" | "instant">> & { className?: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once, margin: "-80px" });
 

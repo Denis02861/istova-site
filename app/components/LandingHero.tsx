@@ -20,25 +20,25 @@ export default function LandingHero({ eyebrow, title, lead, ctaFrom, priceHint }
       <Aurora />
 
       <div className="container mx-auto px-6 max-w-3xl relative z-10 text-center">
-        <BlurFade delay={0.05} yOffset={14}>
+        <BlurFade instant delay={0.05} yOffset={14}>
           <div className="text-[11px] md:text-xs uppercase tracking-[0.2em] text-brand/55 mb-6">
             {eyebrow}
           </div>
         </BlurFade>
 
-        <BlurFade delay={0.18} yOffset={18}>
+        <BlurFade instant delay={0.18} yOffset={18}>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-brand mb-7 leading-[1.05]">
             {title}
           </h1>
         </BlurFade>
 
-        <BlurFade delay={0.32} yOffset={14}>
+        <BlurFade instant delay={0.32} yOffset={14}>
           <p className="text-base md:text-lg text-brand-dark/80 leading-relaxed max-w-xl mx-auto mb-10">
             {lead}
           </p>
         </BlurFade>
 
-        <BlurFade delay={0.46} yOffset={12}>
+        <BlurFade instant delay={0.46} yOffset={12}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <TrackedLink
               goal="BOOKING_CLICK"

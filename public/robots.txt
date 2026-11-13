@@ -12,6 +12,9 @@ Clean-param: etext&ybaip&p
 # на один и тот же контент. Canonical стоит верно, но обход всё равно шёл.
 Clean-param: yclid&gclid&_openstat&from
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+# Метки рекламы Яндекс Бизнеса (геореклама). 13.11.2026 в поиске лежали три копии главной
+# с ?utm_referer=geoadv...&utm_candidate=...
+Clean-param: utm_referer&utm_ya_campaign&yabizcmpgn&utm_candidate
 
 User-agent: Googlebot
 Allow: /

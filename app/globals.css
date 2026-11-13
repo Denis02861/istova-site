@@ -402,3 +402,31 @@ body::before {
     background-image: linear-gradient(to bottom, #e8e4de 0, rgba(232, 228, 222, 0) 160px);
   }
 }
+
+/*
+ * Проявление первого экрана без JS (BlurFade с instant). Тот же рисунок, что у motion:
+ * снизу вверх, из размытия. Работает сразу после загрузки CSS, поэтому заголовок
+ * не ждёт скриптов (13.11.2026: через motion первый экран на телефоне был за 7-8 с).
+ */
+@keyframes blur-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--bf-y, 14px));
+    filter: blur(var(--bf-blur, 8px));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+.blur-fade-instant {
+  animation-name: blur-fade-in;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .blur-fade-instant {
+    animation: none;
+  }
+}
