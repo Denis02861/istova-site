@@ -30,7 +30,7 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: "chto-takoe-head-spa",
-    title: "Что такое head spa: японское спа для головы в СПб | Истова",
+    title: "Что такое head spa и как проходит сеанс | Истова",
     description:
       "Head spa простыми словами: что такое японское спа для головы, чем оно отличается от массажа, что даёт и как проходит сеанс. Где сделать head spa в Санкт-Петербурге.",
     h1: "Что такое head spa: японское спа для головы",

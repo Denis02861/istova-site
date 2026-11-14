@@ -9,7 +9,7 @@ import { programs } from "../lib/programs-data";
 
 const SITE_URL = "https://istova.ru";
 const URL = `${SITE_URL}/massazh-golovy/`;
-const TITLE = "Массаж головы в СПб: спа-массаж головы на Васильевском | Истова";
+const TITLE = "Массаж головы в СПб — расслабляющий спа-массаж | Истова";
 const DESCRIPTION =
   "Спа-массаж головы 75–150 минут: тёплая вода «золотой дуги», работа с шеей и плечами, уход Davines, сушка и укладка в финале. От 6800 ₽, м. Приморская.";
 
@@ -162,7 +162,7 @@ export default function MassazhGolovyPage() {
               <div className="grid sm:grid-cols-3 gap-5">
                 {[
                   { href: "/blog/chto-takoe-head-spa/", t: "Что такое head spa", d: "Формат простыми словами" },
-                  { href: "/yaponskoe-spa-dlya-golovy/", t: "Японский массаж головы", d: "Тот же формат, другое название" },
+                  { href: "/yaponskoe-spa-dlya-golovy/", t: "Японское спа для головы", d: "Head spa японского формата" },
                   { href: "/spa-dlya-volos/", t: "Спа для волос", d: "Когда важнее не расслабление, а уход" },
                   { href: "/blog/kak-snizit-kortizol/", t: "Массаж и кортизол", d: "Что показали исследования" },
                   { href: "/blog/vypadenie-volos-i-massazh-golovy/", t: "Массаж и волосы", d: "Честно про то, чего ждать не стоит" },

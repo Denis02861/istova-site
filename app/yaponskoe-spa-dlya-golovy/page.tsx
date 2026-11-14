@@ -14,7 +14,7 @@ import { programs } from "../lib/programs-data";
 // под эти слова не было, отвечала статья блога и стояла на пятой странице выдачи.
 const SITE_URL = "https://istova.ru";
 const URL = `${SITE_URL}/yaponskoe-spa-dlya-golovy/`;
-const TITLE = "Японский массаж головы в СПб — head spa от 6800 ₽ · Истова";
+const TITLE = "Японское спа для головы в СПб: японский массаж головы | Истова";
 const DESCRIPTION =
   "Японское спа для головы на Васильевском: тёплая вода, работа с кожей головы и шеей, уход Davines, сушка в финале. 75-150 минут, от 6800 ₽, м. Приморская.";
 
@@ -104,7 +104,7 @@ export default function YaponskoeSpaPage() {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Главная", item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "Японский массаж головы в Санкт-Петербурге", item: URL },
+      { "@type": "ListItem", position: 2, name: "Японское спа для головы в Санкт-Петербурге", item: URL },
     ],
   };
 
@@ -118,7 +118,7 @@ export default function YaponskoeSpaPage() {
       <main className="bg-sand">
         <LandingHero
           eyebrow="Санкт-Петербург · Васильевский остров"
-          title="Японский массаж головы"
+          title="Японское спа для головы"
           lead="Тёплая вода, неспешная работа с кожей головы и шеей, уход за волосами и тишина. Тот самый формат, который в России знают как head spa, а ищут чаще всего словами японское спа для головы."
           ctaFrom="yaponskoe_spa_hero"
           priceHint="от 6800 ₽ · 75-150 минут"

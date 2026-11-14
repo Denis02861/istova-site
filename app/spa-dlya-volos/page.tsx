@@ -14,7 +14,7 @@ import { programs } from "../lib/programs-data";
 // Здесь фокус другой: состояние волос и кожи головы, уход, честно про эффект.
 const SITE_URL = "https://istova.ru";
 const URL = `${SITE_URL}/spa-dlya-volos/`;
-const TITLE = "Спа для волос в СПб — уход и массаж головы от 6800 ₽ · Истова";
+const TITLE = "Спа для волос в СПб — уход за волосами и кожей головы · Истова";
 const DESCRIPTION =
   "Спа для волос и кожи головы на Васильевском: тёплая вода, пилинг, уход Davines, сушка и укладка в финале. 75-150 минут, от 6800 ₽, м. Приморская.";
 
@@ -187,7 +187,7 @@ export default function SpaDlyaVolosPage() {
                   { href: "/blog/vypadenie-volos-i-massazh-golovy/", t: "Массаж и волосы", d: "Честно про то, чего ждать не стоит" },
                   { href: "/blog/zhirnaya-kozha-golovy/", t: "Жирная кожа головы", d: "Почему волосы жирнеют на второй день" },
                   { href: "/blog/piling-kozhi-golovy/", t: "Пилинг кожи головы", d: "Зачем нужен и как часто его делать" },
-                  { href: "/yaponskoe-spa-dlya-golovy/", t: "Японский массаж головы", d: "Тот же формат, другое название" },
+                  { href: "/yaponskoe-spa-dlya-golovy/", t: "Японское спа для головы", d: "Head spa японского формата" },
                 ].map((l) => (
                   <Link key={l.href} href={l.href} className="group block">
                     <div className="font-display text-lg text-brand mb-1.5 leading-snug group-hover:text-brand-dark transition-colors">
