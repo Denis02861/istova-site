@@ -66,6 +66,86 @@
         <name>КЕДР + ЛАДА</name>
         <url>https://istova.ru/programs/kedr-lada/</url>
       </set>
+      <set id="s-pr-teplyy-massazh-tela">
+        <name>Тёплый массаж тела</name>
+        <url>https://istova.ru/praktiki/teplyy-massazh-tela/</url>
+      </set>
+      <set id="s-pr-energiya-kamnya">
+        <name>Энергия камня</name>
+        <url>https://istova.ru/praktiki/energiya-kamnya/</url>
+      </set>
+      <set id="s-pr-tishina">
+        <name>Тишина</name>
+        <url>https://istova.ru/praktiki/tishina/</url>
+      </set>
+      <set id="s-pr-glubina">
+        <name>Глубина</name>
+        <url>https://istova.ru/praktiki/glubina/</url>
+      </set>
+      <set id="s-pr-kamen">
+        <name>Камень</name>
+        <url>https://istova.ru/praktiki/kamen/</url>
+      </set>
+      <set id="s-pr-obnovlenie">
+        <name>Обновление</name>
+        <url>https://istova.ru/praktiki/obnovlenie/</url>
+      </set>
+      <set id="s-pr-ukutyvanie">
+        <name>Укутывание</name>
+        <url>https://istova.ru/praktiki/ukutyvanie/</url>
+      </set>
+      <set id="s-pr-obnovlenie-ukutyvanie">
+        <name>Обновление + Укутывание</name>
+        <url>https://istova.ru/praktiki/obnovlenie-ukutyvanie/</url>
+      </set>
+      <set id="s-pr-teplye-kisti">
+        <name>Тёплые кисти</name>
+        <url>https://istova.ru/praktiki/teplye-kisti/</url>
+      </set>
+      <set id="s-pr-legkie-stopy">
+        <name>Лёгкие стопы</name>
+        <url>https://istova.ru/praktiki/legkie-stopy/</url>
+      </set>
+      <set id="s-pr-teplye-stopy">
+        <name>Тёплые стопы</name>
+        <url>https://istova.ru/praktiki/teplye-stopy/</url>
+      </set>
+      <set id="s-pr-travyanoe-teplo">
+        <name>Травяное тепло</name>
+        <url>https://istova.ru/praktiki/travyanoe-teplo/</url>
+      </set>
+      <set id="s-pr-tyazhest-i-tishina">
+        <name>Тяжесть и тишина</name>
+        <url>https://istova.ru/praktiki/tyazhest-i-tishina/</url>
+      </set>
+      <set id="s-land-massazh-golovy">
+        <name>Массаж головы в СПб</name>
+        <url>https://istova.ru/massazh-golovy/</url>
+      </set>
+      <set id="s-land-yaponskoe-spa-dlya-golovy">
+        <name>Японское спа для головы</name>
+        <url>https://istova.ru/yaponskoe-spa-dlya-golovy/</url>
+      </set>
+      <set id="s-land-spa-dlya-volos">
+        <name>Спа для волос</name>
+        <url>https://istova.ru/spa-dlya-volos/</url>
+      </set>
+      <set id="s-land-antistress">
+        <name>Антистресс</name>
+        <url>https://istova.ru/antistress/</url>
+      </set>
+      <set id="s-land-rasslablyayushchiy-massazh">
+        <name>Расслабляющий массаж</name>
+        <url>https://istova.ru/rasslablyayushchiy-massazh/</url>
+      </set>
+      <set id="s-land-spa-vasileostrovskiy">
+        <name>Спа на Васильевском острове</name>
+        <url>https://istova.ru/spa-vasileostrovskiy/</url>
+      </set>
+      <set id="s-main">
+        <name>Head spa и практики Истовы</name>
+        <url>https://istova.ru/</url>
+      </set>
     </sets>
     <offers>
     <offer id="teplota-tyazhest" available="true">
@@ -75,8 +155,8 @@
       <price>1300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
+      <set-ids>s-teplota,s-pr-tyazhest-i-tishina</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-tyazhest.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Отдых под тяжёлым одеялом с тёплым компрессом для глаз. Практика для тех, кому нужно просто полежать в тишине и выдохнуть. Длительность 20 минут.</description>
@@ -96,8 +176,8 @@
       <price>2500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
+      <set-ids>s-teplota,s-pr-travyanoe-teplo</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-travy.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Локальный ритуал с тёплыми травяными мешочками: мелисса, ромашка и лаванда. Мягкое тепло и аромат для кистей и стоп. Длительность 20 минут.</description>
@@ -117,8 +197,8 @@
       <price>2900</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
+      <set-ids>s-teplota,s-pr-teplye-stopy</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-stopy-t.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Массаж стоп и голеней с согреванием тёплыми травяными мешочками. Прогревание и мягкая проработка после долгого дня на ногах. Длительность 30 минут.</description>
@@ -138,8 +218,8 @@
       <price>2200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
+      <set-ids>s-teplota,s-pr-legkie-stopy</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-stopy-l.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Массаж стоп и голеней для снятия усталости. Лёгкие движения снизу вверх, работа со сводом стопы. Длительность 20 минут.</description>
@@ -159,8 +239,8 @@
       <price>2000</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/frag-body.jpg</picture>
+      <set-ids>s-teplota,s-pr-teplye-kisti</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-kisti.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Массаж кистей и рук с тёплым кремом. Короткая практика для тех, кто много печатает или работает руками. Длительность 20 минут.</description>
@@ -180,8 +260,8 @@
       <price>6500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <set-ids>s-teplota,s-pr-obnovlenie-ukutyvanie</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-obn-ukut.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Полный спа-уход за кожей тела: финская сауна, скрабирование, питательное обёртывание, отдых в тепле и завершающий уход. Длительность 70 минут.</description>
@@ -201,8 +281,8 @@
       <price>4200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <set-ids>s-teplota,s-pr-ukutyvanie</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-ukutyvanie.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Укутывание для тела: финская сауна, питательное обёртывание, отдых в тепле под пледом и завершающий уход. Кожа становится мягкой и увлажнённой. Длительность 50 минут.</description>
@@ -222,8 +302,8 @@
       <price>3500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <set-ids>s-teplota,s-pr-obnovlenie</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-obnovlenie.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Обновление кожи тела: скрабирование с двух сторон, тёплый душ и завершающий уход кремом или баттером. Аромат средств выбираете перед началом. Длительность 30 минут.</description>
@@ -243,8 +323,8 @@
       <price>3500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/frag-care.jpg</picture>
+      <set-ids>s-teplota,s-pr-kamen,s-main</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-kamen.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Косметический массаж лица гуаша, роликами и криосферами. Дренажные техники, работа со скулами, лбом и нижней третью лица, завершающий уход. Длительность 30 минут.</description>
@@ -264,8 +344,8 @@
       <price>4200</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <set-ids>s-teplota,s-pr-glubina,s-main</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-glubina.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Массаж лица, шейно-воротниковой зоны и кожи головы с гребнями. Снимает зажатость в шее и плечах, работает с лицом по массажным линиям. Длительность 40 минут.</description>
@@ -285,8 +365,8 @@
       <price>2500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <set-ids>s-teplota,s-pr-tishina,s-main</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-tishina.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Массаж кожи головы руками и гребнями. Спа для головы в коротком формате: медленные техники по всей волосистой части, вискам и затылку. Длительность 20 минут.</description>
@@ -306,8 +386,8 @@
       <price>6300</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
+      <set-ids>s-teplota,s-pr-energiya-kamnya,s-main</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-stone-90.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Массаж горячими камнями (стоун-терапия) в полном формате. Ручные техники и тёплые базальтовые камни по всему телу, включая кисти и стопы. Длительность 90 минут.</description>
@@ -327,8 +407,8 @@
       <price>4800</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
+      <set-ids>s-teplota,s-pr-energiya-kamnya,s-main</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-stone-60.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Массаж горячими камнями (стоун-терапия). Ручные техники и тёплые базальтовые камни: глубокое прогревание мышц спины, ног и плеч. Длительность 60 минут.</description>
@@ -348,8 +428,8 @@
       <price>6100</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
+      <set-ids>s-teplota,s-pr-teplyy-massazh-tela,s-main</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-warm-90.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Тёплый массаж тела на масле массажной свечи в полном формате. Тёплое масло, плавные обволакивающие движения по всему телу. Длительность 90 минут.</description>
@@ -369,8 +449,8 @@
       <price>4500</price>
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
-      <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
+      <set-ids>s-teplota,s-pr-teplyy-massazh-tela,s-main</set-ids>
+      <picture>https://istova.ru/feed-img/teplota-warm-60.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Тёплый массаж тела на масле массажной свечи. Мягкая практика для глубокого расслабления: тёплое масло, плавные движения без давления. Длительность 60 минут.</description>
@@ -391,7 +471,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
       <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
+      <picture>https://istova.ru/feed-img/teplota-massage-90.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Расслабляющий спа-массаж тела в полном формате. Медленные обволакивающие техники по всему телу, включая кисти и стопы. Длительность 90 минут.</description>
@@ -412,7 +492,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>3</categoryId>
       <set-ids>s-teplota</set-ids>
-      <picture>https://istova.ru/gallery/05-massage.jpg</picture>
+      <picture>https://istova.ru/feed-img/teplota-massage-60.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Расслабляющий спа-массаж тела. Медленные обволакивающие техники без резкой проработки: снимает напряжение, возвращает лёгкость. Длительность 60 минут.</description>
@@ -433,7 +513,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-kedr-lada</set-ids>
-      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
+      <picture>https://istova.ru/feed-img/kedr-lada-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Спа для двоих для тех, кто не хочет выбирать одинаковую программу: ей — ЛАДА, ему — КЕДР. Ритуалы проходят одновременно, каждый со своим мастером, в общем пространстве. Длительность 3 часа. Цена указана за двоих.</description>
@@ -454,7 +534,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>4</categoryId>
       <set-ids>s-cert</set-ids>
-      <picture>https://istova.ru/certificates/blank.jpg</picture>
+      <picture>https://istova.ru/feed-img/cert-any.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Электронный или бумажный подарочный сертификат на любую сумму от 6 800 ₽ (стоимость самого короткого ритуала) или на конкретную программу. Оформляется онлайн или в салоне. Срок действия 6 месяцев.</description>
@@ -474,7 +554,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-rodnik</set-ids>
-      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
+      <picture>https://istova.ru/feed-img/rodnik-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Бережное спа для двоих без нагрузки на тело. Идёте одновременно, каждый со своим мастером: массаж лица, спа для головы с «Золотой дугой», уход Davines, ритуал лёгкости для ног. Доступен будущим мамам со второго триместра. Длительность 1 час 45 минут. Цена указана за двоих.</description>
@@ -495,7 +575,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-lada</set-ids>
-      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
+      <picture>https://istova.ru/feed-img/lada-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Большой женский ритуал вдвоём: спа для двоих на 3 часа, каждая со своим мастером. Финская сауна, турецкое очищение кесе, массаж тела, массаж лица гуаша, спа для головы и уход Davines. Цена указана за двоих.</description>
@@ -516,7 +596,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-kedr</set-ids>
-      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
+      <picture>https://istova.ru/feed-img/kedr-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Большой ритуал силы вдвоём: спа для двоих на 3 часа, каждый со своим мастером. Хвойная сауна, скраб с кедровым орехом, бамбуковые веники, массаж тёплыми камнями, спа для головы и уход Davines. Цена указана за двоих.</description>
@@ -537,7 +617,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-yav</set-ids>
-      <picture>https://istova.ru/gallery/02-spa-zone.jpg</picture>
+      <picture>https://istova.ru/feed-img/yav-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Знакомство с Истовой вдвоём. Спа для двоих в общем пространстве, каждый со своим мастером: работа с телом, массаж головы, уход за лицом, «Золотая дуга», уход Davines. Длительность 1 час 45 минут. Цена указана за двоих. Хороший вариант для первого совместного визита.</description>
@@ -558,7 +638,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-sumerki-volosy</set-ids>
-      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <picture>https://istova.ru/feed-img/sumerki-volosy-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Спа для двоих вечером через кожу головы. Идёте одновременно, каждый со своим мастером: расслабляющий массаж лица, травяной ритуал для кожи головы, «Золотая дуга», уход Davines. Длительность 2 часа. Цена указана за двоих.</description>
@@ -579,7 +659,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-sumerki-telo</set-ids>
-      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <picture>https://istova.ru/feed-img/sumerki-telo-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Спа для двоих вечером. Программы идут одновременно, каждый гость со своим мастером: сауна с успокаивающими эфирами, обновление кожи, обёртывание, расслабляющий массаж тела. Длительность 2 часа. Цена указана за двоих.</description>
@@ -600,7 +680,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-zarya-volosy</set-ids>
-      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <picture>https://istova.ru/feed-img/zarya-volosy-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Спа для двоих утром через кожу головы. Идёте одновременно, каждый со своим мастером: массаж лица с криосферами, авторский водный ритуал «Золотая дуга», уход Davines, пенный массаж головы. Длительность 2 часа. Цена указана за двоих.</description>
@@ -621,7 +701,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>2</categoryId>
       <set-ids>s-dvoih,s-zarya-telo</set-ids>
-      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <picture>https://istova.ru/feed-img/zarya-telo-pair.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Спа для двоих утром. Программы проходят одновременно, каждый гость со своим мастером, в общем пространстве: бодрящая сауна, скраб, тонизирующий массаж тела, уход за лицом. Длительность 1 час 40 минут. Цена указана за двоих.</description>
@@ -641,8 +721,8 @@
       <price>7900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-programs,s-rodnik</set-ids>
-      <picture>https://istova.ru/gallery/06-body.jpg</picture>
+      <set-ids>s-programs,s-rodnik,s-land-massazh-golovy,s-land-yaponskoe-spa-dlya-golovy,s-land-spa-dlya-volos,s-land-spa-vasileostrovskiy</set-ids>
+      <picture>https://istova.ru/feed-img/rodnik-solo.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Бережный спа-ритуал без нагрузки на тело. Подходит будущим мамам со второго триместра беременности. Косметический массаж лица и шеи, массаж нефритовыми роликами, деликатный уход за лицом, пенный массаж кожи головы, авторский водный ритуал «Золотая дуга», уход Davines, ритуал лёгкости для уставших голеней и стоп. Длительность 75 минут.</description>
@@ -662,8 +742,8 @@
       <price>11900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-programs,s-lada</set-ids>
-      <picture>https://istova.ru/gallery/06-body.jpg</picture>
+      <set-ids>s-programs,s-lada,s-land-antistress,s-land-rasslablyayushchiy-massazh,s-land-spa-vasileostrovskiy</set-ids>
+      <picture>https://istova.ru/feed-img/lada-solo.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Большой женский спа-ритуал на 150 минут. Финская сауна с цветочными эфирами, турецкое очищение кожи рукавицей кесе, расслабляющий массаж тела с тёплым кремом 40 минут, косметический массаж лица гуаша, спа-уход за лицом, спа для головы с «Золотой дугой» и уходом Davines, тёплый ритуал для кистей и стоп.</description>
@@ -683,8 +763,8 @@
       <price>11900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-programs,s-kedr</set-ids>
-      <picture>https://istova.ru/gallery/06-body.jpg</picture>
+      <set-ids>s-programs,s-kedr,s-land-antistress,s-land-rasslablyayushchiy-massazh,s-land-spa-vasileostrovskiy</set-ids>
+      <picture>https://istova.ru/feed-img/kedr-solo.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Большой мужской спа-ритуал на 150 минут. Финская сауна с хвойными эфирами, скраб с солью и скорлупой кедрового ореха, ритмичная проработка тела бамбуковыми вениками, расслабляющий массаж тёплыми камнями 60 минут, спа-уход за лицом, спа для головы с «Золотой дугой» и уходом Davines.</description>
@@ -704,8 +784,8 @@
       <price>6800</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-programs,s-yav</set-ids>
-      <picture>https://istova.ru/gallery/06-body.jpg</picture>
+      <set-ids>s-programs,s-yav,s-land-massazh-golovy,s-land-yaponskoe-spa-dlya-golovy,s-land-spa-dlya-volos,s-land-antistress,s-land-spa-vasileostrovskiy</set-ids>
+      <picture>https://istova.ru/feed-img/yav-solo.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Знакомство с Истовой: в одном ритуале собраны ключевые практики для тела, лица, кожи головы и волос. Расслабляющая работа со спиной, плечами и руками, массаж головы руками и гребнями, спа-уход за лицом, авторский водный ритуал «Золотая дуга», уход Davines, завершающее звучание чаши. Длительность 75 минут. Оптимальный вариант для первого визита.</description>
@@ -725,8 +805,8 @@
       <price>8500</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-programs,s-sumerki-volosy</set-ids>
-      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <set-ids>s-programs,s-sumerki-volosy,s-land-massazh-golovy,s-land-yaponskoe-spa-dlya-golovy,s-land-spa-dlya-volos,s-land-antistress,s-land-rasslablyayushchiy-massazh</set-ids>
+      <picture>https://istova.ru/feed-img/sumerki-volosy-solo.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Вечернее спа для головы. Расслабляющий массаж лица и шейно-воротниковой зоны, тёплая маска для глаз, авторский водный ритуал «Золотая дуга», травяной ритуал для кожи головы, уход Davines, согревание кистей и стоп. Длительность 90 минут. После — сушка со спа-мастером или самостоятельно.</description>
@@ -746,8 +826,8 @@
       <price>9900</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-programs,s-sumerki-telo</set-ids>
-      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <set-ids>s-programs,s-sumerki-telo,s-land-antistress,s-land-rasslablyayushchiy-massazh,s-land-spa-vasileostrovskiy</set-ids>
+      <picture>https://istova.ru/feed-img/sumerki-telo-solo.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Вечерний спа-ритуал для тела. Сауна с успокаивающими эфирами, кремовое обновление кожи с лавандой, питательное обёртывание, расслабляющий спа-массаж тела 45 минут, массаж лица, согревание тёплыми травяными мешочками. Длительность 120 минут.</description>
@@ -767,8 +847,8 @@
       <price>8500</price>
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
-      <set-ids>s-programs,s-zarya-volosy</set-ids>
-      <picture>https://istova.ru/gallery/04-head-spa.jpg</picture>
+      <set-ids>s-programs,s-zarya-volosy,s-land-massazh-golovy,s-land-yaponskoe-spa-dlya-golovy,s-land-spa-dlya-volos,s-land-spa-vasileostrovskiy</set-ids>
+      <picture>https://istova.ru/feed-img/zarya-volosy-solo.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Утреннее спа для головы. Тонизирующий массаж лица и шеи с криосферами, охлаждающая каменная маска для глаз, авторский водный ритуал «Золотая дуга», уход Davines для кожи головы и волос, пенный массаж головы, массаж кистей. Длительность 90 минут. После — сушка со спа-мастером или самостоятельно.</description>
@@ -789,7 +869,7 @@
       <currencyId>RUR</currencyId>
       <categoryId>1</categoryId>
       <set-ids>s-programs,s-zarya-telo</set-ids>
-      <picture>https://istova.ru/gallery/03-sauna.jpg</picture>
+      <picture>https://istova.ru/feed-img/zarya-telo-solo.jpg</picture>
       <delivery>false</delivery>
       <pickup>false</pickup>
       <description>Утренний спа-ритуал для тела. Бодрящая финская сауна, скраб с гималайской солью и розовым грейпфрутом, тонизирующий массаж тела 45 минут, гидрогелевая маска против отёчности, массаж лица нефритовыми роликами, пробуждение через стопы. Длительность 100 минут.</description>
