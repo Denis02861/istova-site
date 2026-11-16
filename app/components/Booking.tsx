@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback, FormEvent } from "react";
 import BlurFade from "./magicui/BlurFade";
 import { track } from "../lib/track";
+import { leadSource } from "../lib/leadSource";
 import TrackedLink from "./TrackedLink";
 import ContactLinks from "./ContactLinks";
 
@@ -84,7 +85,7 @@ export default function Booking() {
       fetch(BOOKING_WEBHOOK, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: d.name, phone: d.phone, comment: d.comment, partial: true }),
+        body: JSON.stringify({ name: d.name, phone: d.phone, comment: d.comment, partial: true, src: leadSource() }),
         keepalive: true,
         cache: "no-store",
       }).catch(() => {});
@@ -168,7 +169,7 @@ export default function Booking() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         cache: "no-store",
-        body: JSON.stringify({ name, phone, channel, comment }),
+        body: JSON.stringify({ name, phone, channel, comment, src: leadSource() }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || data.ok === false) {

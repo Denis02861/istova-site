@@ -2,6 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
 import CookieBanner from "./components/CookieBanner";
+import LeadSourceCapture from "./components/LeadSourceCapture";
 import { AGGREGATE_RATING } from "./lib/rating";
 
 const SITE_URL = "https://istova.ru";
@@ -265,6 +266,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#hero" className="skip-link">Перейти к содержимому</a>
         {children}
         <CookieBanner />
+        <LeadSourceCapture />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSONLD) }}
