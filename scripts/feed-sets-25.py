@@ -102,6 +102,11 @@ def patch_feed():
         o = re.sub(r"<picture>.*?</picture>", f"<picture>{SITE}/feed-img/{oid}.jpg</picture>", o)
         return o
     s = re.sub(r'<offer id="([^"]+)".*?</offer>', fix, s, flags=re.S)
+    # Дата генерации обновляется при каждой сборке. Со старой датой Яндекс, похоже, не перечитывал фид
+    # (16.11 отчёт Вебмастера был по версии до 14.11, а в фиде стояла дата 26.10)
+    from datetime import datetime, timezone, timedelta
+    s = re.sub(r'<yml_catalog date="[^"]*">',
+               f'<yml_catalog date="{datetime.now(timezone(timedelta(hours=3))):%Y-%m-%dT%H:%M:%S}+03:00">', s, count=1)
     FEED.write_text(s, encoding="utf-8")
 
 if __name__ == "__main__":
