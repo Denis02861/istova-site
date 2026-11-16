@@ -42,7 +42,9 @@ const SHORT_TITLE_ACCENT: Record<string, string> = {
 // услуга, город и цена. Название ритуала остаётся, но уходит во вторую часть.
 const SEO_LEAD: Record<string, string> = {
   "zarya-telo": "Спа для тела в СПб",
-  "zarya-volosy": "Спа для волос и head spa в СПб",
+  // 16.11.2026: было «Спа для волос и head spa в СПб» — спорило со /spa-dlya-volos/ (Топвизор:
+  // Яндекс прыгал между тремя страницами, «спа для волос спб» 2 → 5). Запрос отдан посадочной.
+  "zarya-volosy": "Утренний ритуал для волос в СПб",
   "sumerki-telo": "Вечернее спа для тела в СПб",
   "sumerki-volosy": "Вечернее head spa в СПб",
   "kedr-lada": "Спа для двоих в СПб",
