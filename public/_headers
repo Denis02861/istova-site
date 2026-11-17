@@ -25,6 +25,26 @@
 /logo/*
   Cache-Control: public, max-age=2592000
 
+# Фото по папкам — месяц кэш. Layero понимает только правила по папкам: «/*.webp» ниже он
+# пропускает, и до 17.11.2026 фото шли с max-age=0 (качались заново при каждом заходе).
+# /gallery/feed.json (лента Instagram, обновляется) сюда специально не попадает — у неё свой путь.
+/gallery/2026-11/*
+  Cache-Control: public, max-age=2592000
+/gallery/2026-09/*
+  Cache-Control: public, max-age=2592000
+/gallery/feed/*
+  Cache-Control: public, max-age=2592000
+/gallery/clean/*
+  Cache-Control: public, max-age=2592000
+/gallery/head-spa/*
+  Cache-Control: public, max-age=2592000
+/feed-img/*
+  Cache-Control: public, max-age=2592000
+/certificates/*
+  Cache-Control: public, max-age=2592000
+/og/*
+  Cache-Control: public, max-age=2592000
+
 # Общие правила по расширению
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
