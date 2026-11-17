@@ -51,6 +51,7 @@ export default function Space() {
             <div
               key={i}
               className="group relative aspect-[9/16] overflow-hidden soft-edge cursor-default"
+              style={{ backgroundImage: `url(${z.img})` }}
             >
               {/* Изображение — плавный zoom при hover, без наклона */}
               <img
