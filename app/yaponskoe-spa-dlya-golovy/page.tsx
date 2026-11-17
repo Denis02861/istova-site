@@ -23,7 +23,7 @@ const HEAD_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
   "zarya-volosy": "/gallery/2026-11/kamennaya-maska.webp",
-  "sumerki-volosy": "/gallery/2026-11/duga.webp",
+  "sumerki-volosy": "/gallery/2026-11/duga-greben.webp",
   "rodnik": "/gallery/2026-11/massazh-litsa-2.webp",
   "yav": "/gallery/2026-11/poyushchaya-chasha.webp",
 };
