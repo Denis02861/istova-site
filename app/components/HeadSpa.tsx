@@ -4,7 +4,7 @@ import BlurFade from "./magicui/BlurFade";
 
 const items = [
   {
-    src: "/gallery/2026-11/mytie-golovy-v.webp",
+    src: "/gallery/2026-11/duga-v.webp",
     title: "Аква-медитация",
     tagline: "Расслабление глубже классического массажа",
     tags: ["японская школа", "нефритовые скребки", "тёплая вода"],

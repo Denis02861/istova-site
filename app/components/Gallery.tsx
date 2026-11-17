@@ -53,7 +53,7 @@ type Item = {
 // Из сентябрьских оставлены мужчина и сертификат: таких сцен в новой съёмке нет.
 // Карточки вертикальные 3:4, поэтому горизонтальные кадры лежат здесь вертикальными версиями (*-v).
 const studioPhotos: Item[] = [
-  { type: "image", src: "/gallery/2026-11/duga-v.webp", poster: "/gallery/2026-11/duga-v.webp", alt: "Золотая дуга: водный ритуал для кожи головы" },
+  { type: "image", src: "/gallery/2026-11/duga-greben-v.webp", poster: "/gallery/2026-11/duga-greben-v.webp", alt: "Золотая дуга: водный ритуал для кожи головы" },
   { type: "image", src: "/gallery/2026-11/mytie-golovy-v.webp", poster: "/gallery/2026-11/mytie-golovy-v.webp", alt: "Тёплая вода у Золотой дуги" },
   { type: "image", src: "/gallery/2026-11/kamennaya-maska-v.webp", poster: "/gallery/2026-11/kamennaya-maska-v.webp", alt: "Каменная маска для глаз и массаж гребнями" },
   { type: "image", src: "/gallery/2026-11/pennyy-massazh.webp", poster: "/gallery/2026-11/pennyy-massazh.webp", alt: "Пенный массаж кожи головы" },
