@@ -30,7 +30,8 @@ export function SplitBlock({
         </Reveal>
 
         <Reveal variant="scale" delay={120}>
-          <div className="relative overflow-hidden rounded-[28px] shadow-[0_30px_80px_-40px_rgba(90,51,40,0.55)]">
+          <div className="soft-edge shadow-[0_30px_80px_-40px_rgba(90,51,40,0.55)]" style={{ backgroundImage: `url(${photo})` }}>
+            <div className="soft-sharp">
             <Parallax speed={0.12}>
               <img
                 src={photo}
@@ -40,6 +41,7 @@ export function SplitBlock({
                 className="w-full h-[320px] md:h-[440px] object-cover scale-110"
               />
             </Parallax>
+            </div>
           </div>
         </Reveal>
       </div>
@@ -52,10 +54,12 @@ export function PhotoStrip({ photo, alt, caption }: { photo: string; alt: string
   return (
     <section className="my-6 md:my-10">
       <Reveal variant="fade">
-        <div className="relative overflow-hidden rounded-[28px] h-[240px] md:h-[380px]">
+        <div className="soft-edge h-[240px] md:h-[380px]" style={{ backgroundImage: `url(${photo})` }}>
+          <div className="soft-sharp h-full">
           <Parallax speed={0.16}>
             <img src={photo} alt={alt} loading="lazy" decoding="async" className="w-full h-full object-cover scale-110" />
           </Parallax>
+          </div>
           {caption && (
             <>
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/70 to-transparent" />

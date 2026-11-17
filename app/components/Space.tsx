@@ -54,14 +54,16 @@ export default function Space() {
               style={{ backgroundImage: `url(${z.img})` }}
             >
               {/* Изображение — плавный zoom при hover, без наклона */}
-              <img
-                src={z.img}
-                alt={z.title}
-                width={720}
-                height={1280}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.08]"
-              />
+              <div className="soft-sharp absolute inset-0">
+                <img
+                  src={z.img}
+                  alt={z.title}
+                  width={720}
+                  height={1280}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.08]"
+                />
+              </div>
             </div>
           ))}
         </Reveal>

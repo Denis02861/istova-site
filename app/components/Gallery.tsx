@@ -119,22 +119,25 @@ export default function Gallery() {
       type="button"
       onClick={onClick}
       aria-label={item.type === "video" ? `Открыть видео: ${item.alt}` : `Открыть фото: ${item.alt}`}
-      className="group relative shrink-0 w-40 sm:w-48 aspect-[3/4] rounded-lg overflow-hidden border border-brand/10 bg-brand/5 cursor-pointer"
+      className={`group relative shrink-0 w-40 sm:w-48 aspect-[3/4] soft-edge cursor-pointer transition-opacity duration-700 ${live ? "opacity-85" : "opacity-70"} hover:opacity-100`}
+      style={{ backgroundImage: `url(${item.poster})` }}
     >
+      <div className="soft-sharp absolute inset-0">
       {item.type === "video" ? (
         <LazyVideo
           src={item.preview || item.src}
           poster={item.poster}
-          className={`w-full h-full object-cover transition-all duration-700 ease-out ${live ? "opacity-85 group-hover:opacity-100" : "blur-[2.5px] opacity-70 scale-105 group-hover:blur-0 group-hover:opacity-100 group-hover:scale-100"}`}
+          className={`w-full h-full object-cover transition-all duration-700 ease-out ${live ? "" : "blur-[2.5px] scale-105 group-hover:blur-0 group-hover:scale-100"}`}
         />
       ) : (
         <img
           src={item.poster}
           alt={item.alt}
-          className={`w-full h-full object-cover transition-all duration-700 ease-out ${live ? "opacity-85 group-hover:opacity-100" : "blur-[2.5px] opacity-70 scale-105 group-hover:blur-0 group-hover:opacity-100 group-hover:scale-100"}`}
+          className={`w-full h-full object-cover transition-all duration-700 ease-out ${live ? "" : "blur-[2.5px] scale-105 group-hover:blur-0 group-hover:scale-100"}`}
           loading="lazy"
         />
       )}
+      </div>
       {item.type === "video" && (
         <span className="absolute bottom-2 right-2 w-7 h-7 flex items-center justify-center rounded-full bg-brand-dark/45 backdrop-blur-sm text-sand pointer-events-none">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>

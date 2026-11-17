@@ -151,8 +151,10 @@ export default async function PracticePage({ params }: { params: Promise<{ slug:
           </header>
 
           {p.photo && (
-            <figure className="mb-16 -mt-4 relative aspect-[3/2] overflow-hidden rounded-sm bg-brand/5 shadow-[0_25px_70px_-25px_rgba(116,68,54,0.4)]">
-              <img src={p.photo.src} alt={p.photo.alt} loading="eager" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
+            <figure className="mb-16 -mt-4 aspect-[3/2] soft-edge shadow-[0_25px_70px_-25px_rgba(116,68,54,0.4)]" style={{ backgroundImage: `url(${p.photo.src})` }}>
+              <div className="soft-sharp absolute inset-0">
+                <img src={p.photo.src} alt={p.photo.alt} loading="eager" decoding="async" className="w-full h-full object-cover" />
+              </div>
             </figure>
           )}
 

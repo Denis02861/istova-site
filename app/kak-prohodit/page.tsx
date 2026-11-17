@@ -182,8 +182,10 @@ export default function KakProhoditPage() {
                     <p className="text-base text-brand-dark/80 leading-relaxed">{s.d}</p>
                     <div className={`mt-6 grid gap-3 ${GRID[s.photos.length]}`}>
                       {s.photos.map((ph) => (
-                        <div key={ph.src} className={`relative overflow-hidden rounded-[16px] bg-brand/5 ${"r" in ph && ph.r ? ph.r : s.photos.length > 1 ? "aspect-[3/4]" : "aspect-[3/2]"}`}>
-                          <img src={ph.src} alt={ph.alt} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
+                        <div key={ph.src} style={{ backgroundImage: `url(${ph.src})` }} className={`soft-edge ${"r" in ph && ph.r ? ph.r : s.photos.length > 1 ? "aspect-[3/4]" : "aspect-[3/2]"}`}>
+                          <div className="soft-sharp absolute inset-0">
+                            <img src={ph.src} alt={ph.alt} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                          </div>
                         </div>
                       ))}
                     </div>
