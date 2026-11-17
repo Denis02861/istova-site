@@ -150,6 +150,12 @@ export default async function PracticePage({ params }: { params: Promise<{ slug:
             <p className="font-sans text-base md:text-lg text-brand-dark/85 leading-relaxed mt-8 max-w-2xl">{p.desc}</p>
           </header>
 
+          {p.photo && (
+            <figure className="mb-16 -mt-4 relative aspect-[3/2] overflow-hidden rounded-sm bg-brand/5 shadow-[0_25px_70px_-25px_rgba(116,68,54,0.4)]">
+              <img src={p.photo.src} alt={p.photo.alt} loading="eager" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
+            </figure>
+          )}
+
           <section className="mb-16 flex flex-wrap items-end justify-between gap-8">
             {p.variants.map((v) => (
               <div key={v.offerId}>

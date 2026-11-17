@@ -17,7 +17,8 @@ export type Practice = {
   desc: string;
   variants: { dur: string; price: string; offerId: string }[];
   seoLead: string; // начало title: что человек набирает в поиске
-  picture: string;
+  picture: string; // превью ссылки и разметка (og, schema)
+  photo?: { src: string; alt: string }; // кадр на странице; только если в съёмке есть именно эта практика
 };
 
 export const GROUPS: Record<PracticeGroup, { title: string; subtitle: string; intro: string }> = {
@@ -51,7 +52,7 @@ export const practices: Practice[] = [
       { dur: "90 минут", price: "6 100 ₽", offerId: "teplota-warm-90" },
     ],
     seoLead: "Тёплый массаж тела со свечой в СПб",
-    picture: "/gallery/2026-11/kamni.jpg",
+    picture: "/gallery/2026-11/vybor-masla.jpg",
   },
   {
     slug: "energiya-kamnya",
@@ -65,6 +66,7 @@ export const practices: Practice[] = [
     ],
     seoLead: "Массаж тёплыми камнями в СПб",
     picture: "/gallery/2026-11/kamni.jpg",
+    photo: { src: "/gallery/2026-11/kamni-h.webp", alt: "Массаж тёплым камнем" },
   },
   {
     slug: "tishina",
@@ -74,7 +76,8 @@ export const practices: Practice[] = [
     desc: "Расслабляющий массаж кожи головы руками и гребнями.",
     variants: [{ dur: "20 минут", price: "2 500 ₽", offerId: "teplota-tishina" }],
     seoLead: "Массаж головы с гребнями в СПб",
-    picture: "/gallery/2026-11/mytie-golovy.jpg",
+    picture: "/gallery/2026-11/grebni.jpg",
+    photo: { src: "/gallery/2026-11/grebni.webp", alt: "Массаж кожи головы гребнем" },
   },
   {
     slug: "glubina",
@@ -84,7 +87,8 @@ export const practices: Practice[] = [
     desc: "Массаж лица, шейно-воротниковой зоны и кожи головы с гребнями — для снятия напряжения и полного переключения.",
     variants: [{ dur: "40 минут", price: "4 200 ₽", offerId: "teplota-glubina" }],
     seoLead: "Массаж лица, шеи и головы в СПб",
-    picture: "/gallery/2026-11/mytie-golovy.jpg",
+    picture: "/gallery/2026-11/massazh-litsa.jpg",
+    photo: { src: "/gallery/2026-11/massazh-litsa.webp", alt: "Массаж лица руками мастера" },
   },
   {
     slug: "kamen",
@@ -94,7 +98,8 @@ export const practices: Practice[] = [
     desc: "Косметический массаж лица с гуаша, роликами или криосферами — для расслабления, лёгкости и свежего вида кожи.",
     variants: [{ dur: "30 минут", price: "3 500 ₽", offerId: "teplota-kamen" }],
     seoLead: "Массаж лица гуаша и криосферами в СПб",
-    picture: "/gallery/2026-11/vstrecha.jpg",
+    picture: "/gallery/2026-11/guasha.jpg",
+    photo: { src: "/gallery/2026-11/guasha-h.webp", alt: "Массаж лица гуаша" },
   },
   {
     slug: "obnovlenie",
@@ -104,7 +109,8 @@ export const practices: Practice[] = [
     desc: "Скрабирование тела, тёплый душ и завершающий уход. Ароматическое направление выбирается перед практикой.",
     variants: [{ dur: "30 минут", price: "3 500 ₽", offerId: "teplota-obnovlenie" }],
     seoLead: "Скраб для тела в спа, СПб",
-    picture: "/gallery/2026-11/sauna.jpg",
+    picture: "/gallery/2026-11/skrab-telo.jpg",
+    photo: { src: "/gallery/2026-11/skrab-telo.webp", alt: "Скрабирование кожи тела" },
   },
   {
     slug: "ukutyvanie",
@@ -115,6 +121,7 @@ export const practices: Practice[] = [
     variants: [{ dur: "50 минут", price: "4 200 ₽", offerId: "teplota-ukutyvanie" }],
     seoLead: "Сауна и обёртывание в СПб",
     picture: "/gallery/2026-11/sauna.jpg",
+    photo: { src: "/gallery/2026-11/sauna.webp", alt: "Финская сауна" },
   },
   {
     slug: "obnovlenie-ukutyvanie",
@@ -125,6 +132,7 @@ export const practices: Practice[] = [
     variants: [{ dur: "70 минут", price: "6 500 ₽", offerId: "teplota-obn-ukut" }],
     seoLead: "Скраб, сауна и обёртывание в СПб",
     picture: "/gallery/2026-11/sauna.jpg",
+    photo: { src: "/gallery/2026-11/sauna.webp", alt: "Финская сауна перед уходом для тела" },
   },
   {
     slug: "teplye-kisti",
@@ -134,7 +142,7 @@ export const practices: Practice[] = [
     desc: "Массаж кистей и уход с тёплым кремом.",
     variants: [{ dur: "20 минут", price: "2 000 ₽", offerId: "teplota-kisti" }],
     seoLead: "Массаж кистей рук в СПб",
-    picture: "/gallery/2026-11/skrab-telo.jpg",
+    picture: "/gallery/2026-11/meshochki-ruki.jpg",
   },
   {
     slug: "legkie-stopy",
@@ -144,7 +152,8 @@ export const practices: Practice[] = [
     desc: "Массаж стоп и голеней для снятия усталости и ощущения лёгкости.",
     variants: [{ dur: "20 минут", price: "2 200 ₽", offerId: "teplota-stopy-l" }],
     seoLead: "Массаж стоп и голеней в СПб",
-    picture: "/gallery/2026-11/skrab-telo.jpg",
+    picture: "/gallery/2026-11/kamni.jpg",
+    photo: { src: "/gallery/2026-11/kamni-h.webp", alt: "Массаж стоп" },
   },
   {
     slug: "teplye-stopy",
@@ -154,7 +163,8 @@ export const practices: Practice[] = [
     desc: "Массаж стоп и голеней с последующим согреванием травяными мешочками.",
     variants: [{ dur: "30 минут", price: "2 900 ₽", offerId: "teplota-stopy-t" }],
     seoLead: "Массаж стоп с травяными мешочками в СПб",
-    picture: "/gallery/2026-11/skrab-telo.jpg",
+    picture: "/gallery/2026-11/travyanoy-meshochek.jpg",
+    photo: { src: "/gallery/2026-11/travyanoy-meshochek-h.webp", alt: "Тёплый травяной мешочек" },
   },
   {
     slug: "travyanoe-teplo",
@@ -164,7 +174,8 @@ export const practices: Practice[] = [
     desc: "Локальный ритуал с тёплыми травяными мешочками для выбранной зоны тела.",
     variants: [{ dur: "20 минут", price: "2 500 ₽", offerId: "teplota-travy" }],
     seoLead: "Массаж травяными мешочками в СПб",
-    picture: "/gallery/2026-11/skrab-telo.jpg",
+    picture: "/gallery/2026-11/meshochki-ruki.jpg",
+    photo: { src: "/gallery/2026-11/meshochki-ruki-h.webp", alt: "Тёплый травяной мешочек в ладонях" },
   },
   {
     slug: "tyazhest-i-tishina",
@@ -174,7 +185,7 @@ export const practices: Practice[] = [
     desc: "Отдых под тяжёлым одеялом с тёплым компрессом для глаз — практика полного замедления.",
     variants: [{ dur: "20 минут", price: "1 300 ₽", offerId: "teplota-tyazhest" }],
     seoLead: "Отдых под утяжелённым одеялом в спа, СПб",
-    picture: "/gallery/2026-11/skrab-telo.jpg",
+    picture: "/gallery/2026-11/chaynaya-zona.jpg",
   },
 ];
 
