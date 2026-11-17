@@ -27,12 +27,12 @@ const SLUGS = ["yav", "zarya-volosy", "sumerki-telo", "kedr", "lada", "kedr-lada
 const GIFT_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "yav": "/gallery/2026-11/interer.webp",
-  "zarya-volosy": "/gallery/2026-11/mytie-golovy.webp",
-  "sumerki-telo": "/gallery/2026-11/kamni.webp",
-  "kedr": "/gallery/2026-11/sauna.webp",
-  "lada": "/gallery/2026-11/skrab-telo.webp",
-  "kedr-lada": "/gallery/2026-11/vstrecha.webp",
+  "yav": "/gallery/2026-11/poyushchaya-chasha.webp",
+  "zarya-volosy": "/gallery/2026-11/kamennaya-maska.webp",
+  "sumerki-telo": "/gallery/2026-11/meshochki-ruki-h.webp",
+  "kedr": "/gallery/2026-11/kamni-h.webp",
+  "lada": "/gallery/2026-11/guasha-h.webp",
+  "kedr-lada": "/gallery/2026-09/sauna-dvoe.webp",
 };
 
 const FAQ = [

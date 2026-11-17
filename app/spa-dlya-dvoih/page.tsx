@@ -37,12 +37,12 @@ const KEDR_LADA = programs.find((p) => p.slug === "kedr-lada");
 
 const PHOTOS: Record<string, string> = {
   "zarya-telo": "/gallery/2026-11/skrab-telo.webp",
-  "zarya-volosy": "/gallery/2026-11/massazh-golovy.webp",
-  "sumerki-telo": "/gallery/2026-11/massazh-litsa-2.webp",
-  "sumerki-volosy": "/gallery/2026-11/duga.webp",
-  "rodnik": "/gallery/2026-11/vstrecha.webp",
-  "kedr": "/gallery/2026-11/sauna.jpg",
-  "lada": "/gallery/2026-11/skrab-telo.webp",
+  "zarya-volosy": "/gallery/2026-11/kamennaya-maska.webp",
+  "sumerki-telo": "/gallery/2026-11/meshochki-ruki-h.webp",
+  "sumerki-volosy": "/gallery/2026-11/mytie-golovy.webp",
+  "rodnik": "/gallery/2026-11/pennyy-massazh-2.webp",
+  "kedr": "/gallery/2026-11/kamni-h.webp",
+  "lada": "/gallery/2026-11/guasha-h.webp",
   "yav": "/gallery/2026-11/poyushchaya-chasha.webp",
 };
 

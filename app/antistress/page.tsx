@@ -17,10 +17,10 @@ const SLUGS = ["sumerki-telo", "sumerki-volosy", "kedr", "lada", "yav"];
 const ANTISTRESS_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "sumerki-telo": "/gallery/2026-11/massazh-litsa-2.webp",
-  "sumerki-volosy": "/gallery/2026-11/duga.webp",
-  "kedr": "/gallery/2026-11/sauna.jpg",
-  "lada": "/gallery/2026-11/skrab-telo.webp",
+  "sumerki-telo": "/gallery/2026-11/meshochki-ruki-h.webp",
+  "sumerki-volosy": "/gallery/2026-11/mytie-golovy.webp",
+  "kedr": "/gallery/2026-11/kamni-h.webp",
+  "lada": "/gallery/2026-11/guasha-h.webp",
   "yav": "/gallery/2026-11/poyushchaya-chasha.webp",
 };
 

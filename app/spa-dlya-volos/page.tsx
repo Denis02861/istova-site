@@ -22,10 +22,10 @@ const SLUGS = ["zarya-volosy", "sumerki-volosy", "rodnik", "yav"];
 const HAIR_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "zarya-volosy": "/gallery/2026-11/massazh-golovy.webp",
-  "sumerki-volosy": "/gallery/2026-11/kamennaya-maska.webp",
-  "rodnik": "/gallery/2026-11/vstrecha.webp",
-  "yav": "/gallery/2026-11/grebni.webp",
+  "zarya-volosy": "/gallery/2026-11/kamennaya-maska.webp",
+  "sumerki-volosy": "/gallery/2026-11/mytie-golovy.webp",
+  "rodnik": "/gallery/2026-11/pennyy-massazh-2.webp",
+  "yav": "/gallery/2026-11/poyushchaya-chasha.webp",
 };
 
 const FAQ = [

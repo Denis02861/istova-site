@@ -17,10 +17,10 @@ const SLUGS = ["sumerki-telo", "lada", "kedr", "sumerki-volosy"];
 const RELAX_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "sumerki-telo": "/gallery/2026-11/massazh-litsa-2.webp",
-  "lada": "/gallery/2026-11/skrab-telo.webp",
-  "kedr": "/gallery/2026-11/sauna.jpg",
-  "sumerki-volosy": "/gallery/2026-11/duga.webp",
+  "sumerki-telo": "/gallery/2026-11/meshochki-ruki-h.webp",
+  "lada": "/gallery/2026-11/guasha-h.webp",
+  "kedr": "/gallery/2026-11/kamni-h.webp",
+  "sumerki-volosy": "/gallery/2026-11/mytie-golovy.webp",
 };
 
 const FAQ = [
