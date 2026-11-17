@@ -26,12 +26,12 @@ const SLUGS = ["yav", "rodnik", "zarya-volosy", "sumerki-telo", "kedr", "lada"];
 const LOCAL_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "yav": "/gallery/frag-water.webp",
-  "rodnik": "/gallery/frag-care.webp",
-  "zarya-volosy": "/gallery/04-head-spa.webp",
-  "sumerki-telo": "/gallery/05-massage.webp",
-  "kedr": "/gallery/03-sauna.webp",
-  "lada": "/gallery/frag-body.webp",
+  "yav": "/gallery/2026-11/interer.webp",
+  "rodnik": "/gallery/2026-11/vstrecha.webp",
+  "zarya-volosy": "/gallery/2026-11/mytie-golovy.webp",
+  "sumerki-telo": "/gallery/2026-11/kamni.webp",
+  "kedr": "/gallery/2026-11/sauna.webp",
+  "lada": "/gallery/2026-11/skrab-telo.webp",
 };
 
 const FAQ = [
@@ -132,7 +132,7 @@ export default function VasileostrovskiyPage() {
               "Истова стоит на улице Беринга, это север Васильевского острова, десять минут пешком от метро Приморская. Район жилой и спокойный: рядом залив, вечером здесь тихо даже на улице.",
               "Для спа это важнее, чем кажется. Расслабление начинается не в кабинете, а по дороге. Когда до двери идёшь через плотный поток центра, первые двадцать минут ритуала уходят на то, чтобы просто перестать спешить.",
             ]}
-            photo="/gallery/02-spa-zone.webp"
+            photo="/gallery/2026-11/duga-greben.webp"
             photoAlt="Спа-зона Истовы на Васильевском острове"
           />
 
@@ -145,7 +145,7 @@ export default function VasileostrovskiyPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/frag-water.webp"
+            photo="/gallery/2026-11/interer.webp"
             alt="Водный ритуал в Истове на Васильевском"
             caption="Тишина начинается ещё до входа"
           />
@@ -159,7 +159,7 @@ export default function VasileostrovskiyPage() {
               "Гости часто совмещают визит с прогулкой: от нас недалеко до набережной и парка 300-летия. После ритуала это работает лучше, чем сразу нырять обратно в дела.",
               "Если вы живёте на Васильевском, дорога занимает считанные минуты, и спа перестаёт быть событием, ради которого надо выкраивать полдня. Многие приходят раз в две-три недели просто потому, что близко.",
             ]}
-            photo="/gallery/frag-tea.webp"
+            photo="/gallery/2026-11/chay.webp"
             photoAlt="Чай в лаунж-зоне после ритуала"
           />
 

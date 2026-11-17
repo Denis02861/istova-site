@@ -21,17 +21,17 @@ const DESCRIPTION =
 
 const REASONS = [
   {
-    photo: "/gallery/head-spa/aurora.webp",
+    photo: "/gallery/2026-11/massazh-golovy.webp",
     title: "Тёплая вода и тишина",
     text: "Отдельный кабинет, тёплая вода золотой дуги, работа с шеей и плечами. Никто не ходит мимо и не разговаривает.",
   },
   {
-    photo: "/gallery/head-spa/jade.webp",
+    photo: "/gallery/2026-11/kamennaya-maska.webp",
     title: "Уйдёте собранной",
     text: "Волосы вымоют, высушат и уложат, масло смоют. После можно спокойно ехать по делам.",
   },
   {
-    photo: "/gallery/frag-tea.webp",
+    photo: "/gallery/2026-11/chay.webp",
     title: "Время без спешки",
     text: "От 75 до 150 минут, отсчёт от начала ритуала. В финале чай и лаунж-зона.",
   },

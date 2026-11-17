@@ -22,10 +22,10 @@ const SLUGS = ["zarya-volosy", "sumerki-volosy", "rodnik", "yav"];
 const HEAD_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "zarya-volosy": "/gallery/head-spa/aurora.webp",
-  "sumerki-volosy": "/gallery/head-spa/jade.webp",
-  "rodnik": "/gallery/frag-care.webp",
-  "yav": "/gallery/head-spa/wooden.webp",
+  "zarya-volosy": "/gallery/2026-11/massazh-golovy.webp",
+  "sumerki-volosy": "/gallery/2026-11/kamennaya-maska.webp",
+  "rodnik": "/gallery/2026-11/vstrecha.webp",
+  "yav": "/gallery/2026-11/grebni.webp",
 };
 
 const FAQ = [
@@ -138,7 +138,7 @@ export default function YaponskoeSpaPage() {
               "Формат вырос из японской уходовой культуры, где к голове относятся внимательно и без спешки. Отсюда и названия, которыми его ищут: японский массаж головы, японское спа для головы, head spa. Практика за всеми этими словами одна и та же.",
               "В Истове это не отдельная процедура на пятнадцать минут, а часть ритуала. Кроме самого массажа в него входят работа с шеей и плечами, уход Davines, а в финале волосы сушат и приводят в порядок, так что выходить на улицу можно сразу.",
             ]}
-            photo="/gallery/2026-09/duga-raspyliteli.webp"
+            photo="/gallery/2026-11/duga.webp"
             photoAlt="Нефритовая маска и водный ритуал под золотой дугой"
           />
 
@@ -150,7 +150,7 @@ export default function YaponskoeSpaPage() {
               "Водную часть у нас делают через изогнутую трубку, которую зовут золотой дугой. Вода идёт не струёй из душа, а мягким рассеянным потоком примерно температуры тела. Мастер работает руками прямо под ней: вода снимает трение, поэтому движения получаются мягче и глубже, чем на сухих волосах. Занимает эта часть около сорока минут.",
               "После воды волосы промывают, наносят уход Davines, сушат и укладывают. В конце остаётся время спокойно посидеть с чаем. Ничего активного сразу после планировать не стоит, вечер лучше оставить медленным.",
             ]}
-            photo="/gallery/2026-09/duga-voda-krupno.webp"
+            photo="/gallery/2026-11/mytie-golovy.webp"
             photoAlt="Тёплая вода идёт через золотую дугу"
           />
 
@@ -163,7 +163,7 @@ export default function YaponskoeSpaPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/2026-09/pena-ruki.webp"
+            photo="/gallery/2026-11/pennyy-massazh.webp"
             alt="Пенный массаж кожи головы"
             caption="Уходит тяжесть в голове, ночью легче засыпается, мысли становятся тише"
           />
@@ -177,7 +177,7 @@ export default function YaponskoeSpaPage() {
               "Утренняя ЗАРЯ и вечерние СУМЕРКИ для волос стоят 8500 рублей, это более длинные ритуалы с полноценным уходом за волосами. Бережный РОДНИК без нагрузки на тело стоит 7900 рублей.",
               "Вдвоём в двух смежных кабинетах выходит заметно дешевле, чем два визита по одному. Точные цены на пары указаны на странице каждого ритуала и в разделе спа для двоих.",
             ]}
-            photo="/gallery/frag-tea.webp"
+            photo="/gallery/2026-11/chay.webp"
             photoAlt="Чай после ритуала"
             flip
           />

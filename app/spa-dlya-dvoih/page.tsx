@@ -36,14 +36,14 @@ const PAIR_PROGRAMS = programs.filter((p) => p.pair_price);
 const KEDR_LADA = programs.find((p) => p.slug === "kedr-lada");
 
 const PHOTOS: Record<string, string> = {
-  "zarya-telo": "/gallery/clean/skrab.webp",
-  "zarya-volosy": "/gallery/head-spa/aurora.webp",
-  "sumerki-telo": "/gallery/clean/massazh-golovy.webp",
-  "sumerki-volosy": "/gallery/frag-headspa.webp",
-  "rodnik": "/gallery/frag-care.webp",
-  "kedr": "/gallery/clean/sauna.jpg",
-  "lada": "/gallery/frag-body.webp",
-  "yav": "/gallery/clean/chasha.webp",
+  "zarya-telo": "/gallery/2026-11/skrab-telo.webp",
+  "zarya-volosy": "/gallery/2026-11/massazh-golovy.webp",
+  "sumerki-telo": "/gallery/2026-11/massazh-litsa-2.webp",
+  "sumerki-volosy": "/gallery/2026-11/duga.webp",
+  "rodnik": "/gallery/2026-11/vstrecha.webp",
+  "kedr": "/gallery/2026-11/sauna.jpg",
+  "lada": "/gallery/2026-11/skrab-telo.webp",
+  "yav": "/gallery/2026-11/poyushchaya-chasha.webp",
 };
 
 const FAQ = [
@@ -184,7 +184,7 @@ export default function SpaDlyaDvoihPage() {
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto md:min-h-[280px] overflow-hidden">
                     <img
-                      src="/gallery/frag-sauna.webp"
+                      src="/gallery/2026-11/sauna.webp"
                       alt={KEDR_LADA.name}
                       loading="lazy"
                       decoding="async"
@@ -221,7 +221,7 @@ export default function SpaDlyaDvoihPage() {
               "Чаще всего берут вечер после работы и выходные. Истова открыта с 10 до 22 все семь дней, длинные парные ритуалы идут до трёх часов, поэтому спа-вечер для двоих успевает вместить программу целиком и чай в финале без спешки. На субботу и воскресенье время разбирают раньше, их стоит занимать заранее.",
               "Отдельно это работает как подарок: сертификат на парную программу можно оформить заранее и вручить без привязки к конкретной дате визита.",
             ]}
-            photo="/gallery/frag-tea.webp"
+            photo="/gallery/2026-11/chay.webp"
             photoAlt="Чайная церемония в Истове"
           />
 

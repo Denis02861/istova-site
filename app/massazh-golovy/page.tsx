@@ -17,10 +17,10 @@ const SLUGS = ["zarya-volosy", "sumerki-volosy", "rodnik", "yav"];
 const HEAD_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "zarya-volosy": "/gallery/head-spa/aurora.webp",
-  "sumerki-volosy": "/gallery/head-spa/jade.webp",
-  "rodnik": "/gallery/frag-care.webp",
-  "yav": "/gallery/head-spa/wooden.webp",
+  "zarya-volosy": "/gallery/2026-11/massazh-golovy.webp",
+  "sumerki-volosy": "/gallery/2026-11/kamennaya-maska.webp",
+  "rodnik": "/gallery/2026-11/vstrecha.webp",
+  "yav": "/gallery/2026-11/grebni.webp",
 };
 
 const FAQ = [
@@ -113,7 +113,7 @@ export default function MassazhGolovyPage() {
               "Массаж головы в Истове это не быстрая процедура между делом, а часть спокойного спа-ритуала. Мастер работает с кожей головы, висками, затылком и зоной шеи и плеч, куда чаще всего уходит дневное напряжение.",
               "Мы не ставим задачу что-то исправить во внешности. Задача другая: помочь расслабиться и дать голове отдохнуть так, как это редко получается в обычном дне.",
             ]}
-            photo="/gallery/2026-09/pena-golova.webp"
+            photo="/gallery/2026-11/pennyy-massazh-2.webp"
             photoAlt="Пенный массаж кожи головы"
           />
 
@@ -125,7 +125,7 @@ export default function MassazhGolovyPage() {
               "Дальше мастер работает руками прямо под водой. Это и есть главное отличие от сухого массажа: вода снимает трение, движения становятся мягче и глубже, а кожа головы прогревается равномерно. Плюс постоянный тёплый шум над ушами, от которого мысли сами собой замедляются.",
               "Занимает эта часть около сорока минут и входит во все программы с головой. После неё волосы промывают, наносят уход Davines и в финале сушат и укладывают, так что выходить на улицу можно сразу.",
             ]}
-            photo="/gallery/2026-09/duga-voda-krupno.webp"
+            photo="/gallery/2026-11/mytie-golovy.webp"
             photoAlt="Массаж головы водой через золотую дугу"
           />
 
@@ -138,7 +138,7 @@ export default function MassazhGolovyPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/2026-09/duga-kabinet.webp"
+            photo="/gallery/2026-11/duga-greben.webp"
             alt="Кабинет спа для головы с золотой дугой"
             caption="Уходит тяжесть в голове, ночью легче засыпается, мысли становятся тише"
           />
@@ -152,7 +152,7 @@ export default function MassazhGolovyPage() {
               "Сначала короткий разговор с мастером: как вы себя чувствуете, есть ли чувствительность кожи, какой аромат приятнее. Дальше начинается сам уход, с мягким массажем и тёплой водой, без спешки и лишних движений.",
               "Точную последовательность мастер выстраивает под вас на месте. Ближе к финалу приводит волосы в порядок, и остаётся время спокойно посидеть с чаем. Ничего активного сразу после планировать не стоит.",
             ]}
-            photo="/gallery/2026-09/massazh-litsa.webp"
+            photo="/gallery/2026-11/massazh-litsa-2.webp"
             photoAlt="Работа мастера с лицом и шеей"
           />
 

@@ -51,7 +51,7 @@ export const practices: Practice[] = [
       { dur: "90 минут", price: "6 100 ₽", offerId: "teplota-warm-90" },
     ],
     seoLead: "Тёплый массаж тела со свечой в СПб",
-    picture: "/gallery/05-massage.jpg",
+    picture: "/gallery/2026-11/kamni.jpg",
   },
   {
     slug: "energiya-kamnya",
@@ -64,7 +64,7 @@ export const practices: Practice[] = [
       { dur: "90 минут", price: "6 300 ₽", offerId: "teplota-stone-90" },
     ],
     seoLead: "Массаж тёплыми камнями в СПб",
-    picture: "/gallery/05-massage.jpg",
+    picture: "/gallery/2026-11/kamni.jpg",
   },
   {
     slug: "tishina",
@@ -74,7 +74,7 @@ export const practices: Practice[] = [
     desc: "Расслабляющий массаж кожи головы руками и гребнями.",
     variants: [{ dur: "20 минут", price: "2 500 ₽", offerId: "teplota-tishina" }],
     seoLead: "Массаж головы с гребнями в СПб",
-    picture: "/gallery/04-head-spa.jpg",
+    picture: "/gallery/2026-11/mytie-golovy.jpg",
   },
   {
     slug: "glubina",
@@ -84,7 +84,7 @@ export const practices: Practice[] = [
     desc: "Массаж лица, шейно-воротниковой зоны и кожи головы с гребнями — для снятия напряжения и полного переключения.",
     variants: [{ dur: "40 минут", price: "4 200 ₽", offerId: "teplota-glubina" }],
     seoLead: "Массаж лица, шеи и головы в СПб",
-    picture: "/gallery/04-head-spa.jpg",
+    picture: "/gallery/2026-11/mytie-golovy.jpg",
   },
   {
     slug: "kamen",
@@ -94,7 +94,7 @@ export const practices: Practice[] = [
     desc: "Косметический массаж лица с гуаша, роликами или криосферами — для расслабления, лёгкости и свежего вида кожи.",
     variants: [{ dur: "30 минут", price: "3 500 ₽", offerId: "teplota-kamen" }],
     seoLead: "Массаж лица гуаша и криосферами в СПб",
-    picture: "/gallery/frag-care.jpg",
+    picture: "/gallery/2026-11/vstrecha.jpg",
   },
   {
     slug: "obnovlenie",
@@ -104,7 +104,7 @@ export const practices: Practice[] = [
     desc: "Скрабирование тела, тёплый душ и завершающий уход. Ароматическое направление выбирается перед практикой.",
     variants: [{ dur: "30 минут", price: "3 500 ₽", offerId: "teplota-obnovlenie" }],
     seoLead: "Скраб для тела в спа, СПб",
-    picture: "/gallery/03-sauna.jpg",
+    picture: "/gallery/2026-11/sauna.jpg",
   },
   {
     slug: "ukutyvanie",
@@ -114,7 +114,7 @@ export const practices: Practice[] = [
     desc: "Финская сауна, питательное обёртывание, отдых в тепле и завершающий уход для мягкости и комфорта кожи.",
     variants: [{ dur: "50 минут", price: "4 200 ₽", offerId: "teplota-ukutyvanie" }],
     seoLead: "Сауна и обёртывание в СПб",
-    picture: "/gallery/03-sauna.jpg",
+    picture: "/gallery/2026-11/sauna.jpg",
   },
   {
     slug: "obnovlenie-ukutyvanie",
@@ -124,7 +124,7 @@ export const practices: Practice[] = [
     desc: "Полный СПА-уход для кожи тела: прогревание, обновление, обёртывание и завершающий уход.",
     variants: [{ dur: "70 минут", price: "6 500 ₽", offerId: "teplota-obn-ukut" }],
     seoLead: "Скраб, сауна и обёртывание в СПб",
-    picture: "/gallery/03-sauna.jpg",
+    picture: "/gallery/2026-11/sauna.jpg",
   },
   {
     slug: "teplye-kisti",
@@ -134,7 +134,7 @@ export const practices: Practice[] = [
     desc: "Массаж кистей и уход с тёплым кремом.",
     variants: [{ dur: "20 минут", price: "2 000 ₽", offerId: "teplota-kisti" }],
     seoLead: "Массаж кистей рук в СПб",
-    picture: "/gallery/frag-body.jpg",
+    picture: "/gallery/2026-11/skrab-telo.jpg",
   },
   {
     slug: "legkie-stopy",
@@ -144,7 +144,7 @@ export const practices: Practice[] = [
     desc: "Массаж стоп и голеней для снятия усталости и ощущения лёгкости.",
     variants: [{ dur: "20 минут", price: "2 200 ₽", offerId: "teplota-stopy-l" }],
     seoLead: "Массаж стоп и голеней в СПб",
-    picture: "/gallery/frag-body.jpg",
+    picture: "/gallery/2026-11/skrab-telo.jpg",
   },
   {
     slug: "teplye-stopy",
@@ -154,7 +154,7 @@ export const practices: Practice[] = [
     desc: "Массаж стоп и голеней с последующим согреванием травяными мешочками.",
     variants: [{ dur: "30 минут", price: "2 900 ₽", offerId: "teplota-stopy-t" }],
     seoLead: "Массаж стоп с травяными мешочками в СПб",
-    picture: "/gallery/frag-body.jpg",
+    picture: "/gallery/2026-11/skrab-telo.jpg",
   },
   {
     slug: "travyanoe-teplo",
@@ -164,7 +164,7 @@ export const practices: Practice[] = [
     desc: "Локальный ритуал с тёплыми травяными мешочками для выбранной зоны тела.",
     variants: [{ dur: "20 минут", price: "2 500 ₽", offerId: "teplota-travy" }],
     seoLead: "Массаж травяными мешочками в СПб",
-    picture: "/gallery/frag-body.jpg",
+    picture: "/gallery/2026-11/skrab-telo.jpg",
   },
   {
     slug: "tyazhest-i-tishina",
@@ -174,7 +174,7 @@ export const practices: Practice[] = [
     desc: "Отдых под тяжёлым одеялом с тёплым компрессом для глаз — практика полного замедления.",
     variants: [{ dur: "20 минут", price: "1 300 ₽", offerId: "teplota-tyazhest" }],
     seoLead: "Отдых под утяжелённым одеялом в спа, СПб",
-    picture: "/gallery/frag-body.jpg",
+    picture: "/gallery/2026-11/skrab-telo.jpg",
   },
 ];
 

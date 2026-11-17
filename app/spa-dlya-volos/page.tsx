@@ -22,10 +22,10 @@ const SLUGS = ["zarya-volosy", "sumerki-volosy", "rodnik", "yav"];
 const HAIR_PROGRAMS = programs.filter((p) => SLUGS.includes(p.slug));
 
 const PHOTOS: Record<string, string> = {
-  "zarya-volosy": "/gallery/head-spa/aurora.webp",
-  "sumerki-volosy": "/gallery/head-spa/jade.webp",
-  "rodnik": "/gallery/frag-care.webp",
-  "yav": "/gallery/head-spa/wooden.webp",
+  "zarya-volosy": "/gallery/2026-11/massazh-golovy.webp",
+  "sumerki-volosy": "/gallery/2026-11/kamennaya-maska.webp",
+  "rodnik": "/gallery/2026-11/vstrecha.webp",
+  "yav": "/gallery/2026-11/grebni.webp",
 };
 
 const FAQ = [
@@ -135,7 +135,7 @@ export default function SpaDlyaVolosPage() {
               "Мастер работает руками по коже головы, а затем под тёплой водой, которая идёт мягким рассеянным потоком через изогнутую трубку. Вода убирает трение, поэтому движения получаются глубже, чем на сухих волосах, а кожа прогревается равномерно.",
               "Дальше волосы промывают, наносят уход Davines под ваш тип волос, сушат и укладывают. На выходе это и уход, и полтора-два часа, когда никто вас не трогает.",
             ]}
-            photo="/gallery/2026-09/pena-golova.webp"
+            photo="/gallery/2026-11/pennyy-massazh-2.webp"
             photoAlt="Пенный массаж кожи головы"
           />
 
@@ -147,7 +147,7 @@ export default function SpaDlyaVolosPage() {
               "Чего ждать не стоит: спа не лечит выпадение и не заменяет трихолога. Исследования показывают, что регулярный массаж кожи головы может улучшать её состояние и влиять на толщину волоса, но средством от облысения он не является, и мы не будем обещать обратное.",
               "Если волосы выпадают заметно и давно, правильный порядок такой: сначала врач, потом уход. Одно другому не мешает, но местами их менять не стоит.",
             ]}
-            photo="/gallery/2026-09/maska-dlya-sna.webp"
+            photo="/gallery/2026-11/kamennaya-maska-2.webp"
             photoAlt="Мастер работает с кожей головы"
           />
 
@@ -160,7 +160,7 @@ export default function SpaDlyaVolosPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/2026-09/duga-kabinet.webp"
+            photo="/gallery/2026-11/duga-greben.webp"
             alt="Кабинет спа для головы"
             caption="Полтора часа, когда телефон лежит в сумке, а с вашей головой работает другой человек"
           />
@@ -174,7 +174,7 @@ export default function SpaDlyaVolosPage() {
               "Утренняя ЗАРЯ для волос и вечерние СУМЕРКИ для волос стоят 8500 рублей. Это более длинные ритуалы, где уходу за волосами отведено больше времени. Бережный РОДНИК без нагрузки на тело стоит 7900 рублей.",
               "Вдвоём в двух смежных кабинетах выходит дешевле, чем два одиночных визита. Цены на пары есть на странице каждого ритуала и в разделе спа для двоих.",
             ]}
-            photo="/gallery/frag-tea.webp"
+            photo="/gallery/2026-11/chay.webp"
             photoAlt="Чай после ритуала"
             flip
           />

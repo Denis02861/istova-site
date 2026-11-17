@@ -4,20 +4,20 @@ import BlurFade from "./magicui/BlurFade";
 
 const items = [
   {
-    src: "/gallery/head-spa/jade.webp",
+    src: "/gallery/2026-11/kamennaya-maska.webp",
     title: "Аква-медитация",
     tagline: "Расслабление глубже классического массажа",
     tags: ["японская школа", "нефритовые скребки", "тёплая вода"],
   },
   {
-    src: "/gallery/head-spa/wooden.webp",
+    src: "/gallery/2026-11/grebni.webp",
     title: "Массаж головы",
     tagline: "Точки, микроциркуляция, живые корни волос",
     // Было «снимает мигрень»: лечебное обещание, а мы не медицина (13.11.2026).
     tags: ["деревянные скребки", "лёгкость в голове"],
   },
   {
-    src: "/gallery/head-spa/aurora.webp",
+    src: "/gallery/2026-11/massazh-golovy.webp",
     title: "Массаж лица",
     tagline: "Тонус и свежесть, мягкие техники",
     tags: ["тонус кожи", "снятие отёков", "шейно-воротниковая зона"],
