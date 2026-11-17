@@ -58,6 +58,12 @@ export default function CertificateOrder() {
   const [error, setError] = useState("");
   const firstRef = useRef<HTMLButtonElement | null>(null);
 
+  // старая ошибка уходит, как только человек что-то поменял в форме
+  useEffect(() => {
+    setStatus((st) => (st === "error" ? "idle" : st));
+    setError("");
+  }, [kind, amount, ritual, name, phone, consent]);
+
   const show = useCallback(() => {
     setOpen(true);
     track("CERT_ORDER_OPEN");
