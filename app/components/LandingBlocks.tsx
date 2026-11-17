@@ -168,7 +168,7 @@ export function FaqBlock({ items }: { items: { q: string; a: string }[] }) {
           <Reveal key={i} variant="up" delay={i * 70}>
             <div className="rounded-2xl bg-sand-soft border border-brand/10 px-6 py-5">
               <h3 className="font-display text-lg text-brand mb-2 leading-snug">{f.q}</h3>
-              <p className="text-sm text-brand-dark/80 leading-relaxed">{f.a}</p>
+              <div className="space-y-2">{f.a.split("\n\n").map((t, k) => <p key={k} className="text-sm text-brand-dark/80 leading-relaxed">{t}</p>)}</div>
             </div>
           </Reveal>
         ))}
