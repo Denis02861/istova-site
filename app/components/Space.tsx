@@ -50,7 +50,7 @@ export default function Space() {
           {zones.map((z, i) => (
             <div
               key={i}
-              className="group relative aspect-[9/16] rounded-sm overflow-hidden bg-brand/5 shadow-[0_18px_50px_-15px_rgba(116,68,54,0.3)] hover:shadow-[0_35px_80px_-20px_rgba(116,68,54,0.55)] transition-shadow duration-700 border border-brand/10 cursor-default"
+              className="group relative aspect-[9/16] overflow-hidden soft-edge cursor-default"
             >
               {/* Изображение — плавный zoom при hover, без наклона */}
               <img
