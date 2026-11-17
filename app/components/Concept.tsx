@@ -42,15 +42,14 @@ export default function Concept() {
       />
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
         <BlurFade delay={0.1} yOffset={20}>
-          <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Место, не услуга</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-brand mb-12 text-center tracking-tight">Больше, чем спа</h2>
         </BlurFade>
         <div className="space-y-6 text-lg leading-relaxed text-brand-dark/90">
-          {/* «спа салон спб» даёт 2549 показов в месяц, а слова на главной не было
-              вовсе (Вордстат СПб, 07.10.2026). Решение Дениса: добавить мягко,
-              одним упоминанием в видимом тексте. Заголовок и h1 не трогаем. */}
-          <BlurFade delay={0.25} yOffset={16}><p>Истова — спа-салон в Петербурге, где не торопят и не обещают лишнего.</p></BlurFade>
-          <BlurFade delay={0.35} yOffset={16}><p>Работаем по проверенным программам. Натуральные масла, тёплая и холодная вода, тишина.</p></BlurFade>
-          <BlurFade delay={0.45} yOffset={16}><p>Сюда возвращаются, чтобы выдохнуть.</p></BlurFade>
+          {/* Текст Кати 17.11.2026. Прежний вариант держал «спа-салон в Петербурге» ради запроса
+              «спа салон спб» (2549 показов, Вордстат 07.10) — с новым текстом слова на главной нет. */}
+          <BlurFade delay={0.25} yOffset={16}><p>ИСТОВА — пространство красоты и восстановления, где забота о себе становится особенным опытом.</p></BlurFade>
+          <BlurFade delay={0.35} yOffset={16}><p>Авторские спа-ритуалы, профессиональный уход, искусство прикосновений и атмосфера глубокого спокойствия.</p></BlurFade>
+          <BlurFade delay={0.45} yOffset={16}><p>Здесь время замедляется, а всё внимание принадлежит только вам.</p></BlurFade>
         </div>
 
         <div className="mt-20 pt-16 border-t border-brand/15">
