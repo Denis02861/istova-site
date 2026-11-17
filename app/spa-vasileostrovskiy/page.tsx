@@ -145,8 +145,8 @@ export default function VasileostrovskiyPage() {
           />
 
           <PhotoStrip
-            photo="/gallery/2026-11/interer.webp"
-            alt="Интерьер Истовы в тёплом свете"
+            photo="/gallery/2026-11/vstrecha-resepshn.webp"
+            alt="Стойка Истовы на Васильевском острове"
             caption="Тишина начинается ещё до входа"
           />
 

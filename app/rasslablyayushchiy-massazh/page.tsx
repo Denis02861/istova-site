@@ -122,8 +122,8 @@ export default function RelaxMassagePage() {
           />
 
           <PhotoStrip
-            photo="/gallery/2026-11/interer.webp"
-            alt="Интерьер Истовы в тёплом свете"
+            photo="/gallery/2026-11/massazh-golovy.webp"
+            alt="Расслабляющий массаж кожи головы"
             caption="Тело замедляется, дыхание выравнивается, напряжение отпускает слой за слоем"
           />
 

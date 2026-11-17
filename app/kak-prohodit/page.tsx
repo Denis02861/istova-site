@@ -29,7 +29,7 @@ const STEPS = [
     t: "Арома-выбор",
     time: "5 минут",
     d: "Вы выбираете аромат, который будет сопровождать весь ритуал. Можно нюхать, можно читать состав, можно попросить мастера рассказать про каждый. Тут не бывает неправильного выбора и глупых вопросов.",
-    photos: [{ src: "/gallery/2026-11/vybor-masla-h.webp", alt: "Гостья выбирает аромат для ритуала" }],
+    photos: [{ src: "/gallery/2026-11/vybor-masla.webp", alt: "Гостья выбирает аромат для ритуала", r: "aspect-[4/5]" }],
   },
   {
     n: "03",
@@ -50,7 +50,7 @@ const STEPS = [
     t: "Возвращение",
     time: "сколько нужно",
     d: "Приглушённый свет, тишина, неспешность. Можно посидеть ещё, можно собраться сразу. Мы не выгоняем из кресла и не намекаем, что пора.",
-    photos: [{ src: "/gallery/2026-11/chaynaya-zona-h.webp", alt: "Отдых в чайной зоне" }],
+    photos: [{ src: "/gallery/2026-11/chaynaya-zona.webp", alt: "Отдых в чайной зоне", r: "aspect-[4/5]" }],
   },
 ];
 
@@ -182,7 +182,7 @@ export default function KakProhoditPage() {
                     <p className="text-base text-brand-dark/80 leading-relaxed">{s.d}</p>
                     <div className={`mt-6 grid gap-3 ${GRID[s.photos.length]}`}>
                       {s.photos.map((ph) => (
-                        <div key={ph.src} className={`relative overflow-hidden rounded-[16px] bg-brand/5 ${s.photos.length > 1 ? "aspect-[3/4]" : "aspect-[3/2]"}`}>
+                        <div key={ph.src} className={`relative overflow-hidden rounded-[16px] bg-brand/5 ${"r" in ph && ph.r ? ph.r : s.photos.length > 1 ? "aspect-[3/4]" : "aspect-[3/2]"}`}>
                           <img src={ph.src} alt={ph.alt} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
                         </div>
                       ))}
@@ -213,8 +213,8 @@ export default function KakProhoditPage() {
               "Ничего брать с собой не нужно. Полотенца, халат, тапочки и душ есть здесь. Ценные вещи убираются в шкафчик, украшения и линзы лучше снять — администратор покажет куда положить.",
               "Голову перед визитом мыть не надо, её вымоют здесь. За полтора-два часа лучше не есть плотно, а воду пить можно и нужно.",
             ]}
-            photo="/gallery/2026-11/interer.webp"
-            photoAlt="Интерьер Истовы в тёплом свете"
+            photo="/gallery/2026-11/pennyy-massazh-2.webp"
+            photoAlt="Голову перед визитом мыть не нужно: её вымоют здесь"
           />
 
           <SplitBlock
