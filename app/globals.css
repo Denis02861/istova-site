@@ -431,25 +431,14 @@ body::before {
   }
 }
 
-/* Мягкие края фото (Денис 17.11.2026): по краю полоса лёгкого размытия, контур скруглён и чуть растворяется.
-   Первая версия с широким растворением в фон давала серую дымку на тёмных кадрах — Денису не понравилась.
-   Карточке нужны relative и overflow-hidden; размытие делает ::after поверх картинки. */
+/* Мягкие края фото (Денис 17.11.2026): скруглённые углы и контур, плавно растворённый на 15px.
+   Не делать: широкое растворение в фон (тёмные кадры дают серую дымку) и blur-полосу через
+   backdrop-filter (у края размытие тянет пустоту, край и углы светлеют) — оба варианта Денис забраковал.
+   Карточке нужен overflow-hidden. */
 .soft-edge {
   border-radius: 22px;
-  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 4px, rgba(0,0,0,.75) 8px, #000 12px, #000 calc(100% - 12px), rgba(0,0,0,.75) calc(100% - 8px), rgba(0,0,0,.35) calc(100% - 4px), transparent 100%), linear-gradient(to bottom, transparent 0, rgba(0,0,0,.35) 4px, rgba(0,0,0,.75) 8px, #000 12px, #000 calc(100% - 12px), rgba(0,0,0,.75) calc(100% - 8px), rgba(0,0,0,.35) calc(100% - 4px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.18) 3px, rgba(0,0,0,.5) 7px, rgba(0,0,0,.82) 11px, #000 15px, #000 calc(100% - 15px), rgba(0,0,0,.82) calc(100% - 11px), rgba(0,0,0,.5) calc(100% - 7px), rgba(0,0,0,.18) calc(100% - 3px), transparent 100%), linear-gradient(to bottom, transparent 0, rgba(0,0,0,.18) 3px, rgba(0,0,0,.5) 7px, rgba(0,0,0,.82) 11px, #000 15px, #000 calc(100% - 15px), rgba(0,0,0,.82) calc(100% - 11px), rgba(0,0,0,.5) calc(100% - 7px), rgba(0,0,0,.18) calc(100% - 3px), transparent 100%);
   -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 4px, rgba(0,0,0,.75) 8px, #000 12px, #000 calc(100% - 12px), rgba(0,0,0,.75) calc(100% - 8px), rgba(0,0,0,.35) calc(100% - 4px), transparent 100%), linear-gradient(to bottom, transparent 0, rgba(0,0,0,.35) 4px, rgba(0,0,0,.75) 8px, #000 12px, #000 calc(100% - 12px), rgba(0,0,0,.75) calc(100% - 8px), rgba(0,0,0,.35) calc(100% - 4px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.18) 3px, rgba(0,0,0,.5) 7px, rgba(0,0,0,.82) 11px, #000 15px, #000 calc(100% - 15px), rgba(0,0,0,.82) calc(100% - 11px), rgba(0,0,0,.5) calc(100% - 7px), rgba(0,0,0,.18) calc(100% - 3px), transparent 100%), linear-gradient(to bottom, transparent 0, rgba(0,0,0,.18) 3px, rgba(0,0,0,.5) 7px, rgba(0,0,0,.82) 11px, #000 15px, #000 calc(100% - 15px), rgba(0,0,0,.82) calc(100% - 11px), rgba(0,0,0,.5) calc(100% - 7px), rgba(0,0,0,.18) calc(100% - 3px), transparent 100%);
   mask-composite: intersect;
-}
-.soft-edge::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  -webkit-mask-image: linear-gradient(to right, #000 0, rgba(0,0,0,.6) 14px, rgba(0,0,0,.2) 30px, transparent 46px, transparent calc(100% - 46px), rgba(0,0,0,.2) calc(100% - 30px), rgba(0,0,0,.6) calc(100% - 14px), #000 100%), linear-gradient(to bottom, #000 0, rgba(0,0,0,.6) 14px, rgba(0,0,0,.2) 30px, transparent 46px, transparent calc(100% - 46px), rgba(0,0,0,.2) calc(100% - 30px), rgba(0,0,0,.6) calc(100% - 14px), #000 100%);
-  -webkit-mask-composite: source-over;
-  mask-image: linear-gradient(to right, #000 0, rgba(0,0,0,.6) 14px, rgba(0,0,0,.2) 30px, transparent 46px, transparent calc(100% - 46px), rgba(0,0,0,.2) calc(100% - 30px), rgba(0,0,0,.6) calc(100% - 14px), #000 100%), linear-gradient(to bottom, #000 0, rgba(0,0,0,.6) 14px, rgba(0,0,0,.2) 30px, transparent 46px, transparent calc(100% - 46px), rgba(0,0,0,.2) calc(100% - 30px), rgba(0,0,0,.6) calc(100% - 14px), #000 100%);
-  mask-composite: add;
 }
