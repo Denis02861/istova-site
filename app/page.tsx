@@ -19,6 +19,7 @@ import Reveal from "./components/Reveal";
 import FloatingCTA from "./components/FloatingCTA";
 import Quiz from "./components/Quiz";
 import StickyMobileBar from "./components/StickyMobileBar";
+import CertificateOrder from "./components/CertificateOrder";
 import ScrollProgress from "./components/ScrollProgress";
 import SmoothScroll from "./components/SmoothScroll";
 
@@ -44,6 +45,7 @@ export default function Page() {
         <Reveal variant="up"><Contacts /></Reveal>
         <Reveal variant="up"><Booking /></Reveal>
       </main>
+      <CertificateOrder />
       <Footer />
       <FloatingCTA />
       <StickyMobileBar />

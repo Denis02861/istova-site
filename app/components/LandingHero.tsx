@@ -8,13 +8,16 @@ type Props = {
   lead: string;
   ctaFrom: string;
   priceHint?: string;
+  // своя главная кнопка (страница сертификата открывает окно заказа); по умолчанию — онлайн-запись
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
 /**
  * Первый экран посадочной: светлый фон с плавающими пятнами Aurora, как на главной.
  * Фото сюда не ставим — исходники 720 px шириной мылят на весь экран.
  */
-export default function LandingHero({ eyebrow, title, lead, ctaFrom, priceHint }: Props) {
+export default function LandingHero({ eyebrow, title, lead, ctaFrom, priceHint, ctaLabel, ctaHref }: Props) {
   return (
     <section className="relative min-h-[68vh] md:min-h-[78vh] flex items-center overflow-hidden bg-sand pt-24 pb-16">
       <Aurora />
@@ -46,10 +49,10 @@ export default function LandingHero({ eyebrow, title, lead, ctaFrom, priceHint }
               // Раньше вело на /#booking, то есть перебрасывало человека с посадочной
               // на главную и теряло контекст страницы. Теперь сразу в онлайн-запись
               // через /go/zapis/, которая ставит UTM и отправляет цель в Метрику.
-              href={`/go/zapis/?from=page_${ctaFrom}`} rel="nofollow"
+              href={ctaHref || `/go/zapis/?from=page_${ctaFrom}`} rel="nofollow"
               className="inline-flex items-center justify-center px-9 py-3.5 bg-brand text-sand rounded-full font-medium shadow-[0_12px_40px_-10px_rgba(116,68,54,0.55)] hover:bg-brand-dark hover:shadow-[0_18px_55px_-10px_rgba(116,68,54,0.7)] active:scale-[0.98] transition-[transform,background-color,box-shadow] duration-[220ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
             >
-              Записаться
+              {ctaLabel || "Записаться"}
             </TrackedLink>
             {priceHint && (
               <span className="text-sm text-brand/60">{priceHint}</span>

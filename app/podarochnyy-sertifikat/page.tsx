@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import TrackedLink from "../components/TrackedLink";
 import Footer from "../components/Footer";
 import LandingHero from "../components/LandingHero";
+import CertificateOrder from "../components/CertificateOrder";
 import { SplitBlock, PhotoStrip, ProgramCards, FeatureRow, FaqBlock } from "../components/LandingBlocks";
 import { programs } from "../lib/programs-data";
 
@@ -147,6 +148,8 @@ export default function SertifikatPage() {
                     title="Подарочный сертификат в спа и на массаж"
           lead="На сумму или на конкретный ритуал. Бумажный в конверте или электронный на почту. Действует полгода, время человек выбирает сам."
           ctaFrom="sertifikat_hero"
+          ctaLabel="Заказать сертификат"
+          ctaHref="#zakaz-sertifikata"
           priceHint="от 6800 ₽ · оформляем за день"
         />
 
@@ -231,7 +234,7 @@ export default function SertifikatPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <TrackedLink
-                goal="BOOKING_CLICK" goalParams={{ from: "sertifikat_cta" }} href="/go/zapis/?from=page_sertifikat" rel="nofollow"
+                goal="CERT_ORDER_CLICK" goalParams={{ from: "sertifikat_cta" }} href="#zakaz-sertifikata"
                 className="inline-flex items-center justify-center px-9 py-3.5 bg-sand text-brand rounded-full font-medium hover:bg-white active:scale-[0.98] transition-[transform,background-color] duration-[220ms]"
               >
                 Заказать онлайн
@@ -253,6 +256,7 @@ export default function SertifikatPage() {
           </div>
         </section>
       </main>
+      <CertificateOrder />
       <Footer />
     </>
   );
