@@ -49,28 +49,28 @@ type Item = {
 };
 
 // Первая линия — студийные фото Истовы (все в одну ленту)
-// Съёмка 26.09.2026 стоит первой: до неё в ленте были только интерьеры и предметы,
-// самой процедуры не было видно ни на одном кадре. Карточки вертикальные 3:4,
-// поэтому здесь лежат вертикальные версии, а не те же кадры, что на страницах.
+// Съёмка 16.11.2026 (фотобанк IST-261116-*): один свет и одна подача по всей ленте.
+// Из сентябрьских оставлены мужчина и сертификат: таких сцен в новой съёмке нет.
+// Карточки вертикальные 3:4, поэтому горизонтальные кадры лежат здесь вертикальными версиями (*-v).
 const studioPhotos: Item[] = [
-  { type: "image", src: "/gallery/2026-11/duga-greben.webp",      poster: "/gallery/2026-11/duga-greben.webp",      alt: "Массаж головы под тёплой водой золотой дуги" },
-  { type: "image", src: "/gallery/2026-11/pennyy-massazh.webp",      poster: "/gallery/2026-11/pennyy-massazh.webp",      alt: "Пенный массаж кожи головы" },
-  { type: "image", src: "/gallery/2026-11/guasha.webp",    poster: "/gallery/2026-11/guasha.webp",    alt: "Массаж лица пластинами гуаша" },
-  { type: "image", src: "/gallery/2026-11/sauna.webp",     poster: "/gallery/2026-11/sauna.webp",     alt: "Двое в финской сауне" },
-  { type: "image", src: "/gallery/2026-11/mytie-golovy.webp", poster: "/gallery/2026-11/mytie-golovy.webp", alt: "Нефритовая маска для лица во время ритуала для головы" },
-  { type: "image", src: "/gallery/2026-11/massazh-litsa.webp",     poster: "/gallery/2026-11/massazh-litsa.webp",     alt: "Работа мастера с лицом и шеей" },
-  { type: "image", src: "/gallery/2026-09/g-muzhchina.webp",  poster: "/gallery/2026-09/g-muzhchina.webp", alt: "Мужской ритуал для головы, в зеркале виден второй кабинет" },
-  { type: "image", src: "/gallery/2026-09/g-konvert.webp",    poster: "/gallery/2026-09/g-konvert.webp",   alt: "Подарочный сертификат и витрина с уходом" },
-  { type: "image", src: "/gallery/2026-11/chaynaya-zona.webp",  poster: "/gallery/2026-11/chaynaya-zona.webp",  alt: "Зона отдыха с закатным светом" },
-  { type: "image", src: "/gallery/2026-11/chay.webp",     poster: "/gallery/2026-11/chay.webp",     alt: "Чайный ритуал" },
-  { type: "image", src: "/gallery/2026-11/duga.webp", poster: "/gallery/2026-11/duga.webp", alt: "Кабинет спа для головы" },
-  { type: "image", src: "/gallery/2026-11/vybor-masla.webp",   poster: "/gallery/2026-11/vybor-masla.webp",   alt: "Арома-ритуалы Истовы" },
-  { type: "image", src: "/gallery/2026-11/sauna.webp",   poster: "/gallery/2026-11/sauna.webp",   alt: "Финская сауна" },
-  { type: "image", src: "/gallery/2026-11/interer.webp",   poster: "/gallery/2026-11/interer.webp",   alt: "Welcome-зона" },
-  { type: "image", src: "/gallery/2026-11/massazh-litsa.webp", poster: "/gallery/2026-11/massazh-litsa.webp", alt: "Массажный кабинет" },
-  { type: "image", src: "/gallery/2026-11/vstrecha.webp",    poster: "/gallery/2026-11/vstrecha.webp",    alt: "Уход и косметика Davines" },
-  { type: "image", src: "/gallery/2026-11/skrab-telo.webp",    poster: "/gallery/2026-11/skrab-telo.webp",    alt: "Ритуалы для тела" },
-  { type: "image", src: "/gallery/2026-11/chay-yabloki.webp",  poster: "/gallery/2026-11/chay-yabloki.webp",  alt: "Лаунж-зона" },
+  { type: "image", src: "/gallery/2026-11/duga-v.webp", poster: "/gallery/2026-11/duga-v.webp", alt: "Золотая дуга: водный ритуал для кожи головы" },
+  { type: "image", src: "/gallery/2026-11/mytie-golovy-v.webp", poster: "/gallery/2026-11/mytie-golovy-v.webp", alt: "Тёплая вода у Золотой дуги" },
+  { type: "image", src: "/gallery/2026-11/kamennaya-maska-v.webp", poster: "/gallery/2026-11/kamennaya-maska-v.webp", alt: "Каменная маска для глаз и массаж гребнями" },
+  { type: "image", src: "/gallery/2026-11/pennyy-massazh.webp", poster: "/gallery/2026-11/pennyy-massazh.webp", alt: "Пенный массаж кожи головы" },
+  { type: "image", src: "/gallery/2026-11/vstrecha.webp", poster: "/gallery/2026-11/vstrecha.webp", alt: "Встреча гостя у стойки Истовы" },
+  { type: "image", src: "/gallery/2026-11/kriosfery.webp", poster: "/gallery/2026-11/kriosfery.webp", alt: "Массаж лица криосферами" },
+  { type: "image", src: "/gallery/2026-11/sauna-v.webp", poster: "/gallery/2026-11/sauna-v.webp", alt: "Финская сауна" },
+  { type: "image", src: "/gallery/2026-11/guasha.webp", poster: "/gallery/2026-11/guasha.webp", alt: "Массаж лица гуаша" },
+  { type: "image", src: "/gallery/2026-09/g-muzhchina.webp", poster: "/gallery/2026-09/g-muzhchina.webp", alt: "Мужской ритуал для головы, в зеркале виден второй кабинет" },
+  { type: "image", src: "/gallery/2026-11/massazh-golovy-v.webp", poster: "/gallery/2026-11/massazh-golovy-v.webp", alt: "Массаж кожи головы руками" },
+  { type: "image", src: "/gallery/2026-11/kamni.webp", poster: "/gallery/2026-11/kamni.webp", alt: "Ритуал с тёплыми камнями" },
+  { type: "image", src: "/gallery/2026-11/chaynaya-zona.webp", poster: "/gallery/2026-11/chaynaya-zona.webp", alt: "Чайная зона после ритуала" },
+  { type: "image", src: "/gallery/2026-11/skrab-telo-v.webp", poster: "/gallery/2026-11/skrab-telo-v.webp", alt: "Обновление кожи тела скрабом" },
+  { type: "image", src: "/gallery/2026-11/travyanoy-meshochek.webp", poster: "/gallery/2026-11/travyanoy-meshochek.webp", alt: "Тёплые травяные мешочки" },
+  { type: "image", src: "/gallery/2026-09/g-konvert.webp", poster: "/gallery/2026-09/g-konvert.webp", alt: "Подарочный сертификат и витрина с уходом" },
+  { type: "image", src: "/gallery/2026-11/sushka-volos.webp", poster: "/gallery/2026-11/sushka-volos.webp", alt: "Сушка волос после ритуала" },
+  { type: "image", src: "/gallery/2026-11/poyushchaya-chasha-v.webp", poster: "/gallery/2026-11/poyushchaya-chasha-v.webp", alt: "Звучание поющей чаши" },
+  { type: "image", src: "/gallery/2026-11/chay.webp", poster: "/gallery/2026-11/chay.webp", alt: "Чай после ритуала" },
 ];
 
 export default function Gallery() {
