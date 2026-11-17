@@ -13,7 +13,7 @@ export const BLOG_COVERS: Record<string, string> = {
   "massazh-golovy-i-volosy": "/gallery/2026-11/duga.webp",
 
   // сон, стресс, состояние
-  "kak-bystro-usnut": "/gallery/2026-11/chaynaya-zona-h.webp",
+  "kak-bystro-usnut": "/gallery/2026-11/kamennaya-maska-2.webp",
   "kak-snizit-kortizol": "/gallery/2026-11/sauna.webp",
   "head-spa-i-son": "/gallery/2026-11/duga-greben.webp",
   "massazh-golovy-i-stress": "/gallery/2026-11/massazh-litsa-2.webp",
@@ -34,11 +34,11 @@ export const BLOG_INLINE: Record<string, string> = {
   "zud-i-shelushenie-kozhi-golovy": "/gallery/2026-11/kamennaya-maska.webp",
   "piling-kozhi-golovy": "/gallery/2026-11/duga.webp",
   "vypadenie-volos-i-massazh-golovy": "/gallery/2026-11/grebni.webp",
-  "kak-bystro-usnut": "/gallery/2026-11/kamennaya-maska.webp",
-  "kak-snizit-kortizol": "/gallery/2026-11/chaynaya-zona-h.webp",
+  "kak-bystro-usnut": "/gallery/2026-11/massazh-golovy.webp",
+  "kak-snizit-kortizol": "/gallery/2026-11/mytie-golovy.webp",
   "vygoranie": "/gallery/2026-11/sauna.webp",
   "chto-snimaet-stress": "/gallery/2026-11/poyushchaya-chasha.webp",
-  "kak-rasslabitsya": "/gallery/2026-11/chaynaya-zona-h.webp",
+  "kak-rasslabitsya": "/gallery/2026-11/sauna.webp",
   "rasslablyayushchiy-massazh": "/gallery/2026-11/kamni-h.webp",
   "sheya-posle-raboty": "/gallery/2026-11/massazh-golovy.webp",
   "poyushchie-chashi": "/gallery/2026-11/massazh-golovy.webp",
