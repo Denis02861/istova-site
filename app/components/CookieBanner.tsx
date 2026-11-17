@@ -12,8 +12,20 @@ export default function CookieBanner() {
     try {
       const consent = localStorage.getItem(STORAGE_KEY);
       if (!consent) {
-        const t = setTimeout(() => setShow(true), 1200);
-        return () => clearTimeout(t);
+        // С 17.11.2026 показываем при первом действии гостя (прокрутка, касание, клавиша),
+        // а не через 1,2 с после загрузки: по таймеру баннер ложился на первый экран
+        // и на телефоне становился главным элементом страницы (LCP 2,5 с ждал его).
+        const events = ["scroll", "pointerdown", "touchstart", "keydown", "wheel"] as const;
+        let t: ReturnType<typeof setTimeout> | undefined;
+        const onFirst = () => {
+          events.forEach((e) => window.removeEventListener(e, onFirst));
+          t = setTimeout(() => setShow(true), 400);
+        };
+        events.forEach((e) => window.addEventListener(e, onFirst, { passive: true, once: true }));
+        return () => {
+          events.forEach((e) => window.removeEventListener(e, onFirst));
+          if (t) clearTimeout(t);
+        };
       }
     } catch {
       // localStorage может быть недоступен — просто не показываем

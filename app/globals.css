@@ -26,7 +26,7 @@ html, body {
   font-family: 'Golos Text', system-ui, sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; } /* отступ под фиксированную шапку при переходе по якорю без Lenis (телефоны) */
 /* Страховка от горизонтальной прокрутки на телефоне: что бы ни вылезло за край
    (анимация, длинное слово), страница не станет шире экрана. clip, а не hidden:
    hidden ломает position: sticky у шапки и нижней панели записи. */
@@ -409,15 +409,16 @@ body::before {
  * не ждёт скриптов (13.11.2026: через motion первый экран на телефоне был за 7-8 с).
  */
 @keyframes blur-fade-in {
+  /* С 17.11.2026 не с нуля и без размытия: элемент с opacity 0 браузер не засчитывает
+     в LCP, и главным становился баннер cookie (телефон) или значок в шапке (компьютер),
+     а иногда LCP не определялся вовсе. С 0.4 заголовок виден с первой отрисовки. */
   from {
-    opacity: 0;
+    opacity: 0.4;
     transform: translateY(var(--bf-y, 14px));
-    filter: blur(var(--bf-blur, 8px));
   }
   to {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 .blur-fade-instant {

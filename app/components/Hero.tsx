@@ -10,20 +10,20 @@ export default function Hero() {
     <section id="hero" className="min-h-[100dvh] flex items-center justify-center bg-sand relative pt-20 overflow-hidden">
       <Aurora />
       <div className="container mx-auto px-6 text-center relative z-10">
-        <BlurFade instant delay={0.1} yOffset={20}>
+        <BlurFade instant delay={0} yOffset={20}>
           <img
             src="/logo/istova-wordmark.webp"
             alt="ИСТŌВА"
             fetchPriority="high" decoding="async" className="h-20 md:h-28 w-auto mx-auto mb-6" width={728} height={218} />
         </BlurFade>
 
-        <BlurFade instant delay={0.28} yOffset={18}>
+        <BlurFade instant delay={0.05} yOffset={18}>
           <p className="font-display italic text-2xl md:text-4xl text-brand mb-6 max-w-2xl mx-auto leading-snug">
             Не нужен особый день,<br/>чтобы почувствовать себя особенной
           </p>
         </BlurFade>
 
-        <BlurFade instant delay={0.42} yOffset={14}>
+        <BlurFade instant delay={0.1} yOffset={14}>
           {/* Видимый H1: тот же вид, что был у служебной строки, но заголовок
               теперь читают и гость, и поисковик. Раньше он стоял скрытым (sr-only). */}
           <h1 className="text-xs md:text-sm tracking-widest uppercase text-brand/60 mb-12 font-normal">
@@ -31,7 +31,7 @@ export default function Hero() {
           </h1>
         </BlurFade>
 
-        <BlurFade instant delay={0.56} yOffset={14}>
+        <BlurFade instant delay={0.15} yOffset={14}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
             <a
               href="#booking"
@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
         </BlurFade>
 
-        <BlurFade instant delay={0.7} yOffset={12}>
+        <BlurFade instant delay={0.2} yOffset={12}>
           <p className="text-sm text-brand/60 tracking-wide mt-8 pt-8 border-t border-brand/10">ул. Беринга, 23 к. 2 · Васильевский остров</p>
         </BlurFade>
       </div>

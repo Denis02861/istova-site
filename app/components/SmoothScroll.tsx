@@ -7,6 +7,10 @@ export default function SmoothScroll() {
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
+    // С 17.11.2026 на телефонах и планшетах Lenis не запускаем: прокрутку пальцем он и так
+    // не перехватывает, а его цикл requestAnimationFrame грузил процессор каждый кадр (TBT).
+    // Якоря там ведёт сам браузер: html { scroll-behavior: smooth; scroll-padding-top } в globals.css.
+    if (window.matchMedia("(pointer: coarse)").matches) return;
 
     const lenis = new Lenis({
       duration: 1.2,
