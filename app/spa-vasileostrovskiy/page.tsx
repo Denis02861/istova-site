@@ -146,7 +146,7 @@ export default function VasileostrovskiyPage() {
 
           <PhotoStrip
             photo="/gallery/2026-11/interer.webp"
-            alt="Водный ритуал в Истове на Васильевском"
+            alt="Интерьер Истовы в тёплом свете"
             caption="Тишина начинается ещё до входа"
           />
 

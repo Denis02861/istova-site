@@ -123,7 +123,7 @@ export default function RelaxMassagePage() {
 
           <PhotoStrip
             photo="/gallery/2026-11/interer.webp"
-            alt="Водный ритуал в Истове"
+            alt="Интерьер Истовы в тёплом свете"
             caption="Тело замедляется, дыхание выравнивается, напряжение отпускает слой за слоем"
           />
 
