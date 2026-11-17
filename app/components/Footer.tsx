@@ -23,42 +23,27 @@ export default function Footer() {
           </div>
 
           <div>
+            {/* Подвал по смыслу (Денис 17.11.2026): услуги отдельно, всё про Истову отдельно.
+                Ссылки и подписи прежние — они работают на поиск, менялись только порядок и группы. */}
             <h4 className="text-sand mb-3 text-sm tracking-wide uppercase">Услуги</h4>
             <ul className="space-y-1.5 text-sm mb-7">
-              <li>
-                <a href="/programs/" className="hover:text-sand">Все программы</a>
-              </li>
-              <li>
-                <a href="/o-nas/" className="hover:text-sand">О нас</a>
-              </li>
-              <li>
-                <a href="/podarochnyy-sertifikat/" className="hover:text-sand">Подарочный сертификат</a>
-              </li>
-              <li>
-                <a href="/spa-dlya-dvoih/" className="hover:text-sand">Спа для двоих</a></li>
-              <li><a href="/spa-vasileostrovskiy/" className="hover:text-sand">Спа на Васильевском острове</a>
-              </li>
-              <li>
-                <a href="/massazh-golovy/" className="hover:text-sand">Массаж головы</a>
-              </li>
-              <li>
-                <a href="/yaponskoe-spa-dlya-golovy/" className="hover:text-sand">Японский массаж головы</a>
-              </li>
-              <li>
-                <a href="/spa-dlya-volos/" className="hover:text-sand">Спа для волос</a>
-              </li>
-              <li>
-                <a href="/rasslablyayushchiy-massazh/" className="hover:text-sand">Расслабляющий массаж</a>
-              </li>
-              <li>
-                <a href="/praktiki/" className="hover:text-sand">Отдельные практики</a>
-              </li>
-              <li>
-                <a href="/antistress/" className="hover:text-sand">Антистресс</a>
-              </li>
-              <li>
-                <a href="/blog/" className="hover:text-sand">Блог</a>
-              </li>
+              <li><a href="/programs/" className="hover:text-sand">Все программы</a></li>
+              <li><a href="/massazh-golovy/" className="hover:text-sand">Массаж головы</a></li>
+              <li><a href="/yaponskoe-spa-dlya-golovy/" className="hover:text-sand">Японский массаж головы</a></li>
+              <li><a href="/spa-dlya-volos/" className="hover:text-sand">Спа для волос</a></li>
+              <li><a href="/rasslablyayushchiy-massazh/" className="hover:text-sand">Расслабляющий массаж</a></li>
+              <li><a href="/antistress/" className="hover:text-sand">Антистресс</a></li>
+              <li><a href="/spa-dlya-dvoih/" className="hover:text-sand">Спа для двоих</a></li>
+              <li><a href="/praktiki/" className="hover:text-sand">Отдельные практики</a></li>
+              <li><a href="/podarochnyy-sertifikat/" className="hover:text-sand">Подарочный сертификат</a></li>
+            </ul>
+
+            <h4 className="text-sand mb-3 text-sm tracking-wide uppercase">Истова</h4>
+            <ul className="space-y-1.5 text-sm mb-7">
+              <li><a href="/o-nas/" className="hover:text-sand">О нас</a></li>
+              <li><a href="/kak-prohodit/" className="hover:text-sand">Как проходит визит</a></li>
+              <li><a href="/spa-vasileostrovskiy/" className="hover:text-sand">Спа на Васильевском острове</a></li>
+              <li><a href="/blog/" className="hover:text-sand">Блог</a></li>
             </ul>
 
             <h4 className="text-sand mb-3 text-sm tracking-wide uppercase">Документы</h4>
