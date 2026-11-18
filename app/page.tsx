@@ -30,7 +30,6 @@ export default function Page() {
       <main>
         <Hero />
         <Concept />
-        <Reveal variant="up"><Founder /></Reveal>
         <HeadSpa />
         <Ritual />
         <Reveal variant="up"><Quiz /></Reveal>
@@ -42,6 +41,9 @@ export default function Page() {
         <Reveal variant="up"><Certificates /></Reveal>
         <Reveal variant="up"><FAQ /></Reveal>
         <Reveal variant="up"><Reviews /></Reveal>
+        {/* Слово основателя — внизу, перед контактами и записью, компактно (Денис 18.11.2026):
+            наверху мешал, спа для головы цепляет сильнее и поднят сразу после концепции. */}
+        <Reveal variant="up"><Founder /></Reveal>
         <Reveal variant="up"><Contacts /></Reveal>
         <Reveal variant="up"><Booking /></Reveal>
       </main>
