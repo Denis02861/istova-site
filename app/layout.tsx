@@ -259,8 +259,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://mc.yandex.ru" />
         <link rel="dns-prefetch" href="https://yandex.ru" />
         <link rel="preconnect" href="https://mc.yandex.ru" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
       <body className="font-sans">
         <a href="#hero" className="skip-link">Перейти к содержимому</a>
@@ -278,15 +276,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=${YM_ID}", "ym");ym(${YM_ID}, "init", {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});`}
         </Script>
-        {/* GA4 дублирует Яндекс.Метрику, поэтому грузим его после window.load:
-            он перестаёт влиять на Total Blocking Time, а данные почти не теряются. */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-980B4F1TWG"
-          strategy="lazyOnload"
-        />
-        <Script id="ga4-init" strategy="lazyOnload">
-          {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-980B4F1TWG');`}
-        </Script>
+        {/* GA4 убран 18.11.2026: CSP его не пускал (данные не собирались), для РФ пользы нет,
+            а слать персональные данные гостей в Google — риск по 152-ФЗ. Аналитика — Яндекс Метрика. */}
         <noscript>
           <div>
             <img
